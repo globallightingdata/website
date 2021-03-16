@@ -1,0 +1,14 @@
+.git
+.docusaurus
+.cache-loader
+node_modules
+build
+
+.gitignore
+Dockerfile
+docker-compose.yml
+README.md
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
