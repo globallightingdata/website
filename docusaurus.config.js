@@ -145,12 +145,12 @@ module.exports = {
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
           editUrl:
-            "https://github.com/globallightingdata/website/edit/develop/website/",
+            "https://github.com/globallightingdata/website/edit/develop/",
         },
         blog: {
           showReadingTime: true,
           editUrl:
-            "https://github.com/globallightingdata/website/edit/develop/website/blog/",
+            "https://github.com/globallightingdata/website/edit/develop/",
         },
         theme: {
           customCss: [
