@@ -88,7 +88,7 @@ function HomeCallToAction() {
     <>
       <ActionButton
         type="primary"
-        href={useBaseUrl("/getting-started")}
+        href={useBaseUrl("/getting-started/")}
         target="_self"
       >
         Get started
