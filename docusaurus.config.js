@@ -93,7 +93,7 @@ module.exports = {
             },
             {
               label: 'DIALux',
-              href: 'https://www.dial.de/dialux/',
+              href: 'https://www.dialux.com',
             },
             {
               label: 'LUMsearch',
