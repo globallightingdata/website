@@ -1,0 +1,20 @@
+version: "3.8"
+services:
+  website:
+    image: dialgmbh/gldf-website
+    restart: always
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - caddy-data:/data
+  watchtower:
+    image: containrrr/watchtower:latest
+    restart: always
+    environment:
+      - WATCHTOWER_POLL_INTERVAL=300
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock      
+
+volumes:
+  caddy-data:

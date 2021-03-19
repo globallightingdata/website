@@ -1,0 +1,76 @@
+.ImprintHeader {
+  text-align: center;
+  font-size: 25px;
+  color: var(--ifm-font-color-base);
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.ImprintCompanyName {
+  font-size: 20px;
+  color: var(--ifm-font-color-base);
+  margin-bottom: 30px;
+  border-bottom: 1px solid rgb(224, 224, 224);
+}
+
+/* Two columns */
+
+.ImprintTwoColumns {
+  display: grid;
+}
+
+.ImprintTwoColumns .column {
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.ImprintTwoColumns .column.first {
+  grid-area: first;
+}
+
+.ImprintTwoColumns .column.last {
+  grid-area: last;
+}
+
+@media only screen and (min-width: 961px) {
+  .ImprintTwoColumns {
+    max-width: 900px;
+    margin: 0 auto;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "first last";
+  }
+
+  .ImprintTwoColumns.reverse {
+    grid-template-areas: "last first";
+  }
+
+  .ImprintTwoColumns .column {
+    max-width: 450px;
+  }
+
+  .ImprintTwoColumns .column.left {
+    padding-right: 50px;
+  }
+
+  .ImprintTwoColumns .column.right {
+    padding-left: 50px;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .ImprintTwoColumns,
+  .ImprintTwoColumns.reverse {
+    grid-template-columns: 1fr;
+    grid-template-areas: "first" "last";
+  }
+
+  .ImprintTwoColumns .column {
+    padding: 0 4rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .ImprintTwoColumns .column {
+    padding: 0 1.25rem;
+  }
+}
