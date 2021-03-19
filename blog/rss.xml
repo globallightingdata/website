@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>GLDF Blog</title>
+        <link>https://gldf.io/blog</link>
+        <description>GLDF Blog</description>
+        <lastBuildDate>Sat, 13 Mar 2021 00:00:00 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <item>
+            <title><![CDATA[Roadmap]]></title>
+            <link>https://gldf.io/blog/2021/03/13/roadmap</link>
+            <guid>Roadmap</guid>
+            <pubDate>Sat, 13 Mar 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[GLDF Roadmap 2021]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Welcome]]></title>
+            <link>https://gldf.io/blog/2021/03/12/welcome</link>
+            <guid>Welcome</guid>
+            <pubDate>Fri, 12 Mar 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[GLDF - new unified lighting data format for luminaires and sensors]]></description>
+        </item>
+    </channel>
+</rss>
