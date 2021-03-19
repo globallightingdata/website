@@ -1,5 +1,7 @@
 # GLDF Website
 
+[![master](https://github.com/globallightingdata/website/actions/workflows/master.yml/badge.svg)](https://github.com/globallightingdata/website/actions/workflows/master.yml)
+
 Website of the *Global Lighting Data Format* ➔ [gldf.io](https://gldf.io)
 
 ## Requirements
