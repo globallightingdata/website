@@ -79,15 +79,31 @@ function Imprints() {
           }
           columnTwo={
             <>
-              <h2 class="ImprintCompanyName">Relux Informatik AG</h2>
+              <h2 class="ImprintCompanyName">RELUX Informatik AG</h2>
               <p>
                 <div><strong>Chief Executive Officer</strong></div>
-                <div>Markus Hegi</div>
+                <div>Dipl.-Ing. Markus Hegi</div>
+              </p>
+              <p>
+                <div><strong>Court of jurisdiction – commercial register</strong></div>
+                <div>Basel</div>
+              </p>
+              <p>
+                <div><strong>No. in commercial register</strong></div>
+                <div>CHE-104.196.664</div>
+              </p>
+              <p>
+                <div><strong>VAT ID</strong></div>
+                <div>CHE-104.196.664 TVA</div>
+              </p>
+              <p>
+                <div><strong>Responsible for the content</strong></div>
+                <div>Dipl.-Ing. Robert Heinze</div>
               </p>
               <p>
                 <div><strong>Contact</strong></div>
                 <div>
-                  Relux Informatik AG
+                  RELUX Informatik AG
                   <br />
                   Kaspar Pfeiffer Strasse 4
                   <br />
