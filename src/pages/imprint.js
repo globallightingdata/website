@@ -22,102 +22,112 @@ function TwoColumns({ columnOne, columnTwo, reverse }) {
 function Imprints() {
   return (
     <>
-        <Heading text="Legal notice" />
-        <TwoColumns
-          columnOne={
-            <>
-              <h2 class="ImprintCompanyName">DIAL GmbH</h2>
-              <p>
-                <div>
-                  <strong>Chief Executive Officer</strong>
-                </div>
-                <div>Dipl.-Ing. Dieter Polle</div>
-              </p>
-              <p>
-                <div>
-                  <strong>Court of jurisdiction – commercial register</strong>
-                </div>
-                <div>Iserlohn</div>
-              </p>
-              <p>
-                <div>
-                  <strong>No. in commercial register</strong>
-                </div>
-                <div>HRB 4446</div>
-              </p>
-              <p>
-                <div>
-                  <strong>VAT ID no. acc. to Value Added Tax Act §27a</strong>
-                </div>
-                <div>DE 125807143</div>
-              </p>
-              <p>
-                <div>
-                  <strong>
-                    Responsible for the content according to §55 RStV
-                  </strong>
-                </div>
-                <div>Dipl.-Ing. Dieter Polle</div>
-              </p>
-              <p>
-                <div>
-                  <strong>Contact</strong>
-                </div>
-                <div>
-                  DIAL GmbH
-                  <br />
-                  Bahnhofsallee 18
-                  <br />
-                  D-58507 Lüdenscheid
-                  <br />
-                  Fon: +49 23 51 56 74 0
-                  <br />
-                  Mail: dialog@dial.de
-                </div>
-              </p>
-            </>
-          }
-          columnTwo={
-            <>
-              <h2 class="ImprintCompanyName">RELUX Informatik AG</h2>
-              <p>
-                <div><strong>Chief Executive Officer</strong></div>
-                <div>Dipl.-Ing. Markus Hegi</div>
-              </p>
-              <p>
-                <div><strong>Court of jurisdiction – commercial register</strong></div>
-                <div>Basel</div>
-              </p>
-              <p>
-                <div><strong>No. in commercial register</strong></div>
-                <div>CHE-104.196.664</div>
-              </p>
-              <p>
-                <div><strong>VAT ID</strong></div>
-                <div>CHE-104.196.664 TVA</div>
-              </p>
-              <p>
-                <div><strong>Responsible for the content</strong></div>
-                <div>Dipl.-Ing. Robert Heinze</div>
-              </p>
-              <p>
-                <div><strong>Contact</strong></div>
-                <div>
-                  RELUX Informatik AG
-                  <br />
-                  Kaspar Pfeiffer Strasse 4
-                  <br />
-                  CH-4142 Münchenstein
-                  <br />
-                  Fon: +41 61 333 07 70
-                  <br />
-                  Mail: info@relux.com
-                </div>
-              </p>
-            </>
-          }
-        />
-      </>
+      <Heading text="Legal notice" />
+      <TwoColumns
+        columnOne={
+          <>
+            <h2 class="ImprintCompanyName">DIAL GmbH</h2>
+            <p>
+              <div>
+                <strong>Chief Executive Officer</strong>
+              </div>
+              <div>Dipl.-Ing. Dieter Polle</div>
+            </p>
+            <p>
+              <div>
+                <strong>Court of jurisdiction – commercial register</strong>
+              </div>
+              <div>Iserlohn</div>
+            </p>
+            <p>
+              <div>
+                <strong>No. in commercial register</strong>
+              </div>
+              <div>HRB 4446</div>
+            </p>
+            <p>
+              <div>
+                <strong>VAT ID</strong>
+              </div>
+              <div>DE 125807143</div>
+            </p>
+            <p>
+              <div>
+                <strong>Responsible for the content</strong>
+              </div>
+              <div>Dipl.-Ing. Dieter Polle</div>
+            </p>
+            <p>
+              <div>
+                <strong>Contact</strong>
+              </div>
+              <div>
+                DIAL GmbH
+                <br />
+                Bahnhofsallee 18
+                <br />
+                D-58507 Lüdenscheid
+                <br />
+                Fon: +49 23 51 56 74 0
+                <br />
+                Mail: dialog@dial.de
+              </div>
+            </p>
+          </>
+        }
+        columnTwo={
+          <>
+            <h2 class="ImprintCompanyName">RELUX Informatik AG</h2>
+            <p>
+              <div>
+                <strong>Chief Executive Officer</strong>
+              </div>
+              <div>Dipl.-Ing. Markus Hegi</div>
+            </p>
+            <p>
+              <div>
+                <strong>Court of jurisdiction – commercial register</strong>
+              </div>
+              <div>Basel</div>
+            </p>
+            <p>
+              <div>
+                <strong>No. in commercial register</strong>
+              </div>
+              <div>CHE-104.196.664</div>
+            </p>
+            <p>
+              <div>
+                <strong>VAT ID</strong>
+              </div>
+              <div>CHE-104.196.664 TVA</div>
+            </p>
+            <p>
+              <div>
+                <strong>Responsible for the content</strong>
+              </div>
+              <div>Dipl.-Ing. Robert Heinze</div>
+            </p>
+            <p>
+              <div>
+                <strong>Contact</strong>
+              </div>
+              <div>
+                RELUX Informatik AG
+                <br />
+                Kaspar Pfeiffer Strasse 4
+                <br />
+                CH-4142 Münchenstein
+                <br />
+                Fon: +41 61 333 07 70
+                <br />
+                Mail: info@relux.com
+              </div>
+            </p>
+          </>
+        }
+      />
+    </>
   );
 }
 
