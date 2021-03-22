@@ -6,19 +6,18 @@ import useBaseUrl from "@docusaurus/useBaseUrl";
 
 const textContent = {
   feature1: `
-  <p>A new, modern and modular lighting data format with a structure, that is capable of supporting simple to complex 
-  <strong>luminaires</strong> and <strong>sensors</strong>.</p>
-  <p>Developed by <strong>DIAL</strong> and <strong>RELUX</strong> to save efforts in creation and interpretation 
-  of lighting data, offering more capabilities than ROLF or ULD. <strong>Open and free</strong> available for 
+  <p>GLDF is a new, modern, and modular lighting data format with a structure, capable of supporting simple to complex <strong>luminaires</strong> and <strong>sensors</strong>.</p>
+  <p>Developed by <strong>DIAL</strong> and <strong>RELUX</strong> to save efforts in the creation and interpretation 
+  of lighting data, offering more capabilities than ROLF or ULD. <strong>Open and freely</strong> available for 
   everyone.</p>
   `,
   xmlCodeText: `
-  <p>The core element of GLDF is a <strong>XML file</strong>, which describes all product features and variations. 
+  <p>The core element of GLDF is an <strong>XML file</strong>, which describes all product features and variations. 
   Containing three major blocks - metadata, product parts, the product itself - it allows the definition of luminaires in 
   a <strong>modular manner</strong>.</p>
   <p>With the possibility to <strong>reuse</strong> 
   elements and combine them to multiple variants of the same product <strong>effortless</strong>.</p>
-  <p>All that backed by a consistent, documented and versioned XSD Schema to <strong>validate</strong> your data.</p>
+  <p>All that is backed by a consistent, documented, and versioned XSD Schema to <strong>validate</strong> your data.</p>
   `,
   codeExample: `<?xml version="1.0" encoding="UTF-8"?>
   <Root xsi:noNamespaceSchemaLocation="GldfSchema.xsd">
@@ -45,7 +44,7 @@ const textContent = {
   feature2: `
   <p>Create 3D models for your products and visualize them in <strong>different levels of detail</strong>. 
   From basic bodies, through parameterisable models up to detailed 3D geometries.</p>
-  <p>Combine GLDF with our <strong>newly developed L3D format</strong>. To visualise enclosures in fine granularity, 
+  <p>Combine GLDF with our <strong>newly developed L3D format</strong>. To visualize enclosures in fine granularity, 
   precisely positioned light-emitting surfaces/sensors and movable parts with joints as required.</p>
   `,
   feature3: `
@@ -56,8 +55,7 @@ embeded/linked files, emergency lighting, maintenance factors, control gears, mo
 optional use of all ~350 CEN/TS 17623 - ZVEI BIM properties <strong>to name just a few</strong>.</p>
   `,
   feature4: `
-<p>One product - one file. All product and geometry data is <strong>compressed and packaged</strong> into a .gldf 
-container file, which can be conveniently exchanged and imported into DIALux & RELUX.</p>
+<p>One product - One file. The product and geometry data is <strong>compressed and packaged</strong> into a .gldf container file, which you can conveniently exchange and imported into DIALux & RELUX.</p>
   `,
 };
 
@@ -260,33 +258,28 @@ function Community() {
               <p className="firstP">
                 <img src={useBaseUrl(`img/logo.png`)} alt="" />
                 <span>
-                  GLDF is currently under development and DIAL and RELUX will
-                  take care of the format together.
+                  GLDF is currently under development and will be maintained by DIAL and RELUX together.
                 </span>
               </p>
               <p>
-                We appreciate early adopters starting using it with us. And are
-                welcoming contributors to collaborate on the next version.
+                We appreciate early adopters starting to use it and welcome contributors to collaborate with us on the next version.
               </p>
               <p>
-                We will keep this website up-to-date and publish a collection of
-                resources for individuals and companies who want to learn how to
-                use and contribute to GLDF.
+                We will keep this website up-to-date and publish a collection of resources for individuals and companies who want to learn how to use and contribute to GLDF.
               </p>
-              <p>Here are some few ideas how to get started:</p>
+              <p>Here are a few ideas on how to get started:</p>
             </>
           }
           columnTwo={
             <>
               <ul>
                 <li>
-                  Read our Blog. Any news will be pulished there
+                  Read our Blog. News will be published there
                 </li>
-                <li>Have a look on the XSD reference</li>
+                <li>Have a look at the XSD reference</li>
                 <li>Visit our Github repository, download the XSD schema and try it out</li>
                 <li>
-                  We will publish and extend the documentation in the next weeks
-                  and months. Bookmark us and follow our RSS feed on this website
+                  We will publish and extend the documentation in the coming weeks and months. Bookmark us and follow our RSS feed on this website
                 </li>
                 <li>
                   Go through the Getting Started guide - we will publish it soon
