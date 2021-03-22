@@ -118,15 +118,15 @@ module.exports = {
           items: [
             {
               label: 'Website',
-              href: 'https://reluxnet.relux.com',
+              href: 'https://relux.com',
             },
             {
               label: 'ReluxDesktop',
-              href: 'https://reluxnet.relux.com/en/relux-desktop.html',
+              href: 'https://relux.com/en/relux-desktop.html',
             },
             {
               label: 'ReluxNet',
-              href: 'https://reluxnet.relux.com/en/search/luminaires/',
+              href: 'https://relux.com/en/search/luminaires/',
             },
           ],
         },
