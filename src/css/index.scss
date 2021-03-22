@@ -277,11 +277,15 @@
 
 @media only screen and (min-width: 961px) {
   .Feature4 {
-    max-height: 250px;  
+    max-height: 300px;
   }
 
   .Feature4 .TwoColumns {
     grid-template-columns: 1fr 2fr;
+  }
+
+  .Feature4 .column.last {
+    margin-top: 30px;
   }
 
   .Feature4 .column.first {
