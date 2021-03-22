@@ -2,11 +2,18 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://gldf.io/blog</id>
     <title>GLDF Blog</title>
-    <updated>2021-03-13T00:00:00.000Z</updated>
+    <updated>2021-03-22T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://gldf.io/blog"/>
     <subtitle>GLDF Blog</subtitle>
     <icon>https://gldf.io/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Licht 2021]]></title>
+        <id>Licht 2021</id>
+        <link href="https://gldf.io/blog/2021/03/22/licht-2021"/>
+        <updated>2021-03-22T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Vom 21. bis zum 24. März 2021 trifft sich die Lichtwelt zum 24. europäischen Lichtkongress LICHT2021]]></summary>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Roadmap]]></title>
         <id>Roadmap</id>

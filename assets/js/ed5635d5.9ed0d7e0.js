@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[37],{105:function(a){a.exports=JSON.parse('{"allTagsPath":"/blog/tags","slug":"licht-2021","name":"licht2021","count":1,"permalink":"/blog/tags/licht-2021"}')}}]);

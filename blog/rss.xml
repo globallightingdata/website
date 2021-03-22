@@ -4,9 +4,16 @@
         <title>GLDF Blog</title>
         <link>https://gldf.io/blog</link>
         <description>GLDF Blog</description>
-        <lastBuildDate>Sat, 13 Mar 2021 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 22 Mar 2021 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
+        <item>
+            <title><![CDATA[Licht 2021]]></title>
+            <link>https://gldf.io/blog/2021/03/22/licht-2021</link>
+            <guid>Licht 2021</guid>
+            <pubDate>Mon, 22 Mar 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[Vom 21. bis zum 24. März 2021 trifft sich die Lichtwelt zum 24. europäischen Lichtkongress LICHT2021]]></description>
+        </item>
         <item>
             <title><![CDATA[Roadmap]]></title>
             <link>https://gldf.io/blog/2021/03/13/roadmap</link>
