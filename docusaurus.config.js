@@ -69,8 +69,13 @@ module.exports = {
         //     },
         //   ],
         // },
+        // {
+        //   to: 'download',
+        //   label: 'Download',
+        //   position: 'right',
+        // },
         {
-          to: 'download',
+          href: 'https://github.com/globallightingdata/gldf/releases',
           label: 'Download',
           position: 'right',
         },
