@@ -6,7 +6,8 @@ import useBaseUrl from "@docusaurus/useBaseUrl";
 
 const textContent = {
   feature1: `
-  <p>GLDF is a new, modern, and modular lighting data format with a structure, capable of supporting simple to complex <strong>luminaires</strong> and <strong>sensors</strong>.</p>
+  <p>GLDF is a new, modern, and modular lighting data format with a structure, capable of supporting simple to complex 
+  <strong>luminaires</strong> and <strong>sensors</strong>.</p>
   <p>Developed by <strong>DIAL</strong> and <strong>RELUX</strong> to save efforts in the creation and interpretation 
   of lighting data, offering more capabilities than ROLF or ULD. <strong>Open and freely</strong> available for 
   everyone.</p>
@@ -55,7 +56,8 @@ embeded/linked files, emergency lighting, maintenance factors, control gears, mo
 optional use of all ~350 CEN/TS 17623 - ZVEI BIM properties <strong>to name just a few</strong>.</p>
   `,
   feature4: `
-<p>One product - One file. The product and geometry data is <strong>compressed and packaged</strong> into a .gldf container file, which you can conveniently exchange and imported into DIALux & RELUX.</p>
+<p>One product - One file. The product and geometry data is <strong>compressed and packaged</strong> into a .gldf container file, 
+which you can conveniently exchange and import into DIALux & RELUX.</p>
   `,
 };
 
@@ -258,14 +260,18 @@ function Community() {
               <p className="firstP">
                 <img src={useBaseUrl(`img/logo.png`)} alt="" />
                 <span>
-                  GLDF is currently under development and will be maintained by DIAL and RELUX together.
+                  GLDF is currently under development and will be maintained by
+                  DIAL and RELUX together.
                 </span>
               </p>
               <p>
-                We appreciate early adopters starting to use it and welcome contributors to collaborate with us on the next version.
+                We appreciate early adopters starting to use it and welcome
+                contributors to collaborate with us on the next version.
               </p>
               <p>
-                We will keep this website up-to-date and publish a collection of resources for individuals and companies who want to learn how to use and contribute to GLDF.
+                We will keep this website up-to-date and publish a collection of
+                resources for individuals and companies who want to learn how to
+                use and contribute to GLDF.
               </p>
               <p>Here are a few ideas on how to get started:</p>
             </>
@@ -273,13 +279,16 @@ function Community() {
           columnTwo={
             <>
               <ul>
-                <li>
-                  Read our Blog. News will be published there
-                </li>
+                <li>Read our Blog. News will be published there</li>
                 <li>Have a look at the XSD reference</li>
-                <li>Visit our Github repository, download the XSD schema and try it out</li>
                 <li>
-                  We will publish and extend the documentation in the coming weeks and months. Bookmark us and follow our RSS feed on this website
+                  Visit our Github repository, download the XSD schema and try
+                  it out
+                </li>
+                <li>
+                  We will publish and extend the documentation in the coming
+                  weeks and months. Bookmark us and follow our RSS feed on this
+                  website
                 </li>
                 <li>
                   Go through the Getting Started guide - we will publish it soon
