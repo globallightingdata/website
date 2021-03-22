@@ -56,8 +56,10 @@ embeded/linked files, emergency lighting, maintenance factors, control gears, mo
 optional use of all ~350 CEN/TS 17623 - ZVEI BIM properties <strong>to name just a few</strong>.</p>
   `,
   feature4: `
-<p>One product - One file. The product and geometry data is <strong>compressed and packaged</strong> into a .gldf container file, 
-which you can conveniently exchange and import into DIALux & RELUX.</p>
+<p>One product - one file. The product and geometry data is <strong>compressed and packaged</strong> into a .gldf container file 
+which you can conveniently exchange and import into DIALux, RELUX and any other software that support it.</p>
+<p>The format contains all information that BIM applications require in the entire process. Regardless of whether it is <strong>CAD, lighting 
+planning or facility management</strong> - GLDF is able to contain and transport them.</p>
   `,
 };
 
