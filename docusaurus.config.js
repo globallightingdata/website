@@ -11,7 +11,7 @@ module.exports = {
   themeConfig: {
     announcementBar: {
       id: 'licht2021',
-      content: 'Visit us @<a target="_blank" rel="noopener noreferrer" href="/blog/2021/03/22/licht-2021">LICHT2021</a>',
+      content: 'Meet us online @<a target="_blank" rel="noopener noreferrer" href="/blog/2021/03/22/licht-2021">LICHT2021</a>',
       backgroundColor: '#fafbfc',
       textColor: '#091E42',
       isCloseable: true,
