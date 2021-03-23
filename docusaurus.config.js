@@ -1,6 +1,6 @@
 module.exports = {
   title: 'GLDF',
-  tagline: 'Global Luminaire Data Format',
+  tagline: 'Global Lighting Data Format',
   url: 'https://gldf.io',
   baseUrl: '/',
   onBrokenLinks: 'throw',
