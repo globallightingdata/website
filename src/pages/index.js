@@ -136,7 +136,7 @@ function HeaderHero() {
         <h1 className="title">
           <span className="titleHighlight">G</span>
           lobal <span className="titleHighlight">L</span>
-          uminaire <span className="titleHighlight">D</span>
+          ighting <span className="titleHighlight">D</span>
           ata <span className="titleHighlight">F</span>ormat
         </h1>
         <p className="tagline">
@@ -313,7 +313,7 @@ const Index = () => {
   return (
     <Layout wrapperClassName="homepage">
       <Head>
-        <title>GLDF | Global Luminaire Data Format</title>
+        <title>GLDF | Global Lighting Data Format</title>
       </Head>
       <HeaderHero />
       <Feature1 />
