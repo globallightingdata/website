@@ -9,13 +9,13 @@ module.exports = {
   organizationName: 'globallightingdata',
   projectName: 'website',
   themeConfig: {
-    announcementBar: {
-      id: 'licht2021',
-      content: 'Meet us online @<a target="_blank" rel="noopener noreferrer" href="/blog/2021/03/22/licht-2021">LICHT2021</a>',
-      backgroundColor: '#fafbfc',
-      textColor: '#091E42',
-      isCloseable: true,
-    },
+    // announcementBar: {
+    //   id: 'licht2021',
+    //   content: 'Meet us online @<a target="_blank" rel="noopener noreferrer" href="/blog/2021/03/22/licht-2021">LICHT2021</a>',
+    //   backgroundColor: '#fafbfc',
+    //   textColor: '#091E42',
+    //   isCloseable: true,
+    // },
     prism: {
       defaultLanguage: 'xml',
       additionalLanguages: ['csharp'],
