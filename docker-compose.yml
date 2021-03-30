@@ -10,9 +10,11 @@ services:
       - caddy-data:/data
   watchtower:
     image: containrrr/watchtower:latest
+    command: gldf_website_1
     restart: always
     environment:
-      - WATCHTOWER_POLL_INTERVAL=300
+     - WATCHTOWER_POLL_INTERVAL=300
+     - WATCHTOWER_CLEANUP=true
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock      
 
