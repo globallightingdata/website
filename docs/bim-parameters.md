@@ -1,7 +1,7 @@
 ---
 title: BIM parameters 
 sidebar_label: BIM parameters
-slug: /
+slug: BIM parameters
 ---
 
 Here you can download a complete list of the recommended BIM parameters 
