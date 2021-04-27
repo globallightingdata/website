@@ -1,6 +1,6 @@
 module.exports = {
   sidebar: {
-    Overview: ['intro'],
+    Overview: ['intro', 'bim-parameters'],
     // 'Getting started': [
     //   'getting-started/concept',
     //   {
