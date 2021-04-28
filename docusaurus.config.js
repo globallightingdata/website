@@ -155,14 +155,10 @@ module.exports = {
       '@docusaurus/preset-classic',
       {
         docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
-          editUrl:
-            'https://github.com/globallightingdata/website/edit/develop/',
+          sidebarPath: require.resolve('./sidebars.js')
         },
         blog: {
-          showReadingTime: true,
-          editUrl:
-            'https://github.com/globallightingdata/website/edit/develop/',
+          showReadingTime: true
         },
         theme: {
           customCss: [
