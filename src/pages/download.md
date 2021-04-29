@@ -7,9 +7,9 @@ hide_table_of_contents: false
 
 ---
 
-### GLDF XSD  
+### GLDF XSD
 
-The current XML Schema file can always be downloaded from our *Github Release* page here:  
+The current XML Schema file can be downloaded from our _Github Release_ page here:
 
 - <https://github.com/globallightingdata/gldf/releases>
 
@@ -23,11 +23,11 @@ The current XML Schema file can always be downloaded from our *Github Release* p
 
 ### Licht 2021 (lighting fair)
 
-Our presentations and papers for the *Licht 2021*
+Our presentations and papers for the _Licht 2021_
 
 - Friedrich Bremecker
   - [Standardized data format for lighting design - structure and features #1](https://github.com/globallightingdata/files/blob/master/2021_licht_lightfair/licht2021_paper_friedrich_bremecker_en.pdf)
-  - [Standardized data format for lighting design - structure and features #2](globallightingdata/files/blob/master/2021_licht_lightfair/licht2021_webinar_friedrich_bremecker.pdf)
+  - [Standardized data format for lighting design - structure and features #2](https://github.com/globallightingdata/files/blob/master/2021_licht_lightfair/licht2021_webinar_friedrich_bremecker.pdf)
   - [Einheitliches Datenformat für die Lichtplanung - Struktur und Merkmale](https://github.com/globallightingdata/files/blob/master/2021_licht_lightfair/licht2021_paper_friedrich_bremecker_de.pdf)
 - Robert Heinze
   - [GLDF (Global Lighting Data Format)](https://github.com/globallightingdata/files/blob/master/2021_licht_lightfair/licht2021_paper_robert_heinze.pdf)
