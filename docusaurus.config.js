@@ -1,3 +1,4 @@
+/** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
   title: 'GLDF',
   tagline: 'Global Lighting Data Format',
