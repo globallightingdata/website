@@ -1,0 +1,1 @@
+(self.webpackChunkgldf=self.webpackChunkgldf||[]).push([[462],{6353:function(e){"use strict";e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"Licht 2021","permalink":"/blog/2021/03/22/licht-2021"},{"title":"Roadmap","permalink":"/blog/2021/03/13/roadmap"},{"title":"Welcome","permalink":"/blog/2021/03/12/welcome"}]}')}}]);
