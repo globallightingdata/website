@@ -163,15 +163,14 @@ module.exports = {
         },
         theme: {
           customCss: [
-            require.resolve('./src/css/custom.scss'),
-            require.resolve('./src/css/index.scss'),
-            require.resolve('./src/css/imprint.scss'),
+            require.resolve('./src/css/custom.css'),
+            require.resolve('./src/css/index.css'),
+            require.resolve('./src/css/imprint.css'),
           ],
         },
       },
     ],
   ],
-  plugins: ['docusaurus-plugin-sass'],
   // scripts: [
   //   {
   //     src: 'https://s.imgur.com/min/embed.js',
