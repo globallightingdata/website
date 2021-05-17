@@ -24,36 +24,8 @@
   font-size: smaller;
 }
 
-html[data-theme="dark"] {
-  .markdown {
-    a {
-      color: var(--link-color-dark);
-      background-color: var(--link-background-dark);
-
-      &:hover {
-        background-color: transparent;
-      }
-    }
-  }
-}
-
-html[data-theme="light"] {
-  .markdown {
-    a {
-      background-color: var(--link-background-light);
-      color: var(--ifm-color-primary-dark);
-
-      &:hover {
-        background-color: transparent;
-      }
-    }
-  }
-}
-
-.table-of-contents {
-  .table-of-contents__link--active {
-    margin-left: -16px;
-    padding-left: 12px;
-    border-left: 4px solid var(--ifm-color-primary);
-  }
+.table-of-contents .table-of-contents__link--active {
+  margin-left: -16px;
+  padding-left: 12px;
+  border-left: 4px solid var(--ifm-color-primary);
 }

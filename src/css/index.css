@@ -81,11 +81,11 @@
   border-radius: 5px;
   color: white;
   background-color: rgba(134, 134, 134, 0.281);
+}
 
-  &:hover {
-    color: black;
-    background-color: var(--ifm-color-primary-lighter);
-  }
+.ActionButton:hover {
+  color: black;
+  background-color: var(--ifm-color-primary-lighter);
 }
 
 @media only screen and (max-width: 480px) {
@@ -315,13 +315,13 @@
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+}
 
-  .firstP img {
-    float: left;
-    width: 56px;
-    height: 56px;
-    margin-right: 20px;
-  }
+.Community .content .firstP img {
+  float: left;
+  width: 56px;
+  height: 56px;
+  margin-right: 20px;
 }
 
 @media only screen and (max-width: 480px) {

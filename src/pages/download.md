@@ -11,7 +11,7 @@ hide_table_of_contents: false
 
 The current XML Schema file can be downloaded from our _Github Release_ page here:
 
-- <https://github.com/globallightingdata/gldf/releases>
+- [Github.com GLDF Releases](https://github.com/globallightingdata/gldf/releases)
 
 ---
 
