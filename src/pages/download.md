@@ -7,11 +7,12 @@ hide_table_of_contents: false
 
 ---
 
-### GLDF XSD
+### GLDF/L3D XSD
 
-The current XML Schema file can be downloaded from our _Github Release_ page here:
+The current XML Schema files can be downloaded from our _Github Release_ page here:
 
 - [Github.com GLDF Releases](https://github.com/globallightingdata/gldf/releases)
+- [Github.com L3D Releases](https://github.com/globallightingdata/l3d/releases)
 
 ---
 
