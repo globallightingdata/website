@@ -16,6 +16,14 @@ The current XML Schema files can be downloaded from our _Github Release_ page he
 
 ---
 
+### GLDF/L3D Examples
+
+Real-world GLDF and L3D luminaire examples can be downloaded here:
+
+- [Github.com GLDF & L3D example files](https://github.com/globallightingdata/examples)
+
+---
+
 ### BIM - Building Information Modeling
 
 - [Excel Sheet with recommended BIM parameters](https://github.com/globallightingdata/files/raw/master/bim/bim_properties.xlsx)
