@@ -9,7 +9,7 @@ hide_table_of_contents: false
 
 ### GLDF/L3D XSD
 
-The current XML Schema files can be downloaded from our _Github Release_ page here:
+The current XML Schema files can be downloaded from our _Github Release pages_ here:
 
 - [Github.com GLDF Releases](https://github.com/globallightingdata/gldf/releases)
 - [Github.com L3D Releases](https://github.com/globallightingdata/l3d/releases)
@@ -20,7 +20,8 @@ The current XML Schema files can be downloaded from our _Github Release_ page he
 
 Real-world GLDF and L3D luminaire examples can be downloaded here:
 
-- [Github.com GLDF & L3D example files](https://github.com/globallightingdata/examples)
+- [Github.com GLDF examples](https://github.com/globallightingdata/examples)
+- [Github.com L3D examples](https://github.com/globallightingdata/l3d/tree/master/examples)
 
 ---
 
