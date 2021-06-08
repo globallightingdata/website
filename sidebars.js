@@ -1,20 +1,18 @@
 module.exports = {
   sidebar: {
-    Overview: ['intro', 'bim-parameters'],
+    Overview: ['overview/intro', 'overview/container-spec'],
+    Geometry: ['geometry/l3d-intro', 'geometry/l3d-container-spec', 'geometry/l3d-xml-reference', 'geometry/l3d-examples'],
+    'Papers & Presentations': ['papers/bim-parameters', 'papers/licht-2021'],
+
+    // Sidebar nesting example
     // 'Getting started': [
     //   'getting-started/concept',
     //   {
     //     ChildCategory: [
-    //       'getting-started/childCategory/download',
     //       'getting-started/childCategory/doc1',
     //       'getting-started/childCategory/doc2',
-    //       'getting-started/childCategory/doc3',
     //     ],
     //   },
     // ],
-    // Advanced: ['advanced/hierarchy'],
-    // '3D Geometry': ['geometry/parametrical', 'geometry/l3d'],
-    // Sensors: ['sensors/definition'],
-    // Examples: ['examples/simple-luminaire', 'examples/complex-luminaire', 'examples/sensor-luminaire'],
   },
 };
