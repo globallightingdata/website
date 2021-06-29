@@ -11,8 +11,21 @@ hide_table_of_contents: false
 
 The current XML Schema files can be downloaded from our _Github Release pages_ here:
 
-- [Github.com GLDF Releases](https://github.com/globallightingdata/gldf/releases)
-- [Github.com L3D Releases](https://github.com/globallightingdata/l3d/releases)
+- GLDF: [Github Releases](https://github.com/globallightingdata/gldf/releases)
+- L3D: [Github Releases](https://github.com/globallightingdata/l3d/releases)
+
+or referenced directly from gldf.io:
+
+- GLDF v0.9-beta.5: [gldf.io/xsd/gldf/0.9-beta.5/gldf.xsd](https://gldf.io/xsd/gldf/0.9-beta.5/gldf.xsd)
+- L3D v0.2: [gldf.io/xsd/l3d/0.2/l3d.xsd](https://gldf.io/xsd/l3d/0.2/l3d.xsd)
+
+Older versions
+
+- GLDF: [v0.9-beta.4](https://gldf.io/xsd/gldf/0.9-beta.4/gldf.xsd)
+- GLDF: [v0.9-beta.3](https://gldf.io/xsd/gldf/0.9-beta.3/gldf.xsd)
+- GLDF: [v0.9-beta.2](https://gldf.io/xsd/gldf/0.9-beta.2/gldf.xsd)
+- GLDF: [v0.9-beta.1](https://gldf.io/xsd/gldf/0.9-beta.1/gldf.xsd)
+- L3D: [v0.1](https://gldf.io/xsd/l3d/0.1/l3d.xsd)
 
 ---
 
