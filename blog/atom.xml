@@ -13,6 +13,10 @@
         <link href="https://gldf.io/blog/2021/03/22/licht-2021"/>
         <updated>2021-03-22T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Vom 21. bis zum 24. März 2021 trifft sich die Lichtwelt zum 24. europäischen Lichtkongress LICHT2021]]></summary>
+        <author>
+            <name>Friedrich</name>
+            <uri>https://www.licht2021.de/referenten/279</uri>
+        </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Roadmap]]></title>
@@ -20,6 +24,10 @@
         <link href="https://gldf.io/blog/2021/03/13/roadmap"/>
         <updated>2021-03-13T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[GLDF Roadmap 2021]]></summary>
+        <author>
+            <name>Thorsten</name>
+            <uri>https://github.com/tkock-dx</uri>
+        </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Welcome]]></title>
@@ -27,5 +35,9 @@
         <link href="https://gldf.io/blog/2021/03/12/welcome"/>
         <updated>2021-03-12T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[GLDF - new unified lighting data format for luminaires and sensors]]></summary>
+        <author>
+            <name>Robert</name>
+            <uri>https://github.com/robertrelux</uri>
+        </author>
     </entry>
 </feed>
