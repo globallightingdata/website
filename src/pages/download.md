@@ -16,11 +16,12 @@ The current XML Schema files can be downloaded from our _Github Release pages_ h
 
 or referenced directly from gldf.io:
 
-- GLDF v0.9-beta.5: [gldf.io/xsd/gldf/0.9-beta.5/gldf.xsd](https://gldf.io/xsd/gldf/0.9-beta.5/gldf.xsd)
-- L3D v0.2: [gldf.io/xsd/l3d/0.2/l3d.xsd](https://gldf.io/xsd/l3d/0.2/l3d.xsd)
+- GLDF: [gldf.io/xsd/gldf/0.9-beta.6/gldf.xsd](https://gldf.io/xsd/gldf/0.9-beta.6/gldf.xsd)
+- L3D: [gldf.io/xsd/l3d/0.2/l3d.xsd](https://gldf.io/xsd/l3d/0.2/l3d.xsd)
 
 Older versions
 
+- GLDF: [v0.9-beta.5](https://gldf.io/xsd/gldf/0.9-beta.5/gldf.xsd)
 - GLDF: [v0.9-beta.4](https://gldf.io/xsd/gldf/0.9-beta.4/gldf.xsd)
 - GLDF: [v0.9-beta.3](https://gldf.io/xsd/gldf/0.9-beta.3/gldf.xsd)
 - GLDF: [v0.9-beta.2](https://gldf.io/xsd/gldf/0.9-beta.2/gldf.xsd)

@@ -1,5 +1,5 @@
 ### BUILD ###
-FROM node:15-stretch AS build
+FROM node:16-stretch AS build
 
 WORKDIR /build
 COPY . /
