@@ -4,10 +4,10 @@ FROM node:16-stretch AS build
 WORKDIR /build
 COPY . /
 
-RUN yarn install && yarn build
+RUN npm install && npm run build
 
 ### RELEASE ###
-FROM caddy:latest
+FROM caddy:2.4.6-alpine
 
 COPY Caddyfile /etc/caddy/Caddyfile
 COPY --from=build /build /srv
