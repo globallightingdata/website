@@ -1,5 +1,6 @@
 ---
 title: L3D Examples
+sidebar_label: Examples
 ---
 
 The source of all examples can be downloaded from the [L3D Github Repository](https://github.com/globallightingdata/l3d/tree/master/examples)
