@@ -4,11 +4,11 @@ sidebar_label: Types
 ---
 
 
-[Ceiling Recessed Round](/types/l3d-type-a/)
+[Ceiling Recessed Round](./types/l3d-type-a.md/)
 
-[Wall Recessed Round](/types/l3d-type-a/)
+[Wall Recessed Round](./types/l3d-type-b/)
 
-[Floor Recessed Round](/types/l3d-type-a/)
+[Floor Recessed Round](./types/l3d-type-c/)
 
 
 ---
