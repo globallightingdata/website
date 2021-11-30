@@ -1,6 +1,6 @@
 ---
-title: Parametric Geometry Types
-sidebar_label: Types
+title: Round Recessed Types
+sidebar_label: Round Recessed
 ---
 
 # Round Recessed Luminaires (Type A)
