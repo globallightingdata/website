@@ -3,7 +3,9 @@ title: Parametric Geometry Types
 sidebar_label: Types
 ---
 
-## Recessed Luminaires (Type A)
+## Round Recessed Luminaires (Type A)
+
+Round recessed luminaires
 
 [Ceiling Recessed Round](./types/l3d-type-a.md/)
 
@@ -11,7 +13,9 @@ sidebar_label: Types
 
 [Floor Recessed Round](./types/l3d-type-a.md/)
 
-## Recessed Luminaires (Type B)
+## Cubic Recessed Luminaires (Type B)
+
+Cubic Recessed Luminaires
 
 [Ceiling Recessed Cuboid](./types/l3d-type-b.md/)
 

@@ -50,6 +50,11 @@ module.exports = {
         "Parametric Geometry": [
           "geometry/parametric-features",
           "geometry/parametric-types",
+          {
+            Types: [
+              "geometry/types"
+            ],
+          },
           "geometry/parametric-how-to",
         ],
         "L3D Geometry": [
