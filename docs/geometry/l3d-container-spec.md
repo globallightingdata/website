@@ -1,6 +1,5 @@
 ---
 title: L3D Container Specification
-sidebar_label: Container Specification
 ---
 
 ## General

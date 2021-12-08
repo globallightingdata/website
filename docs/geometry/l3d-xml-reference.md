@@ -1,6 +1,5 @@
 ---
 title: L3D XML Reference
-sidebar_label: XML Reference
 ---
 
 ## XML-Elements
