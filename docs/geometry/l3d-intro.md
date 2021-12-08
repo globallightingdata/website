@@ -1,6 +1,9 @@
 ---
 title: L3D Introduction
+sidebar_label: Introduction
 ---
+
+## Purpose
 
 **L**uminaire **3D** (XML Format)
 
