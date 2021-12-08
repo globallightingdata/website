@@ -1,5 +1,5 @@
 ---
-title: GLDF Introduction
+title: Introduction
 sidebar_label: Introduction
 slug: /
 ---
