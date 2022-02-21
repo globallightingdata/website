@@ -9,34 +9,36 @@
     <icon>https://gldf.io/img/favicon.ico</icon>
     <entry>
         <title type="html"><![CDATA[Licht 2021]]></title>
-        <id>Licht 2021</id>
+        <id>/2021/03/22/licht-2021</id>
         <link href="https://gldf.io/blog/2021/03/22/licht-2021"/>
         <updated>2021-03-22T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Vom 21. bis zum 24. März 2021 trifft sich die Lichtwelt zum 24. europäischen Lichtkongress LICHT2021]]></summary>
-        <content type="html"><![CDATA[<p><a href="https://www.licht2021.de/panel-session/04-lichtplanung-bim-und-lichtberechnungsprogramme"><img src="https://i.imgur.com/i9GM4Sn.jpg" alt="Licht 2021"/></a>
-<a href="https://www.licht2021.de/panel-session/04-lichtplanung-bim-und-lichtberechnungsprogramme">Panel Session 04: Lichtplanung - BIM und Lichtberechnungsprogramme</a></p><h3>Session topics</h3><ul><li><a href="https://www.licht2021.de/referenten/322">Klaus Heiß</a><ul><li>Lighting design in BIM</li></ul></li><li><a href="https://www.licht2021.de/referenten/279">Friedrich Wilhelm Bremecker</a><ul><li>Uniform, comprehensive data format for the lighting design - structure and features</li></ul></li><li><a href="https://www.licht2021.de/referenten/265">Robert Heinze</a><ul><li>Uniform, comprehensive data format for the lighting design – geometry and application</li></ul></li><li><a href="https://www.licht2021.de/referenten/361">David Geisler-Moroder</a><ul><li>Integral planning of holistic solutions for daylight, artificial light and lighting control</li></ul></li></ul><hr/><p>You can download our presentations here (pdf):</p><ul><li><a href="https://b2b.dial.de/index.php/s/Zqf6anpfgYtiHLG">Einheitliches Datenformat für die Lichtplanung – Struktur und Merkmale #1</a></li><li><a href="https://b2b.dial.de/index.php/s/D6GDvuhEpwe2xE9">Einheitliches Datenformat für die Lichtplanung – Struktur und Merkmale #2</a></li><li><a href="https://b2b.dial.de/index.php/s/TfiBtC6hFgWmYXn">Standardized data format for lighting design – Structure and Features</a></li></ul>]]></content>
+        <content type="html"><![CDATA[<p><a href="https://www.licht2021.de/panel-session/04-lichtplanung-bim-und-lichtberechnungsprogramme" target="_blank" rel="noopener noreferrer"><img src="https://i.imgur.com/i9GM4Sn.jpg" alt="Licht 2021"></a>
+<a href="https://www.licht2021.de/panel-session/04-lichtplanung-bim-und-lichtberechnungsprogramme" target="_blank" rel="noopener noreferrer">Panel Session 04: Lichtplanung - BIM und Lichtberechnungsprogramme</a></p><h3 class="anchor anchorWithStickyNavbar_mojV" id="session-topics">Session topics<a class="hash-link" href="#session-topics" title="Direct link to heading">​</a></h3><ul><li><a href="https://www.licht2021.de/referenten/322" target="_blank" rel="noopener noreferrer">Klaus Heiß</a><ul><li>Lighting design in BIM</li></ul></li><li><a href="https://www.licht2021.de/referenten/279" target="_blank" rel="noopener noreferrer">Friedrich Wilhelm Bremecker</a><ul><li>Uniform, comprehensive data format for the lighting design - structure and features</li></ul></li><li><a href="https://www.licht2021.de/referenten/265" target="_blank" rel="noopener noreferrer">Robert Heinze</a><ul><li>Uniform, comprehensive data format for the lighting design – geometry and application</li></ul></li><li><a href="https://www.licht2021.de/referenten/361" target="_blank" rel="noopener noreferrer">David Geisler-Moroder</a><ul><li>Integral planning of holistic solutions for daylight, artificial light and lighting control</li></ul></li></ul><hr><p>You can download our presentations here (pdf):</p><ul><li><a href="https://b2b.dial.de/index.php/s/Zqf6anpfgYtiHLG" target="_blank" rel="noopener noreferrer">Einheitliches Datenformat für die Lichtplanung – Struktur und Merkmale #1</a></li><li><a href="https://b2b.dial.de/index.php/s/D6GDvuhEpwe2xE9" target="_blank" rel="noopener noreferrer">Einheitliches Datenformat für die Lichtplanung – Struktur und Merkmale #2</a></li><li><a href="https://b2b.dial.de/index.php/s/TfiBtC6hFgWmYXn" target="_blank" rel="noopener noreferrer">Standardized data format for lighting design – Structure and Features</a></li></ul>]]></content>
         <author>
             <name>Friedrich</name>
             <uri>https://www.licht2021.de/referenten/279</uri>
         </author>
+        <category label="licht2021" term="licht2021"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[Roadmap]]></title>
-        <id>Roadmap</id>
+        <id>/2021/03/13/roadmap</id>
         <link href="https://gldf.io/blog/2021/03/13/roadmap"/>
         <updated>2021-03-13T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[GLDF Roadmap 2021]]></summary>
         <content type="html"><![CDATA[<p>GLDF is a true teamwork of DIAL and RELUX. The further software development of libraries,
 tools and the integration in the applications will need many efforts. Here is a preliminary
-road map with time estimations of the next GLDF development steps.</p><p><img src="https://raw.githubusercontent.com/globallightingdata/files/master/blog/GLDF_Roadmap_211216.png" alt="Roadmap"/></p>]]></content>
+road map with time estimations of the next GLDF development steps.</p><p><img src="https://raw.githubusercontent.com/globallightingdata/files/master/blog/GLDF_Roadmap_211216.png" alt="Roadmap"></p>]]></content>
         <author>
             <name>Thorsten</name>
             <uri>https://github.com/tkock-dx</uri>
         </author>
+        <category label="roadmap" term="roadmap"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[Welcome]]></title>
-        <id>Welcome</id>
+        <id>/2021/03/12/welcome</id>
         <link href="https://gldf.io/blog/2021/03/12/welcome"/>
         <updated>2021-03-12T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[GLDF - new unified lighting data format for luminaires and sensors]]></summary>
@@ -46,20 +48,20 @@ Thanks to the joint forces the format is technically robust, modern, and univers
 In the future it may replace other and older existing luminaire data formats, which is a huge
 benefit in creating of data on manufacturer side and a benefit for designers and luminaire data
 users in a reduced handling and an open structure. GLDF includes more capabilities as ROLF and
-ULD format combined.</p><h2>Motivation and History</h2><p>On my last LICHT 2018 proceedings and presentation in Davos, I ended with these words:</p><blockquote><p>“Another potential and interesting application of the common lighting properties would be
+ULD format combined.</p><h2 class="anchor anchorWithStickyNavbar_mojV" id="motivation-and-history">Motivation and History<a class="hash-link" href="#motivation-and-history" title="Direct link to heading">​</a></h2><p>On my last LICHT 2018 proceedings and presentation in Davos, I ended with these words:</p><blockquote><p>“Another potential and interesting application of the common lighting properties would be
 a lighting data format. A new, modern and modular lighting data format could be the result
 of harmonised definitions and intense tests. This new one, could replace all other current
 lighting data formats from simple to complex, cause of the modular structure. And it
 could contain much more information as today‘s exiting ones. But just a true replace could
-save efforts in creation and interpretation of lighting data.”</p></blockquote><p><img src="https://i.imgur.com/zU2c6x1.jpg" alt="Gldf"/></p><p>Today is the day where we can proudly announce a new modern luminaire and
+save efforts in creation and interpretation of lighting data.”</p></blockquote><p><img src="https://i.imgur.com/zU2c6x1.jpg" alt="Gldf"></p><p>Today is the day where we can proudly announce a new modern luminaire and
 sensor data format will be very soon available. RELUX and DIAL have put almost two
 years of work into a modern data format to cover actual use cases for the BIM area.
-This is a big step for the lighting industry with its lighting software applications.</p><h2>GLDF Technical Benefits</h2><p>One advantage is obvious: luminaire manufacture members of RELUX and DIAL only
+This is a big step for the lighting industry with its lighting software applications.</p><h2 class="anchor anchorWithStickyNavbar_mojV" id="gldf-technical-benefits">GLDF Technical Benefits<a class="hash-link" href="#gldf-technical-benefits" title="Direct link to heading">​</a></h2><p>One advantage is obvious: luminaire manufacture members of RELUX and DIAL only
 have to create one format and one geometry. In addition, the format also offers these
 new technical features for everybody, even for non-members of the two software
-houses:</p><ul><li>several variants of a product with its own GTIN</li><li>definition of lamps in absolute (LED) or relative (conventional) state</li><li>embedding of pictures, geometries, documents etc. as a file or link by using a link:<br/>dynamic assets form a central server are possible</li><li>geometry from eulumdat, parametric objects or as a 3D model; multiple LOD</li><li>light emission surfaces, rotating elements, suspension points and electrical connection can be defined</li><li>luminaires with multiple light emitters and/or sensors</li><li>emergency lighting LDCs or Emergency Ballast Lumen Factor</li><li>constant light output CLO and international maintenance factors</li><li>spectrum and dimming curves</li><li>checksum for pure data validation or detection of manipulating</li><li>optional use of all ~350 CEN/TS 17623 - ZVEI lighting BIM properties</li><li>use of other BIM, IFC or even custom properties</li></ul><p>GLDF was created by RELUX and DIAL experts with decades of lighting experience for
+houses:</p><ul><li>several variants of a product with its own GTIN</li><li>definition of lamps in absolute (LED) or relative (conventional) state</li><li>embedding of pictures, geometries, documents etc. as a file or link by using a link:<br>dynamic assets form a central server are possible</li><li>geometry from eulumdat, parametric objects or as a 3D model; multiple LOD</li><li>light emission surfaces, rotating elements, suspension points and electrical connection can be defined</li><li>luminaires with multiple light emitters and/or sensors</li><li>emergency lighting LDCs or Emergency Ballast Lumen Factor</li><li>constant light output CLO and international maintenance factors</li><li>spectrum and dimming curves</li><li>checksum for pure data validation or detection of manipulating</li><li>optional use of all ~350 CEN/TS 17623 - ZVEI lighting BIM properties</li><li>use of other BIM, IFC or even custom properties</li></ul><p>GLDF was created by RELUX and DIAL experts with decades of lighting experience for
 all modern BIM use cases. Everything a manufacturer could communicate about his
-product, can be enveloped in GLDF.</p><h2>LDC and Luminaire</h2><p>In the past often just the photometrics of luminaires, the LDC – Light Distribution
+product, can be enveloped in GLDF.</p><h2 class="anchor anchorWithStickyNavbar_mojV" id="ldc-and-luminaire">LDC and Luminaire<a class="hash-link" href="#ldc-and-luminaire" title="Direct link to heading">​</a></h2><p>In the past often just the photometrics of luminaires, the LDC – Light Distribution
 Curve was handled and used in lighting calculation and simulation applications. For a
 pure lighting calculation nothing more is truly needed. But with two or more light outputs
 or some additional photometric information like spectrum or flicker this gets
@@ -73,7 +75,7 @@ formation beyond the simple LDC. But ULD is closer to a binary format and could 
 be created with tools restricted to members. Also, the ROLF is a proprietary format
 and just to be used in RELUX applications and created by RELUX members. Theoreti-
 cally ROLF (RELUX Open Luminaire Format) is an open XML structure and could be
-created and used outside RELUX tooling.</p><p><img src="https://i.imgur.com/w8LqRHd.jpg" alt="Gldf"/></p><h2>GLDF Structure</h2><p>GLDF is technically a (zip) container with the file ending .gldf. In this container a XML
+created and used outside RELUX tooling.</p><p><img src="https://i.imgur.com/w8LqRHd.jpg" alt="Gldf"></p><h2 class="anchor anchorWithStickyNavbar_mojV" id="gldf-structure">GLDF Structure<a class="hash-link" href="#gldf-structure" title="Direct link to heading">​</a></h2><p>GLDF is technically a (zip) container with the file ending .gldf. In this container a XML
 file define the product in a clear structure. Beside the XML the GLDF file contain sev-
 eral file assets like pictures, LDCs, geometry and documents. The core element is the
 XML which describes all product features and variations. The XML contains three ma-
@@ -104,13 +106,13 @@ grow dramatically in complexity. I doubt that this luminaire enhanced IFC would
 validate against the IFC XSD anymore. And there is no benefit in having forced GLDF
 into IFC; no BIM authoring system would understand it and would therefore just
 display parts of it. And it would be much harder to create and to interpret the format.
-Maybe we could check again the IFC relation of GLDF in a couple of years.</p><h2>Geometry Options</h2><p>GLDF has three geometry options</p><ul><li>No geometry. Just the Eulumdat primitive.</li><li>A parametric geometry with simple objects.</li><li>A full 3D model based on the new L3D format.</li></ul><p>Geometry is technically not necessary. The format could be created just with a name
+Maybe we could check again the IFC relation of GLDF in a couple of years.</p><h2 class="anchor anchorWithStickyNavbar_mojV" id="geometry-options">Geometry Options<a class="hash-link" href="#geometry-options" title="Direct link to heading">​</a></h2><p>GLDF has three geometry options</p><ul><li>No geometry. Just the Eulumdat primitive.</li><li>A parametric geometry with simple objects.</li><li>A full 3D model based on the new L3D format.</li></ul><p>Geometry is technically not necessary. The format could be created just with a name
 and a Eulumdat. The box or cylinder of Eulumdat will be taken as basic geometry.
 Of cause, it would make absolute sense to put a real 3D model into the GLDF. There
 will be a new mesh-based 3D model format with the name L3D for this purpose. A
 way in between are the parametric geometry models. Here it is possible to describe
 basic luminaire shapes with alphanumerical values. It is also possible to do both or all
-three options in one file for the benefit of a multi LOD luminaire geometry.</p><h2>Parametric Geometry</h2><p>The idea is simple: a set of basic luminaire geometry shapes could be altered with
+three options in one file for the benefit of a multi LOD luminaire geometry.</p><h2 class="anchor anchorWithStickyNavbar_mojV" id="parametric-geometry">Parametric Geometry<a class="hash-link" href="#parametric-geometry" title="Direct link to heading">​</a></h2><p>The idea is simple: a set of basic luminaire geometry shapes could be altered with
 some parameters to hit the real luminaire shape as good as possible. There is no
 need of 3D modelling, an expert or modelling software. All parameters can be entered
 in a simple table and the 3D shape will be finished. RELUX started with a first set of
@@ -128,7 +130,7 @@ creating tools.</p><p>At the moment this concept is not compatible with the simi
 MC classes has a different approach of a pure 3D object visualisation and could not
 contain LDC or electrical connector positions. But ZVEI, DIAL, RELUX and ETIM working
 on a mapping of both concepts. Ideally it should be compatible or a least simple to
-convert.</p><p><img src="https://i.imgur.com/Y6JdZ0B.jpg" alt="Geometry"/></p><h2>Geometry Format L3D</h2><p>The 3D geometry took a lot of efforts in the GLDF project group and probably also later
+convert.</p><p><img src="https://i.imgur.com/Y6JdZ0B.jpg" alt="Geometry"></p><h2 class="anchor anchorWithStickyNavbar_mojV" id="geometry-format-l3d">Geometry Format L3D<a class="hash-link" href="#geometry-format-l3d" title="Direct link to heading">​</a></h2><p>The 3D geometry took a lot of efforts in the GLDF project group and probably also later
 at manufacturer side. On the other side is a unified geometry a huge cost saving for
 the manufacturers.</p><p>Sadly, it is not possible to take an existing 3D format and just add some properties for
 the lighting usage. For a long time, we focused Collada as open XML basement for our
@@ -150,7 +152,7 @@ public available it should be possible that someone create a nice tool or addon.
 cause, it would be even better if someone made it publicly available too.</p><p>L3D files could be used in GLDF: as file in the container and as file reference in the
 XML. The name of the light emitters, which are defined in the L3D, will be referenced
 in the GLDF. All Light emitter properties like offsets, sizes, rotations, etc. are set in the
-L3D file. We will interpret and visualise L3D via GLDF.</p><p><img src="https://i.imgur.com/K7kL5sX.jpg" alt="GLDF"/></p><h2>How to create GLDF?</h2><p>The best way is the creation of the GLDF right out of the PIM system. It is just an XML
+L3D file. We will interpret and visualise L3D via GLDF.</p><p><img src="https://i.imgur.com/K7kL5sX.jpg" alt="GLDF"></p><h2 class="anchor anchorWithStickyNavbar_mojV" id="how-to-create-gldf">How to create GLDF?<a class="hash-link" href="#how-to-create-gldf" title="Direct link to heading">​</a></h2><p>The best way is the creation of the GLDF right out of the PIM system. It is just an XML
 file where all files and properties are written in. If you were able to create ROLF directly
 out of your systems, then you almost certainly get GLDF created. The container aspect is maybe
 technically new. But this is just a zip event and a renaming of the file
@@ -162,5 +164,6 @@ available. The public could develop free and open tools too.</p>]]></content>
             <name>Robert</name>
             <uri>https://github.com/robertrelux</uri>
         </author>
+        <category label="news" term="news"/>
     </entry>
 </feed>
