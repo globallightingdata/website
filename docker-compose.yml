@@ -9,7 +9,7 @@ services:
     volumes:
       - caddy-data:/data
   watchtower:
-    image: containrrr/watchtower:latest
+    image: containrrr/watchtower:1.4.0
     command: gldf_website_1
     restart: always
     environment:
