@@ -47,11 +47,6 @@ module.exports = {
     "3D Geometry": [
       "geometry/introduction",
       {
-        "Parametric Geometry": [
-          "geometry/parametric-features",
-          "geometry/parametric-types",
-          "geometry/parametric-how-to",
-        ],
         "L3D Geometry": [
           "geometry/l3d-intro",
           "geometry/l3d-features",
