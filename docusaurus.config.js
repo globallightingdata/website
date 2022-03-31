@@ -1,14 +1,14 @@
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-  title: 'GLDF',
-  tagline: 'Global Lighting Data Format',
-  url: 'https://gldf.io',
-  baseUrl: '/',
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
-  organizationName: 'globallightingdata',
-  projectName: 'website',
+  title: "GLDF",
+  tagline: "Global Lighting Data Format",
+  url: "https://gldf.io",
+  baseUrl: "/",
+  onBrokenLinks: "throw",
+  onBrokenMarkdownLinks: "warn",
+  favicon: "img/favicon.ico",
+  organizationName: "globallightingdata",
+  projectName: "website",
   themeConfig: {
     // announcementBar: {
     //   id: 'licht2021',
@@ -18,41 +18,46 @@ module.exports = {
     //   isCloseable: true,
     // },
     prism: {
-      defaultLanguage: 'xml',
-      additionalLanguages: ['csharp'],
+      defaultLanguage: "xml",
+      additionalLanguages: ["csharp"],
       /* Themes: https://github.com/FormidableLabs/prism-react-renderer/tree/master/src/themes */
-      theme: require('prism-react-renderer/themes/palenight'),
-      darkTheme: require('prism-react-renderer/themes/palenight'),
+      theme: require("prism-react-renderer/themes/palenight"),
+      darkTheme: require("prism-react-renderer/themes/palenight"),
     },
     navbar: {
-      title: 'GLDF',
+      title: "GLDF",
       logo: {
-        alt: 'GLDF Logo',
-        src: 'img/logo.png',
-        srcDark: 'img/logo-dark.png',
+        alt: "GLDF Logo",
+        src: "img/logo.png",
+        srcDark: "img/logo-dark.png",
       },
       items: [
         {
-          to: 'blog/',
-          label: 'Blog',
-          position: 'left',
+          to: "blog/",
+          label: "Blog",
+          position: "left",
         },
         {
-          to: 'getting-started/',
-          label: 'Getting Started',
-          position: 'left',
+          to: "getting-started/",
+          label: "Getting Started",
+          position: "left",
         },
         {
-          to: 'docs/',
-          activeBasePath: 'docs',
-          label: 'Docs',
-          position: 'left',
+          to: "docs/",
+          activeBasePath: "docs",
+          label: "Docs",
+          position: "left",
         },
         {
-          href: '/xsd-reference/index_Root.html',
-          label: 'XSD Reference',
-          position: 'left',
-          target: '_blank',
+          href: "/xsd-reference/index_Root.html",
+          label: "XSD Reference",
+          position: "left",
+          target: "_blank",
+        },
+        {
+          to: "tools/",
+          label: "Tools",
+          position: "left",
         },
         // {
         //   type: 'localeDropdown',
@@ -78,9 +83,9 @@ module.exports = {
         //   ],
         // },
         {
-          to: 'download',
-          label: 'Download',
-          position: 'right',
+          to: "download",
+          label: "Download",
+          position: "right",
         },
         // {
         //   href: 'https://github.com/globallightingdata/gldf/releases',
@@ -88,59 +93,59 @@ module.exports = {
         //   position: 'right',
         // },
         {
-          href: 'https://github.com/globallightingdata/gldf',
-          label: 'GitHub',
-          position: 'right',
+          href: "https://github.com/globallightingdata/gldf",
+          label: "GitHub",
+          position: "right",
         },
       ],
     },
     footer: {
-      style: 'dark',
+      style: "dark",
       links: [
         {
-          title: 'DIAL GmbH',
+          title: "DIAL GmbH",
           items: [
             {
-              label: 'Website',
-              href: 'https://www.dial.de',
+              label: "Website",
+              href: "https://www.dial.de",
             },
             {
-              label: 'DIALux',
-              href: 'https://www.dialux.com',
+              label: "DIALux",
+              href: "https://www.dialux.com",
             },
             {
-              label: 'LUMsearch',
-              href: 'https://lumsearch.com',
+              label: "LUMsearch",
+              href: "https://lumsearch.com",
             },
           ],
         },
         {
-          title: 'RELUX Informatik AG',
+          title: "RELUX Informatik AG",
           items: [
             {
-              label: 'Website',
-              href: 'https://relux.com',
+              label: "Website",
+              href: "https://relux.com",
             },
             {
-              label: 'ReluxDesktop',
-              href: 'https://relux.com/en/relux-desktop.html',
+              label: "ReluxDesktop",
+              href: "https://relux.com/en/relux-desktop.html",
             },
             {
-              label: 'ReluxNet',
-              href: 'https://relux.com/en/search/luminaires/',
+              label: "ReluxNet",
+              href: "https://relux.com/en/search/luminaires/",
             },
           ],
         },
         {
-          title: 'Imprint',
+          title: "Imprint",
           items: [
             {
-              label: 'Legal notice',
-              to: 'imprint',
+              label: "Legal notice",
+              to: "imprint",
             },
             {
-              label: 'Data Protection Policy',
-              to: 'privacy-policy',
+              label: "Data Protection Policy",
+              to: "privacy-policy",
             },
           ],
         },
@@ -153,19 +158,19 @@ module.exports = {
   },
   presets: [
     [
-      '@docusaurus/preset-classic',
+      "@docusaurus/preset-classic",
       {
         docs: {
-          sidebarPath: require.resolve('./sidebars.js')
+          sidebarPath: require.resolve("./sidebars.js"),
         },
         blog: {
-          showReadingTime: true
+          showReadingTime: true,
         },
         theme: {
           customCss: [
-            require.resolve('./src/css/custom.css'),
-            require.resolve('./src/css/index.css'),
-            require.resolve('./src/css/imprint.css'),
+            require.resolve("./src/css/custom.css"),
+            require.resolve("./src/css/index.css"),
+            require.resolve("./src/css/imprint.css"),
           ],
         },
       },
