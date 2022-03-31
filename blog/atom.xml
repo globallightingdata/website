@@ -13,7 +13,7 @@
         <link href="https://gldf.io/blog/2021/03/22/licht-2021"/>
         <updated>2021-03-22T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Vom 21. bis zum 24. März 2021 trifft sich die Lichtwelt zum 24. europäischen Lichtkongress LICHT2021]]></summary>
-        <content type="html"><![CDATA[<p><a href="https://www.licht2021.de/panel-session/04-lichtplanung-bim-und-lichtberechnungsprogramme" target="_blank" rel="noopener noreferrer"><img src="https://i.imgur.com/i9GM4Sn.jpg" alt="Licht 2021"></a>
+        <content type="html"><![CDATA[<p><a href="https://www.licht2021.de/panel-session/04-lichtplanung-bim-und-lichtberechnungsprogramme" target="_blank" rel="noopener noreferrer"><img loading="lazy" src="https://i.imgur.com/i9GM4Sn.jpg" alt="Licht 2021" class="img_E7b_"></a>
 <a href="https://www.licht2021.de/panel-session/04-lichtplanung-bim-und-lichtberechnungsprogramme" target="_blank" rel="noopener noreferrer">Panel Session 04: Lichtplanung - BIM und Lichtberechnungsprogramme</a></p><h3 class="anchor anchorWithStickyNavbar_mojV" id="session-topics">Session topics<a class="hash-link" href="#session-topics" title="Direct link to heading">​</a></h3><ul><li><a href="https://www.licht2021.de/referenten/322" target="_blank" rel="noopener noreferrer">Klaus Heiß</a><ul><li>Lighting design in BIM</li></ul></li><li><a href="https://www.licht2021.de/referenten/279" target="_blank" rel="noopener noreferrer">Friedrich Wilhelm Bremecker</a><ul><li>Uniform, comprehensive data format for the lighting design - structure and features</li></ul></li><li><a href="https://www.licht2021.de/referenten/265" target="_blank" rel="noopener noreferrer">Robert Heinze</a><ul><li>Uniform, comprehensive data format for the lighting design – geometry and application</li></ul></li><li><a href="https://www.licht2021.de/referenten/361" target="_blank" rel="noopener noreferrer">David Geisler-Moroder</a><ul><li>Integral planning of holistic solutions for daylight, artificial light and lighting control</li></ul></li></ul><hr><p>You can download our presentations here (pdf):</p><ul><li><a href="https://b2b.dial.de/index.php/s/Zqf6anpfgYtiHLG" target="_blank" rel="noopener noreferrer">Einheitliches Datenformat für die Lichtplanung – Struktur und Merkmale #1</a></li><li><a href="https://b2b.dial.de/index.php/s/D6GDvuhEpwe2xE9" target="_blank" rel="noopener noreferrer">Einheitliches Datenformat für die Lichtplanung – Struktur und Merkmale #2</a></li><li><a href="https://b2b.dial.de/index.php/s/TfiBtC6hFgWmYXn" target="_blank" rel="noopener noreferrer">Standardized data format for lighting design – Structure and Features</a></li></ul>]]></content>
         <author>
             <name>Friedrich</name>
@@ -29,7 +29,7 @@
         <summary type="html"><![CDATA[GLDF Roadmap 2021]]></summary>
         <content type="html"><![CDATA[<p>GLDF is a true teamwork of DIAL and RELUX. The further software development of libraries,
 tools and the integration in the applications will need many efforts. Here is a preliminary
-road map with time estimations of the next GLDF development steps.</p><p><img src="https://raw.githubusercontent.com/globallightingdata/files/master/blog/GLDF_Roadmap_211216.png" alt="Roadmap"></p>]]></content>
+road map with time estimations of the next GLDF development steps.</p><p><img loading="lazy" src="https://raw.githubusercontent.com/globallightingdata/files/master/blog/GLDF_Roadmap_211216.png" alt="Roadmap" class="img_E7b_"></p>]]></content>
         <author>
             <name>Thorsten</name>
             <uri>https://github.com/tkock-dx</uri>
@@ -53,7 +53,7 @@ a lighting data format. A new, modern and modular lighting data format could be 
 of harmonised definitions and intense tests. This new one, could replace all other current
 lighting data formats from simple to complex, cause of the modular structure. And it
 could contain much more information as today‘s exiting ones. But just a true replace could
-save efforts in creation and interpretation of lighting data.”</p></blockquote><p><img src="https://i.imgur.com/zU2c6x1.jpg" alt="Gldf"></p><p>Today is the day where we can proudly announce a new modern luminaire and
+save efforts in creation and interpretation of lighting data.”</p></blockquote><p><img loading="lazy" src="https://i.imgur.com/zU2c6x1.jpg" alt="Gldf" class="img_E7b_"></p><p>Today is the day where we can proudly announce a new modern luminaire and
 sensor data format will be very soon available. RELUX and DIAL have put almost two
 years of work into a modern data format to cover actual use cases for the BIM area.
 This is a big step for the lighting industry with its lighting software applications.</p><h2 class="anchor anchorWithStickyNavbar_mojV" id="gldf-technical-benefits">GLDF Technical Benefits<a class="hash-link" href="#gldf-technical-benefits" title="Direct link to heading">​</a></h2><p>One advantage is obvious: luminaire manufacture members of RELUX and DIAL only
@@ -75,7 +75,7 @@ formation beyond the simple LDC. But ULD is closer to a binary format and could 
 be created with tools restricted to members. Also, the ROLF is a proprietary format
 and just to be used in RELUX applications and created by RELUX members. Theoreti-
 cally ROLF (RELUX Open Luminaire Format) is an open XML structure and could be
-created and used outside RELUX tooling.</p><p><img src="https://i.imgur.com/w8LqRHd.jpg" alt="Gldf"></p><h2 class="anchor anchorWithStickyNavbar_mojV" id="gldf-structure">GLDF Structure<a class="hash-link" href="#gldf-structure" title="Direct link to heading">​</a></h2><p>GLDF is technically a (zip) container with the file ending .gldf. In this container a XML
+created and used outside RELUX tooling.</p><p><img loading="lazy" src="https://i.imgur.com/w8LqRHd.jpg" alt="Gldf" class="img_E7b_"></p><h2 class="anchor anchorWithStickyNavbar_mojV" id="gldf-structure">GLDF Structure<a class="hash-link" href="#gldf-structure" title="Direct link to heading">​</a></h2><p>GLDF is technically a (zip) container with the file ending .gldf. In this container a XML
 file define the product in a clear structure. Beside the XML the GLDF file contain sev-
 eral file assets like pictures, LDCs, geometry and documents. The core element is the
 XML which describes all product features and variations. The XML contains three ma-
@@ -130,7 +130,7 @@ creating tools.</p><p>At the moment this concept is not compatible with the simi
 MC classes has a different approach of a pure 3D object visualisation and could not
 contain LDC or electrical connector positions. But ZVEI, DIAL, RELUX and ETIM working
 on a mapping of both concepts. Ideally it should be compatible or a least simple to
-convert.</p><p><img src="https://i.imgur.com/Y6JdZ0B.jpg" alt="Geometry"></p><h2 class="anchor anchorWithStickyNavbar_mojV" id="geometry-format-l3d">Geometry Format L3D<a class="hash-link" href="#geometry-format-l3d" title="Direct link to heading">​</a></h2><p>The 3D geometry took a lot of efforts in the GLDF project group and probably also later
+convert.</p><p><img loading="lazy" src="https://i.imgur.com/Y6JdZ0B.jpg" alt="Geometry" class="img_E7b_"></p><h2 class="anchor anchorWithStickyNavbar_mojV" id="geometry-format-l3d">Geometry Format L3D<a class="hash-link" href="#geometry-format-l3d" title="Direct link to heading">​</a></h2><p>The 3D geometry took a lot of efforts in the GLDF project group and probably also later
 at manufacturer side. On the other side is a unified geometry a huge cost saving for
 the manufacturers.</p><p>Sadly, it is not possible to take an existing 3D format and just add some properties for
 the lighting usage. For a long time, we focused Collada as open XML basement for our
@@ -152,7 +152,7 @@ public available it should be possible that someone create a nice tool or addon.
 cause, it would be even better if someone made it publicly available too.</p><p>L3D files could be used in GLDF: as file in the container and as file reference in the
 XML. The name of the light emitters, which are defined in the L3D, will be referenced
 in the GLDF. All Light emitter properties like offsets, sizes, rotations, etc. are set in the
-L3D file. We will interpret and visualise L3D via GLDF.</p><p><img src="https://i.imgur.com/K7kL5sX.jpg" alt="GLDF"></p><h2 class="anchor anchorWithStickyNavbar_mojV" id="how-to-create-gldf">How to create GLDF?<a class="hash-link" href="#how-to-create-gldf" title="Direct link to heading">​</a></h2><p>The best way is the creation of the GLDF right out of the PIM system. It is just an XML
+L3D file. We will interpret and visualise L3D via GLDF.</p><p><img loading="lazy" src="https://i.imgur.com/K7kL5sX.jpg" alt="GLDF" class="img_E7b_"></p><h2 class="anchor anchorWithStickyNavbar_mojV" id="how-to-create-gldf">How to create GLDF?<a class="hash-link" href="#how-to-create-gldf" title="Direct link to heading">​</a></h2><p>The best way is the creation of the GLDF right out of the PIM system. It is just an XML
 file where all files and properties are written in. If you were able to create ROLF directly
 out of your systems, then you almost certainly get GLDF created. The container aspect is maybe
 technically new. But this is just a zip event and a renaming of the file
