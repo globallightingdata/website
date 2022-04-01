@@ -10,7 +10,7 @@ With the new Tools “GLDF-Editor” and “L3D-Editor” it is much easier to v
 
 ## GLDF Tooling
 
-GLDF is open souce, published under MIT licence. So everybody can use GLDF and create applications to generate or interpret GLDF. Even as commercial applications. RELUX and DIAL do the first step and provide the first tooling for L3D and GLDF. With this tools it is much easier to view, edit and create L3D and GLDF files as just with standard text editors. The tools are free to use. With this tools we hope that a larger community will start to investigate the possibilities of GLDF. Also professional data format experts could use this tools to get a better access to the new lighting formats.
+GLDF is open source, published under MIT licence. So everybody can use GLDF and create applications to generate or interpret GLDF. Even as commercial applications. RELUX and DIAL do the first step and provide the first tooling for L3D and GLDF. With this tools it is much easier to view, edit and create L3D and GLDF files as just with standard text editors. The tools are free to use. With this tools we hope that a larger community will start to investigate the possibilities of GLDF. Also professional data format experts could use this tools to get a better access to the new lighting formats.
 
 ![Logos](/img/homepage/editor-logos.webp)
 
