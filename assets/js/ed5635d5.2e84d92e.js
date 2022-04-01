@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkgldf=self.webpackChunkgldf||[]).push([[7721],{6043:function(l){l.exports=JSON.parse('{"allTagsPath":"/blog/tags","name":"licht2021","count":1,"permalink":"/blog/tags/licht-2021"}')}}]);

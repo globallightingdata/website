@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkgldf=self.webpackChunkgldf||[]).push([[347],{8065:function(s){s.exports=JSON.parse('{"allTagsPath":"/blog/tags","name":"tools","count":1,"permalink":"/blog/tags/tools"}')}}]);

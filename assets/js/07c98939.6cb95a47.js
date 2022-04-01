@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkgldf=self.webpackChunkgldf||[]).push([[4504],{5016:function(e){e.exports=JSON.parse('{"permalink":"/blog/tags/licht-2021","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);

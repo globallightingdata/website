@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkgldf=self.webpackChunkgldf||[]).push([[2839],{6832:function(a){a.exports=JSON.parse('{"allTagsPath":"/blog/tags","name":"roadmap","count":2,"permalink":"/blog/tags/roadmap"}')}}]);
