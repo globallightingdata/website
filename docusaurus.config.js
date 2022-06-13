@@ -17,6 +17,12 @@ module.exports = {
     //   textColor: '#091E42',
     //   isCloseable: true,
     // },
+    docs: {
+      sidebar: {
+        hideable: true,
+        autoCollapseCategories: true,
+      }
+    },
     prism: {
       defaultLanguage: "xml",
       additionalLanguages: ["csharp"],
