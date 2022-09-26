@@ -15,7 +15,8 @@ First of all, a single `Photometry` element references a [**File**](/docs/struct
 
 ## XSD description
 
-![Photometries in XSD](/img/docs/structure/photometries-xsd.webp)
+<!-- markdownlint-disable-next-line -->
+<img src="/img/docs/structure/photometries-xsd.webp" alt="Photometries in XSD" width="750" />
 
 ## XML example
 
@@ -40,7 +41,7 @@ First of all, a single `Photometry` element references a [**File**](/docs/struct
 The `Photometry` Element above describes a single photometry with only **mandatory** content. It...
 
 - **references** itself the ldc `File` element with `id` *photometryFile* (line 6 + 10)
-- can be **referenced** in subsquent elements via *photometry1* (its `id` attribute, line 9)
+- can be **referenced** in subsequent elements via *photometry1* (its `id` attribute, line 9)
 - provides no optional **metadata** (see below)
 
 Its simply the **definition of a ldc file as a photometry** for further usage in the description of a luminare.

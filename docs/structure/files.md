@@ -34,7 +34,7 @@ A single `File` element contains various **metadata** about a concrete file. Wha
 
 The `File` Element above describes a file with all mandatory attributes. It can...
 
-- be **referenced** in subsquent elements via *productImage1* (`id` attribute)
+- be **referenced** in subsequent elements via *productImage1* (`id` attribute)
 - is an image of the **type** *JPG* (`contentType` attribute)
 - is stored **locally**. **Inside** the GLDF container (`type` attribute, see below for details) and with the **filename** `Luminaire.jpg`
 
