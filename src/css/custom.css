@@ -29,3 +29,7 @@
   padding-left: 12px;
   border-left: 4px solid var(--ifm-color-primary);
 }
+
+.blue-text {
+  color: rgb(1, 162, 232);
+}

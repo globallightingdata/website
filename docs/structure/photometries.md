@@ -56,7 +56,7 @@ Once declared, all photometries can be referenced in subsequent XML elements via
   <Header/>
   <GeneralDefinitions>
     <Files>
-      <File id="photometryFile" contentType="ldc/ies" type="localFileName">photometryFileName.ldt</File>
+      <File id="photometryFile" contentType="ldc/ies" type="localFileName">MyLightSource_50W-E27.ldt</File>
     </Files>
     <Photometries>
       <Photometry id="photometry1">
@@ -66,7 +66,7 @@ Once declared, all photometries can be referenced in subsequent XML elements via
     <LightSources>
       <ChangeableLightSource id="lightSource1">
         <Name>
-          <Locale language="en">My LightSource</Locale>
+          <Locale language="en">My LightSource 50W E27</Locale>
         </Name>
         <RatedInputPower>50</RatedInputPower>
         <RatedLuminousFlux>400</RatedLuminousFlux>
