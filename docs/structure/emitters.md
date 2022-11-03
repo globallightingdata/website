@@ -33,7 +33,7 @@ This does **not** mean that these emitters are **all active at the same time**. 
 <details>
 <summary>Examples</summary>
 
-*Example #1*: Imagine a luminaire with **emergency mode** on one light source. In GLDF you can describe this with **one emitter** which contains **two** `ChangeableLightEmitter` child elements. One for normal mode and e.g. 500 lumen and another `ChangeableLightEmitter` for the same light output, but with emergency mode and 50 lumen. **Both an not active at the same time** but can operate in one mode or another.
+*Example #1*: Imagine a luminaire with **emergency mode** on one light source. In GLDF you can describe this with **one emitter** which contains **two** `ChangeableLightEmitter` child elements. One for normal mode and e.g. 500 lumen and another `ChangeableLightEmitter` for the same light output, but with emergency mode and 50 lumen. **Both are not active at the same time** but can operate in one mode or another.
 
 *Example #2*: Imagine a luminaire measured/sold with two different lamps (and therefore probably different lighting, spectrum and electric characteristics). Again, you can describe this use case with **multiple [Equipments](/docs/structure/equipments.md)** referenced inside **one Emitter**. This way they are meant to be interchangeable, rather than both active at same time on multiple light outputs.
 </details>
