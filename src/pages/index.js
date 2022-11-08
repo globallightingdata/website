@@ -31,6 +31,7 @@ const textContent = {
       <LightSources />
       <ControlGears />
       <Equipments />
+      <Emitters />
       <Geometries />    
     </GeneralDefinitions>
     <ProductDefinitions>
