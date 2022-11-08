@@ -22,7 +22,7 @@ First of all you have to decide which **type of emitter** is required for a your
 - Emitter for a **lamp permanently installed** in the luminaire ➜ choose `FixedLightEmitter`
 - Emitter for a **sensor** ➜ choose `SensorEmitter`
 
-<img src="/img/docs/structure/emitters-xsd.webp" alt="Equipment in XSD" width="460" />
+<img src="/img/docs/structure/emitters-xsd.webp" alt="Emitters in XSD" width="460" />
 
 :::important
 
@@ -33,7 +33,7 @@ This does **not** mean that these emitters are **all active at the same time**. 
 <details>
 <summary>Examples</summary>
 
-*Example #1*: Imagine a luminaire with **emergency mode** on one light source. In GLDF you can describe this with **one emitter** which contains **two** `ChangeableLightEmitter` child elements. One for normal mode and e.g. 500 lumen and another `ChangeableLightEmitter` for the same light output, but with emergency mode and 50 lumen. **Both an not active at the same time** but can operate in one mode or another.
+*Example #1*: Imagine a luminaire with **emergency mode** on one light source. In GLDF you can describe this with **one emitter** which contains **two** `ChangeableLightEmitter` child elements. One for normal mode and e.g. 500 lumen and another `ChangeableLightEmitter` for the same light output, but with emergency mode and 50 lumen. **Both are not active at the same time** but can operate in one mode or another.
 
 *Example #2*: Imagine a luminaire measured/sold with two different lamps (and therefore probably different lighting, spectrum and electric characteristics). Again, you can describe this use case with **multiple [Equipments](/docs/structure/equipments.md)** referenced inside **one Emitter**. This way they are meant to be interchangeable, rather than both active at same time on multiple light outputs.
 </details>
@@ -67,7 +67,7 @@ An Emitter with child element(s) of type `ChangeableLightEmitter` is intended fo
 
 #### XSD description
 
-<img src="/img/docs/structure/emitters-xsd-changeable.webp" alt="Emitter" width="670" />
+<img src="/img/docs/structure/emitters-xsd-changeable.webp" alt="ChangeableLightEmitter" width="670" />
 
 The only **required** element of a `ChangeableLightEmitter` is a `PhotometryReference` to define the **light distribution curve** of this light emitter. Let's expand the example to it in line 16:
 
@@ -298,7 +298,7 @@ Add these additional elements as applicable.
 
 The `SensorEmitter` is the simplest form of an Emitter. And as the name suggests, it is not intended for light sources, but for the definition of radiation-emitting parts in form of a [`Sensor`](/docs/structure/sensors.md):
 
-<img src="/img/docs/structure/emitters-xsd-sensor.webp" alt="Emitter" width="460" />
+<img src="/img/docs/structure/emitters-xsd-sensor.webp" alt="SensorEmitter" width="460" />
 
 The XML example is correspondingly simple:
 
@@ -342,7 +342,7 @@ One element we haven't covered yet is the `Rotation` on each of the Emitter type
   <img src="/img/docs/structure/emitters-rotation-street.webp" alt="Emitter street rotation" width="700" />
 
 - **Wall luminaires** not measured in their **position of usage**
-  <img src="/img/docs/structure/emitters-rotation-wall.webp" alt="Emitter street rotation" width="700" />
+  <img src="/img/docs/structure/emitters-rotation-wall.webp" alt="Emitter wall rotation" width="700" />
 
 ### Rotation XML Example
 
