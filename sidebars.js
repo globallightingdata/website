@@ -49,10 +49,7 @@ module.exports = {
       {
         "L3D Geometry": [
           "geometry/l3d-intro",
-          "geometry/l3d-features",
-          "geometry/l3d-getting-started",
           "geometry/l3d-examples",
-          "geometry/l3d-legacy",
           "geometry/l3d-xml-reference",
           "geometry/l3d-container-spec",
         ],
