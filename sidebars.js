@@ -34,7 +34,7 @@ module.exports = {
         ],
       },
     ],
-    "GLDF Structure": [
+    "GLDF Container": [
       "container/about-container",
       "container/container-specification",
     ],
