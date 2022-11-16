@@ -7,7 +7,7 @@ COPY . /
 RUN npm install && npm run build
 
 ### RELEASE ###
-FROM caddy:2.4.6-alpine
+FROM caddy:2.6.2-alpine
 
 COPY Caddyfile /etc/caddy/Caddyfile
 COPY --from=build /build /srv
