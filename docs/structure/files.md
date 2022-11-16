@@ -77,29 +77,30 @@ This `File` with `id` *lightSourceImage* (line 6) is referenced multiple times i
 Currently, GLDF supports the following file content types. It is specified by the `Files`'s attribute `contentType`
 
 - **Photometry types**
-  - Eulumdat
-  - IES
-  - IES XML (possible but not recommended. Very limited support only)
+  - Eulumdat 🠖 `ldc/eulumdat`
+  - IES 🠖 `ldc/ies`
 - **Image types**
-  - JPG
-  - PNG
-  - SVG
+  - JPG 🠖 `image/jpg`
+  - PNG 🠖 `image/png`
+  - SVG 🠖 `image/svg`
 - **Symbol image types**
-  - SVG
-  - DXF
+  - SVG 🠖 `symbol/svg`
+  - DXF 🠖 `symbol/dxf`
 - **3D Geometry model types**
-  - L3D (recommended)
-  - M3D (DIAL specific only)
-  - R3D (Relux specific only)
+  - L3D 🠖 `geo/l3d` (recommended)
+  - M3D 🠖 `geo/m3d` (DIAL specific only)
+  - R3D 🠖 `geo/r3d` (Relux specific only)
 - **Document types**
-  - PDF
+  - PDF 🠖 `document/pdf`
 - **Spectrum types**
-  - TXT
+  - TXT 🠖 `spectrum/text`
 - **Sensor types**
-  - Sens LDT
-  - Sens XML
+  - Sens LDT 🠖 `sensor/sensldt`
+  - Sens XML 🠖 `sensor/sensxml`
+- **Other files**
+  - All other files 🠖 `other`
 
-There is also the `other` file type you can use for your `Files`. It can be particularly useful to provide **further data types** within [`CustomProperties`](/docs/structure/descriptive-attributes).
+The `other` file type can be particularly useful to provide **further file types** within [`CustomProperties`](/docs/structure/descriptive-attributes).
 
 ## File location
 

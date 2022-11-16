@@ -5,14 +5,22 @@ sidebar_label: Container Specification
 
 ## General
 
-- The container files' underlying format is a standard ZIP archive.
-- The container file extension is .L3D
+- The container files' **underlying format** is a standard [ZIP archive](https://en.wikipedia.org/wiki/ZIP_(file_format))
+- The container file **extension** is `.l3d`
 
-## Root Folder Content
+## Root folder content
 
-- In the root of the container file, the following elements are expected.
-  - **L3D-XML** file, with the file name `structure.xml` (mandatory).
-  - At least one directory with .OBJ file and the corresponding MTL/Texture files if available (mandatory).
+In the root of the container file, the following elements are expected:
+
+Mandatory
+
+- **L3D-XML** file, with the file name `structure.xml`.
+- At least one directory with .OBJ file
+
+Optional
+
+- Corresponding MTL/Texture files if available
+- L3D-XSD Schema file, with the filename l3d.xsd
 
 ## L3D-XML File
 
@@ -25,18 +33,18 @@ sidebar_label: Container Specification
 
 ## **L3D-XSD** Schema
 
-- The official **L3D-XSD** Schema can always be found published at [gldf.io](/xsd/l3d/l3d.xsd) or [Github](https://raw.githubusercontent.com/globallightingdata/l3d/master/xsd/l3d.xsd).
+- The **official** L3D-XSD Schema can always be found published on [gldf.io](/download) or our [Github repository](https://github.com/globallightingdata/l3d)
 
 ## Directories
 
-- Each model has to be placed in a separate directory where the directory name matches the `id` of the [`GeometryFileDefinition`](/docs/geometry/l3d-xml-reference.md#geometryfiledefinition) which uses the model.
-- All material library and texture files have to be placed in the same directory as the corresponding model.
+- Each model has to be placed in a **separate directory** where the directory name **matches** the `id` of the [`GeometryFileDefinition`](/docs/geometry/l3d-xml-reference.md#geometryfiledefinition) which uses the model.
+- All material library and texture files have to be placed in the **same directory** as the **corresponding model**.
 
 ## Model Files
 
 - Supported model files
-  - Version 1 of the L3D-Format only supports Wavefront .obj files, including the material files .mtl
-  - From the material file the diffuse color and diffuse texture data are supported, for now.  
+  - Version 1 of the L3D-Format only supports **Wavefront** .obj files, including the material files .mtl
+  - From the material file the **diffuse color** and **diffuse texture data** are supported, for now.  
 
 :::caution
 The .obj files must not contain more than one object per file.
@@ -47,3 +55,7 @@ The .obj files must not contain more than one object per file.
 - Supported texture formats
   - JPEG
   - PNG
+
+## GLDF Container
+
+The **GLDF** container specification is described [here](/docs/container/container-specification)

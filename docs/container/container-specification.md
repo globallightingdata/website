@@ -19,13 +19,13 @@ Mandatory
 Optional
 
 - **GLDF-XSD** Schema file, with the filename `gldf.xsd`
-- Multiple **directories**
+- Multiple **directories** for assets like photometries, images, geometry files and other
 - `signature` file, without extension. Intended for a **[digital signature](https://en.wikipedia.org/wiki/Digital_signature)** of the content above
 
 ## GLDF-XML file
 
 - Filename
-  - The **filename** of the GLDF-XML inside the root directory must be `product.xml`
+  - The **filename** of the GLDF XML inside the root directory **must** be `product.xml`
 - The **GLDF-XML** file is expected to be **valid as follows**
   - Valid [XML syntax](https://en.wikipedia.org/wiki/XML)
   - Valid against the referenced `gldf.xsd`, see below
@@ -33,10 +33,10 @@ Optional
 
 ## GLDF-XSD Schema
 
-- The **official** GLDF-XSD Schema can always be found published on our [Github repository](https://github.com/globallightingdata/gldf)
+- The **official** GLDF-XSD Schema can always be found published on [gldf.io](/download) or our [Github repository](https://github.com/globallightingdata/gldf)
 - The GLDF-XSD has to be **referenced** by the GLDF-XML file
-- The GLDF-XSD Schema can be referenced either **online** (recommended) or **locally** inside the container
-- Referenced XSDs which **differ** from the official published XSDs may lead to **errors**. Please use only the published XSDs for validation and development
+- The GLDF-XSD Schema can be referenced either **online** or **locally** inside the container
+- Referenced XSDs which **differ** from the officially published XSDs may lead to **errors**. Please use only the published XSDs for validation and development
 
 ## Directories
 
@@ -44,16 +44,16 @@ Optional
 - These directories can contain **assets** like images, photometries, spectrums, 3d models or documents
 - Directory **names**
   - The directory name must reflect the **first part** of the **`contentType`** of the files it contains
-  - For possible contenttypes please refer to our [**XSD reference**](/xsd-reference/index_Files.html)
+  - For possible content types please refer the [`Files` documentation](/docs/structure/files.md#available-content-types)
   - **Examples**
     - The contenttype for JPG images is `image/jpg`. The directory name for this asset must be `image`
     - The contenttype for PNG images is `image/png`. The directory name for this asset must be `image`
     - The contenttype for Eulumdat photometries is `ldc/eulumdat`. The directory name for this asset must be `ldc`
     - The contenttype for IES photometries is `ldc/ies`. The directory name for this asset must be `ldc`
 
-## GLDF Container structure example
+## Container example
 
-For a manufacturer with the name `ManufacturerXY` and a luminaire with the name `Pendulum 50W LED`, the GLDF file content could have the following structure:
+For a manufacturer with the name *ManufacturerXY* and a luminaire with the name *Pendulum 50W LED*, the GLDF file content could have the following structure:
 
 ```bash
     ManufacturerXY-Pendulum-50W-LED.gldf
@@ -73,6 +73,6 @@ For a manufacturer with the name `ManufacturerXY` and a luminaire with the name 
     |   |—— lightsource-spectrum.txt
 ```
 
-## L3D Container specification
+## L3D Container
 
-The [Luminaire 3D](https://github.com/globallightingdata/l3d) container specification is described [here](/docs/geometry/l3d-container-spec)
+The [Luminaire 3D](/docs/geometry/l3d-intro) container specification is described [here](/docs/geometry/l3d-container-spec)
