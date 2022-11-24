@@ -66,6 +66,14 @@ Real-world GLDF and L3D luminaire examples can be downloaded here:
 
 ---
 
+### GLDF Templates
+
+GLDFs presets to get easyliy started
+
+- [Github.com GLDF templates](https://github.com/globallightingdata/templates)
+
+---
+
 ### BIM - Building Information Modeling
 
 - [Excel Sheet with recommended BIM parameters](https://github.com/globallightingdata/files/raw/master/bim/bim_properties.xlsx)
