@@ -2,31 +2,85 @@
 title: Getting started
 hide_table_of_contents: false
 ---
+<!-- markdownlint-disable MD033 (no html im markdown) -->
 
 ## Getting started
 
-Coming soon...
+> *Welcome! We’re excited that you want learn GLDF.*
 
-<!-- 
+**GLDF** is an open and free **luminaire and sensor data format** that can be used across the entire lighting industry. Developed in cooperation by [**DIAL**](https://dial.de) and [**RELUX**](https://relux.com) with the intention to meet the latest **product data** and **BIM process requirements**. As well as to create a new standard to help manufacturers, planners and software developers to interchange product data and work together in a more consistent and efficient way.
 
-- Wie fange ich an?
-- Übersicht der Ressourcen
+:::note
+**This guide contains** suggestions and resources on how to get started with the global lighting data format. And what is our recommended order depending on your prior knowledge and preferred way of learning. What you need to get started, how to stay up-to-date and what could be your next steps.
+:::
 
-### Dokumentation
+---
 
-- Inhalte
+## How to proceed
 
-### Download
+The following sources can of course be viewed in any order. However, if you have little to no experience with the GLDF, we recommend the following chronology:
 
-- Wo finde ich was
+1. **Introduction videos**  
+  Should you have not come into contact with GLDF yet. Or only have a rough idea of what the format is and what it is capable of, we recommend taking a look at our introductory videos on YouTube and/or read some presentations and papers. These are listed in the [**Download / Links**](/download#presentations-and-papers) section and will be gradually extended.
 
-### XSD Referenz
+1. **Documentation**  
+  With this prior knowledge, we recommend reading the [**documentation**](/docs) next. It introduces all aspects of the format. And includes not only GLDF descriptions, specifications and visual explanations. But contains also code examples for people who learn by doing, chapters on tools, libraries, tutorials for using GLDF in DIALux and RELUX, tips & tricks and more.
 
-- Was ist das und wie nutz ich es?
+1. **Examples**  
+  The GLDF example files can be of further help. They represent real GLDFs that can be used for orientation purposes. A separate chapter in the documentation is dedicated to them here: [**Examples**](/docs/getting-started/examples). Or visit the [**Github reposity**](https://github.com/globallightingdata/examples) directly.
 
-### Weitere Quellen
+1. **Templates**  
+  With the knowledge from the documentation and GLDF example files, we recommend creating your own GLDFs for the first time. Our predesigned templates can provide a starting point for this. A separate chapter in the documentation is dedicated to them here: [**Templates**](/docs/getting-started/templates). Or visit the [**Github reposity**](https://github.com/globallightingdata/templates) directly. If you are inexperienced in working with XML, we recommend to read the [**Requirements**](#requirements) chapter beforehand.
 
-- Github
-- Become a partner? 
+1. **Tools**  
+  Not everything has to be written by hand. In the [**Tooling section**](/tools) you can find useful applications for working with GLDF. And in the [**Download**](/download#gldf-parser) area  you will find further libraries that can be used in your own software to read and write GLDF & L3D - again open source. There are also separate chapters on both in the documentation: [**GLDF Parser**](/docs/tools-dev/gldf-net-parser), [**L3D Parser**](/docs/tools-dev/l3d-net-parser), [**L3D Editor**](/docs/tools-dev/l3d-editor) and [**GLDF Editor**](/docs/tools-dev/gldf-editor)
 
--->
+1. **XSD reference**  
+  And lastly, the [**XSD reference**](pathname:///xsd-reference/index_Root.html) is intended for the daily work with GLDF. It describes the complete XML Schema visually. And is useful to look up possible elements and attributes, their required order, data types, enumerations and more easily. How to use the XSD reference is described [**in the documentation**](/docs/getting-started/xsd-reference) as well.
+
+1. **Further resources**
+  Another good source of information are the websites of the two companies behind GLDF: [**dial.de**](https://dial.de) & [**relux.com**](https://relux.com). Have also a look on the repository overview of our Github team to find out new projects in the future: [**globallightingdata**](https://github.com/globallightingdata).
+
+:::tip **Staying Informed**
+The [**GLDF blog**](/blog) is the official source for updates from the GLDF team. Anything important, including releases and changelog notes, roadmaps and more will be posted there first.
+:::
+
+---
+
+## Requirements
+
+To create the very first GLDF XML on your own, **a simple text editor is all you need**. Additionally an **application to create ZIP archives** is required to create the [GLDF container](/docs/container/about-container) afterwards.
+
+However, if you want a little more comfort when writing GLDFs, we recommend an advanced text editor or an IDE right away. Two of the most useful functions when writing XML are
+
+- XML Schema validation
+- Code completion and IntelliSense
+
+If you do not already use a preferred text editor, we suggest one of the following with the above features:
+
+### Notepad++
+
+[Notepadd++ for Windows](https://notepad-plus-plus.org) is a free and lightweight editor, but already offers XML schema validation:
+
+<img src="/img/docs/getting-started/requirements-notepad-plugin.webp" alt="Notepad++ Validate feature" width="750" /><br/><br/>
+
+Provided the GLDF XSD is referenced (1), Notepad++ marks the faulty parts directly (2):
+
+<img src="/img/docs/getting-started/requirements-notepad-validation.webp" alt="Notepad++ validation" width="750" /><br/><br/>
+
+### Visual Studio Code
+
+One step further goes the [Visual Studio Code IDE](https://code.visualstudio.com), which is available for all common operating systems. In addition to XML schema validation (1) like in Notepad++, Visual Studio Code also offers full code completion and IntelliSense (2):
+
+<img src="/img/docs/getting-started/requirements-studio-code-validation.webp" alt="Notepad++ validation" width="650" />
+
+---
+
+## Next steps
+
+If you would like to start with the documentation, you can get to the first chapter here: [**Introduction**](/docs)
+<br/>
+
+:::note Contribute
+You would like to contribute to GLDF? Have a look on the [**Get involved chapter**](/docs/contribute). We would also appreciate to welcome you as a new [**DIALux & Relux member**](/docs/contribute/become-a-partner).
+:::
