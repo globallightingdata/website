@@ -89,9 +89,9 @@ GLDFs presets to get easyliy started
 
 ---
 
-### Licht 2021 (lighting fair)
+### Presentations and Papers
 
-Our presentations and papers for the _Licht 2021_
+Licht 2021 (lighting fair)
 
 - Friedrich Bremecker
   - [Standardized data format for lighting design - structure and features #1](https://github.com/globallightingdata/files/blob/master/2021_licht_lightfair/licht2021_paper_friedrich_bremecker_en.pdf)
