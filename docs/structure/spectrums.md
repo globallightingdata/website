@@ -7,7 +7,7 @@ sidebar_label: Spectrums
 
 `Spectrums` is the fourth child-element of `GeneralDefinitions` - the part in the XML where **global and reusable** elements are defined (imagine them as the building blocks of each luminaire). The definition of spectrums is **optional**.
 
-A spectrum in the GLDF format can be defined in two ways
+A spectrum in the GLDF can be defined in two ways
 
 1. Through a table with an assignment of intensities to wavelengths, inside the GLDF XML iteself
 2. Through a `File` reference containing a well-formed spectrum definition, outside the GLDF XML

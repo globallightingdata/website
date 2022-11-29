@@ -61,8 +61,25 @@ The XSD urls without version should only be referenced with caution, as the cont
 
 Real-world GLDF and L3D luminaire examples can be downloaded here:
 
-- [Github.com GLDF examples](https://github.com/globallightingdata/examples)
-- [Github.com L3D examples](https://github.com/globallightingdata/l3d/tree/master/examples)
+- [Github GLDF examples](https://github.com/globallightingdata/examples)
+- [Github L3D examples](https://github.com/globallightingdata/l3d/tree/master/examples)
+
+---
+
+### GLDF Templates
+
+GLDFs presets to get easyliy started
+
+- [Github GLDF templates](https://github.com/globallightingdata/templates) ([documentation](/docs/getting-started/templates))
+
+---
+
+### GLDF Parser
+
+[.NET](https://dotnet.microsoft.com) libraries to read and write GLDF & L3D XML
+
+- [Github GLDF.NET](https://github.com/globallightingdata/gldf.net) ([documentation](/docs/tools-dev/gldf-net-parser))
+- [Github L3D.NET](https://github.com/globallightingdata/l3d.net) ([documentation](/docs/tools-dev/l3d-net-parser))
 
 ---
 
@@ -72,9 +89,9 @@ Real-world GLDF and L3D luminaire examples can be downloaded here:
 
 ---
 
-### Licht 2021 (lighting fair)
+### Presentations and Papers
 
-Our presentations and papers for the _Licht 2021_
+Licht 2021 (lighting fair)
 
 - Friedrich Bremecker
   - [Standardized data format for lighting design - structure and features #1](https://github.com/globallightingdata/files/blob/master/2021_licht_lightfair/licht2021_paper_friedrich_bremecker_en.pdf)
@@ -88,6 +105,8 @@ Our presentations and papers for the _Licht 2021_
 
 ### YouTube
 
-- [Relux presents GLDF (2022 English)](https://www.youtube.com/watch?v=GKhY2EsILhc)
-- [Relux presents GLDF (2021 English)](https://www.youtube.com/watch?v=0xOOn1yQV1k)
-- [Relux präsentiert das neue Datenformat GLDF (2021 German)](https://www.youtube.com/watch?v=ecbHqjwZCe0)
+- English
+  - [Status of the GLDF 1.0 format (2022)](https://www.youtube.com/watch?v=GKhY2EsILhc)
+  - [Relux presents GLDF (2021)](https://www.youtube.com/watch?v=0xOOn1yQV1k)  
+- German
+  - [Relux präsentiert das neue Datenformat GLDF (2021)](https://www.youtube.com/watch?v=ecbHqjwZCe0)
