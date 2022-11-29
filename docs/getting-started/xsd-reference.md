@@ -15,10 +15,10 @@ In summary the XSD allows...
 - to view the documentation of all elements and attributes
 - to validate a written GLDF XML
 
-The only problem is, that the XSD is **difficult to read**. Therefore, it can also be viewed **visually** on gldf.io - in the XSD Reference section accessible via the navigation menu.
+The only problem is, that the XSD is **difficult to read**. Therefore, it can also be viewed **visually** on gldf.io - in the XSD Reference section accessible via the navigation menu or here:
 
 :::tip
-<https://gldf.io/xsd-reference/index_Root.html>
+[XSD Reference](pathname:///xsd-reference/index_Root.html)
 :::
 
 ## Root Example
@@ -29,7 +29,7 @@ The following is an example of the top XML element 'Root'. According to the GLDF
 - `GeneralDefinitions`
 - `ProductDefinitions`
 
-And exactly this is also shown by the [XSD Reference](/xsd-reference/index_Root.html)
+And exactly this is also shown by the [XSD Reference](pathname:///xsd-reference/index_Root.html)
 
 ![XSD Root](/img/docs/getting-started/xsd-reference_xsd-root.webp)
 
