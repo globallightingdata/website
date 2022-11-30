@@ -76,6 +76,44 @@ One step further goes the [Visual Studio Code IDE](https://code.visualstudio.com
 
 ---
 
+### GLDF XML Example
+
+If you would like to test it out right away, copy and paste this XML of a minimal GLDF and try to validate it:
+
+```xml showLineNumbers
+<?xml version="1.0" encoding="UTF-8"?>
+<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+      xsi:noNamespaceSchemaLocation="https://gldf.io/xsd/gldf/gldf.xsd">
+  <Header>
+    <Manufacturer>GlobalLightingData</Manufacturer>
+    <CreationTimeCode>2022-11-30T09:00:00</CreationTimeCode>
+    <CreatedWithApplication>Visual Studio Code</CreatedWithApplication>
+    <FormatVersion>1.0.0-rc.1</FormatVersion>
+  </Header>
+  <GeneralDefinitions>
+  </GeneralDefinitions>
+  <ProductDefinitions>
+    <ProductMetaData>
+        <ProductNumber>
+            <Locale language="en">42</Locale>
+        </ProductNumber>
+        <Name>
+            <Locale language="en">Example Luminaire</Locale>
+        </Name>
+    </ProductMetaData>
+    <Variants>
+        <Variant id="variant-1">
+            <Name>
+                <Locale language="en">Example Luminaire Variant 1</Locale>
+            </Name>
+        </Variant>
+    </Variants>
+  </ProductDefinitions>
+</Root>
+```
+
+---
+
 ## Next steps
 
 If you would like to start with the documentation, you can get to the first chapter here: [**Introduction**](/docs)
