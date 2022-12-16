@@ -47,6 +47,36 @@ module.exports = {
     "3D Geometry": [
       "geometry/introduction",
       {
+        "Parametric Geometry": [
+          "geometry/parametric-introduction",
+          {
+            "Types":[
+              "geometry/types/parametric-round-recessed",
+              "geometry/types/parametric-cuboid-recessed",
+              "geometry/types/parametric-open-luminaire",
+              "geometry/types/parametric-cuboid",
+              "geometry/types/parametric-sphere",
+              "geometry/types/parametric-parabolic",
+              "geometry/types/parametric-cylinder",
+              "geometry/types/parametric-StandCylinder",
+              "geometry/types/parametric-StandCuboidCentered",
+              "geometry/types/parametric-StandCuboidSide",
+              "geometry/types/parametric-WallCuboid",
+              "geometry/types/parametric-WallCylinder",
+              "geometry/types/parametric-WallTriangular",
+              "geometry/types/parametric-BollardCuboid",
+              "geometry/types/parametric-BollardCylinder",
+              "geometry/types/parametric-BollardSide",
+              "geometry/types/parametric-StreetCylinderCentered",
+              "geometry/types/parametric-StreetCuboidSide",
+              "geometry/types/parametric-StreetCylinderSide",
+              "geometry/types/parametric-SpotCylinder",
+              "geometry/types/parametric-SpotCuboid",
+              "geometry/types/parametric-FloodLightCylinder",
+              "geometry/types/parametric-FloodLightCuboid",
+            ],
+          },
+        ],
         "L3D Geometry": [
           "geometry/l3d-intro",
           "geometry/l3d-examples",
