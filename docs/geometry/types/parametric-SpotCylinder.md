@@ -18,20 +18,22 @@ The distance of the connector of the bracket to the luminaire is the same as the
 | LuminousDiameter | int | value in mm |
 | TotalHeight | int |  value in mm |
 | BaseDiameter | int | value in mm |
+| BaseDiameter | int | value in mm |
 
 ## XSD
      
 	<xs:element name="SpotCylinder">
-	<xs:complexType>
-		<xs:sequence>
-		<xs:element name="Diameter" type="xs:int"/>
-		<xs:element name="Height" type="xs:int"/>
-		<xs:element name="LuminousDiameter" type="xs:int"/>
-		<xs:element name="TotalHeight" type="xs:int"/>
-		<xs:element name="BaseDiameter" type="xs:int" minOccurs="0"/>
-		</xs:sequence>
-	</xs:complexType>
-	</xs:element> 
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Diameter" type="xs:int"/>
+				<xs:element name="Height" type="xs:int"/>
+				<xs:element name="LuminousDiameter" type="xs:int"/>
+				<xs:element name="TotalHeight" type="xs:int"/>
+				<xs:element name="BaseDiameter" type="xs:int" minOccurs="0"/>
+				<xs:element name="BaseHeight" type="xs:int" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
 
 ## XML
 	<P3D>
