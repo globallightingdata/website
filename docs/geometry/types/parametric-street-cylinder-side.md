@@ -1,5 +1,5 @@
 ---
-title: TitStreet Cylinder Side
+title: Street Cylinder Side
 sidebar_label: Street Cylinder Side
 ---
 
