@@ -5,7 +5,7 @@ sidebar_label: Bollard Cuboid
 
 ## Description
 
-![Bollard Quboid](./doc_images/BollardQuboid.PNG) 
+![Bollard Quboid](./doc_images/BollardQuboid.PNG)
 
 Bollard Quboid is a Cube-shaped bollard with a square-shaped luminous surface. The parameter height will set the height of the head, whereas the total height will affect the size of the entire model.
 
