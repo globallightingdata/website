@@ -27,24 +27,24 @@ The luminaire can be mounted on ceilings, walls, or floors.
 ## XSD
 
     <xs:element name="RecessedRound">
-    	<xs:complexType>
-    	    <xs:sequence>
-    			<xs:element name="Diameter" type="xs:int"/>
-    				<xs:element name="Height" type="xs:int"/>
-    				<xs:element name="LuminousDiameter" type="xs:int"/>
-    				<xs:element name="TopDiameter" type="xs:int" minOccurs="0">
-    				<xs:element name="LuminousHeight" type="xs:int" minOccurs="0"/>
-    				<xs:element name="Mounting">
-    					<xs:simpleType>
-    						<xs:restriction base="xs:string">
-    						<xs:enumeration value="Ceiling"/>
-    						<xs:enumeration value="Wall"/>
-    						<xs:enumeration value="Floor"/>
-    					</xs:restriction>
-    				</xs:simpleType>
-    			</xs:element>
-    		</xs:sequence>
-    	</xs:complexType>
+      <xs:complexType>
+          <xs:sequence>
+          <xs:element name="Diameter" type="xs:int"/>
+            <xs:element name="Height" type="xs:int"/>
+            <xs:element name="LuminousDiameter" type="xs:int"/>
+            <xs:element name="TopDiameter" type="xs:int" minOccurs="0">
+            <xs:element name="LuminousHeight" type="xs:int" minOccurs="0"/>
+            <xs:element name="Mounting">
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                <xs:enumeration value="Ceiling"/>
+                <xs:enumeration value="Wall"/>
+                <xs:enumeration value="Floor"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+        </xs:sequence>
+      </xs:complexType>
     </xs:element>
 
 ## XML

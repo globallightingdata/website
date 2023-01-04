@@ -26,23 +26,23 @@ There is an offset aligned to C0.
 
     <xs:element name="StreetCuboidSide">
     <xs:complexType>
-    	<xs:sequence>
-    	<xs:element name="Width" type="xs:int"/>
-    	<xs:element name="Length" type="xs:int"/>
-    	<xs:element name="Height" type="xs:int"/>
-    	<xs:element name="LuminousWidth" type="xs:int" minOccurs="0"/>
-    	<xs:element name="LuminousLength" type="xs:int" minOccurs="0"/>
-    	<xs:element name="LuminousHeight" type="xs:int" minOccurs="0"/>
-    	</xs:sequence>
+      <xs:sequence>
+      <xs:element name="Width" type="xs:int"/>
+      <xs:element name="Length" type="xs:int"/>
+      <xs:element name="Height" type="xs:int"/>
+      <xs:element name="LuminousWidth" type="xs:int" minOccurs="0"/>
+      <xs:element name="LuminousLength" type="xs:int" minOccurs="0"/>
+      <xs:element name="LuminousHeight" type="xs:int" minOccurs="0"/>
+      </xs:sequence>
     </xs:complexType>
     </xs:element>
 
 ## XML
 
     <P3D>
-    	<StreetCuboidSide>
-    		<Width>300</Width>
-    		<Length>190</Length>
-    		<Height>200</Height>
-    	</StreetCuboidSide>
+      <StreetCuboidSide>
+        <Width>300</Width>
+        <Length>190</Length>
+        <Height>200</Height>
+      </StreetCuboidSide>
     </P3D>

@@ -28,26 +28,26 @@ There is only one size for luminous surfaces. Any Value in C0, C90, C180, and C2
 
     <xs:element name="BollardCylinder">
     <xs:complexType>
-    	<xs:sequence>
-    	<xs:element name="Diameter" type="xs:int"/>
-    	<xs:element name="Height" type="xs:int" minOccurs="0"/>
-    	<xs:element name="LuminousHeight" type="xs:int" minOccurs="0"/>
-    	<xs:element name="TotalHeight" type="xs:int" minOccurs="0"/>
-    	<xs:element name="C0" type="xs:int" minOccurs="0"/>
-    	<xs:element name="C90" type="xs:int" minOccurs="0"/>
-    	<xs:element name="C180" type="xs:int" minOccurs="0"/>
-    	<xs:element name="C270" type="xs:int" minOccurs="0"/>
-    	</xs:sequence>
+      <xs:sequence>
+      <xs:element name="Diameter" type="xs:int"/>
+      <xs:element name="Height" type="xs:int" minOccurs="0"/>
+      <xs:element name="LuminousHeight" type="xs:int" minOccurs="0"/>
+      <xs:element name="TotalHeight" type="xs:int" minOccurs="0"/>
+      <xs:element name="C0" type="xs:int" minOccurs="0"/>
+      <xs:element name="C90" type="xs:int" minOccurs="0"/>
+      <xs:element name="C180" type="xs:int" minOccurs="0"/>
+      <xs:element name="C270" type="xs:int" minOccurs="0"/>
+      </xs:sequence>
     </xs:complexType>
     </xs:element>
 
 ## XML
 
     <P3D>
-    	<BollardCylinder>
-    		<Diameter>300</Diameter>
-    		<Height>200</Height>
-    		<LuminousHeight>200</LuminousHeight>
-    		<TotalHeight>1300</TotalHeight>
-    	</BollardCylinder>
+      <BollardCylinder>
+        <Diameter>300</Diameter>
+        <Height>200</Height>
+        <LuminousHeight>200</LuminousHeight>
+        <TotalHeight>1300</TotalHeight>
+      </BollardCylinder>
     </P3D>

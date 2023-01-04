@@ -24,36 +24,36 @@ If the mounting type is a pendulum, the pendulum length will set the default pen
 ## XSD
 
     <xs:element name="Cylinder">
-    	<xs:complexType>
-    		<xs:sequence>
-    			<xs:element name="Diameter" type="xs:int"/>
-    			<xs:element name="Height" type="xs:int"/>
-    			<xs:element name="TopDiameter" type="xs:int" minOccurs="0"/>
-    			<xs:element name="LuminousDiameter" type="xs:int"/>
-    			<xs:element name="LuminousHeight" type="xs:int" minOccurs="0"/>
-    			<xs:element name="Mounting">
-    				<xs:simpleType>
-    					<xs:restriction base="xs:string">
-    						<xs:enumeration value="Ceiling"/>
-    						<xs:enumeration value="Wall"/>
-    						<xs:enumeration value="Floor"/>
-    						<xs:enumeration value="Pendulum"/>
-    					</xs:restriction>
-    				</xs:simpleType>
-    			</xs:element>
-    			<xs:element name="PendulumLength" type="xs:int" minOccurs="0"/>
-    		</xs:sequence>
-    	</xs:complexType>
+      <xs:complexType>
+        <xs:sequence>
+          <xs:element name="Diameter" type="xs:int"/>
+          <xs:element name="Height" type="xs:int"/>
+          <xs:element name="TopDiameter" type="xs:int" minOccurs="0"/>
+          <xs:element name="LuminousDiameter" type="xs:int"/>
+          <xs:element name="LuminousHeight" type="xs:int" minOccurs="0"/>
+          <xs:element name="Mounting">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:enumeration value="Ceiling"/>
+                <xs:enumeration value="Wall"/>
+                <xs:enumeration value="Floor"/>
+                <xs:enumeration value="Pendulum"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="PendulumLength" type="xs:int" minOccurs="0"/>
+        </xs:sequence>
+      </xs:complexType>
     </xs:element>
 
 ## XML
 
     <P3D>
-    	<Cylinder>
-    		<Diameter>500</Diameter>
-    		<Height>900</Height>
-    		<LuminousDiameter>450</LuminousDiameter>
-    		<Mounting>Pendulum</Mounting>
-    		<PendulumLength>800</PendulumLength>
-    	</Cylinder>
+      <Cylinder>
+        <Diameter>500</Diameter>
+        <Height>900</Height>
+        <LuminousDiameter>450</LuminousDiameter>
+        <Mounting>Pendulum</Mounting>
+        <PendulumLength>800</PendulumLength>
+      </Cylinder>
     </P3D>

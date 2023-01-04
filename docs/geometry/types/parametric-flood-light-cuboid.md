@@ -23,28 +23,28 @@ A Spotlight in cube shape mounted on a bracket attached to a cubic plate. You ca
 
     <xs:element name="FloodLightCuboid">
     <xs:complexType>
-    	<xs:sequence>
-    	<xs:element name="Width" type="xs:int"/>
-    	<xs:element name="Length" type="xs:int"/>
-    	<xs:element name="Height" type="xs:int"/>
-    	<xs:element name="LuminousWidth" type="xs:int"/>
-    	<xs:element name="LuminousLength" type="xs:int"/>
-    	<xs:element name="LuminousHeight" type="xs:int"/>
-    	<xs:element name="TotalHeight" type="xs:int" minOccurs="0"/>
-    	</xs:sequence>
+      <xs:sequence>
+      <xs:element name="Width" type="xs:int"/>
+      <xs:element name="Length" type="xs:int"/>
+      <xs:element name="Height" type="xs:int"/>
+      <xs:element name="LuminousWidth" type="xs:int"/>
+      <xs:element name="LuminousLength" type="xs:int"/>
+      <xs:element name="LuminousHeight" type="xs:int"/>
+      <xs:element name="TotalHeight" type="xs:int" minOccurs="0"/>
+      </xs:sequence>
     </xs:complexType>
     </xs:element>
 
 ## XML
 
     <P3D>
-    	<FloodLightCuboid>
-    		<Width>500</Width>
-    		<Length>500</Length>
-    		<Height>300</Height>
-    		<LuminousWidth>480</LuminousWidth>
-    		<LuminousLength>480</LuminousLength>
-    		<LuminousHeight>100</LuminousHeight>
-    		<TotalHeight>900</TotalHeight>
-    	</FloodLightCuboid>
+      <FloodLightCuboid>
+        <Width>500</Width>
+        <Length>500</Length>
+        <Height>300</Height>
+        <LuminousWidth>480</LuminousWidth>
+        <LuminousLength>480</LuminousLength>
+        <LuminousHeight>100</LuminousHeight>
+        <TotalHeight>900</TotalHeight>
+      </FloodLightCuboid>
     </P3D>

@@ -24,20 +24,20 @@ There is an offset aligned to C0.
 
     <xs:element name="StreetCylinderSide">
     <xs:complexType>
-    	<xs:sequence>
-    	<xs:element name="Diameter" type="xs:int"/>
-    	<xs:element name="LuminousDiameter" type="xs:int"/>
-    	<xs:element name="TopLuminousDiameter" type="xs:int" minOccurs="0"/>
-    	<xs:element name="LuminousHeight" type="xs:int" minOccurs="0"/>
-    	</xs:sequence>
+      <xs:sequence>
+      <xs:element name="Diameter" type="xs:int"/>
+      <xs:element name="LuminousDiameter" type="xs:int"/>
+      <xs:element name="TopLuminousDiameter" type="xs:int" minOccurs="0"/>
+      <xs:element name="LuminousHeight" type="xs:int" minOccurs="0"/>
+      </xs:sequence>
     </xs:complexType>
     </xs:element>
 
 ## XML
 
     <P3D>
-    	<StreetCylinderSide>
-    		<Diameter>300</Diameter>
-    		<LuminousDiameter>180</LuminousDiameter>
-    	</StreetCylinderSide>
+      <StreetCylinderSide>
+        <Diameter>300</Diameter>
+        <LuminousDiameter>180</LuminousDiameter>
+      </StreetCylinderSide>
     </P3D>

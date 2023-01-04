@@ -27,29 +27,29 @@ The distance of the connector of the bracket to the luminaire is the same as the
 
     <xs:element name="SpotCuboid">
     <xs:complexType>
-    	<xs:sequence>
-    	<xs:element name="Width" type="xs:int"/>
-    	<xs:element name="Length" type="xs:int"/>
-    	<xs:element name="Height" type="xs:int"/>
-    	<xs:element name="LuminousWidth" type="xs:int"/>
-    	<xs:element name="LuminousLength" type="xs:int"/>
-    	<xs:element name="LuminousHeight" type="xs:int"/>
-    	<xs:element name="BaseWidth" type="xs:int" minOccurs="0"/>
-    	<xs:element name="BaseLength" type="xs:int" minOccurs="0"/>
-    	<xs:element name="BaseHeight" type="xs:int" minOccurs="0"/>
-    	</xs:sequence>
+      <xs:sequence>
+      <xs:element name="Width" type="xs:int"/>
+      <xs:element name="Length" type="xs:int"/>
+      <xs:element name="Height" type="xs:int"/>
+      <xs:element name="LuminousWidth" type="xs:int"/>
+      <xs:element name="LuminousLength" type="xs:int"/>
+      <xs:element name="LuminousHeight" type="xs:int"/>
+      <xs:element name="BaseWidth" type="xs:int" minOccurs="0"/>
+      <xs:element name="BaseLength" type="xs:int" minOccurs="0"/>
+      <xs:element name="BaseHeight" type="xs:int" minOccurs="0"/>
+      </xs:sequence>
     </xs:complexType>
     </xs:element>
 
 ## XML
 
     <P3D>
-    	<SpotCuboid>
-    		<Width>300</Width>
-    		<Length>600</Length>
-    		<Height>200</Height>
-    		<LuminousWidth>280</LuminousWidth>
-    		<LuminousLength>580</LuminousLength>
-    		<LuminousHeight>90</LuminousHeight>
-    	</SpotCuboid>
+      <SpotCuboid>
+        <Width>300</Width>
+        <Length>600</Length>
+        <Height>200</Height>
+        <LuminousWidth>280</LuminousWidth>
+        <LuminousLength>580</LuminousLength>
+        <LuminousHeight>90</LuminousHeight>
+      </SpotCuboid>
     </P3D>

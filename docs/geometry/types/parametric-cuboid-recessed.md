@@ -26,39 +26,39 @@ Luminous width, length, and height describe the dimensions of the luminous surfa
 ## XSD
 
     <xs:element name="RecessedCuboid">
-    	<xs:complexType>
-    		<xs:sequence>
-    			<xs:element name="Width" type="xs:int"/>
-    			<xs:element name="Length" type="xs:int"/>
-    			<xs:element name="Height" type="xs:int"/>
-    			<xs:element name="LuminousWidth" type="xs:int"/>
-    			<xs:element name="LuminousLength" type="xs:int"/>
-    			<xs:element name="LuminousHeight" type="xs:int"/>
-    			<xs:element name="TopWidth" type="xs:int" minOccurs="0"/>
-    			<xs:element name="TopLength" type="xs:int" minOccurs="0"/>
-    			<xs:element name="Mounting">
-    				<xs:simpleType>
-    					<xs:restriction base="xs:string">
-    						<xs:enumeration value="Ceiling"/>
-    						<xs:enumeration value="Wall"/>
-    						<xs:enumeration value="Floor"/>
-    					</xs:restriction>
-    				</xs:simpleType>
-    			</xs:element>
-    		</xs:sequence>
-    	</xs:complexType>
+      <xs:complexType>
+        <xs:sequence>
+          <xs:element name="Width" type="xs:int"/>
+          <xs:element name="Length" type="xs:int"/>
+          <xs:element name="Height" type="xs:int"/>
+          <xs:element name="LuminousWidth" type="xs:int"/>
+          <xs:element name="LuminousLength" type="xs:int"/>
+          <xs:element name="LuminousHeight" type="xs:int"/>
+          <xs:element name="TopWidth" type="xs:int" minOccurs="0"/>
+          <xs:element name="TopLength" type="xs:int" minOccurs="0"/>
+          <xs:element name="Mounting">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:enumeration value="Ceiling"/>
+                <xs:enumeration value="Wall"/>
+                <xs:enumeration value="Floor"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+        </xs:sequence>
+      </xs:complexType>
     </xs:element>
 
 ## XML
 
     <P3D>
-    	<RecessedCuboid>
-    		<Width>80</Width>
-    		<Length>80</Length>
-    		<Height>80</Height>
-    		<LuminousWidth>70</LuminousWidth>
-    		<LuminousLength>70</LuminousLength>
-    		<LuminousHeight>70</LuminousHeight>
-    		<Mounting>Ceiling</Mounting>
-    	</RecessedCuboid>
+      <RecessedCuboid>
+        <Width>80</Width>
+        <Length>80</Length>
+        <Height>80</Height>
+        <LuminousWidth>70</LuminousWidth>
+        <LuminousLength>70</LuminousLength>
+        <LuminousHeight>70</LuminousHeight>
+        <Mounting>Ceiling</Mounting>
+      </RecessedCuboid>
     </P3D>
