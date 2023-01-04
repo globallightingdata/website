@@ -23,9 +23,10 @@ Both sides have the same length. Lumious surfaces have the same size.
 
 ## XSD
 
-    <xs:element name="WallTriangular">
-    <xs:complexType>
-      <xs:sequence>
+```xml
+<xs:element name="WallTriangular">
+  <xs:complexType>
+    <xs:sequence>
       <xs:element name="Width" type="xs:int"/>
       <xs:element name="Length" type="xs:int"/>
       <xs:element name="Height" type="xs:int"/>
@@ -34,26 +35,29 @@ Both sides have the same length. Lumious surfaces have the same size.
       <xs:element name="LuminousHeight" type="xs:int"/>
       <xs:element name="Type" minOccurs="0">
         <xs:simpleType>
-        <xs:restriction base="xs:string">
-          <xs:enumeration value="Direct"/>
-          <xs:enumeration value="Indirect"/>
-          <xs:enumeration value="DirectIndirect"/>
-        </xs:restriction>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Direct"/>
+            <xs:enumeration value="Indirect"/>
+            <xs:enumeration value="DirectIndirect"/>
+          </xs:restriction>
         </xs:simpleType>
       </xs:element>
-      </xs:sequence>
-    </xs:complexType>
-    </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+```
 
 ## XML
 
-    <P3D>
-      <WallTriangular>
-        <Width>300</Width>
-        <Length>200</Length>
-        <Height>200</Height>
-        <LuminousWidth>50</LuminousWidth>
-        <LuminousLength>50</LuminousLength>
-        <LuminousHeight>20</LuminousHeight>
-      </WallTriangular>
-    </P3D>
+```xml
+<P3D>
+  <WallTriangular>
+    <Width>300</Width>
+    <Length>200</Length>
+    <Height>200</Height>
+    <LuminousWidth>50</LuminousWidth>
+    <LuminousLength>50</LuminousLength>
+    <LuminousHeight>20</LuminousHeight>
+  </WallTriangular>
+</P3D>
+```

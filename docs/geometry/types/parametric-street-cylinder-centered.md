@@ -27,26 +27,30 @@ There is an offset aligned to C0.
 
 ## XSD
 
-    <xs:element name="StreetCylinderCentered">
-    <xs:complexType>
-      <xs:sequence>
+```xml
+<xs:element name="StreetCylinderCentered">
+  <xs:complexType>
+    <xs:sequence>
       <xs:element name="Diameter" type="xs:int"/>
       <xs:element name="TopDiameter" type="xs:int"/>
       <xs:element name="LuminousDiameter" type="xs:int"/>
       <xs:element name="TopLuminousDiameter" type="xs:int" minOccurs="0"/>
       <xs:element name="LuminousHeight" type="xs:int" minOccurs="0"/>
       <xs:element name="Height" type="xs:int" minOccurs="0"/>
-      </xs:sequence>
-    </xs:complexType>
-    </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+```
 
 ## XML
 
-    <P3D>
-      <StreetCylinderCentered>
-        <Diameter>500</Diameter>
-        <TopDiameter>900</TopDiameter>
-        <LuminousDiameter>600</LuminousDiameter>
-        <TotalHeight>3000</TotalHeight>
-      </StreetCylinderCentered>
-    </P3D>
+```xml
+<P3D>
+  <StreetCylinderCentered>
+    <Diameter>500</Diameter>
+    <TopDiameter>900</TopDiameter>
+    <LuminousDiameter>600</LuminousDiameter>
+    <TotalHeight>3000</TotalHeight>
+  </StreetCylinderCentered>
+</P3D>
+```

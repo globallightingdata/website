@@ -32,9 +32,10 @@ Type DirectIndirect: LEO placed in the center of the luminaire. LES on top and b
 
 ## XSD
 
-    <xs:element name="StandCylinder">
-    <xs:complexType>
-      <xs:sequence>
+```xml
+<xs:element name="StandCylinder">
+  <xs:complexType>
+    <xs:sequence>
       <xs:element name="Diameter" type="xs:int"/>
       <xs:element name="Height" type="xs:int"/>
       <xs:element name="TopDiameter" type="xs:int" minOccurs="0"/>
@@ -42,24 +43,27 @@ Type DirectIndirect: LEO placed in the center of the luminaire. LES on top and b
       <xs:element name="LuminousHeight" type="xs:int" minOccurs="0"/>
       <xs:element name="TotalHeight">
         <xs:simpleType>
-        <xs:restriction base="xs:string">
-          <xs:enumeration value="Ceiling"/>
-          <xs:enumeration value="Wall"/>
-          <xs:enumeration value="Floor"/>
-        </xs:restriction>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Ceiling"/>
+            <xs:enumeration value="Wall"/>
+            <xs:enumeration value="Floor"/>
+          </xs:restriction>
         </xs:simpleType>
       </xs:element>
-      </xs:sequence>
-    </xs:complexType>
-    </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+```
 
 ## XML
 
-    <P3D>
-      <StandCylinder>
-        <Diameter>310</Diameter>
-        <Height>310</Height>
-        <LuminousDiameter>300</LuminousDiameter>
-        <TotalHeight>1800</TotalHeight>
-      </StandCylinder>
-    </P3D>
+```xml
+<P3D>
+  <StandCylinder>
+    <Diameter>310</Diameter>
+    <Height>310</Height>
+    <LuminousDiameter>300</LuminousDiameter>
+    <TotalHeight>1800</TotalHeight>
+  </StandCylinder>
+</P3D>
+```

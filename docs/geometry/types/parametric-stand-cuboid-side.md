@@ -37,9 +37,10 @@ If length is greater than C90, die luminous surface shall grow backwards toward 
 
 ## XSD
 
-    <xs:element name="StandCuboidSide">
-    <xs:complexType>
-      <xs:sequence>
+```xml
+<xs:element name="StandCuboidSide">
+  <xs:complexType>
+    <xs:sequence>
       <xs:element name="Width" type="xs:int"/>
       <xs:element name="Length" type="xs:int"/>
       <xs:element name="Height" type="xs:int"/>
@@ -48,27 +49,30 @@ If length is greater than C90, die luminous surface shall grow backwards toward 
       <xs:element name="TotalHeight" type="xs:int"/>
       <xs:element name="Type" minOccurs="0">
         <xs:simpleType>
-        <xs:restriction base="xs:string">
-          <xs:enumeration value="Direct"/>
-          <xs:enumeration value="Indirect"/>
-          <xs:enumeration value="DirectIndirect"/>
-        </xs:restriction>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Direct"/>
+            <xs:enumeration value="Indirect"/>
+            <xs:enumeration value="DirectIndirect"/>
+          </xs:restriction>
         </xs:simpleType>
       </xs:element>
-      </xs:sequence>
-    </xs:complexType>
-    </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+```
 
 ## XML
 
-    <P3D>
-      <StandCuboidSide>
-        <Width>400</Width>
-        <Length>400</Length>
-        <Height>300</Height>
-        <LuminousWidth>380</LuminousWidth>
-        <LuminousLength>380</LuminousLength>
-        <TotalHeight>20</TotalHeight>
-        <Type>DirectIndirect</Type>
-      </StandCuboidSide>
-    </P3D>
+```xml
+<P3D>
+  <StandCuboidSide>
+    <Width>400</Width>
+    <Length>400</Length>
+    <Height>300</Height>
+    <LuminousWidth>380</LuminousWidth>
+    <LuminousLength>380</LuminousLength>
+    <TotalHeight>20</TotalHeight>
+    <Type>DirectIndirect</Type>
+  </StandCuboidSide>
+</P3D>
+```

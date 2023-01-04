@@ -25,9 +25,10 @@ There is only one luminous surfaces.
 
 ## XSD
 
-    <xs:element name="BollardSide">
-    <xs:complexType>
-      <xs:sequence>
+```xml
+<xs:element name="BollardSide">
+  <xs:complexType>
+    <xs:sequence>
       <xs:element name="Width" type="xs:int"/>
       <xs:element name="Length" type="xs:int"/>
       <xs:element name="Height" type="xs:int"/>
@@ -35,19 +36,22 @@ There is only one luminous surfaces.
       <xs:element name="LuminousLength" type="xs:int"/>
       <xs:element name="LuminousHeight" type="xs:int"/>
       <xs:element name="TotalHeight" type="xs:int" minOccurs="0"/>
-      </xs:sequence>
-    </xs:complexType>
-    </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+```
 
 ## XML
 
-    <P3D>
-      <BollardSide>
-        <Width>400</Width>
-        <Length>400</Length>
-        <Height>1300</Height>
-        <LuminousWidth>300</LuminousWidth>
-        <LuminousLength>100</LuminousLength>
-        <LuminousHeight>100</LuminousHeight>
-      </BollardSide>
-    </P3D>
+```xml
+<P3D>
+  <BollardSide>
+    <Width>400</Width>
+    <Length>400</Length>
+    <Height>1300</Height>
+    <LuminousWidth>300</LuminousWidth>
+    <LuminousLength>100</LuminousLength>
+    <LuminousHeight>100</LuminousHeight>
+  </BollardSide>
+</P3D>
+```
