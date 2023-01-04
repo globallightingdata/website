@@ -5,7 +5,7 @@ sidebar_label: Parabolic
 
 ## Description
 
-![Parabolic Luminaire ](/img/docs/geometry/parametric/parabolic.webp)
+![Parabolic Luminaire](/img/docs/geometry/parametric/parabolic.webp)
 
 Parabolic shaped luminaire. The base diamteter has a default value of 50% of the main diamterer. The base height default value is 50% of the main height.
 

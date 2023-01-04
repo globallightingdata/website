@@ -5,7 +5,7 @@ sidebar_label: Cuboid
 
 ## Description
 
-![Open Luminaire ](/img/docs/geometry/parametric/cuboid.webp)
+![Cuboid](/img/docs/geometry/parametric/cuboid.webp)
 
 Cuboid is a cube-shaped luminaire.
 Width, length, and height describe the total size of the entire luminaire.
