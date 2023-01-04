@@ -5,7 +5,7 @@ sidebar_label: Cylinder
 
 ## Description
 
-![Cylinder](/img/docs/geometry/parametric/Cylinder.webp)
+![Cylinder](/img/docs/geometry/parametric/cylinder.webp)
 
 Diameter and Height describe the bounding box size of the luminaire.
 Luminous diameter and Height describe the dimensions of the illuminated surface. Height will let the luminous surface extrude out of the object.

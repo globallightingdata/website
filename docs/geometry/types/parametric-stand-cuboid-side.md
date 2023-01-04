@@ -5,7 +5,7 @@ sidebar_label: Stand Cuboid Side
 
 ## Description
 
-![Stand Cuboid Side](/img/docs/geometry/parametric/StandCuboidSide.webp)
+![Stand Cuboid Side](/img/docs/geometry/parametric/stand-cuboid-side.webp)
 
 A cube-shaped standing luminaire with the head attached on the side rather than the center. This parametric model allows you to define the total height and the height of the luminaire, not including the stand. The full default height will be 1.8 meters. The stand height is the total height minus the luminaire height. The stand is always in the middle of the luminaire.
 

@@ -5,7 +5,7 @@ sidebar_label: Stand Cylinder
 
 ## Description
 
-![Stand Cylinder Luminaire ](/img/docs/geometry/parametric/StandCylinder.webp)
+![Stand Cylinder Luminaire ](/img/docs/geometry/parametric/stand-cylinder.webp)
 
 A cylinder-shaped standing luminaire. This parametric model allows you to define the total height and the height of the luminaire, not including the stand. The full default height will be 1.8 meters. The stand height is the total height minus the luminaire height. The stand is always in the middle of the luminaire.
 

@@ -5,7 +5,7 @@ sidebar_label: Stand Cuboid Centered
 
 ## Description
 
-![Stand Cuboid Centered](/img/docs/geometry/parametric/StandCuboidCentered.webp)
+![Stand Cuboid Centered](/img/docs/geometry/parametric/stand-cuboid-centered.webp)
 
 A cube-shaped standing luminaire. This parametric model allows you to define the total height and the height of the luminaire, not including the stand. The stand height is the total height minus the luminaire height. The stand is always in the middle of the luminaire.
 

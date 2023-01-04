@@ -5,7 +5,7 @@ sidebar_label: Recessed Round
 
 ## Description
 
-![Recessed Round](/img/docs/geometry/parametric/RecessedRound.webp)
+![Recessed Round](/img/docs/geometry/parametric/recessed-round.webp)
 
 Round recessed luminaire.
 The diameter indicates the widest part of the luminaire.

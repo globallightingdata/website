@@ -5,7 +5,7 @@ sidebar_label: Spot Cuboid
 
 ## Description
 
-![Spot Cuboid](/img/docs/geometry/parametric/SpotCuboid.webp)
+![Spot Cuboid](/img/docs/geometry/parametric/spot-cuboid.webp)
 
 A Spotlight in cube shape mounted on a bracket attached to a cubic plate. You can adjust the dimensions of the light by setting the length, width, and height. Setting the Total height parameter will affect the size of the bracket. The plate size can be changed using the Base dimensions.
 

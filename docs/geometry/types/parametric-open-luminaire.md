@@ -5,7 +5,7 @@ sidebar_label: Open Luminaire
 
 ## Description
 
-![Open Luminaire ](/img/docs/geometry/parametric/OpenLuminaire.webp)
+![Open Luminaire ](/img/docs/geometry/parametric/open-luminaire.webp)
 
 Open Luminaire has a base with openly accessible luminous object.
 Width, length, and height will define the total size in the form of a bounding box.

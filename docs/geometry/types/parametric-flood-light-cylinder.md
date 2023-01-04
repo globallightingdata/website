@@ -7,7 +7,7 @@ sidebar_label: Floodlight Cylinder
 
 FloodlightCylinder
 
-![Floodlight Cylinder](/img/docs/geometry/parametric/FloodlightCylinder.webp)
+![Floodlight Cylinder](/img/docs/geometry/parametric/flood-light-cylinder.webp)
 
 A Spotlight in cylinder shape mounted on a bracket attached to a plate. You can adjust the dimensions of the light by setting the diameter and length. Setting the Total height parameter will affect the size of the bracket. The plate size can be changed using the Base Diameter parameter.
 

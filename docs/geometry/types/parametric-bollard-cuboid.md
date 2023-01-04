@@ -5,9 +5,9 @@ sidebar_label: Bollard Cuboid
 
 ## Description
 
-![Bollard Quboid](/img/docs/geometry/parametric/BollardQuboid.webp)
+![Bollard Cuboid](/img/docs/geometry/parametric/bollard-cuboid.webp)
 
-Bollard Quboid is a Cube-shaped bollard with a square-shaped luminous surface. The parameter height will set the height of the head, whereas the total height will affect the size of the entire model.
+Bollard Cuboid is a Cube-shaped bollard with a square-shaped luminous surface. The parameter height will set the height of the head, whereas the total height will affect the size of the entire model.
 
 The default setting shall be one luminous surface aligned to C0. The default distance of the luminous surface is 2% of the height measured from the upper edge.
 
@@ -29,7 +29,7 @@ There is only one size for luminous surfaces. Any Value in C0, C90, C180, and C2
 
 ## XSD
 
-    <xs:element name="BollardQuboid">
+    <xs:element name="BollardCuboid">
     <xs:complexType>
     	<xs:sequence>
     	<xs:element name="Width" type="xs:int"/>
@@ -50,7 +50,7 @@ There is only one size for luminous surfaces. Any Value in C0, C90, C180, and C2
 ## XML
 
     <P3D>
-    	<BollardQuboid>
+    	<BollardCuboid>
     		<Width>300</Width>
     		<Length>100</Length>
     		<Height>200</Height>
@@ -58,5 +58,5 @@ There is only one size for luminous surfaces. Any Value in C0, C90, C180, and C2
     		<LuminousLength>50</LuminousLength>
     		<LuminousHeight>50</LuminousHeight>
     		<TotalHeight>1200</TotalHeight>
-    	</BollardQuboid>
+    	</BollardCuboid>
     </P3D>

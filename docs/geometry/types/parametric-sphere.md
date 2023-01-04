@@ -5,7 +5,7 @@ sidebar_label: Sphere
 
 ## Description
 
-![Sphere Luminaire ](/img/docs/geometry/parametric/Sphere.webp)
+![Sphere Luminaire ](/img/docs/geometry/parametric/sphere.webp)
 
 This model consists of a sphere on a base if the base height is greater than 0.
 Diameter describes the Diameter of the sphere. Base height and Diameter represent the size of the base. If you set the mounting type to a pendulum, the value pendulum will specify the length of the pendulum.

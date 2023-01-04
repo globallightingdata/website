@@ -5,7 +5,7 @@ sidebar_label: Bollard Side
 
 ## Description
 
-![Bollard Side](/img/docs/geometry/parametric/BollardSide.webp)
+![Bollard Side](/img/docs/geometry/parametric/bollard-side.webp)
 
 Bollard Side is a Cube-shaped bollard with a square-shaped luminous surface aligned to C0 direction. The parameter height will set the height of the head, whereas the total height will affect the size of the entire model.
 

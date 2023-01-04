@@ -5,7 +5,7 @@ sidebar_label: Street Cylinder Centered
 
 ## Description
 
-![Street Cylinder Centered](/img/docs/geometry/parametric/StreetCylinderCentered.webp)
+![Street Cylinder Centered](/img/docs/geometry/parametric/street-cylinder-centered.webp)
 
 Classic street light with the luminous head in cylinder shape centered on the pole. The polse shall ont be modelled.
 

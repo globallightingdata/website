@@ -5,7 +5,7 @@ sidebar_label: Recessed Cuboid
 
 ## Description
 
-![Recessed Quboid](/img/docs/geometry/parametric/RecessedQuboid.webp)
+![Recessed Cuboid](/img/docs/geometry/parametric/recessed-cuboid.webp)
 
 The Recessed Cuboid is a cube-shaped recessed luminaire.
 Width, length, and height describe the total size of the entire luminaire.
@@ -25,7 +25,7 @@ Luminous width, length, and height describe the dimensions of the luminous surfa
 
 ## XSD
 
-    <xs:element name="RecessedQuboid">
+    <xs:element name="RecessedCuboid">
     	<xs:complexType>
     		<xs:sequence>
     			<xs:element name="Width" type="xs:int"/>
@@ -52,7 +52,7 @@ Luminous width, length, and height describe the dimensions of the luminous surfa
 ## XML
 
     <P3D>
-    	<RecessedQuboid>
+    	<RecessedCuboid>
     		<Width>80</Width>
     		<Length>80</Length>
     		<Height>80</Height>
@@ -60,5 +60,5 @@ Luminous width, length, and height describe the dimensions of the luminous surfa
     		<LuminousLength>70</LuminousLength>
     		<LuminousHeight>70</LuminousHeight>
     		<Mounting>Ceiling</Mounting>
-    	</RecessedQuboid>
+    	</RecessedCuboid>
     </P3D>

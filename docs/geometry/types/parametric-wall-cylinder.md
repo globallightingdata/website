@@ -5,7 +5,7 @@ sidebar_label: Wall Cylinder
 
 ## Description
 
-![Wall Cylinder](/img/docs/geometry/parametric/WallCylinder.webp)
+![Wall Cylinder](/img/docs/geometry/parametric/wall-cylinder.webp)
 
 This type is a cylinder-Shaped luminaire that is attached to a wall. Diameter and Height will determine the housing dimensions. Luminous Diameter will set the size of the luminous surfaces.
 You can define The Light output areas as Direct, Indirect, or Direct and Indirect.

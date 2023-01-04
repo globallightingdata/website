@@ -5,7 +5,7 @@ sidebar_label: Bollard Cylinder
 
 ## Description
 
-![Bollard Cylinder](/img/docs/geometry/parametric/BollardCylinder.webp)
+![Bollard Cylinder](/img/docs/geometry/parametric/bollard-cylinder.webp)
 
 Bollard Cylinder is a Cylinder-shaped bollard with a luminous surface around the model. The parameter height will set the height of the head, whereas the total height will affect the size of the entire model.
 

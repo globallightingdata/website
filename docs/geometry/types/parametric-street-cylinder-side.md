@@ -5,7 +5,7 @@ sidebar_label: Street Cylinder Side
 
 ## Description
 
-![Street Cylinder Side](/img/docs/geometry/parametric/StreetCylinderSide.webp)
+![Street Cylinder Side](/img/docs/geometry/parametric/street-cylinder-side.webp)
 
 Classic street light with the luminous head cylinder-shaped attached to the pole on its edge. The polse shall not be modeled.
 You can adjust the dimensions of the head by setting the diameter and height.

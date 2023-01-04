@@ -5,7 +5,7 @@ sidebar_label: Street Cuboid Side
 
 ## Description
 
-![Street Cuboid Side](/img/docs/geometry/parametric/StreetCuboidSide.webp)
+![Street Cuboid Side](/img/docs/geometry/parametric/street-cuboid-side.webp)
 
 Classic street light with the luminous head cube-shaped attached to the pole on its edge. The pole will not be moodeled.
 You can adjust the dimensions of the head by setting the length, width, and height.
