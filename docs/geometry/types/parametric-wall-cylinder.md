@@ -7,11 +7,13 @@ sidebar_label: Wall Cylinder
 
 ![Wall Cylinder](/img/docs/geometry/parametric/wall-cylinder.webp)
 
-This type is a cylinder-Shaped luminaire that is attached to a wall. Diameter and Height will determine the housing dimensions. Luminous Diameter will set the size of the luminous surfaces.
-You can define The Light output areas as Direct, Indirect, or Direct and Indirect.
+This type is a cylinder-Shaped luminaire that is attached to a wall.
 
-The base elements default width is 80% of the main diameter.
-The base elements default depth is twice the distance of the outer point of the cylinder to the inner point of the intersection within the cylinder.
+- `Diameter` and `Height` will determine the housing dimensions.
+- `LuminouDiameter` will set the size of the luminous surfaces.
+- You can define the light output areas through `Type` as `Direct`, `Indirect`, or `DirectIndirect`.
+- The base elements default width is 80% of the main diameter.
+- The base elements default depth is twice the distance of the outer point of the cylinder to the inner point of the intersection within the cylinder.
 
 | Parameter        | Type |           Explanation            |
 | ---------------- | :--: | :------------------------------: |

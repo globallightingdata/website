@@ -7,11 +7,13 @@ sidebar_label: Bollard Cylinder
 
 ![Bollard Cylinder](/img/docs/geometry/parametric/bollard-cylinder.webp)
 
-Bollard Cylinder is a Cylinder-shaped bollard with a luminous surface around the model. The parameter height will set the height of the head, whereas the total height will affect the size of the entire model.
+`BollardCylinder` is a Cylinder-shaped bollard with a luminous surface around the model.
 
-The default setting shall be one luminous surface aligned to C0. The default distance of the luminous surface is 2% of the height measured from the upper edge.
-
-There is only one size for luminous surfaces. Any Value in C0, C90, C180, and C270 greater than zero means there will be aluminuous surface as defined in the luminous dimensions.
+- The parameter `Height` will set the height of the head, whereas the `TotalHeight` will affect the size of the entire model.
+- The default setting is one luminous surface aligned to C0.
+- The default distance of the luminous surface is 2% of the height measured from the upper edge.
+- There is only one size for luminous surfaces.
+- Any Value in `C0`, `C90`, `C180` and `C270` greater than zero means there will be a luminuous surface as defined in the luminous dimensions.
 
 | Parameter      | Type | Explanation |
 | -------------- | :--: | :---------: |

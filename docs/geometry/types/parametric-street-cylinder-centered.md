@@ -7,14 +7,12 @@ sidebar_label: Street Cylinder Centered
 
 ![Street Cylinder Centered](/img/docs/geometry/parametric/street-cylinder-centered.webp)
 
-Classic street light with the luminous head in cylinder shape centered on the pole. The polse shall ont be modelled.
+Classic street light with the luminous head in cylinder shape centered on the pole.
 
-You can adjust the dimensions of the cylinder by setting the diameter and height. Skewing is possible by selecting a different top diameter.
-
-The height of the lid on top shall be 2% of the luminous height.
-
-The lumimous center is located at 0,0,0.
-There is an offset aligned to C0.
+- You can adjust the dimensions of the cylinder by setting the `Diameter` and `Height`. Skewing is possible by selecting a different `TopDiameter`.
+- The height of the lid on top is 2% of the `LuminousHeight`.
+- The luminous center is located at 0,0,0. There is an offset aligned to C0.
+- The pole is not modelled.
 
 | Parameter           | Type | Explanation |
 | ------------------- | :--: | :---------: |

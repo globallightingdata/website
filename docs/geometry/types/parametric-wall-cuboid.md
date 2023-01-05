@@ -7,8 +7,12 @@ sidebar_label: Wall Cuboid
 
 ![Wall Cuboid](/img/docs/geometry/parametric/wall-cuboid.webp)
 
-This type is a cube-Shaped luminaire that is attached to a wall. The Parameters Length, Width, and Height will determine the housing dimensions. Luminous Length, Width, and Height determine the size of the luminous surfaces. You can skew the housing by setting Top Length and Width.
-You can define The Light output areas as Direct, Indirect, or Direct and Indirect.
+This type is a cube-Shaped luminaire that is attached to a wall.
+
+- The Parameters `Length`, `Width`, and `Height` will determine the housing dimensions.
+- `LuminousLength`, `LuminousWidth` and `LuminousHeight` determine the size of the luminous surfaces.
+- You can skew the housing by setting `TopLength` and `TopWidth`.
+- You can define the light output areas trough `Type` as `Direct`, `Indirect`, or `DirectIndirect`.
 
 | Parameter      | Type |           Explanation            |
 | -------------- | :--: | :------------------------------: |

@@ -7,11 +7,12 @@ sidebar_label: Street Cuboid Side
 
 ![Street Cuboid Side](/img/docs/geometry/parametric/street-cuboid-side.webp)
 
-Classic street light with the luminous head cube-shaped attached to the pole on its edge. The pole will not be moodeled.
-You can adjust the dimensions of the head by setting the length, width, and height.
+Classic street light with the luminous head cube-shaped attached to the pole on its edge.
 
-The lumimous center is located at 0,0,0.
-There is an offset aligned to C0.
+- The pole will not be modeled.
+- You can adjust the dimensions of the head by setting the `LuminousLength`, `LuminousWidth`, and `LuminousHeight`.
+- The luminous center is located at 0,0,0.
+- There is an offset aligned to C0.
 
 | Parameter      | Type | Explanation |
 | -------------- | :--: | :---------: |

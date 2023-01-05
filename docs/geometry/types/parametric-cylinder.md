@@ -7,9 +7,11 @@ sidebar_label: Cylinder
 
 ![Cylinder](/img/docs/geometry/parametric/cylinder.webp)
 
-Diameter and Height describe the bounding box size of the luminaire.
-Luminous diameter and Height describe the dimensions of the illuminated surface. Height will let the luminous surface extrude out of the object.
-If the mounting type is a pendulum, the pendulum length will set the default pendulum length.
+`Diameter` and `Height` describe the bounding box size of the luminaire.
+
+- `LuminousDiameter` and `LuminousHeight` describe the dimensions of the illuminated surface.
+- `LuminousHeight` will let the luminous surface extrude out of the object.
+- If the `Mounting` type is a `Pendulum`, the `PendulumLength` will set the default pendulum length.
 
 | Parameter        | Type |          Explanation           |
 | ---------------- | :--: | :----------------------------: |

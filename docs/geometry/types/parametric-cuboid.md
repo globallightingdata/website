@@ -7,9 +7,12 @@ sidebar_label: Cuboid
 
 ![Cuboid](/img/docs/geometry/parametric/cuboid.webp)
 
-Cuboid is a cube-shaped luminaire.
-Width, length, and height describe the total size of the entire luminaire.
-Luminous width, length, and height describe the dimensions of the luminous surfaces. The height describes how far the luminous part sticks out of the body. The luminaire can be mounted to a surface or on a pendulum.
+`Cuboid` is a cube-shaped luminaire.
+
+- `Width`, `Length` and `Height` describe the total size of the entire luminaire.
+- `LuminousWidth`, `LuminousLength` and `LuminousHeight` describe the dimensions of the luminous surfaces.
+- The `LuminousHeight` describes how far the luminous part sticks out of the body.
+- The luminaire can be mounted to a surface or on a pendulum (`Mounting`).
 
 | Parameter      | Type |      Explanation       |
 | -------------- | :--: | :--------------------: |

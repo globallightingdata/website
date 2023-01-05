@@ -7,9 +7,13 @@ sidebar_label: Spot Cuboid
 
 ![Spot Cuboid](/img/docs/geometry/parametric/spot-cuboid.webp)
 
-A Spotlight in cube shape mounted on a bracket attached to a cubic plate. You can adjust the dimensions of the light by setting the length, width, and height. Setting the Total height parameter will affect the size of the bracket. The plate size can be changed using the Base dimensions.
+A Spotlight in cube shape mounted on a bracket attached to a cubic plate.
 
-The distance of the connector of the bracket to the luminaire is the same as the height. The length of the connection from the base surface to the bracket is 10% of the height.
+- You can adjust the dimensions of the light by setting the `Length`, `Width` and `Height`.
+- Setting the `TotalHeight` parameter will affect the size of the bracket.
+- The plate size can be changed using the base dimensions.
+- The distance of the connector of the bracket to the luminaire is the same as the `Height`.
+- The length of the connection from the base surface to the bracket is 10% of the `Height`.
 
 | Parameter      | Type | Explanation |
 | -------------- | :--: | :---------: |

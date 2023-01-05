@@ -7,19 +7,18 @@ sidebar_label: Stand Cylinder
 
 ![Stand Cylinder Luminaire](/img/docs/geometry/parametric/stand-cylinder.webp)
 
-A cylinder-shaped standing luminaire. This parametric model allows you to define the total height and the height of the luminaire, not including the stand. The full default height will be 1.8 meters. The stand height is the total height minus the luminaire height. The stand is always in the middle of the luminaire.
+A cylinder-shaped standing luminaire. This parametric model allows you to define the `TotalHeight` and the `Height` of the luminaire, not including the stand.
 
-Default diameter of the foot will be the same as the main diameter.
-
-Default height of the foot is 2 cm.
-Diameter of the stand is 5 cm.
-Luminous dimensions must be smaller than the main dimensions.
-
-Type Direct: LEO and LES placed at the bottom center of the luminaire. Grows upwards with Lumimous height.
-
-Type Indirect: LEO and LES placed at the top center of the luminaire. Grows downwards with Lumimous height.
-
-Type DirectIndirect: LEO placed in the center of the luminaire. LES on top and bottom surfaces centered.
+- The full default height will be 1.8 meters.
+- The stand height is the `TotalHeight` minus the luminaire `Height`.
+- The stand is always in the middle of the luminaire.
+- Default diameter of the foot will be the same as the main `Diameter`.
+- Default height of the foot is 2 cm.
+- Diameter of the stand is 5 cm.
+- Luminous dimensions must be smaller than the main dimensions.
+- `Type` ➜ `Direct`: LEO and LES placed at the bottom center of the luminaire. Grows upwards with `LumimousHeight`.
+- `Type` ➜ `Indirect`: LEO and LES placed at the top center of the luminaire. Grows downwards with `LumimousHeight`.
+- `Type` ➜ `DirectIndirect`: LEO placed in the center of the luminaire. LES on top and bottom surfaces centered.
 
 | Parameter        | Type | Explanation |
 | ---------------- | :--: | :---------: |

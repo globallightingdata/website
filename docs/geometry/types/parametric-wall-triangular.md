@@ -7,9 +7,12 @@ sidebar_label: Wall Triangular
 
 ![Wall Triangular](/img/docs/geometry/parametric/wall-triangular.webp)
 
-Triangular-shaped wall-mounted luminaire. It can be direct, indirect, or direct and indirect. Width, Length, and Height will set the dimensions of the bounding box. Luminous Width, LuminousLength, and LuminousHeight set the dimensions of the main luminous output.
+Triangular-shaped wall-mounted luminaire.
 
-Both sides have the same length. Lumious surfaces have the same size.
+- `Width`, `Length`, and `Height` will set the dimensions of the bounding box.
+- `LuminousWidth`, `LuminousLength` and `LuminousHeight` set the dimensions of the main luminous output.
+- It can be defined through `Type` as `Direct`, `Indirect`, or `DirectIndirect`.
+- Both sides have the same length. Lumious surfaces have the same size.
 
 | Parameter      | Type |           Explanation            |
 | -------------- | :--: | :------------------------------: |

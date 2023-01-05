@@ -8,7 +8,13 @@ sidebar_label: Recessed Round
 ![Recessed Round](/img/docs/geometry/parametric/recessed-round.webp)
 
 Round recessed luminaire.
-The `Diameter` indicates the widest part of the luminaire. The `Height` describes the total height, including the recessed and protruding parts of the luminaire. `LuminousDiameter` describes the diameter of the illuminated surface. The `TopDiameter` is, by default, 80% of the total diameter and describes the diameter of the recessed part. `LuminousHeight` describes how far the luminaire protrudes from the mounting surface. The luminaire can be mounted on ceilings, walls or floors (`Mounting`).
+
+- The `Diameter` indicates the widest part of the luminaire.
+- The `Height` describes the total height, including the recessed and protruding parts of the luminaire.
+- `LuminousDiameter` describes the diameter of the illuminated surface.
+- The `TopDiameter` is, by default, 80% of the total diameter and describes the diameter of the recessed part.
+- `LuminousHeight` describes how far the luminaire protrudes from the mounting surface.
+- The luminaire can be mounted on ceilings, walls or floors (`Mounting`).
 
 | Parameter        | Type |      Explanation       |
 | ---------------- | :--: | :--------------------: |

@@ -7,10 +7,12 @@ sidebar_label: Parabolic
 
 ![Parabolic Luminaire](/img/docs/geometry/parametric/parabolic.webp)
 
-Parabolic shaped luminaire. The base diamteter has a default value of 50% of the main diamterer. The base height default value is 50% of the main height.
+Parabolic shaped luminaire.
 
-The default diamter of the base is 50% of the main diameter.
-The default height of the base is 50% of the main height parameter.
+- The base diameter has a default value of 50% of the main diameter.
+- The base height default value is 50% of the main height.
+- The default diameter of the base is 50% of the main diameter.
+- The default height of the base is 50% of the main height parameter.
 
 | Parameter        | Type |          Explanation           |
 | ---------------- | :--: | :----------------------------: |

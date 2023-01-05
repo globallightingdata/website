@@ -7,11 +7,12 @@ sidebar_label: Street Cylinder Side
 
 ![Street Cylinder Side](/img/docs/geometry/parametric/street-cylinder-side.webp)
 
-Classic street light with the luminous head cylinder-shaped attached to the pole on its edge. The polse shall not be modeled.
-You can adjust the dimensions of the head by setting the diameter and height.
+Classic street light with the luminous head cylinder-shaped attached to the pole on its edge.
 
-The lumimous center is located at 0,0,0.
-There is an offset aligned to C0.
+- You can adjust the dimensions of the head by setting the `LuminousDiameter` and `Height`.
+- The luminous center is located at 0,0,0.
+- There is an offset aligned to C0.
+- The pole is not modeled.
 
 | Parameter           | Type | Explanation |
 | ------------------- | :--: | :---------: |

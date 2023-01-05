@@ -7,9 +7,12 @@ sidebar_label: Recessed Cuboid
 
 ![Recessed Cuboid](/img/docs/geometry/parametric/recessed-cuboid.webp)
 
-The Recessed Cuboid is a cube-shaped recessed luminaire.
-Width, length, and height describe the total size of the entire luminaire.
-Luminous width, length, and height describe the dimensions of the luminous surfaces. The height describes how far the luminous part sticks out of the mounting surface. Top dimensions are by default 80% of the lower dimensions.
+The `RecessedCuboid` is a cube-shaped recessed luminaire.
+
+- `Width`, `Length`, and `Height` describe the total size of the entire luminaire.
+- `LuminousWidth`, `LuminousLength` and `LuminousHeight` describe the dimensions of the luminous surfaces.
+- The `LuminousHeight` describes how far the luminous part sticks out of the mounting surface.
+- Top dimensions are by default 80% of the lower dimensions.
 
 | Parameter      | Type |      Explanation       |
 | -------------- | :--: | :--------------------: |

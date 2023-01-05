@@ -7,11 +7,13 @@ sidebar_label: Bollard Cuboid
 
 ![Bollard Cuboid](/img/docs/geometry/parametric/bollard-cuboid.webp)
 
-Bollard Cuboid is a Cube-shaped bollard with a square-shaped luminous surface. The parameter height will set the height of the head, whereas the total height will affect the size of the entire model.
+`BollardCuboid` is a Cube-shaped bollard with a square-shaped luminous surface.
 
-The default setting shall be one luminous surface aligned to C0. The default distance of the luminous surface is 2% of the height measured from the upper edge.
-
-There is only one size for luminous surfaces. Any Value in C0, C90, C180, and C270 greater than zero means there will be aluminuous surface as defined in the luminous dimensions.
+- The parameter `Height` will set the height of the head, whereas the `TotalHeight` will affect the size of the entire model.
+- The default setting is one luminous surface aligned to C0.
+- The default distance of the luminous surface is 2% of the height measured from the upper edge.
+- There is only one size for luminous surfaces.
+- Any Value in `C0`, `C90`, `C180` and `C270` greater than zero means there will be a luminuous surface as defined in the luminous dimensions.
 
 | Parameter      | Type | Explanation |
 | -------------- | :--: | :---------: |

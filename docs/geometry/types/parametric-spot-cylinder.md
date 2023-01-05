@@ -7,9 +7,13 @@ sidebar_label: Spot Cylinder
 
 ![Spot Cylinder](/img/docs/geometry/parametric/spot-cylinder.webp)
 
-A Spotlight in cylinder shape mounted on a bracket attached to a plate. You can adjust the dimensions of the light by setting the diameter and length. Setting the Total height parameter will affect the size of the bracket. The plate size can be changed using the Base Diameter parameter.
+A Spotlight in cylinder shape mounted on a bracket attached to a plate.
 
-The distance of the connector of the bracket to the luminaire is the same as the height. The length of the connection from the base surface to the bracket is 1/2 of the height.
+- You can adjust the dimensions of the light by setting the `Diameter` and `Length`.
+- Setting the `TotalHeight` parameter will affect the size of the bracket.
+- The plate size can be changed using the `BaseDiameter` parameter.
+- The distance of the connector of the bracket to the luminaire is the same as the `Height`.
+- The length of the connection from the base surface to the bracket is 1/2 of the `Height`.
 
 | Parameter        | Type | Explanation |
 | ---------------- | :--: | :---------: |
@@ -18,7 +22,7 @@ The distance of the connector of the bracket to the luminaire is the same as the
 | LuminousDiameter | int  | value in mm |
 | TotalHeight      | int  | value in mm |
 | BaseDiameter     | int  | value in mm |
-| BaseDiameter     | int  | value in mm |
+| BaseHeight       | int  | value in mm |
 
 ## XSD
 

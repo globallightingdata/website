@@ -7,11 +7,12 @@ sidebar_label: Bollard Side
 
 ![Bollard Side](/img/docs/geometry/parametric/bollard-side.webp)
 
-Bollard Side is a Cube-shaped bollard with a square-shaped luminous surface aligned to C0 direction. The parameter height will set the height of the head, whereas the total height will affect the size of the entire model.
+`BollardSide` is a Cube-shaped bollard with a square-shaped luminous surface aligned to C0 direction.
 
-The default setting shall be one luminous surface aligned to C0. The default distance of the luminous surface is 2% of the height measured from the upper edge.
-
-There is only one luminous surfaces.
+- The parameter `Height` will set the height of the head, whereas the `TotalHeight` will affect the size of the entire model.
+- The default setting is one luminous surface aligned to C0.
+- The default distance of the luminous surface is 2% of the height measured from the upper edge.
+- There is only one luminous surface.
 
 | Parameter      | Type | Explanation |
 | -------------- | :--: | :---------: |

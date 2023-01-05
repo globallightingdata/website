@@ -7,7 +7,11 @@ sidebar_label: Floodlight Cuboid
 
 ![Floodlight Cuboid](/img/docs/geometry/parametric/flood-light-cuboid.webp)
 
-A Spotlight in cube shape mounted on a bracket attached to a cubic plate. You can adjust the dimensions of the light by setting the length, width, and height. Setting the Total height parameter will affect the size of the bracket. The plate size can be changed using the Base dimensions.
+A Spotlight in cube shape mounted on a bracket attached to a cubic plate.
+
+- You can adjust the dimensions of the light by setting the `Length`, `Width` and `Height`.
+- Setting the `TotalHeight` parameter will affect the size of the bracket.
+- The plate size can be changed using the base dimensions.
 
 | Parameter      | Type | Explanation |
 | -------------- | :--: | :---------: |

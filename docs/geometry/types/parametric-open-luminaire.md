@@ -8,10 +8,11 @@ sidebar_label: Open Luminaire
 ![Open Luminaire ](/img/docs/geometry/parametric/open-luminaire.webp)
 
 Open Luminaire has a base with openly accessible luminous object.
-Width, length, and height will define the total size in the form of a bounding box.
-Luminous dimensions describe the bounding box of the luminous elements.
-The width of the luminaire determines the number of luminous objects.
-Open luminaires are ceiling mounted.
+
+- `Width`, `Length` and `Height` will define the total size in the form of a bounding box.
+- `LuminousWidth`, `LuminousLength` and `LuminousHeight` describe the bounding box of the luminous elements.
+- The width of the luminaire determines the number of luminous objects.
+- Open luminaires are ceiling mounted.
 
 | Parameter      | Type | Explanation |
 | -------------- | :--: | :---------: |
