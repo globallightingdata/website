@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Mit XMLSpy v2019 rel. 3 sp1 (x64) (http://www.altova.com) von  (Relux Informatik AG) bearbeitet -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" elementFormDefault="qualified" attributeFormDefault="unqualified" vc:minVersion="1.1">
+	<xs:element name="P3D">
+		<xs:annotation>
+			<xs:documentation>Comment describing your root element</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:choice>
+				<xs:element name="RecessedRound">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Diameter" type="xs:int"/>
+							<xs:element name="Height" type="xs:int"/>
+							<xs:element name="LuminousDiameter" type="xs:int"/>
+							<xs:element name="TopDiameter" type="xs:int" minOccurs="0"/>
+							<xs:element name="LuminousHeight" type="xs:int" minOccurs="0"/>
+							<xs:element name="Mounting">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="Ceiling"/>
+										<xs:enumeration value="Wall"/>
+										<xs:enumeration value="Floor"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="RecessedCuboid">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Width" type="xs:int"/>
+							<xs:element name="Length" type="xs:int"/>
+							<xs:element name="Height" type="xs:int"/>
+							<xs:element name="LuminousWidth" type="xs:int"/>
+							<xs:element name="LuminousLength" type="xs:int"/>
+							<xs:element name="LuminousHeight" type="xs:int"/>
+							<xs:element name="TopWidth" type="xs:int" minOccurs="0"/>
+							<xs:element name="TopLength" type="xs:int" minOccurs="0"/>
+							<xs:element name="Mounting">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="Ceiling"/>
+										<xs:enumeration value="Wall"/>
+										<xs:enumeration value="Floor"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="OpenLuminaire">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Width" type="xs:int"/>
+							<xs:element name="Length" type="xs:int"/>
+							<xs:element name="Height" type="xs:int"/>
+							<xs:element name="LuminousWidth" type="xs:int"/>
+							<xs:element name="LuminousLength" type="xs:int"/>
+							<xs:element name="LuminousHeight" type="xs:int"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Cuboid">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Width" type="xs:int"/>
+							<xs:element name="Length" type="xs:int"/>
+							<xs:element name="Height" type="xs:int"/>
+							<xs:element name="LuminousWidth" type="xs:int"/>
+							<xs:element name="LuminousLength" type="xs:int"/>
+							<xs:element name="LuminousHeight" type="xs:int"/>
+							<xs:element name="TopWidth" type="xs:int" minOccurs="0"/>
+							<xs:element name="TopLength" type="xs:int" minOccurs="0"/>
+							<xs:element name="Mounting">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="Ceiling"/>
+										<xs:enumeration value="Wall"/>
+										<xs:enumeration value="Floor"/>
+										<xs:enumeration value="Pendulum"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="PendulumLength" type="xs:int" minOccurs="0"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Sphere">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Diameter" type="xs:int"/>
+							<xs:element name="BaseHeight" type="xs:int" minOccurs="0"/>
+							<xs:element name="BaseDiameter" type="xs:int" minOccurs="0"/>
+							<xs:element name="Mounting">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="Ceiling"/>
+										<xs:enumeration value="Wall"/>
+										<xs:enumeration value="Floor"/>
+										<xs:enumeration value="Pendulum"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="PendulumLength" type="xs:int" minOccurs="0"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Parabolic">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Diameter" type="xs:int"/>
+							<xs:element name="Height" type="xs:int"/>
+							<xs:element name="LuminousDiameter" type="xs:int" minOccurs="0"/>
+							<xs:element name="LuminousHeight" type="xs:int" minOccurs="0"/>
+							<xs:element name="BaseDiameter" type="xs:int" minOccurs="0"/>
+							<xs:element name="BaseHeight" type="xs:int" minOccurs="0"/>
+							<xs:element name="Mounting">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="Ceiling"/>
+										<xs:enumeration value="Wall"/>
+										<xs:enumeration value="Floor"/>
+										<xs:enumeration value="Pendulum"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="PendulumLength" type="xs:int" minOccurs="0"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Cylinder">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Diameter" type="xs:int"/>
+							<xs:element name="Height" type="xs:int"/>
+							<xs:element name="TopDiameter" type="xs:int" minOccurs="0"/>
+							<xs:element name="LuminousDiameter" type="xs:int"/>
+							<xs:element name="LuminousHeight" type="xs:int" minOccurs="0"/>
+							<xs:element name="Mounting">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="Ceiling"/>
+										<xs:enumeration value="Wall"/>
+										<xs:enumeration value="Floor"/>
+										<xs:enumeration value="Pendulum"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="PendulumLength" type="xs:int" minOccurs="0"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="StandCylinder">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Diameter" type="xs:int"/>
+							<xs:element name="Height" type="xs:int"/>
+							<xs:element name="TopDiameter" type="xs:int" minOccurs="0"/>
+							<xs:element name="LuminousDiameter" type="xs:int"/>
+							<xs:element name="LuminousHeight" type="xs:int" minOccurs="0"/>
+							<xs:element name="TotalHeight" type="xs:int"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="StandCuboidCentered">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Width" type="xs:int"/>
+							<xs:element name="Length" type="xs:int"/>
+							<xs:element name="Height" type="xs:int"/>
+							<xs:element name="LuminousWidth" type="xs:int"/>
+							<xs:element name="LuminousLength" type="xs:int"/>
+							<xs:element name="TopWidth" type="xs:int" minOccurs="0"/>
+							<xs:element name="TopLength" type="xs:int" minOccurs="0"/>
+							<xs:element name="TotalHeight" type="xs:int"/>
+							<xs:element name="LuminousHeight" type="xs:int" minOccurs="0"/>
+							<xs:element name="Type" minOccurs="0">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="Direct"/>
+										<xs:enumeration value="Indirect"/>
+										<xs:enumeration value="DirectIndirect"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="StandCuboidSide">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Width" type="xs:int"/>
+							<xs:element name="Length" type="xs:int"/>
+							<xs:element name="Height" type="xs:int"/>
+							<xs:element name="LuminousWidth" type="xs:int"/>
+							<xs:element name="LuminousLength" type="xs:int"/>
+							<xs:element name="TotalHeight" type="xs:int"/>
+							<xs:element name="Type" minOccurs="0">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="Direct"/>
+										<xs:enumeration value="Indirect"/>
+										<xs:enumeration value="DirectIndirect"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="WallCuboid">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Width" type="xs:int"/>
+							<xs:element name="Length" type="xs:int"/>
+							<xs:element name="Height" type="xs:int"/>
+							<xs:element name="LuminousWidth" type="xs:int"/>
+							<xs:element name="LuminousLength" type="xs:int"/>
+							<xs:element name="LuminousHeight" type="xs:int"/>
+							<xs:element name="TopWidth" type="xs:int" minOccurs="0"/>
+							<xs:element name="TopLength" type="xs:int" minOccurs="0"/>
+							<xs:element name="Type" minOccurs="0">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="Direct"/>
+										<xs:enumeration value="Indirect"/>
+										<xs:enumeration value="DirectIndirect"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="WallCylinder">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Diameter" type="xs:int"/>
+							<xs:element name="Height" type="xs:int"/>
+							<xs:element name="LuminousDiameter" type="xs:int"/>
+							<xs:element name="LuminousHeight" type="xs:int" minOccurs="0"/>
+							<xs:element name="Type" minOccurs="0">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="Direct"/>
+										<xs:enumeration value="Indirect"/>
+										<xs:enumeration value="DirectIndirect"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="WallTriangular">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Width" type="xs:int"/>
+							<xs:element name="Length" type="xs:int"/>
+							<xs:element name="Height" type="xs:int"/>
+							<xs:element name="LuminousWidth" type="xs:int"/>
+							<xs:element name="LuminousLength" type="xs:int"/>
+							<xs:element name="LuminousHeight" type="xs:int"/>
+							<xs:element name="Type" minOccurs="0">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="Direct"/>
+										<xs:enumeration value="Indirect"/>
+										<xs:enumeration value="DirectIndirect"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="BollardCuboid">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Width" type="xs:int"/>
+							<xs:element name="Length" type="xs:int"/>
+							<xs:element name="Height" type="xs:int"/>
+							<xs:element name="LuminousWidth" type="xs:int"/>
+							<xs:element name="LuminousLength" type="xs:int"/>
+							<xs:element name="LuminousHeight" type="xs:int"/>
+							<xs:element name="TotalHeight" type="xs:int" minOccurs="0"/>
+							<xs:element name="C0" type="xs:int" minOccurs="0"/>
+							<xs:element name="C90" type="xs:int" minOccurs="0"/>
+							<xs:element name="C180" type="xs:int" minOccurs="0"/>
+							<xs:element name="C270" type="xs:int" minOccurs="0"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="BollardCylinder">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Diameter" type="xs:int"/>
+							<xs:element name="Height" type="xs:int" minOccurs="0"/>
+							<xs:element name="LuminousHeight" type="xs:int" minOccurs="0"/>
+							<xs:element name="TotalHeight" type="xs:int" minOccurs="0"/>
+							<xs:element name="C0" type="xs:int" minOccurs="0"/>
+							<xs:element name="C90" type="xs:int" minOccurs="0"/>
+							<xs:element name="C180" type="xs:int" minOccurs="0"/>
+							<xs:element name="C270" type="xs:int" minOccurs="0"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="BollardSide">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Width" type="xs:int"/>
+							<xs:element name="Length" type="xs:int"/>
+							<xs:element name="Height" type="xs:int"/>
+							<xs:element name="LuminousWidth" type="xs:int"/>
+							<xs:element name="LuminousLength" type="xs:int"/>
+							<xs:element name="LuminousHeight" type="xs:int"/>
+							<xs:element name="TotalHeight" type="xs:int" minOccurs="0"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="StreetCylinderCentered">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Diameter" type="xs:int"/>
+							<xs:element name="TopDiameter" type="xs:int"/>
+							<xs:element name="LuminousDiameter" type="xs:int"/>
+							<xs:element name="TopLuminousDiameter" type="xs:int" minOccurs="0"/>
+							<xs:element name="LuminousHeight" type="xs:int" minOccurs="0"/>
+							<xs:element name="Height" type="xs:int" minOccurs="0"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="StreetCuboidSide">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Width" type="xs:int"/>
+							<xs:element name="Length" type="xs:int"/>
+							<xs:element name="Height" type="xs:int"/>
+							<xs:element name="LuminousWidth" type="xs:int" minOccurs="0"/>
+							<xs:element name="LuminousLength" type="xs:int" minOccurs="0"/>
+							<xs:element name="LuminousHeight" type="xs:int" minOccurs="0"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="StreetCylinderSide">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Diameter" type="xs:int"/>
+							<xs:element name="LuminousDiameter" type="xs:int"/>
+							<xs:element name="TopDiameter" type="xs:int" minOccurs="0"/>
+							<xs:element name="TopLuminousDiameter" type="xs:int" minOccurs="0"/>
+							<xs:element name="LuminousHeight" type="xs:int" minOccurs="0"/>
+							<xs:element name="Height" type="xs:int" minOccurs="0"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="SpotCylinder">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Diameter" type="xs:int"/>
+							<xs:element name="Height" type="xs:int"/>
+							<xs:element name="LuminousDiameter" type="xs:int"/>
+							<xs:element name="TotalHeight" type="xs:int"/>
+							<xs:element name="BaseDiameter" type="xs:int" minOccurs="0"/>
+							<xs:element name="BaseHeight" type="xs:int" minOccurs="0"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="SpotCuboid">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Width" type="xs:int"/>
+							<xs:element name="Length" type="xs:int"/>
+							<xs:element name="Height" type="xs:int"/>
+							<xs:element name="LuminousWidth" type="xs:int"/>
+							<xs:element name="LuminousLength" type="xs:int"/>
+							<xs:element name="LuminousHeight" type="xs:int"/>
+							<xs:element name="BaseWidth" type="xs:int" minOccurs="0"/>
+							<xs:element name="BaseLength" type="xs:int" minOccurs="0"/>
+							<xs:element name="BaseHeight" type="xs:int" minOccurs="0"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="FloodLightCylinder">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Diameter" type="xs:int"/>
+							<xs:element name="Height" type="xs:int"/>
+							<xs:element name="LuminousDiameter" type="xs:int"/>
+							<xs:element name="LuminousHeight" type="xs:int"/>
+							<xs:element name="TotalHeight" type="xs:int" minOccurs="0"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="FloodLightCuboid">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Width" type="xs:int"/>
+							<xs:element name="Length" type="xs:int"/>
+							<xs:element name="Height" type="xs:int"/>
+							<xs:element name="LuminousWidth" type="xs:int"/>
+							<xs:element name="LuminousLength" type="xs:int"/>
+							<xs:element name="LuminousHeight" type="xs:int"/>
+							<xs:element name="TotalHeight" type="xs:int" minOccurs="0"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
