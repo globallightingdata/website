@@ -7,9 +7,13 @@ sidebar_label: Introduction
 
 Parametric Geometry is a concept that allows you to create basic rudimentary 3d models of generic luminaires without having to model them. You can generate models based on a few parameters describing the product's dimensions.
 
+Our parametric 3d model web service allows you to upload an input XML file and provides the download link after generating the new L3D file. You can then use the file within your GLDF file.
+
+You  of the P3D input XML files is dedinfed in the following
+
 ## Step by Step guide
 
-Create your own paremtric l3d model.
+You can follow the following steps to create your own paremtric l3d model and understand how the web serice works.
 
 The process outline is as follows:
 
@@ -25,9 +29,11 @@ The following is a windows platform-based example.
 
 You can download our sample bat and XML source files or create them yourself, as described in the following steps.
 
-- **Step 1:** Create the *.bat file on your system.
-- **Step 2:** Open the file in a text editor such as notepad.exe
-- **Step 3:** Enter the following code, save the file and exit the editor.
+- **Step 1:** Open notepad.exe on your system.
+
+![Open notepad.exe on windows 11](/img/docs/geometry/screenshots/opennotepad.webp)
+
+- **Step 2:** Enter the following code, save the file and exit the editor.
 
 ```
 @Echo off
@@ -58,12 +64,17 @@ del out.xml
 pause
 ```
 
-- **Step 4:** Create a *.xml file, and open it in a text editor such as notepad.exe.
-- **Step 5:** copy and paste the XML code for a Luminaire of type Stand Cuboid Side: 
+![Open notepad.exe on windows 11](/img/docs/geometry/screenshots/notepad.webp)
+
+- **Step 3:** Click on Save As. Select All files as file type and save the file as example.bat
+
+![Open notepad.exe on windows 11](/img/docs/geometry/screenshots/saveas.webp)
+
+- **Step 4:** Open another instance of Notepad and paste the following text: 
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-<P3D xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:///C:/Users/Alex/Desktop/p3d/P3D/P3D.xsd">
+<P3D>
     <StandCuboidSide>
 	    <Width>30</Width>
 	    <Length>60</Length>
@@ -75,8 +86,16 @@ pause
 </P3D>
 ```
 
-- **Step 6:** Save the file and rename it to *.xml.
+![Open notepad.exe on windows 11](/img/docs/geometry/screenshots/xmlnotepad.webp)
 
-If you double-click the bat file, a file selection dialog will appear. You can then select the source XML file, and the script will download the result l3d file to the location of your bat file.
+- **Step 5:** Click Save as again and save the file as example-geometry.xml. You should now have two files in your directory.
 
-Open your file in the l3d editor to see the result.
+![Open notepad.exe on windows 11](/img/docs/geometry/screenshots/files1.webp)
+
+- **Step 6:** Double-click the bat file. Then a file selection dialog will appear. You can then select the source XML file, and the script will download the result l3d file to the location of your bat file. The result filename should start with StandCuboidSide... and end with .l3d. Your directory should look as in the image below.
+
+![Open notepad.exe on windows 11](/img/docs/geometry/screenshots/result.webp)
+
+- **Step 7:** load up the <a href="https://l3d-editor.gldf.io" target="_blank">L3D Editor</a> and open your new file to see the result.
+
+![Open notepad.exe on windows 11](/img/docs/geometry/screenshots/resulteditor.webp)
