@@ -3,7 +3,7 @@ title: Introduction
 sidebar_label: Introduction
 ---
 
-## Summary
+## Concept
 
 Parametric Geometry is a concept that allows you to create basic rudimentary 3d models of generic luminaires without having to model them. You can generate models based on a few parameters describing the product's dimensions.
 
@@ -13,27 +13,26 @@ You  of the P3D input XML files is dedinfed in the following
 
 ## Step by Step guide
 
-You can follow the following steps to create your own paremtric l3d model and understand how the web serice works.
+This guide will walk you through the steps to create an example parametric l3d model and help you understand how the web service works.
 
 The process outline is as follows:
 
-Create an input XML file according to our <a href="/xsd/p3d/p3d.xsd" target="_blank">XSD</a> file specification.
+- Create an input XML file according to our <a href="/xsd/p3d/p3d.xsd" target="_blank">XSD</a> file specification.
+- Send the input XML file to our Web service.
+- The web service will respond with an URL where you can download the generated l3d file.
 
-Send the input XML file to our Web service.
-The web service will respond with an URL where you can download the generated l3d file.
-
-Sample
-We created a BAT and a sample source file to demonstrate how the service works and make it easy for you to test it yourself.
+In this example, we will create a BAT file and a sample source XML file to demonstrate and test the web service
 
 The following is a windows platform-based example.
 
-You can download our sample bat and XML source files or create them yourself, as described in the following steps.
+### Step 1
 
-- **Step 1:** Open notepad.exe on your system.
+Open notepad.exe on your system.
 
 ![Open notepad.exe on windows 11](/img/docs/geometry/screenshots/opennotepad.webp)
 
-- **Step 2:** Enter the following code, save the file and exit the editor.
+### Step 2
+Enter the following code, save the file and exit the editor.
 
 ```
 @Echo off
@@ -66,11 +65,13 @@ pause
 
 ![Open notepad.exe on windows 11](/img/docs/geometry/screenshots/notepad.webp)
 
-- **Step 3:** Click on Save As. Select All files as file type and save the file as example.bat
+### Step 3 
+Click on Save As. Select All files as file type and save the file as example.bat
 
 ![Open notepad.exe on windows 11](/img/docs/geometry/screenshots/saveas.webp)
 
-- **Step 4:** Open another instance of Notepad and paste the following text: 
+### Step 4
+Open another instance of Notepad and paste the following text: 
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -88,14 +89,17 @@ pause
 
 ![Open notepad.exe on windows 11](/img/docs/geometry/screenshots/xmlnotepad.webp)
 
-- **Step 5:** Click Save as again and save the file as example-geometry.xml. You should now have two files in your directory.
+### Step 5
+Click Save as again and save the file as example-geometry.xml. You should now have two files in your directory.
 
 ![Open notepad.exe on windows 11](/img/docs/geometry/screenshots/files1.webp)
 
-- **Step 6:** Double-click the bat file. Then a file selection dialog will appear. You can then select the source XML file, and the script will download the result l3d file to the location of your bat file. The result filename should start with StandCuboidSide... and end with .l3d. Your directory should look as in the image below.
+### Step 6
+Double-click the bat file. Then a file selection dialog will appear. You can then select the source XML file, and the script will download the result l3d file to the location of your bat file. The result filename should start with StandCuboidSide... and end with .l3d. Your directory should look as in the image below.
 
 ![Open notepad.exe on windows 11](/img/docs/geometry/screenshots/result.webp)
 
-- **Step 7:** load up the <a href="https://l3d-editor.gldf.io" target="_blank">L3D Editor</a> and open your new file to see the result.
+### Step 7
+Load up the <a href="https://l3d-editor.gldf.io" target="_blank">L3D Editor</a> and open your new file to see the result.
 
 ![Open notepad.exe on windows 11](/img/docs/geometry/screenshots/resulteditor.webp)
