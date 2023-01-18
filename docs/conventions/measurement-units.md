@@ -3,18 +3,36 @@ title: Measurement Units
 sidebar_label: Measurement Units
 ---
 ## Definition
+In GLDF und L3D werden Einheiten nach dem **International System of Units**, bzw. davon abgeleitete Einheiten, verwendet. Die Einheiten sind den jeweiligen Feldern fest zugeordnet und in der XSD entsprechend dokumentiert.
 
-One convention in the GLDF is: which **priority** applies, if the **same property** is present in the **photometry** as well as in the **GLDF**:
 
-:::important Convention
-If a property is present
+Folgende Einheiten werden derzeit verwendet:
 
-- in a linked photometry file
-- and in the GLDF itself
 
-the following applies: **GLDF overwrites photometry**. This applies not only to properties with the same name, but to all semantically identical values.
+| Syntax      | Description | Test Text     |
+| :---        |    :----:   |          ---: |
+| Header      | Title       | Here's this   |
+| Paragraph   | Text        | And more      |
 
-This convention **always prevails** without having to be explicitly defined.
+
+|**Grösse**|**Einheit**|**Formelzeichen**|
+| :--- | :------: | :------: |
+| Abmessungen | Millimeter | \[mm\] | 
+| Winkel | Grad | \[°\] | 
+| Leuchtdichte | Candela per square meter | \[cd/m²\] | 
+| Leistung | Watt | \[W\] | 
+| Spannung | Volt | \[V\] | 
+| Farbtemperatur | Kelvin | \[K\] | 
+| Lichtstrom | Lumen | \[lm\] | 
+| Zeit | Stunden | \[h\] | 
+| Masse | Kilogram | \[kg\] | 
+| Frequenz | Herz | \[hz\] | 
+| Temperatur | Grad Celsius | \[°C\] | 
+
+> In GLDF und **L3D** werden Abmessungen ausschliesslich in Milimeter angegeben
+
+
+
 :::
 
 ## Examples
@@ -23,4 +41,4 @@ This convention **always prevails** without having to be explicitly defined.
 
 Probably the most obvious use case that one might not even think of is the **manufacturer's name**. It occurs in both - photometry files like Eulumdat/IES and the GLDF - and is a mandatory field in these formats. What may seem obvious is a use case for this convention: The manufacturer name in the GLDF XML **always applies**. The manufacturer name in any photometry file is thus **overwritten and has no meaning**:
 
-<!-- <img src="/img//docs/conventions/gldf-overwrites-manufacturer.webp" alt="GLDF Container" width="950" /> -->
+<!-- <img src="/img//docs/conventions/gldf_measuring_units.webp" alt="Measurement Units" width="950" /> -->
