@@ -2,43 +2,32 @@
 title: Measurement Units
 sidebar_label: Measurement Units
 ---
-## Definition
-In GLDF und L3D werden Einheiten nach dem **International System of Units**, bzw. davon abgeleitete Einheiten, verwendet. Die Einheiten sind den jeweiligen Feldern fest zugeordnet und in der XSD entsprechend dokumentiert.
+
+In GLDF and L3D, units according to the **International System of Units**, or units derived from it, are used. The units are firmly assigned to the respective fields and documented accordingly in the XSD.
 
 
-Folgende Einheiten werden derzeit verwendet:
+The following units are currently in use:
 
 
-| Syntax      | Description | Test Text     |
-| :---        |    :----:   |          ---: |
-| Header      | Title       | Here's this   |
-| Paragraph   | Text        | And more      |
 
-
-|**Grösse**|**Einheit**|**Formelzeichen**|
+|**Value**|**Unit**|**Formula sign**|
 | :--- | :------: | :------: |
-| Abmessungen | Millimeter | \[mm\] | 
-| Winkel | Grad | \[°\] | 
-| Leuchtdichte | Candela per square meter | \[cd/m²\] | 
-| Leistung | Watt | \[W\] | 
-| Spannung | Volt | \[V\] | 
-| Farbtemperatur | Kelvin | \[K\] | 
-| Lichtstrom | Lumen | \[lm\] | 
-| Zeit | Stunden | \[h\] | 
-| Masse | Kilogram | \[kg\] | 
-| Frequenz | Herz | \[hz\] | 
-| Temperatur | Grad Celsius | \[°C\] | 
-
-> In GLDF und **L3D** werden Abmessungen ausschliesslich in Milimeter angegeben
+| Dimensions | Millimetres | \[mm\] | 
+| Angle | Degrees | \[°\] | 
+| Luminance | Candela per square meter | \[cd/m²\] | 
+| Power | Watt | \[W\] | 
+| Voltage | Volt | \[V\] | 
+| Colour temperature | Kelvin | \[K\] | 
+| Luminous flux | lumen | \[lm\] | 
+| Time | hours | \[h\] | 
+| Mass | kilogram | \[kg\] | 
+| Frequency | heart | \[hz\] | 
+| Temperature | degrees Celsius | \[°C\] | 
 
 
 
-:::
+> In GLDF and **L3D** dimensions are given exclusively in milimetres
 
-## Examples
 
-### HEAD
 
-Probably the most obvious use case that one might not even think of is the **manufacturer's name**. It occurs in both - photometry files like Eulumdat/IES and the GLDF - and is a mandatory field in these formats. What may seem obvious is a use case for this convention: The manufacturer name in the GLDF XML **always applies**. The manufacturer name in any photometry file is thus **overwritten and has no meaning**:
-
-<!-- <img src="/img//docs/conventions/gldf_measuring_units.webp" alt="Measurement Units" width="950" /> -->
+<img src="/img//docs/conventions/gldf_measuring_units.webp" alt="Measurement Units" width="950" />
