@@ -67,6 +67,8 @@ If the scaling is already known **before** import, it can be set in advance. All
 
 To do this, select the corresponding unit in the selection field of the *Import Catalog*.
 
+---
+
 ### Scaling after import
 
 If the scaling is incorrect **after** the import, it can also be adjusted.
@@ -89,9 +91,9 @@ You can use the Move & Rotate modes (1) to **translate** your models. These mode
 
 ## Light Emitting Objects (LEO)
 
-The models imported, placed and oriented up to this point now contain the geometric information for a luminaire. For lighting calculation, it is now necessary to determine **which surfaces are luminous and therefore emit light**. This is done using so-called Light Emitting Objects. Or LEO for short. After all, they are also the geometric connectors to the [`Emitter`](/docs/structure/emitters.md) elements in the GLDF. The assignment of LEOs in the L3D model and the emitters in the GLDF is done via **unique identifiers**.
+Up to this point, the models imported, placed and oriented contain the geometric information for a luminaire now. For lighting calculation however, it is now necessary to determine **which surfaces are luminous and therefore emit light**. This is done using so-called **L**ight **E**mitting **O**bjects. Or LEO for short. After all, they are also the geometric connectors to the [`Emitter`](/docs/structure/emitters.md) XML elements in the GLDF. The assignment of LEOs in the L3D model and the emitters in the GLDF is done via **unique identifiers**.
 
-### Create a LEO
+### Creating a LEO
 
 As with many functionalities in the L3D Editor, there are different ways to add a LEO to the luminaire model. One is to **drag & drop the LEO onto the corresponding geometry** in the CAD area. The model becomes highlighted in the scene and the LEO is hierarchically attached to the geometry:
 
@@ -104,6 +106,86 @@ Another way is to **draw** the LEO into the model. To do this, select the model 
 :::tip
 Holding the Ctrl-key, you can undo selected areas.
 :::
+
+---
+
+### Position, size & orientation
+
+Since the LEO is a 2-dimensional surface, the question arises even more, how to scale, position and align it. This depends on a number of factors:
+
+- the position of the light source inside the housing
+- the translucency of the housing
+- how the luminaire was measured in the lighting laboratory
+
+Using an asymmetrical photometry, The LEO alignment is even more important.
+
+### LEO position
+
+The LEO should always be positioned **at the place of light emission** - not necessarily of the light source. This may be the same position, but it does not have to be. This shall be clarified with the following example:
+
+For a luminaire with an **opaque housing**, the LEO should be placed **exactly at the light exit**: Since this is also where the photometric measurement takes place:
+
+<img src="/img/docs/tools/l3d-editor-leo1.webp" alt="LEO example" width="300" />
+
+For a luminaire with a **transparent housing**, on the other hand, the LEO should be placed at the **height of the light source**:
+
+<img src="/img/docs/tools/l3d-editor-leo2.webp" alt="LEO example" width="300" />
+
+In addition, it should be taken into account that in light calculation applications like [DIALux](https://www.dialux.com) and [RELUX](https://relux.com/en/relux-desktop.html), the photometry itself is placed exactly **in the centre of the LEO**.
+
+---
+
+### LEO size
+
+Even if the photometry is positioned exactly in the centre of the LEO, as written above, the LEO **should not be defined as a point only**. It should be defined as the **actual luminous surface** of the luminaire. The reason for this is, that this surface is also used in lighting design software for **near-field calculation** and **UGR (Unified Glare Rating)**.
+
+If a LEO is selected, it is also possible to specify the **luminous heights**. Usually these are taken from the photometric file, but can also be stored in the model in case they are **missing or should be overwritten**.
+
+<img src="/img/docs/tools/l3d-editor-lum-heights.webp" alt="LEO example" width="650" />
+
+---
+
+### LEO orientation
+
+To better illustrate the LEO alignment, two **helper lines** are permanently displayed as soon as a LEO is created:
+
+- the **yellow G0 plane** line
+- the **red C0 plane** line
+
+### C0 plane
+
+Rule of thumb: lighting design software expect the **geometry of the luminaire** to be placed **along the (green) Y-axis**. While the **C0 plane** should point in the **direction of the positive X-axis** (or in other words be **horizontally positive**). This is highlighted in the editor by a **short red line**
+
+<img src="/img/docs/tools/l3d-editor-c0-plane.webp" alt="LEO example" width="650" />
+
+Yo can **rotate the C0 plane** by selecting the LEO and clicking on **Rotate G0** (to rotate the C0 plane **around** the G0 axis)
+
+:::tip street luminaires
+A C0 rotation by 90° around G0 is often required for street luminaires with IES photometry.
+:::
+
+---
+
+### G0 plane
+
+The G0 plane defines the **orientation of the photometry at the LEO** and is visualised in the L3D editor by a **short yellow line**. The preferred G0 orientation is mainly influenced by two factors:
+
+- **Type** of luminaire (ceiling, floor, wall)
+- **Position** of the luminaire during the photometric measurement
+
+Usually, G0 should **point into the room** by default. This means
+
+- For **ceiling** luminaires into the **negative Z axis**
+- For **floor** luminaires into the **positive Z axis**
+- For wall luminaires it depends on **housing, orientation and measurement**
+
+So if for some reason the luminaire has not been measured in the **position of usage**, this can be corrected by rotating the G0 plane.
+
+Following these rules, the final model (within GLDF) should be rendered inside a room in [DIALux](https://www.dialux.com) and [RELUX](https://relux.com/en/relux-desktop.html) as follows:
+
+<img src="/img/docs/tools/l3d-editor-orientation.webp" alt="LEO example" width="500" />
+
+---
 
 ### LEO names & GLDF
 
