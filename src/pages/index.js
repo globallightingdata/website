@@ -163,7 +163,7 @@ function Feature1() {
           />
         }
         // columnTwo={<img alt="" src={useBaseUrl('img/homepage/feature1.png')} />}
-        columnTwo={<img alt="" src="/img/homepage/modular.png" />}
+        columnTwo={<img alt="" src="/img/homepage/modular.webp" />}
       />
     </Section>
   );
@@ -201,7 +201,7 @@ function Feature2() {
           <img
             alt=""
             // src={useBaseUrl(`img/homepage/image.png`)}
-            src="/img/homepage/level-of-detail.png"
+            src="/img/homepage/level-of-detail.webp"
           />
         }
       />
@@ -220,7 +220,7 @@ function Feature3() {
             text={textContent.feature3}
           />
         }
-        columnTwo={<img alt="" src="/img/homepage/hierarchy.png" />}
+        columnTwo={<img alt="" src="/img/homepage/hierarchy.webp" />}
       />
     </Section>
   );
@@ -246,7 +246,7 @@ function Feature4() {
         //     src={useBaseUrl(`img/homepage/video.mp4`)}
         //   />
         // }
-        columnTwo={<img alt="" src="/img/homepage/compress.png" />}
+        columnTwo={<img alt="" src="/img/homepage/compress.webp" />}
       />
     </Section>
   );
