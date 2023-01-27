@@ -10,8 +10,6 @@ In this step-by-step guide, we will create a simple GLDF file.
 ## Prerequisites
 - You need to know how to pack and unpack ZIP archives.
 - You need a Text or XML Editor. Please see <a href="./requirements" target="_self">Requirements</a> for recommendations and more information.
-- You will need a product image, ideally in jpg format. Or download this <a href="https://upload.wikimedia.org/wikipedia/commons/9/91/PH-Lampan_1.jpg" target="_blank">Sample image</a>.
-- You need an LDT file to represent your light distribution or use our <a href="" target="_self"> sample file</a>.
 
 ## Structure of a GLDF file
 
@@ -32,6 +30,23 @@ GLDF divides the XML structure into three sections.
 Please see <a href="../structure/xml-hierarchy" target="_self">xml hierarchy</a> for more information.
 
 All sections are children of the `Root` element.
+
+## Preparation
+
+In this example, we will use a template GLDF file from the GLDF Editor and recreate the product.xml file from scratch. This file contains all the necessary files, such as the product image, ldt-file, and 3d model. To download the sample, open the <a href="https://gldf-editor.gldf.io" target="_blank">GLDF Editor</a>.
+
+Open the "single round 1 variant" template by clicking on open.
+
+<img src="/img/docs/getting-started/gldfeditor1.webp" alt="GLDF Editor" width="800" />
+
+You can then download the template GLDF file by clicking on the download GLDF button.
+<img src="/img/docs/getting-started/gldfeditor2.webp" alt="Download gldf file" width="800" />
+
+You can open the GLDF file in your favorite archiver that supports the ZIP format. We are using 7Zip in the screenshot.
+
+<img src="/img/docs/getting-started/7zip.webp" alt="GLDF ZIP" width="800" />
+
+We will now recreate the product.xml file from scratch in the following steps.
 
 ## Step 1: Create the basic XML structure
 Create an XML file named **product.xml** with the following XML code.
@@ -102,6 +117,8 @@ We will add a <a href="../structure/photometries" target="_self">`photometry`</a
 
 ## Step 4: Add Light Source
 
+We will add a light source with a rated input power of 10.2, a Color rendering index of 95, and a color temperature of 3000. We can also set the lifetime in hours and add maintenance factor information.
+
 ```xml
 <LightSources>
     <FixedLightSource id="s01">
@@ -125,6 +142,8 @@ We will add a <a href="../structure/photometries" target="_self">`photometry`</a
 
 ## Step 5: Add Control Gear
 
+Next we add a Control Gear with a name and description. We will also set power properties. For more information check the <a href="../conventions/measurement-units" target="_self">units</a> section.
+
 ```xml
 <ControlGears>
     <ControlGear id="c01">
@@ -143,6 +162,10 @@ We will add a <a href="../structure/photometries" target="_self">`photometry`</a
 ```
 
 ## Step 5: Add Emitter
+
+We will now combine the previously defines parts in an emitter. It can later be referenced via its id emitter01.
+
+We will now combine the previously defined parts in an emitter. You can later reference it via its id emitter01. In the same way, we are referencing the Photometry, Light source, and Control gear via their ids. We will also set the luminous flux.
 
 ```xml
 <Emitters>
