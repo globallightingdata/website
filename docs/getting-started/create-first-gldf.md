@@ -15,22 +15,6 @@ In this step-by-step guide, we will create a simple GLDF file.
 
 GLDF is a container or ZIP-Archive. It contains all the product information and assets belonging to the product and its variants. To learn more about the container and its structure, please see <a href="../container/about-container" target="_self">About GLDF Container</a>.
 
-### The product.xml file
-
-The heart of a GLDF file is the **product.xml** file, located at the root of the archive. It contains all the product information.
-
-The GLDF Schema defines the exact structure of the XML code in **product.xml**. You can validate your XML file against the schema to ensure your GLDF file works correctly. We describe this in the section <a href="" target="_self">validation</a>.
-
-GLDF divides the XML structure into three sections.
-
-- Header
-- General Definitions
-- Product Definitions
-
-Please see <a href="../structure/xml-hierarchy" target="_self">xml hierarchy</a> for more information.
-
-All sections are children of the `Root` element.
-
 ## Preparation
 
 In this example, we will use a template GLDF file from the GLDF Editor and recreate the product.xml file from scratch. This file contains all the necessary files, such as the product image, ldt-file, and 3d model. To download the sample, open the <a href="https://gldf-editor.gldf.io" target="_blank">GLDF Editor</a>.
@@ -46,7 +30,30 @@ You can open the GLDF file in your favorite archiver that supports the ZIP forma
 
 <img src="/img/docs/getting-started/7zip.webp" alt="GLDF ZIP" width="800" />
 
+You can see the products.xml file as well as three subfolders.
+
+- The `products.xml` file is the heart of the GLDF archive and defines the structure and properties of your product.
+- The folder `ldc` contains an Eulumdat file called diffuse.ldt. This is the light distribution curve.
+- The folder `image` contains the file bulb.jpg, which will be our product picture.
+- Finally, `geo` contains our 3d model called recessed_round.l3d.
+
 We will now recreate the product.xml file from scratch in the following steps.
+
+### The product.xml file
+
+The heart of a GLDF file is the **product.xml** file, located at the root of the archive. It contains all the product information.
+
+The GLDF Schema defines the exact structure of the XML code in **product.xml**. You can validate your XML file against the schema to ensure your GLDF file works correctly. We describe this in the section <a href="" target="_self">validation</a>.
+
+GLDF divides the XML structure into three sections.
+
+- Header
+- General Definitions
+- Product Definitions
+
+Please see <a href="../structure/xml-hierarchy" target="_self">xml hierarchy</a> for more information.
+
+All sections are children of the `Root` element.
 
 ## Step 1: Create the basic XML structure
 Create an XML file named **product.xml** with the following XML code.
