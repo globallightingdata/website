@@ -49,8 +49,9 @@ module.exports = {
       {
         "Parametric Geometry": [
           "geometry/parametric-introduction",
+          "geometry/parametric-features",
           {
-            "Types":[
+            "Parametric Types":[
               "geometry/types/parametric-round-recessed",
               "geometry/types/parametric-cuboid-recessed",
               "geometry/types/parametric-open-luminaire",

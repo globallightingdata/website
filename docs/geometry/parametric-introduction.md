@@ -1,5 +1,5 @@
 ---
-title: Introduction
+title: Parametric Geometry Introduction
 sidebar_label: Introduction
 ---
 
