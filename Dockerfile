@@ -4,7 +4,7 @@ FROM node:19-buster-slim AS build
 WORKDIR /build
 COPY . /
 
-RUN npm install && npm run build
+RUN npm ci --no-audit --no-fund && npm run build
 
 ### RELEASE ###
 FROM caddy:2.6.4-alpine
