@@ -7,22 +7,21 @@ Website of the *Global Lighting Data Format* ➔ [gldf.io](https://gldf.io)
 ## Requirements
 
 - Node.js ➔ [nodejs.org](https://nodejs.org)
-- Yarn ➔ [yarnpkg.com](https://yarnpkg.com)
 
 ## Installation
 
 ```console
-yarn install
+npm ci
 ```
 
-## Local Development
+## Local development
 
 ```console
-yarn start
+npm start
 ```
 
-## Build
+## Deployment
 
 ```console
-yarn build
+npm run build
 ```
