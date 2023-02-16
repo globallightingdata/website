@@ -1,5 +1,5 @@
 ### BUILD ###
-FROM node:16-stretch AS build
+FROM node:19-buster-slim AS build
 
 WORKDIR /build
 COPY . /
