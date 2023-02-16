@@ -15,5 +15,5 @@ jobs:
           node-version: '19.x'
       - name: Test Build
         run: |
-          npm ci
+          npm ci --no-audit --no-fund
           npm run build
