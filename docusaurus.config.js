@@ -61,6 +61,22 @@ const config = {
           autoCollapseCategories: true,
         },
       },
+      algolia: {
+        appId: "CZKT0F0YIB",
+        apiKey: "472ed677500d234a8afefdb39c5c54b7",
+        indexName: "gldf",
+        contextualSearch: true,
+        searchParameters: {},
+        searchPagePath: "search",
+        // Optional: Replace parts of the item URLs from Algolia.
+        // Useful when using the same search index for multiple deployments using a different baseUrl.
+        // You can use regexp or string in the `from` param.
+        // For example: localhost: 3000 vs myCompany.com / docs
+        // replaceSearchResultPathname: {
+        //   from: "/docs/", // or as RegExp: /\/docs\//
+        //   to: "/",
+        // },
+      },
       navbar: {
         title: "GLDF",
         logo: {
@@ -96,7 +112,6 @@ const config = {
             label: "Tools",
             position: "left",
           },
-
           /* Lokalisierung */
           // {
           //   type: "localeDropdown",
@@ -123,10 +138,13 @@ const config = {
           //     },
           //   ],
           // },
-          
           {
             to: "download",
             label: "Download",
+            position: "right",
+          },
+          {
+            type: "search",
             position: "right",
           },
           {
