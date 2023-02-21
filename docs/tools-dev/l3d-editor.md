@@ -42,6 +42,12 @@ Most buttons in the CAD working area have **tooltips with explanations**. Howeve
 
 <img src="/img/docs/tools/l3d-editor-buttons.webp" alt="L3D Editor" width="900" />
 
+## CAD area
+
+The coordinate grid has a **different meaning** depending on the way the luminaire is **mounted**. And should be seen accordingly as ceiling, wall or floor. See [model orientation](#model-orientation) for further details.
+
+<img src="/img/docs/tools/l3d-editor-cad-area.webp" alt="L3D Editor" width="600" />
+
 ## Model import
 
 Only [**Wavefront OBJ files**](https://de.wikipedia.org/wiki/Wavefront_OBJ) are supported and can be imported into the L3D Editor. There are three ways to import OBJ files:
@@ -77,6 +83,8 @@ If the scaling is incorrect **after** the import, it can also be adjusted.
 
 Simply open the *Import Catalog* and spycify the scaling as required for each model. Already placed OBJs in the CAD area will be scaled accordingly as well.
 
+---
+
 ## Model placement
 
 Now that the OBJ models are imported into the application, they can be placed on the CAD surface. If this has not already been done by drag & drop during import, there are two ways to add OBJ models to the CAD working area:
@@ -88,6 +96,86 @@ Now that the OBJ models are imported into the application, they can be placed on
 You can use the Move & Rotate modes (1) to **translate** your models. These modes are also accessible via **context menu** (2). Or use the **property window** to enter the values more precisely (3):
 
 <img src="/img/docs/tools/l3d-editor-translate.webp" alt="L3D Editor" width="650" />
+
+---
+
+## Model orientation
+
+Once the model is placed, the question arises how to **align** it correctly inside the **coordinate system**. This depends on two factors:
+
+- Alignment by **mounting type**  
+  Is it a ceiling, wall or floor light?
+- Alignment by **luminaire shape**  
+  Is it a symmetrical housing/light distribution or does it have a long side?
+
+### Floor surface/recessed
+
+For floor luminaires, the **coordinate plane represents the floor** when placing the models. Note the following implications
+
+- The **camera angle** on the coordinate system is already correctly aligned when opening the L3D Editor or reseting the view
+- The **mounting point** of the luminaire should be placed at the origin **X0, Y0, Z0**
+- If the luminaire is **surface-mounted**, it should face **entirely upwards in Z+ axis**
+- If the luminaire is **recessed into floor**, only the **visible part** should be placed in **Z+**
+- When creating the LEO and the luminaire has been measured **in position of usage**, the **LEO G0 alignment** has usually to be **rotated by 180°**, if the light output is facing upwards - see picture below
+- **Linear luminaires** should be modelled **along Y**. **C0** of the LEO should direct **towards X+** - see picture below
+
+<img src="/img/docs/tools/l3d-editor-floor-luminaire.webp" alt="L3D Editor" width="750" />
+
+---
+
+### Ceiling surface/recessed
+
+For ceiling luminaires, many things apply **analogously to floor luminaires**
+
+- The **coordinate plane** is now to be considered as a **ceiling**
+- The **mounting point** of the luminaire should be placed at the origin **X0, Y0, Z0**
+- The **visible part** of the luminaire should **face downwards in Z- axis**
+- Only the **recessed part** (if any) should be placed **above the coordinate plane**
+- **LEO G0** (yellow line) should direct to **Z-**, if the luminaire has been measured **in position of usage**
+
+<img src="/img/docs/tools/l3d-editor-ceiling-luminaire.webp" alt="L3D Editor" width="750" />
+
+---
+
+### Ceiling pendant
+
+There is one additional rule for pendant luminaires
+
+- Pendant luminaires **without modelled pendulum** should be treated like **ceiling-surface** mounted luminaires; Don't model the pendulum gap between ceiling and luminaire! The pendulum length itself should be defined later in the GLDF [`Variant`](/docs/structure/variant.md) element (`Mountings` child element)
+- Pendant luminaires **with modelled pendulum** should be placed accordingly to the image below. The Variant's `pendantLength` attribute in GLDF should be set to 0 in this case:
+
+<img src="/img/docs/tools/l3d-editor-pendant-luminaire.webp" alt="L3D Editor" width="750" />
+
+---
+
+### Wall surface/recessed
+
+For wall-mounted luminaires, the L3D Editor offers a **Wall luminaire mode**. It rotates the coordinate plane by 90° without rotating the axis system - it's simply as **visual helper**. Using this mode, the following rules apply:
+
+- The **coordinate plane** can now to be considered as a **wall**
+- The **mounting point** of the luminaire should be placed at the origin **X0, Y0, Z0**
+- Only the **recessed part** (if any) should be placed **behind the coordinate plane** "into the wall"
+- **LEO C0** should direct to **X+** "into the room"
+- Any **mounting height** can be set later in the GLDFs Variant's `Mountings` child element
+
+<img src="/img/docs/tools/l3d-editor-wall-luminaire.webp" alt="L3D Editor" width="550" />
+
+---
+
+### Alignment by luminaire shape
+
+In addition to the mounting place, the **luminaire shape** must be taken into account while aligning your 3D models. This applies in particular to **rectangular shaped luminaires** with a long side.
+
+- **Linear** luminaires must be aligned **lengthwise to the Y axis**
+- **LEO C0** should face **X+**
+
+:::tip
+Yo can **rotate the C0 plane** by selecting the LEO and clicking on *Rotate G0* Button (to rotate the C0 plane **around** the G0 axis)
+:::
+
+<img src="/img/docs/tools/l3d-editor-alignment.webp" alt="L3D Editor" width="600" />
+
+---
 
 ## Light Emitting Objects (LEO)
 
@@ -119,7 +207,7 @@ Since the LEO is a 2-dimensional surface, the question arises even more, how to 
 
 Using an asymmetrical photometry, The LEO alignment is even more important.
 
-### LEO position
+#### LEO position
 
 The LEO should always be positioned **at the place of light emission** - not necessarily of the light source. This may be the same position, but it does not have to be. This shall be clarified with the following example:
 
@@ -135,7 +223,7 @@ In addition, it should be taken into account that in light calculation applicati
 
 ---
 
-### LEO size
+#### LEO size
 
 Even if the photometry is positioned exactly in the centre of the LEO, as written above, the LEO **should not be defined as a point only**. It should be defined as the **actual luminous surface** of the luminaire. The reason for this is, that this surface is also used in lighting design software for **near-field calculation** and **UGR (Unified Glare Rating)**.
 
@@ -145,7 +233,7 @@ If a LEO is selected, it is also possible to specify the **luminous heights**. U
 
 ---
 
-### LEO orientation
+#### LEO orientation
 
 To better illustrate the LEO alignment, two **helper lines** are permanently displayed as soon as a LEO is created:
 
@@ -158,7 +246,7 @@ Rule of thumb: lighting design software expect the **geometry of the luminaire**
 
 <img src="/img/docs/tools/l3d-editor-c0-plane.webp" alt="LEO example" width="650" />
 
-Yo can **rotate the C0 plane** by selecting the LEO and clicking on **Rotate G0** (to rotate the C0 plane **around** the G0 axis)
+Yo can **rotate the C0 plane** by selecting the LEO and clicking on *Rotate G0* Button (to rotate the C0 plane **around** the G0 axis)
 
 :::tip street luminaires
 A C0 rotation by 90° around G0 is often required for street luminaires with IES photometry.
@@ -296,6 +384,8 @@ The particular rows in the XML example are highlighted:
 - And finally, in the [`Variant`](/docs/structure/variant) the geometry (70) is combined with the two [`Emitter`](/docs/structure/emitters) (71 and 74) using the `ModelGeometryReference` element.
 - In order to specify **which emitter in GLDF** should be assigned to **which LEO in the L3D**, the LEO **names previously defined in the L3D editor** are now set using **`EmitterObjectExternalName`** (72 and 75).
 
+---
+
 ## Light Emitting Surface (LES)
 
 Light Emitting Surfaces (LES) - similar to Light Emitting Objects (LEO) - are model surfaces with a special meaning. While LEOs are the surfaces that **emit** the photometrically measured light (The photometry is "placed" in their center). LES are meant for visualisation in applications like DIALux/Relux: They appear simply brighter.
@@ -313,6 +403,8 @@ By default there is no need to create LES them manually. Whenever a LEO is creat
 
 It is also possible to make some LES appear darker or lighter by setting the percentage to a value between 10% and 100%.
 
+---
+
 ## Joints
 
 The [L3D format](/docs/geometry/l3d-intro.md) as well as the L3D Editor support luminaires with movable [`Joints`](/docs/geometry/l3d-xml-reference.md#joint), which can then be adjusted for the respective lighting scene in applications such as [DIALux](https://dialux.com) and [Relux](https://relux.com/en/relux-desktop.html).
@@ -320,6 +412,8 @@ The [L3D format](/docs/geometry/l3d-intro.md) as well as the L3D Editor support 
 In the L3D editor, these joints are separate objects that are placed in the CAD area. They create a hierarchy between two objects. Once placed, you can use the property window to set degrees of freedom, in which the user can later rotate the child object on the X, Y and/or Z axis:
 
 <video controls src="https://github.com/globallightingdata/files/raw/master/docs/l3d-create-joints.webm" width="700">Your browser doesn't support the WEBM video format</video><br/><br/>
+
+---
 
 ## Connectors
 
