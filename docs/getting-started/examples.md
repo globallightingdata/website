@@ -113,13 +113,19 @@ Download the example here: <a href="https://github.com/globallightingdata/exampl
 
 ### Explanation
 
-The setup of the file is very straightforward. It contains no 3d geometry. 
+The setup of the file is very straightforward. It contains no 3d geometry and only a simple light distribution curve.
 
-... TODO
+There is only one file reference called ldtFile reference by one photometry called photometry01. 
+
+There is one light source and one emitter. The emitter references the light source and the photometry.
+
+The geometry has the simplest possible structure. It only contains the reference to the light emitter (line 55).
+
+Because no geometry is defined, Relux and Dialux will use the LDT file to determine the geometry for their respective applications.
 
 ### product.xml
 
-```xml {16,68} showLineNumbers
+```xml {14-38,55} showLineNumbers
 <?xml version="1.0" encoding="UTF-8"?>
 <Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://gldf.io/xsd/gldf/1.0.0-rc.1/gldf.xsd">
 	<Header>
