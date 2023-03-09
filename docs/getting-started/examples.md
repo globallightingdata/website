@@ -5,6 +5,15 @@ sidebar_label: Examples
 
 In this section, we will be showcasing example GLDF files. They represent real GLDFs that you can use for orientation purposes. All samples are available for download from the <a href="https://github.com/globallightingdata/examples" target="_bkank">GLDF Examples GitHub repository</a>.
 
+The following examples will be covered.
+
+- <a href="https://github.com/globallightingdata/examples/tree/master/Minimal%20Geo" target="_blank">Minimal Geo.gldf</a>
+- <a href="https://github.com/globallightingdata/examples/tree/master/Minimal%20LDC" target="_blank">Minimal LDC.gldf</a>
+- <a href="https://github.com/globallightingdata/examples/tree/master/Philips%20SP542P" target="_blank">Philips SP542P</a>
+- <a href="https://github.com/globallightingdata/examples/tree/master/SLV%20-%20Tria%202%20with%20sensor" target="_blank">SLV - Tria 2 with sensor</a>
+- <a href="https://github.com/globallightingdata/examples/tree/master/Trilux%20Belviso%20S%20CDP" target="_blank">Trilux Belviso S CDP</a>
+- <a href="https://github.com/globallightingdata/examples/tree/master/Zumtobel%20P-EVO%20R100L" target="_blank">Zumtobel P-EVO R100L</a>
+
 
 ## Minimal Geo
 
@@ -104,12 +113,15 @@ The following XML code references the single light-emitting object of the 3d fil
 </Root>
 ```
 
+### Download
+
+<a href="https://github.com/globallightingdata/examples/tree/master/Minimal%20Geo" target="_blank">Minimal Geo.gldf</a>
 
 ## Minimal LDC
 
 This example demonstrates very simple minimal GLDF file implementation with no 3d geometry. The only file reference is the light distribution curve.
 
-Download the example here: <a href="https://github.com/globallightingdata/examples/tree/master/Minimal%20LDC" target="_blank">Minimal Geo.gldf</a>
+Download the example here: <a href="https://github.com/globallightingdata/examples/tree/master/Minimal%20LDC" target="_blank">Minimal LDC.gldf</a>
 
 ### Explanation
 
@@ -188,10 +200,66 @@ Because no geometry is defined, Relux and Dialux will use the LDT file to determ
 </Root>
 ```
 
+### Download
+
+<a href="https://github.com/globallightingdata/examples/tree/master/Minimal%20LDC" target="_blank">Minimal LDC.gldf</a>
+
 ## Philips SP542P
+
+### Explanation
+
+This example demonstrates a simple minimal GLDF implementation of the Philips SP542P product. It uses l3d geometry.
+
+<img src="/img/docs/getting-started/sp542pproductimage.webp" alt="Philips SP542 Product Image"/>
+
+<img src="/img/docs/getting-started/philips.webp" alt="Philips SP542 Relux Screenshot"/>
+
+### Download
+
+<a href="https://github.com/globallightingdata/examples/tree/master/Philips%20SP542P" target="_blank">Philips SP542P</a>
+
 
 ## SLV - Tria 2 with sensor
 
+### Explanation
+
+This example demonstrates a GLDF file with an l3d model, two light outputs, and an integrated sensor. Everything is put together via the geometry node.
+
+<img src="/img/docs/getting-started/slvprod.webp" alt="SLV NEW TRIA 2"/>
+
+<img src="/img/docs/getting-started/slv3d.webp" alt="SLV NEW TRIA 2"/>
+
+### Download
+
+<a href="https://github.com/globallightingdata/examples/tree/master/SLV%20-%20Tria%202%20with%20sensor" target="_blank">SLV - Tria 2 with sensor</a>
+
 ## Trilux Belviso S CDP
 
+### Explanation
+
+Trilux Belviso is an example of a standing luminaire with two individual heads. The secondary light emitter can be adjusted by rotating it. Each light emitter has a different ldt file connected via the geometry node.
+
+<img src="/img/docs/getting-started/triluxprod.webp" alt="Trilux Belviso S CDP Product Picture"/>
+
+<img src="/img/docs/getting-started/triluxcad.webp" alt="Trilux Belviso S CDP Technical sketch"/>
+
+<img src="/img/docs/getting-started/trilux3d.webp" alt="Trilux Belviso S CDP Relux Screenshot"/>
+
+### Download 
+
+<a href="https://github.com/globallightingdata/examples/tree/master/Trilux%20Belviso%20S%20CDP" target="_blank">Trilux Belviso S CDP</a>
+
+
 ## Zumtobel P-EVO R100L
+
+### Explanation
+
+Zumtobel P-EVO R100L ist a simple recessed luminaire using an l3d model.
+
+<img src="/img/docs/getting-started/zumtobelprod.webp" alt="SLV NEW TRIA 2"/>
+
+<img src="/img/docs/getting-started/zumtobel3d.webp" alt="SLV NEW TRIA 2"/>
+
+### Download 
+
+<a href="https://github.com/globallightingdata/examples/tree/master/Zumtobel%20P-EVO%20R100L" target="_blank">Zumtobel P-EVO R100L</a>

@@ -5,11 +5,9 @@ sidebar_label: Introduction
 
 ## Concept
 
-Parametric Geometry is a concept that allows you to create basic rudimentary 3d models of generic luminaires without having to model them. You can generate models based on a few parameters describing the product's dimensions.
+Parametric Geometry is a concept that allows you to create basic rudimentary 3d models of generic luminaires without having to model them. You can generate models based on a few product dimension parameters.
 
 Our parametric 3d model web service allows you to upload an input XML file and provides the download link after generating the new L3D file. You can then use the file within your GLDF file.
-
-You  of the P3D input XML files is dedinfed in the following
 
 ## Step by Step guide
 
