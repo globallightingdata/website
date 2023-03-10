@@ -8,7 +8,17 @@ module.exports = {
     "Getting started": [
       "getting-started/requirements",
       "getting-started/create-first-gldf",
-      "getting-started/examples",
+      {
+        "Examlpes":[
+          "getting-started/examples/introduction",
+          "getting-started/examples/minimalgeo",
+          "getting-started/examples/minimalldc",
+          "getting-started/examples/philips",
+          "getting-started/examples/slv",
+          "getting-started/examples/trilux",
+          "getting-started/examples/zumtobel",
+        ],
+      },
       "getting-started/templates",
       "getting-started/xsd-reference",
     ],
