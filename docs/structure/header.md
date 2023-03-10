@@ -10,11 +10,23 @@ The header is the first part of the GLDF product.xml file. It contains meta-info
 ## Author
 The author describes the author of the GLDF file. The author can be a company or the name of an individual who made the file.
 
+:::important Convention
+Datatype: **xs:string**
+:::
+
 ## Manufacturer
 The manufacturer will typically be the name of the company that makes or sells the luminaire.
 
+:::important Convention
+Datatype: **xs:string**
+:::
+
 ## CreationTimeCode
 Creation Time Code is the date and time when you create or generate the GLDF file. The data type is xs:dateTime
+
+:::important Convention
+Datatype: **xs:dateTime**
+:::
 
 :::important Convention
 The format of xs:dateTime is: yyyy-mm-ddThh:mm:ss.sssssssssssszzzzzz
@@ -42,3 +54,34 @@ Example:
 <CreationTimeCode>2023-02-08T12:00:00-02:00</CreationTimeCode>
 ```
 
+## CreatedWithApplication
+
+This section describes which application the author used to make the GLDF file.
+
+:::important Convention
+Datatype: **xs:string**
+:::
+
+## FormatVersion
+
+This section describes which Version of GLDF is being used.
+
+:::important Convention
+Datatype: **xs:string** must be **1.0.0-rc.1**
+:::
+
+## DefaultLanguage
+
+This section describes the default language applications using GLDF should fall back to if available.
+
+## LicenseKeys
+
+For Relux and DIALux to utilize the GLDF file to its full extent, you may need to add a license key. The key is provided to the manufacturers by Relux and DIAL.
+
+## ReluxMemberId and DIALuxMemberId
+
+Relux and DIAL may assign company IDs to manufacturers. These Ids will help applications associate GLDF files with a specific manufacturer.
+
+## Contact
+
+This section holds contact information for the manufacturer.
