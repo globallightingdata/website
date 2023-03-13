@@ -10,7 +10,7 @@ tags: [l3d, tools, release, roadmap]
 ---
 
 
-Today we've released the **first major version** of the **L3D Editor** 🥳. It contains many bugfixes and is **featurecomplete** insofar, as it provides **everything necessary to create 3D models** for the GLDF.
+Today we've released the **first major version** of the **L3D Editor** 🥳. It contains many bug fixes and is **feature-complete**, providing everything necessary to create 3D models for GLDF.
 
 This post is a **brief summary** of what has changed since the beta version. As well as a small preview of the near-term **roadmap**.
 
@@ -78,7 +78,7 @@ Finally, a short outlook on further changes:
 - **L3D XSD 1.0 support**  
   Currently, the L3D Editor supports the L3D XSD in version 0.10. One upcoming major change will be the integration of the final L3D XSD specification 1.0.
   :::warning Important
-  Even though the L3D Editor is already final, the L3D XSD is still close to finalisation. It is unlikely, but cannot be guaranteed, that the final version will introduce some breaking changes. This should be kept in mind when creating L3Ds.
+  Even though the L3D Editor is already final, the L3D XSD is still close to finalisation. It is unlikely, but we cannot guarantee that the final version won't introduce **breaking changes**. Keep this in mind when creating L3Ds.
   :::
 
 - **More units**  
