@@ -1,6 +1,6 @@
 ---
-title: GLDF Examples
-sidebar_label: Introduction
+title: Examples
+sidebar_label: Examples
 ---
 
 ### Introduction

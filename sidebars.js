@@ -8,9 +8,9 @@ module.exports = {
     "Getting started": [
       "getting-started/requirements",
       "getting-started/create-first-gldf",
+      "getting-started/examples",
       {
-        "Examlpes":[
-          "getting-started/examples/introduction",
+        "Examlpe files":[
           "getting-started/examples/minimalgeo",
           "getting-started/examples/minimalldc",
           "getting-started/examples/philips",
