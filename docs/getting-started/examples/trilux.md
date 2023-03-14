@@ -68,20 +68,6 @@ Trilux Belviso is an example of a standing luminaire with two individual heads. 
 				</Description>
 			</ControlGear>
 		</ControlGears>
-		<!--<Equipments>
-			<Equipment id="Equipment_indirect">
-				<LightSourceReference lightSourceId="LightSource" />
-				<ControlGearReference controlGearId="ControlGear1" />
-				<RatedInputPower>18</RatedInputPower>
-				<RatedLuminousFlux>1600</RatedLuminousFlux>
-			</Equipment>
-			<Equipment id="Equipment_main">
-				<LightSourceReference lightSourceId="LightSource" />
-				<ControlGearReference controlGearId="ControlGear1" />
-				<RatedInputPower>81</RatedInputPower>
-				<RatedLuminousFlux>7800</RatedLuminousFlux>
-			</Equipment>
-		</Equipments>-->
 		<Emitters>
 			<Emitter id="LightEmitterMain">
 				<FixedLightEmitter emergencyBehaviour="Combined">

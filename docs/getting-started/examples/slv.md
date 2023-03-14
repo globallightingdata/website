@@ -113,39 +113,6 @@ This example demonstrates a GLDF file with an l3d model, two light outputs, and 
 				</Description>
 			</ControlGear>
 		</ControlGears>
-		<!--<Equipments>
-			<Equipment id="Equipment_narrow">
-				<LightSourceReference lightSourceId="LightSource1"/>
-				<ControlGearReference controlGearId="ControlGear1"/>
-				<RatedInputPower>18</RatedInputPower>
-				<RatedLuminousFlux>1600</RatedLuminousFlux>
-			</Equipment>
-			<Equipment id="Equipment_middle">
-				<LightSourceReference lightSourceId="LightSource2"/>
-				<ControlGearReference controlGearId="ControlGear1"/>
-				<RatedInputPower>81</RatedInputPower>
-				<RatedLuminousFlux>7800</RatedLuminousFlux>
-			</Equipment>
-			<Equipment id="Equipment_wide">
-				<LightSourceReference lightSourceId="LightSource3"/>
-				<ControlGearReference controlGearId="ControlGear1"/>
-				<RatedInputPower>81</RatedInputPower>
-				<RatedLuminousFlux>7800</RatedLuminousFlux>
-			</Equipment>
-			<Equipment id="Equipment_wide_emergency_combined">
-				<LightSourceReference lightSourceId="LightSource3"/>
-				<ControlGearReference controlGearId="ControlGear1"/>
-				<RatedInputPower>81</RatedInputPower>
-				<RatedLuminousFlux>7800</RatedLuminousFlux>
-				<EmergencyRatedLuminousFlux>100</EmergencyRatedLuminousFlux>
-			</Equipment>
-			<Equipment id="Equipment_wide_emergency_only">
-				<LightSourceReference lightSourceId="LightSource3"/>
-				<ControlGearReference controlGearId="ControlGear1"/>
-				<RatedInputPower>81</RatedInputPower>
-				<RatedLuminousFlux>100</RatedLuminousFlux>
-			</Equipment>
-		</Equipments>-->
 		<Emitters>
 			<Emitter id="em-n-n">
 				<FixedLightEmitter emergencyBehaviour="None">
