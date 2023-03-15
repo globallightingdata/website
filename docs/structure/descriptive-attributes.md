@@ -26,7 +26,102 @@ We split descriptive attributes into the following categories.
 
 ## Mechanical
 
+This XML schema describes the Mechanical element, which provides information about the mechanical attributes of a luminaire.
+
+### Structure
+
 <img src="/img/docs/structure/mechanical.webp" alt="Mechanical Attributes" width="435" />
+
+```xml showLineNumbers
+<Mechanical>
+  <ProductSize>
+    <Length>...</Length>
+    <Width>...</Width>
+    <Height>...</Height>
+  </ProductSize>
+  <ProductForm>...</ProductForm>
+  <SealingMaterial>...</SealingMaterial>
+  <Adjustabilities>
+    <Adjustability>...</Adjustability>
+    ...
+  </Adjustabilities>
+  <IKRating>...</IKRating>
+  <ProtectiveAreas>
+    <Area>...</Area>
+    ...
+  </ProtectiveAreas>
+  <Weight>...</Weight>
+</Mechanical>
+```
+
+### ProductSize
+
+The ProductSize element contains the dimensions of the luminaire in millimeters. It includes the following child elements:
+
+- Length (type: xs:int): The length of the product along the C90/C270 axis.
+- Width (type: xs:int): The width of the product along the C0/C180 axis.
+- Height (type: xs:int): The height of the product.
+
+### ProductForm
+
+The ProductForm element describes the geometrical form of the luminaire. It has a string value, which can be one of the following enumeration values:
+
+- Round
+- Rounded
+- Square
+- Linear
+- Areal
+- Sphere
+- Cuboid
+- Cylinder
+- Cone
+- Special
+
+### SealingMaterial
+
+The SealingMaterial element represents the material of the luminaire's sealing (type: Locale).
+
+### Adjustabilities
+
+The Adjustabilities element contains a sequence of Adjustability elements, describing the possible adjustabilities of the luminaire's parts. The Adjustability element has a string value and can be one of the following enumeration values:
+
+- Fixed
+- Orientation
+- Turn
+- Tilt
+- Cardanic
+- Height adjustable
+- User defined
+
+### IKRating
+
+The IKRating element describes the degree of protection provided by enclosures for electrical equipment against external mechanical impacts, according to IEC 62262:2002 and IEC 60068-2-75:1997. It has a string value and can be one of the following enumeration values:
+
+- IK00
+- IK01
+- IK02
+- IK03
+- IK04
+- IK05
+- IK06
+- IK07
+- IK08
+- IK09
+- IK10
+- IK10+
+
+### ProtectiveAreas
+
+The ProtectiveAreas element contains a sequence of Area elements, representing the possible usage of the luminaire in protection-relevant areas. The Area element has a string value and can be one of the following enumeration values:
+
+- Cleanroom suitable
+- Ball-impact proof
+- Drive/Roll-over proof
+
+### Weight
+
+The Weight element describes the weight of the luminaire in kilograms, including the ballast but excluding the packaging (type: xs:double).
+
 
 ## Electrical 
 
