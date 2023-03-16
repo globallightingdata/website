@@ -353,14 +353,360 @@ The `Applications` element contains fields of application for the luminaire.
 
 This XML schema describes the `OperationsAndMaintenance` element, which provides information about the Operations and Maintenance attributes of a luminaire.
 
-### UsefulLifeTimes
-Useful lifetimes of the luminaire with declaration of Lx, By and ambient temperature. E.g. L80B50 50000h 25°C
-
-UsefulLife (0 or more occurrences): Single useful lifetime of the luminaire with declaration of Lx, By and ambient temperature. E.g. L80B50 50000h 25°C
-
 ### Structure
 
 <img src="/img/docs/structure/operationsandmaint.webp" alt="Operatoins and Maintenance Attributes" width="536" />
+
+### UsefulLifeTimes
+Useful lifetimes of the luminaire with declaration of Lx, By and ambient temperature. E.g. L80B50 50000h 25°C
+
+- `UsefulLife` (1 or more occurrences, `xs:string`): Single useful lifetime of the luminaire with declaration of Lx, By and ambient temperature. E.g. L80B50 50000h 25°C
+
+### MedianUsefulLifeTimes
+
+`MedianUsefulLifeTimes`. Time during which 50% (B50) of a population of operating LED modules of the same type have parametrically failed to provide at least the percentage Lx of the initial luminous flux.
+Recommend fixed time values are 35k, 50k, 75k or 100k hours (depending on application). E.g. L80B50 75000h 25°C It contains the following elements:
+
+- `MedianUsefulLife` (1 or more occurrences, `xs:string`):
+Single median useful lifetime during which 50% (B50) of a population of operating LED modules of the same type have parametrically failed to provide at least the percentage Lx of the initial luminous flux.
+Recommend fixed time values are 35k, 50k, 75k or 100k hours (depending on application). E.g. L80B50 75000h 25°C
+
+### OperatingTemperature
+`OperatingTemperature` Operating range defined by a minimum and maximum temperature, at which the luminaire operates normally
+
+#### TemperatureRange 
+- `Lower` (`xs:int`): Lower inclusive limit of the temperature (Unit: celsius)
+- `Upper` (`xs:int`): Upper inclusive limit of the temperature (Unit: celsius)
+
+### AmbientTemperature
+`AmbientTemperature` is the Recommended ambient temperature range
+
+#### TemperatureRange
+- `Lower` (`xs:int`): Lower inclusive limit of the temperature (Unit: celsius)
+- `Upper` (`xs:int`): Upper inclusive limit of the temperature (Unit: celsius)
+
+### RatedAmbientTemperature
+`RatedAmbientTemperature` (1 occurrence `xs:int`): Rated ambient performance temperature. It's the highest ambient temperature around the luminaire related to a rated performance of the luminaire under normal operating conditions (Unit: celsius)
+
+### ATEX
+Specifies whether the fitting is intended for installation in an explosive environment. See ATEX directive 2014/34/EU
+
+
+#### Directives
+Hazardous area classification `directives`. E.g. European Union’s ATEX Directive, U.S. National Electrical Code (NEC) or Canadian Electrical Code (CEC).
+
+The `Directives` element has a complex type that contains a sequence of one or more Directive elements.
+
+It Contains `Directive` elements.
+ - The maximum occurrence of Directive element is 4.
+    Directive (`xs:string`) Hazardous area classification directive
+    - The allowed values are "ATEX", "IECEx", "CEC", and "NEC".
+
+
+#### Classes
+  `Classes` Classification of substances. Gas, Dust or Fibers/Flyings
+  Contains:
+  - `Class` (`xs:string`) Posssible Enumerations:
+    - I
+    - II
+    - III
+
+#### Divisions
+  `Divisions` Division classifications. Corresponds to zones as follows: Zone 0|1 > Division 1. Zone 2 > Division 2
+  - Contains 1 or 2 `Division` Elements
+  - Enumtetions (`xs:string`)
+    - 1
+    - 2
+
+#### DivisionGroups
+
+`DivisionGroups` Hazardous atmosphere category groups A-G
+
+  Contains `Gas`: Gas, fog, steam zones contains:
+  - `Group` (`xs:string`): Division group A,B,C,D
+    - Enumeration values:
+    - Value: A
+    - Value: B
+    - Value: C
+    - Value: D
+
+  `Dust`  Dust zones
+
+  Contains `Group` (`xs:string`): Division group E,F,G
+  
+  Enumeration values:
+  - Value: E
+  - Value: F
+  - Value: G
+
+  Element Name: Zones
+Annotation:
+
+    Classification of possible hazardous zones
+    Child Elements:
+    Element Name: Gas
+    Annotation:
+        Gas, fog, steam zones
+        Child Elements:
+        Element Name: Zone
+        Annotation:
+            Zone 0, 1, 2
+            Enumeration:
+            0
+            1
+            2
+    Element Name: Dust
+    Annotation:
+        Dust zones
+        Child Elements:
+        Element Name: Zone
+        Annotation:
+            Zone 20, 21, 22
+            Enumeration:
+            20
+            21
+            22
+
+Element Name: ZoneGroups
+Annotation:
+
+    Classification of possible hazardous zone groups
+    Child Elements:
+    Element Name: Gas
+    Annotation:
+        Gas, fog, steam zones
+        Child Elements:
+        Element Name: Group
+        Annotation:
+            Group IIC, IIB + H2, IIB, IIA
+            Enumeration:
+            IIC
+            IIB + H2
+            IIB
+            IIA
+    Element Name: Dust
+    Annotation:
+        Dust zones
+        Child Elements:
+        Element Name: Group
+        Annotation:
+            Group IIIC, IIIB, IIIA
+            Enumeration:
+            IIIC
+            IIIB
+            IIIA
+
+MaximumSurfaceTemperature
+Maximum temperature of a surface that can be reached by the ex atmosphere
+
+Element Name: TemperatureClasses
+Annotation:
+
+    Temperature classifications. E.g. T3 lower/equal 300°C
+    Child Elements:
+    Element Name: TemperatureClass
+    Annotation:
+        Temperature classification
+        Enumeration:
+        T1
+        T2
+        T2A
+        T2B
+        T2C
+        T2D
+        T3
+        T3A
+        T3B
+        T3C
+        T4
+        T4A
+        T5
+        T6
+
+Element Name: ExCodes
+Annotation:
+
+    Protection against the occurrence of an ignition source
+    Child Elements:
+    Element Name: ExCode
+    Annotation:
+        Type of protection short code
+        Data Type: xs:string
+        Enumeration:
+        da
+        db
+        dc
+        eb
+        ec
+        ia
+        ib
+        ic
+        ma
+        mb
+        mc
+        nC
+        nR
+        ob
+        oc
+        op is
+        op pr
+        op sh
+        pxb
+        pyb
+        pyc
+        pzc
+        q
+        ta
+        tb
+        tc
+
+Element Name: EquipmentProtectionLevels
+Annotation:
+
+    Equipment Protection Level EPL. "M" Mining - "G" Gas - "D" Dust and respective protection level
+    Child Elements:
+    Element Name: EquipmentProtectionLevel
+    Annotation:
+        Equipment protection level
+        Data Type: xs:string
+        Enumeration:
+        Ga
+        Gb
+        Gc
+        Da
+        Db
+        Dc
+        Ma
+        Mb
+
+Element Name: EquipmentGroups
+Annotation:
+
+    Equipment Groups. Defines if the equipment can be used under ground (mining) or above ground explosive areas
+    Child Elements:
+    Element Name: EquipmentGroup
+    Annotation:
+        Possible hazardous area
+        Data Type: xs:string
+        Enumeration:
+        I
+        II
+
+Element Name: EquipmentCategories
+Annotation:
+
+    Defines in which zones the equipment can be used. With protection level from normal to high
+    Child Elements:
+    Element Name: EquipmentCategory
+    Annotation:
+        Possible equipment hazardous zone. Mining, Gas, Dust and corresponding protection level
+        Data Type: xs:string
+        Enumeration:
+        M1
+        M2
+        1G
+        2G
+        3G
+        1D
+        2D
+        3D
+
+  Element Name: Atmospheres
+Annotation:
+
+    Atmosphere classification
+    Child Elements:
+    Element Name: Atmosphere
+    Annotation:
+        Gas, Dust
+        Data Type: xs:string
+        Enumeration:
+        G
+        D
+
+Element Name: Groups
+
+Annotations:
+
+    Documentation: Explosion groups (I Mining, II Gas, III Dust) and sub-group classification
+
+Enumeration Values:
+
+    I
+    II
+    IIA
+    IIB
+    IIC
+    III
+    IIIA
+    IIIB
+    IIIC
+
+Data Type: xs:string
+
+Element name: AcousticAbsorptionRates
+
+Annotation:
+
+    Documentation: Sound absorption coefficient (ISO 354:2003), depending on frequencies in the human hearable range
+
+Datatype: complexType
+
+Sub-elements:
+
+    Element name: AbsorptionRate
+        Max Occurs: unbounded
+        Annotation:
+            Documentation: Absorption coefficient. Must be a value between 0 (no absorption) and 1 (complete absorption)
+        Datatype: complexType
+        Simple content:
+            Datatype: double
+        Attribute:
+            Name: hertz
+            Use: required
+            Annotation:
+                Documentation: Frequency (Unit: hertz)
+            Datatype: int
+            Restriction:
+                Datatype: int
+                MinInclusive: 0
+
+Element Name: CustomProperties
+
+Annotation:
+Custom properties can hold additional information that may be use-case-specific and will not be parsed by the Relux or DIAL parsers.
+
+Data Type:
+Complex Type
+
+    Sequence
+        Element Name: Property
+            Annotation: Single custom property
+            Data Type: Complex Type
+                Sequence
+                    Element Name: Name
+                        Data Type: Locale
+                        Annotation: Meaningful name of the property
+                    Element Name: PropertySource
+                        Data Type: string
+                        Min Occurs: 0
+                        Annotation: Property source, e.g. standard name like ISO, CIE or DIN. Or Identity Server key
+                    Choice
+                        Element Name: Value
+                            Data Type: string
+                            Annotation: Value of the property
+                        Element Name: FileReference
+                            Annotation: Value of the property defined by a reference to a file
+                            Complex Type
+                                Attribute Name: fileId
+                                    Data Type: NCName
+                                    Use: required
+                                    Annotation: Id reference to a File element defined under GeneralDefinitions/Files
+                Attribute Name: id
+                    Data Type: string
+                    Use: required
+                    Annotation: Id may refer to a customer based internal id system. If no Id is available, use a placeholder like a number
+
 
 ## Custom Properties
 
