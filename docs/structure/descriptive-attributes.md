@@ -439,276 +439,163 @@ It Contains `Directive` elements.
   - Value: F
   - Value: G
 
-  Element Name: Zones
-Annotation:
+#### Zones
+`Zones` Classification of possible hazardous zones contains
 
-    Classification of possible hazardous zones
-    Child Elements:
-    Element Name: Gas
-    Annotation:
-        Gas, fog, steam zones
-        Child Elements:
-        Element Name: Zone
-        Annotation:
-            Zone 0, 1, 2
-            Enumeration:
-            0
-            1
-            2
-    Element Name: Dust
-    Annotation:
-        Dust zones
-        Child Elements:
-        Element Name: Zone
-        Annotation:
-            Zone 20, 21, 22
-            Enumeration:
-            20
-            21
-            22
+`Gas`: Gas, fog, steam zones Contains
 
-Element Name: ZoneGroups
-Annotation:
+`Zone` (`xs:string`): Zone 0, 1, 2
+- Enumerations:
+- 0
+- 1
+- 2
 
-    Classification of possible hazardous zone groups
-    Child Elements:
-    Element Name: Gas
-    Annotation:
-        Gas, fog, steam zones
-        Child Elements:
-        Element Name: Group
-        Annotation:
-            Group IIC, IIB + H2, IIB, IIA
-            Enumeration:
-            IIC
-            IIB + H2
-            IIB
-            IIA
-    Element Name: Dust
-    Annotation:
-        Dust zones
-        Child Elements:
-        Element Name: Group
-        Annotation:
-            Group IIIC, IIIB, IIIA
-            Enumeration:
-            IIIC
-            IIIB
-            IIIA
+`Dust`: Dust zones contains
+`Zone` (`xs:string`): Zone 20, 21, 22
+- Enumerations:
+- 20
+- 21
+- 22
 
-MaximumSurfaceTemperature
-Maximum temperature of a surface that can be reached by the ex atmosphere
+#### ZoneGroups
 
-Element Name: TemperatureClasses
-Annotation:
+`ZoneGroups` Classification of possible hazardous zone groups cotains
 
-    Temperature classifications. E.g. T3 lower/equal 300°C
-    Child Elements:
-    Element Name: TemperatureClass
-    Annotation:
-        Temperature classification
-        Enumeration:
-        T1
-        T2
-        T2A
-        T2B
-        T2C
-        T2D
-        T3
-        T3A
-        T3B
-        T3C
-        T4
-        T4A
-        T5
-        T6
+- `Gas`: Gas, fog, steam zones contins
+  - Group: Group IIC, IIB + H2, IIB, IIA
+   - Enumeration:
+   - IIC
+   - IIB + H2
+   - IIB
+   - IIA
 
-Element Name: ExCodes
-Annotation:
+- `Dust`: Dust zones
+ - `Group`: Group IIIC, IIIB, IIIA
+   - Enumeration:
+   - IIIC
+   - IIIB
+   - IIIA
 
-    Protection against the occurrence of an ignition source
-    Child Elements:
-    Element Name: ExCode
-    Annotation:
-        Type of protection short code
-        Data Type: xs:string
-        Enumeration:
-        da
-        db
-        dc
-        eb
-        ec
-        ia
-        ib
-        ic
-        ma
-        mb
-        mc
-        nC
-        nR
-        ob
-        oc
-        op is
-        op pr
-        op sh
-        pxb
-        pyb
-        pyc
-        pzc
-        q
-        ta
-        tb
-        tc
+#### MaximumSurfaceTemperature 
+`MaximumSurfaceTemperature` (`xs:string`): Maximum temperature of a surface that can be reached by the ex atmosphere
 
-Element Name: EquipmentProtectionLevels
-Annotation:
+#### TemperatureClasses
+`TemperatureClasses`: Temperature classifications. E.g. T3 lower/equal 300°C Contains
+- `TemperatureClass`:  Temperature classification
+  - Enumeration:
+  - T1
+  - T2
+  - T2A
+  - T2B
+  - T2C
+  - T2D
+  - T3
+  - T3A
+  - T3B
+  - T3C
+  - T4
+  - T4A
+  - T5
+  - T6
 
-    Equipment Protection Level EPL. "M" Mining - "G" Gas - "D" Dust and respective protection level
-    Child Elements:
-    Element Name: EquipmentProtectionLevel
-    Annotation:
-        Equipment protection level
-        Data Type: xs:string
-        Enumeration:
-        Ga
-        Gb
-        Gc
-        Da
-        Db
-        Dc
-        Ma
-        Mb
+#### ExCodes
+`xCodes`: Protection against the occurrence of an ignition source Contains
+- `ExCode` (`xs:string`): Type of protection short code
+  - Enumeration:
+  - da
+  - db
+  - dc
+  - eb
+  - ec
+  - ia
+  - ib
+  - ic
+  - ma
+  - mb
+  - mc
+  - nC
+  - nR
+  - ob
+  - oc
+  - op is
+  - op pr
+  - op sh
+  - pxb
+  - pyb
+  - pyc
+  - pzc
+  - q
+  - ta
+  - tb
+  - tc
 
-Element Name: EquipmentGroups
-Annotation:
+#### EquipmentProtectionLevels
+`EquipmentProtectionLevels`: Equipment Protection Level EPL. "M" Mining - "G" Gas - "D" Dust and respective protection level. Contains
+ - `EquipmentProtectionLevel` (`xs:string`): Equipment protection level
+  - Enumeration:
+  - Ga
+  - Gb
+  - Gc
+  - Da
+  - Db
+  - Dc
+  - Ma
+  - Mb
 
-    Equipment Groups. Defines if the equipment can be used under ground (mining) or above ground explosive areas
-    Child Elements:
-    Element Name: EquipmentGroup
-    Annotation:
-        Possible hazardous area
-        Data Type: xs:string
-        Enumeration:
-        I
-        II
+#### EquipmentGroups
 
-Element Name: EquipmentCategories
-Annotation:
+`EquipmentGroups` Equipment Groups. Defines if the equipment can be used under ground (mining) or above ground explosive areas. Contains
+ - `EquipmentGroup` (`xs:string`): Possible hazardous area
+  - Enumeration:
+  - I
+  - II
 
-    Defines in which zones the equipment can be used. With protection level from normal to high
-    Child Elements:
-    Element Name: EquipmentCategory
-    Annotation:
-        Possible equipment hazardous zone. Mining, Gas, Dust and corresponding protection level
-        Data Type: xs:string
-        Enumeration:
-        M1
-        M2
-        1G
-        2G
-        3G
-        1D
-        2D
-        3D
+#### EquipmentCategories
+`EquipmentCategories` Defines in which zones the equipment can be used. With protection level from normal to high. Contsains:
+- `EquipmentCategory` (`xs:string`): Possible equipment hazardous zone. Mining, Gas, Dust and corresponding protection level
+  - Enumerations:
+  - M1
+  - M2
+  - 1G
+  - 2G
+  - 3G
+  - 1D
+  - 2D
+  - 3D
 
-  Element Name: Atmospheres
-Annotation:
+#### Atmospheres
+`Atmospheres` Atmosphere classification. Contains:
+`Atmosphere` (`xs:string`): Gas, Dust
+ - Enumeration:
+ - G
+ - D
 
-    Atmosphere classification
-    Child Elements:
-    Element Name: Atmosphere
-    Annotation:
-        Gas, Dust
-        Data Type: xs:string
-        Enumeration:
-        G
-        D
-
-Element Name: Groups
-
-Annotations:
-
-    Documentation: Explosion groups (I Mining, II Gas, III Dust) and sub-group classification
-
+#### Groups
+`Groups` (`xs:string`): Explosion groups (I Mining, II Gas, III Dust) and sub-group classification
 Enumeration Values:
+ - I
+ - II
+ - IIA
+ - IIB
+ - IIC
+ - III
+ - IIIA
+ - IIIB
+ - IIIC
 
-    I
-    II
-    IIA
-    IIB
-    IIC
-    III
-    IIIA
-    IIIB
-    IIIC
 
-Data Type: xs:string
+### AcousticAbsorptionRates
+`AcousticAbsorptionRates`: Sound absorption coefficient (ISO 354:2003), depending on frequencies in the human hearable range
 
-Element name: AcousticAbsorptionRates
+Contains:
 
-Annotation:
+`AbsorptionRate` (`xs:double`): Documentation: Absorption coefficient. Must be a value between 0 (no absorption) and 1 (complete absorption)
 
-    Documentation: Sound absorption coefficient (ISO 354:2003), depending on frequencies in the human hearable range
-
-Datatype: complexType
-
-Sub-elements:
-
-    Element name: AbsorptionRate
-        Max Occurs: unbounded
-        Annotation:
-            Documentation: Absorption coefficient. Must be a value between 0 (no absorption) and 1 (complete absorption)
-        Datatype: complexType
-        Simple content:
-            Datatype: double
-        Attribute:
-            Name: hertz
-            Use: required
-            Annotation:
-                Documentation: Frequency (Unit: hertz)
-            Datatype: int
-            Restriction:
-                Datatype: int
-                MinInclusive: 0
-
-Element Name: CustomProperties
-
-Annotation:
-Custom properties can hold additional information that may be use-case-specific and will not be parsed by the Relux or DIAL parsers.
-
-Data Type:
-Complex Type
-
-    Sequence
-        Element Name: Property
-            Annotation: Single custom property
-            Data Type: Complex Type
-                Sequence
-                    Element Name: Name
-                        Data Type: Locale
-                        Annotation: Meaningful name of the property
-                    Element Name: PropertySource
-                        Data Type: string
-                        Min Occurs: 0
-                        Annotation: Property source, e.g. standard name like ISO, CIE or DIN. Or Identity Server key
-                    Choice
-                        Element Name: Value
-                            Data Type: string
-                            Annotation: Value of the property
-                        Element Name: FileReference
-                            Annotation: Value of the property defined by a reference to a file
-                            Complex Type
-                                Attribute Name: fileId
-                                    Data Type: NCName
-                                    Use: required
-                                    Annotation: Id reference to a File element defined under GeneralDefinitions/Files
-                Attribute Name: id
-                    Data Type: string
-                    Use: required
-                    Annotation: Id may refer to a customer based internal id system. If no Id is available, use a placeholder like a number
-
+- Attribute `hertz` (`xs:int`, required, MinInclusive: 0): Frequency (Unit: hertz)
 
 ## Custom Properties
 
-<img src="/img/docs/structure/customproperties.webp" alt="Custom Properties Attributes" width="536" />
+<img src="/img/docs/structure/customproperties.webp" alt="Custom Properties Attributes" width="536" />   
+
+`CustomProperties`: Custom properties can hold additional information that may be use-case-specific and will not be parsed by the Relux or DIAL parsers.
 
