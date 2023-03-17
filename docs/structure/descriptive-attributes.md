@@ -24,6 +24,7 @@ We split descriptive attributes into the following categories.
 
 <img src="/img/docs/structure/desciptiveattributes.webp" alt="Descriptive Attributes" width="561" />
 
+
 ## Mechanical
 
 This XML schema describes the `Mechanical` element, which provides information about the mechanical attributes of a luminaire.
@@ -32,25 +33,28 @@ This XML schema describes the `Mechanical` element, which provides information a
 
 <img src="/img/docs/structure/mechanical.webp" alt="Mechanical Attributes" width="435" />
 
+### Example
 ```xml showLineNumbers
 <Mechanical>
-  <ProductSize>
-    <Length>...</Length>
-    <Width>...</Width>
-    <Height>...</Height>
-  </ProductSize>
-  <ProductForm>...</ProductForm>
-  <SealingMaterial>...</SealingMaterial>
-  <Adjustabilities>
-    <Adjustability>...</Adjustability>
-    ...
-  </Adjustabilities>
-  <IKRating>...</IKRating>
-  <ProtectiveAreas>
-    <Area>...</Area>
-    ...
-  </ProtectiveAreas>
-  <Weight>...</Weight>
+    <ProductSize>
+        <Length>500</Length>
+        <Width>200</Width>
+        <Height>100</Height>
+    </ProductSize>
+    <ProductForm>Cuboid</ProductForm>
+    <SealingMaterial>
+        <Locale language="en">Polycarbonate</Locale>
+        <Locale language="de">Polycarbonat</Locale>
+    </SealingMaterial>
+    <Adjustabilities>
+        <Adjustability>Fixed</Adjustability>
+        <Adjustability>Orientation</Adjustability>
+    </Adjustabilities>
+    <IKRating>IK08</IKRating>
+    <ProtectiveAreas>
+        <Area>Ball-impact proof</Area>
+    </ProtectiveAreas>
+    <Weight>3.5</Weight>
 </Mechanical>
 ```
 
@@ -122,24 +126,26 @@ The `ProtectiveAreas` element contains a sequence of Area elements, representing
 
 The `Weight` element describes the weight of the luminaire in kilograms, including the ballast but excluding the packaging (type: `xs:double`).
 
+
 ## Electrical 
 
 The `Electrical` element, which provides information about the electrical attributes of a luminaire.
 
 <img src="/img/docs/structure/electrical.webp" alt="Electrical Attributes" width="433" />
 
+### Example
 ```xml showLineNumbers
 <Electrical>
-  <ClampingRange>
-    <Lower>...</Lower>
-    <Upper>...</Upper>
-  </ClampingRange>
-  <SwitchingCapacity>...</SwitchingCapacity>
-  <ElectricalSafetyClass>...</ElectricalSafetyClass>
-  <IngressProtectionIPCode>...</IngressProtectionIPCode>
-  <PowerFactor>...</PowerFactor>
-  <ConstantLightOutput>...</ConstantLightOutput>
-  <LightDistribution>...</LightDistribution>
+    <ClampingRange>
+        <Lower>10.0</Lower>
+        <Upper>25.0</Upper>
+    </ClampingRange>
+    <SwitchingCapacity>1E-1, W 1E0, unitless</SwitchingCapacity>
+    <ElectricalSafetyClass>II</ElectricalSafetyClass>
+    <IngressProtectionIPCode>IP67</IngressProtectionIPCode>
+    <PowerFactor>0.95</PowerFactor>
+    <ConstantLightOutput>true</ConstantLightOutput>
+    <LightDistribution>Direct indirect</LightDistribution>
 </Electrical>
 ```
 
@@ -210,10 +216,12 @@ The `Emergency` element, which provides information about the emergency lighting
 
 ```xml showLineNumbers
 <Emergency>
-  <DurationTimeAndFlux>
-    <Flux hours="...">...</Flux>
-  </DurationTimeAndFlux>
-  <DedicatedEmergencyLightingType>...</DedicatedEmergencyLightingType>
+    <DurationTimeAndFlux>
+        <Flux hours="1">500</Flux>
+        <Flux hours="2">400</Flux>
+        <Flux hours="3">300</Flux>
+    </DurationTimeAndFlux>
+    <DedicatedEmergencyLightingType>Exit Light</DedicatedEmergencyLightingType>
 </Emergency>
 ```
 
@@ -239,6 +247,8 @@ The `DedicatedEmergencyLightingType` element describes the dedicated application
 The `Marketing` element contains descriptive attributes for marketing purposes.
 
 <img src="/img/docs/structure/marketing.webp" alt="Marketing Attributes" width="407" />
+
+### Example
 
 ```xml showLineNumbers
 <?xml version="1.0" encoding="UTF-8"?>
@@ -356,6 +366,77 @@ This XML schema describes the `OperationsAndMaintenance` element, which provides
 ### Structure
 
 <img src="/img/docs/structure/operationsandmaint.webp" alt="Operatoins and Maintenance Attributes" width="536" />
+
+### Example
+
+```xml showLineNumbers
+<DescriptiveAttributes>
+	<OperationsAndMaintenance>
+		<UsefulLifeTimes>
+			<UsefulLife>L00B00 5000h</UsefulLife>
+		</UsefulLifeTimes>
+		<MedianUsefulLifeTimes>
+			<MedianUsefulLife>L00B00 5000h</MedianUsefulLife>
+		</MedianUsefulLifeTimes>
+		<OperatingTemperature>
+			<Lower>-20</Lower>
+			<Upper>40</Upper>
+		</OperatingTemperature>
+		<AmbientTemperature>
+			<Lower>-20</Lower>
+			<Upper>40</Upper>
+		</AmbientTemperature>
+		<RatedAmbientTemperature>25</RatedAmbientTemperature>
+		<ATEX>
+			<Directives>
+				<Directive>ATEX</Directive>
+			</Directives>
+			<Classes>
+				<Class>I</Class>
+			</Classes>
+			<Divisions>
+				<Division>1</Division>
+			</Divisions>
+			<DivisionGroups/>
+			<Zones>
+				<Gas>
+					<Zone>0</Zone>
+				</Gas>
+			</Zones>
+			<ZoneGroups>
+				<Gas>
+					<Group>IIA</Group>
+				</Gas>
+			</ZoneGroups>
+			<MaximumSurfaceTemperature>90°C</MaximumSurfaceTemperature>
+			<TemperatureClasses>
+				<TemperatureClass>T4</TemperatureClass>
+			</TemperatureClasses>
+			<ExCodes>
+				<ExCode>eb</ExCode>
+			</ExCodes>
+			<EquipmentProtectionLevels>
+				<EquipmentProtectionLevel>Gb</EquipmentProtectionLevel>
+			</EquipmentProtectionLevels>
+			<EquipmentGroups>
+				<EquipmentGroup>II</EquipmentGroup>
+			</EquipmentGroups>
+			<EquipmentCategories>
+				<EquipmentCategory>2G</EquipmentCategory>
+			</EquipmentCategories>
+			<Atmospheres>
+				<Atmosphere>G</Atmosphere>
+			</Atmospheres>
+			<Groups>
+				<Group>IIB</Group>
+			</Groups>
+		</ATEX>
+		<AcousticAbsorptionRates>
+			<AbsorptionRate hertz="1000">0.1</AbsorptionRate>
+		</AcousticAbsorptionRates>
+	</OperationsAndMaintenance>
+</DescriptiveAttributes>
+```
 
 ### UsefulLifeTimes
 Useful lifetimes of the luminaire with declaration of Lx, By and ambient temperature. E.g. L80B50 50000h 25°C
@@ -597,5 +678,37 @@ Contains:
 
 <img src="/img/docs/structure/customproperties.webp" alt="Custom Properties Attributes" width="536" />   
 
-`CustomProperties`: Custom properties can hold additional information that may be use-case-specific and will not be parsed by the Relux or DIAL parsers.
+### Example
 
+```xml showLineNumbers
+<CustomProperties>
+	<Property id="p1">
+		<Name>
+			<Locale language="en">custom name</Locale>
+		</Name>
+		<PropertySource>source</PropertySource>
+		<Value>5</Value>
+	</Property>
+	<Property id="p2">
+		<Name>
+			<Locale language="en">custom name 2</Locale>
+		</Name>
+		<PropertySource>source</PropertySource>
+		<FileReference fileId="f1">file 1</FileReference>
+	</Property>
+</CustomProperties>
+```
+
+`CustomProperties`: can hold additional information that may be use-case-specific and will not be parsed by the Relux or DIAL parsers.
+
+`CustomProperties` hold a list of the element `Property` with unlimited Elements.
+
+`Property` Contains:
+
+- Attribute `id` (`xs:string`). Id may refer to a customer based internal id system. If no Id is available, use a placeholder like a number
+- `Name` Element holding a Sequence of type `Locale`: Meaningful name of the property
+- `PropertySource` (`xs:string`, optional): Property source, e.g. standard name like ISO, CIE or DIN. Or Identity Server key
+- Either 
+  - `Value` (`xs:string`): Value of the property
+  - FileReference
+    - Attribute: fileId (`xs:NCName`): Id reference to a `File` element defined under GeneralDefinitions/Files
