@@ -24,9 +24,11 @@ The current XML Schema files can also be referenced directly from gldf.io:
 - **Including** version 🠖 **content won't change** on new release
   - GLDF: <a href="/xsd/gldf/1.0.0-rc.1/gldf.xsd" target="_blank">gldf.io/xsd/gldf/1.0.0-rc.1/gldf.xsd</a>
   - L3D: <a href="/xsd/l3d/0.10.0/l3d.xsd" target="_blank">gldf.io/xsd/l3d/0.10.0/l3d.xsd</a>
+  - Meta-Information: <a href="/xsd/meta/1.0.0/meta-information.xsd" target="_blank">gldf.io/xsd/meta/1.0.0/meta-information.xsd</a>
 - **Without** version 🠖 **content will change** on every new release
   - GLDF: <a href="/xsd/gldf/gldf.xsd" target="_blank">gldf.io/xsd/gldf/gldf.xsd</a>
   - L3D: <a href="/xsd/l3d/l3d.xsd" target="_blank">gldf.io/xsd/l3d/l3d.xsd</a>
+  - Meta-Information: <a href="/xsd/meta/meta-information.xsd" target="_blank">gldf.io/xsd/meta/meta-information.xsd</a>
 
 :::caution
 The XSD urls without version should only be referenced with caution, as the content can change anytime and may invalidate your GLDF XML unintentionally!

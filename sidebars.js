@@ -36,6 +36,7 @@ module.exports = {
     ],
     "GLDF Container": [
       "container/about-container",
+      "container/meta-information",
       "container/container-specification",
     ],
     Conventions: [
@@ -50,7 +51,7 @@ module.exports = {
         "Parametric Geometry": [
           "geometry/parametric-introduction",
           {
-            "Types":[
+            Types: [
               "geometry/types/parametric-round-recessed",
               "geometry/types/parametric-cuboid-recessed",
               "geometry/types/parametric-open-luminaire",
