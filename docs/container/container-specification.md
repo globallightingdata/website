@@ -20,9 +20,9 @@ Optional
 
 - **GLDF-XSD** Schema file, with the filename `gldf.xsd`
 - Multiple **directories** for assets like photometries, images, geometry files and other
-- `signature` file, without extension. Intended for a **[digital signature](https://en.wikipedia.org/wiki/Digital_signature)** of the content above
+- A `meta-information.xml` file. Intended for **additional information** like **[digital signatures](https://en.wikipedia.org/wiki/Digital_signature)**
 
-## GLDF-XML file
+## GLDF-XML file (`product.xml`)
 
 - Filename
   - The **filename** of the GLDF XML inside the root directory **must** be `product.xml`
@@ -37,6 +37,10 @@ Optional
 - The GLDF-XSD has to be **referenced** by the GLDF-XML file
 - The GLDF-XSD Schema can be referenced either **online** or **locally** inside the container
 - Referenced XSDs which **differ** from the officially published XSDs may lead to **errors**. Please use only the published XSDs for validation and development
+
+## Meta-Information File (`meta-information.xml`)
+
+See [Meta-Information](/docs/container/meta-information)
 
 ## Directories
 
