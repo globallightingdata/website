@@ -46,6 +46,7 @@ module.exports = {
     ],
     "GLDF Container": [
       "container/about-container",
+      "container/meta-information",
       "container/container-specification",
     ],
     Conventions: [
