@@ -31,51 +31,6 @@ dotnet add package L3D.Net
 
 ---
 
-### Building a L3D container
+## Examples
 
-`Builder` example:
-
-```csharp
-Builder.NewLuminaire()
-    .WithTool("Example-Tool")
-    .AddGeometry("luminairePartName", "path/to/model.obj", GeometricUnits.m, geomOptions => geomOptions
-        .AddRectangularLightEmittingObject("lightEmittingPartName", 0.5, 0.25, leoOptions => leoOptions
-            .WithLightEmittingSurfaceOnParent(3)
-        )
-    )
-    .Build("path/to/new/container.l3d");
-```
-
-### Reading a L3D container
-
-`Reader` example:
-
-```csharp
-var reader = new Reader();
-var container = reader.ReadContainer("path/to/container.l3d");
-
-foreach (var geometryPartDto in container.Parts)
-{
-    // ...
-    var model = geometryPartDto.GeometryDefinition.Model;
-    foreach (var vertex in model.Vertices)
-    {
-        // .obj-Model vertices
-    }
-
-    // ...
-    
-    foreach (var lightEmittingPartDto in geometryPartDto.LightEmittingObjects)
-    {
-        // do something for light emitting part 
-    }
-
-    // ...
-}
-```
-
----
-
-## Questions & Issues
-
-Please use on [Github](https://github.com/globallightingdata/l3d.net) the discussion section for questions or create an issues, when something seems to be wrong.
+Examples on how to read, write and validate a L3D container can always be found on [Github](https://github.com/globallightingdata/l3d.net)
