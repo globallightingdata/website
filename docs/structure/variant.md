@@ -133,7 +133,7 @@ The following is a complete example of a `Variant` with many optional elements. 
           <EmitterReference emitterId="emitter1_Narrow" />
         </Geometry>
         <ProductSeries>
-          <ProductSerie>
+          <ProductSerie id="ceilingLuminaires">
             <Name>
               <Locale language="en">Ceiling luminaires</Locale>
             </Name>
@@ -192,7 +192,7 @@ Contains child elements to reference the `GlobalDefinitions` parts [`Geometry`](
 
 ### `ProductSeries` (optional)
 
-Product series applicable to a single variant of the product. Overwrites the `ProductSeries` element of [`ProductMetaData`](/docs/structure/product.md)
+Product series applicable to a single variant of the product. Overwrites the `ProductSeries` element of [`ProductMetaData`](/docs/structure/product.md). The `id` attribute must be unique for different product series. But equal across different GLDF files for the same product series.
 
 ### `Pictures` (optional)
 

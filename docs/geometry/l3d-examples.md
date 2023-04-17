@@ -23,10 +23,11 @@ The following example xml creates exactly what we want.
 ```xml showLineNumbers
 <?xml version="1.0" encoding="UTF-8"?>
 <Luminaire xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-        xsi:noNamespaceSchemaLocation="https://gldf.io/xsd/l3d/l3d.xsd">
+  xsi:noNamespaceSchemaLocation="https://gldf.io/xsd/l3d/l3d.xsd">
   <Header>
     <CreatedWithApplication>Example-Tool</CreatedWithApplication>
     <CreationTimeCode>2021-03-03T10:10:10</CreationTimeCode>
+    <FormatVersion major="0" minor="11" pre-release="0" />
   </Header>
   <GeometryDefinitions>
     <GeometryFileDefinition id="cube" filename="cube.obj" units="m" />
@@ -43,9 +44,14 @@ The following example xml creates exactly what we want.
           <Rectangle sizeX="0.5" sizeY="0.25" />
         </LightEmittingObject>
       </LightEmittingObjects>
-      <LightEmittingFaceAssignments>
-        <Assignment faceIndex="3" lightEmittingPartName="leo" />
-      </LightEmittingFaceAssignments>
+      <LightEmittingSurfaces>
+        <LightEmittingSurface partName="les">
+          <LightEmittingObjectReference lightEmittingPartName="leo" />
+          <FaceAssignments>
+            <FaceAssignment faceIndex="3" />
+          </FaceAssignments>
+        </LightEmittingSurface>
+      </LightEmittingSurfaces>
     </Geometry>
   </Structure>
 </Luminaire>
@@ -97,10 +103,11 @@ The xml below contains these adjustments.
 ```xml showLineNumbers
 <?xml version="1.0" encoding="UTF-8"?>
 <Luminaire xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-           xsi:noNamespaceSchemaLocation="https://gldf.io/xsd/l3d/l3d.xsd">
+  xsi:noNamespaceSchemaLocation="https://gldf.io/xsd/l3d/l3d.xsd">
   <Header>
     <CreatedWithApplication>Example-Tool</CreatedWithApplication>
     <CreationTimeCode>2021-03-03T10:10:10</CreationTimeCode>
+    <FormatVersion major="0" minor="11" pre-release="0" />
   </Header>
   <GeometryDefinitions>
     <GeometryFileDefinition id="cube" filename="cube.obj" units="m" />
@@ -117,9 +124,14 @@ The xml below contains these adjustments.
           <Rectangle sizeX="0.5" sizeY="0.25" />
         </LightEmittingObject>
       </LightEmittingObjects>
-      <LightEmittingFaceAssignments>
-        <Assignment faceIndex="3" lightEmittingPartName="leo" />
-      </LightEmittingFaceAssignments>
+      <LightEmittingSurfaces>
+        <LightEmittingSurface partName="les">
+          <LightEmittingObjectReference lightEmittingPartName="leo" />
+          <FaceAssignments>
+            <FaceAssignment faceIndex="3" />
+          </FaceAssignments>
+        </LightEmittingSurface>
+      </LightEmittingSurfaces>
     </Geometry>
   </Structure>
 </Luminaire>
