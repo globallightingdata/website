@@ -29,6 +29,11 @@ Contains some meta-information about the model and how it has been created.
   If there is a distinct name for this model, this can be mentioned here. May appear once.
 - `Description`
   Some text as model description. May appear once.
+- `FormatVersion`
+  The format version consists of the following attributes:
+  - major (required) = Major version >= 0
+  - minor (required) = Minor version >= 0
+  - pre-release (optional) = Prerelease version >= 0
 
 ### `GeometryDefinitions`
 

@@ -82,35 +82,55 @@ If you would like to test it out right away, copy and paste this XML of a minima
 
 ```xml showLineNumbers
 <?xml version="1.0" encoding="UTF-8"?>
-<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-      xsi:noNamespaceSchemaLocation="https://gldf.io/xsd/gldf/gldf.xsd">
+<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="https://gldf.io/xsd/gldf/gldf.xsd">
   <Header>
     <Manufacturer>GlobalLightingData</Manufacturer>
-    <CreationTimeCode>2022-11-30T09:00:00</CreationTimeCode>
+    <FormatVersion major="1" minor="0" pre-release="2" />
     <CreatedWithApplication>Visual Studio Code</CreatedWithApplication>
-    <FormatVersion>1.0.0-rc.1</FormatVersion>
+    <GldfCreationTimeCode>2023-03-29T14:30:00Z</GldfCreationTimeCode>
+    <UniqueGldfId>e19ed73e-fcd6-4469-a359-58fd80510e9c</UniqueGldfId>
   </Header>
   <GeneralDefinitions>
   </GeneralDefinitions>
   <ProductDefinitions>
     <ProductMetaData>
-        <ProductNumber>
-            <Locale language="en">42</Locale>
-        </ProductNumber>
-        <Name>
-            <Locale language="en">Example Luminaire</Locale>
-        </Name>
+      <UniqueProductId>e1da63af-6e41-45ff-927b-d66f91d6b447</UniqueProductId>
+      <ProductNumber>
+        <Locale language="en">42</Locale>
+      </ProductNumber>
+      <Name>
+        <Locale language="en">Example Luminaire</Locale>
+      </Name>
     </ProductMetaData>
     <Variants>
-        <Variant id="variant-1">
-            <Name>
-                <Locale language="en">Example Luminaire Variant 1</Locale>
-            </Name>
-        </Variant>
+      <Variant id="variant-1">
+        <Name>
+          <Locale language="en">Example Luminaire Variant 1</Locale>
+        </Name>
+      </Variant>
     </Variants>
   </ProductDefinitions>
 </Root>
 ```
+
+### Unique IDs
+
+As you can see in the example above, there are two uniqe IDs in each GLDF. Since they are important mandatory elements, they shall be explained at this point as well:
+
+:::tip
+
+Each GLDF must have 2 unique IDs. The difference between `UniqueGldfId` and `UniqueProductId` is the following:
+
+- `UniqueGldfId`  
+  Should **always** be unique. Every GLDF file should have a **worldwide-unique** `UniqueGldfId`, so UUIDs (GUIDs) are **strongly recommended**. This is supposed to help recognise same GLDF data in an easy way.
+- `UniqueProductId`  
+  On the other hand, the `UniqueProductId` should **be unique only across different products** (at least for the same manufacturer). So they can be equal in different GLDF files - and should be, if they depict the same product.
+  
+  This is supposed to help to **recognise same products of a manufacturer across different GLDF files** - for example in case of product data updates. You could use the product's article number, GTIN or EAN for this use case - but we recommend UUIDs here as well.
+
+Worldwide unique UUIDs can be generated for example here: [guidgenerator.com](https://guidgenerator.com)
+:::
 
 ---
 
