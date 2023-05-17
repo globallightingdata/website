@@ -14,6 +14,7 @@ The current XML Schema files can be downloaded from our Github release pages her
 
 - GLDF: [Github Releases](https://github.com/globallightingdata/gldf/releases)
 - L3D: [Github Releases](https://github.com/globallightingdata/l3d/releases)
+- Meta-Info: [Github Releases](https://github.com/globallightingdata/meta-information/releases)
 
 ---
 
