@@ -40,6 +40,7 @@ module.exports = {
       "container/container-specification",
     ],
     Conventions: [
+      "conventions/ids-and-timecodes",
       "conventions/measurement-units",
       "conventions/referencing",
       "conventions/gldf-over-ldc",
