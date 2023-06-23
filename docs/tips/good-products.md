@@ -104,7 +104,7 @@ It may be tempting to define not only a luminaire but a complete product family 
 - **Recommandation**: Limit each GLDF to a maximum of 15 `Variants`
 :::
 
-## To large GLDF files
+## Too large GLDF files
 
 GLDFs are intended for the exchange of luminaire data. Be it as is or integrated within lighting design projects of applications such as [DIALux](https://www.dialux.com) or [RELUX](https://relux.com/en/relux-desktop.html). For this purpose, it is important that they do not exceed a manageable size.
 
