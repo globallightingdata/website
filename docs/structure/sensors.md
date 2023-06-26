@@ -15,7 +15,7 @@ First of all, a single `Sensor` element references a [**File**](/docs/structure/
 
 ## Location in XSD
 
-![Sensors in XSD](/img/docs/structure/Sensor-xsd.webp)
+![Sensors in XSD](/img/docs/structure/sensors-hierarchy.webp)
 
 
 ## XSD description
