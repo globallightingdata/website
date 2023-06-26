@@ -17,6 +17,19 @@ Below is a short guide on how to migrate existing GLDFs from rc.2 to the new rc.
 
 ---
 
+## How to upgrade
+
+Reference the new XSD and update the `FormatVersion` element as follows:
+
+```xml showLineNumbers {2,5}
+<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+      xsi:noNamespaceSchemaLocation="https://gldf.io/xsd/gldf/1.0.0-rc.3/gldf.xsd">
+ <Header>
+  <Manufacturer>Acme</Manufacturer>
+  <FormatVersion major="1" minor="0" pre-release="3" />
+  ...
+```
+
 ## Possible breaking changes
 
 ### Cylinder `plane` attribute removed
