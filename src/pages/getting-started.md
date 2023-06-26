@@ -123,7 +123,7 @@ As you can see in the example above, there are two uniqe IDs in each GLDF. Since
 Each GLDF must have 2 unique IDs. The difference between `UniqueGldfId` and `UniqueProductId` is the following:
 
 - `UniqueGldfId`  
-  Should **always** be unique. Every GLDF file should have a **worldwide-unique** `UniqueGldfId`, so UUIDs (GUIDs) are **strongly recommended**. This is supposed to help recognise same GLDF data in an easy way.
+  Should **always** be unique, even for the same product in different GLDFs. Every GLDF file should have a **worldwide-unique** `UniqueGldfId`, so UUIDs (GUIDs) are **strongly recommended**. This is supposed to help recognise same GLDF data in an easy way.
 - `UniqueProductId`  
   On the other hand, the `UniqueProductId` should **be unique only across different products** (at least for the same manufacturer). So they can be equal in different GLDF files - and should be, if they depict the same product.
   
@@ -131,6 +131,8 @@ Each GLDF must have 2 unique IDs. The difference between `UniqueGldfId` and `Uni
 
 Worldwide unique UUIDs can be generated for example here: [guidgenerator.com](https://guidgenerator.com)
 :::
+
+See also [IDs and timecodes](/docs/conventions/ids-and-timecodes)
 
 ---
 
