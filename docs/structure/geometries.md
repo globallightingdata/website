@@ -84,3 +84,6 @@ Once declared, all geometries can be referenced in subsequent XML elements via t
 ```
 
 The `Geometry` of subsequent element `Variant` refers in this example to `ModelGeometry` with `geometryId` *geometry01* (line 20), defines the geometry of this variant and link the `EmitterObject` in the L3D with the `EmitterReference`, in other words the photometry and light source .
+
+
+
