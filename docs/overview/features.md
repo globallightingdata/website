@@ -10,8 +10,7 @@ One advantage is obvious: luminaire manufacture members of RELUX and DIAL only h
 - several variants of a product with its own GTIN
 - definition of lamps in absolute (LED) or relative (conventional) state
 - embedding of pictures, geometries, documents etc. as a file or link
-- multi languages on all text data
-by using a link: dynamic assets form a central server are possible
+- multi languages on all text data by using a link: dynamic assets form a central server are possible
 - geometry from eulumdat, simple geometry or as a 3D model; multiple LOD
 - light emission surfaces, rotating elements, suspension points and electrical connection can be defined
 - luminaires with multiple light emitters and/or sensors
