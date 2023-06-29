@@ -37,11 +37,11 @@ Most **marketing information** are **optional**. However, the more are specified
 
 ### `ProductMetaData` XSD description
 
-<img src="/img/docs/structure/product-xsd-metadata.webp" alt="ProductDefinitions in XSD" width="370" />
+<img src="/img/docs/structure/product-xsd-metadata.webp" alt="ProductDefinitions in XSD" width="400" />
 
 ### XML example
 
-`ProductMetaData` is a relatively straightforward element and in its simplest form only requires two mandatory fields: The **product number** and the **product name** in one language (preferably English):
+`ProductMetaData` is a relatively straightforward element and in its simplest form only requires three mandatory fields: An **unique product id**, the **product number** and the **product name** in one language (preferably English):
 
 ```xml {10-17} showLineNumbers
 <?xml version="1.0" encoding="UTF-8"?>
@@ -54,6 +54,7 @@ Most **marketing information** are **optional**. However, the more are specified
   </GeneralDefinitions>
   <ProductDefinitions>
     <ProductMetaData>
+      <UniqueProductId>e1da63af-6e41-45ff-927b-d66f91d6b447</UniqueProductId>
       <ProductNumber>
         <Locale language="en">1234-AB</Locale>
       </ProductNumber>
@@ -68,6 +69,14 @@ Most **marketing information** are **optional**. However, the more are specified
 </Root>
 ```
 
+:::tip Unique Product Id
+The element `UniqueProductId` is particularly important, as it makes it possible to recognise the same (updated) product across multiple GLDF files. You could use the product's article number, GTIN or EAN for it, but we **recommend UUIDs (GUIDs)** related only for this use case, since all other values could change over time.
+
+**See also [Unique IDs](/getting-started#unique-ids)**
+:::
+
+---
+
 A complete example, on the other hand, could look as follows. In general, it is recommended to provide as much information about the product as possible:
 
 ```xml {10-57} showLineNumbers
@@ -81,6 +90,7 @@ A complete example, on the other hand, could look as follows. In general, it is 
   </GeneralDefinitions>
   <ProductDefinitions>
     <ProductMetaData>
+      <UniqueProductId>e1da63af-6e41-45ff-927b-d66f91d6b447</UniqueProductId>
       <ProductNumber>
         <Locale language="en">1234-AB</Locale>
       </ProductNumber>
@@ -97,13 +107,13 @@ A complete example, on the other hand, could look as follows. In general, it is 
         <Locale language="de">Unser Verkaufsschlager, Gewinner des Red Dot Awards</Locale>
       </TenderText>
       <ProductSeries>
-        <ProductSerie>
+        <ProductSerie id="familyXY">
           <Name>
             <Locale language="en">Product family XY</Locale>
             <Locale language="de">Produktfamilie XY</Locale>
           </Name>
         </ProductSerie>
-        <ProductSerie>
+        <ProductSerie id="familyYZ">
           <Name>
             <Locale language="en">Our series YZ</Locale>
             <Locale language="de">Unsere Serie YZ</Locale>
@@ -171,6 +181,7 @@ The luminaire maintenance according to **CIE 97** is indicated by **specifying a
   </GeneralDefinitions>
   <ProductDefinitions>
     <ProductMetaData>
+      <UniqueProductId>e1da63af-6e41-45ff-927b-d66f91d6b447</UniqueProductId>
       <ProductNumber>
         <Locale language="en">42</Locale>
       </ProductNumber>
@@ -203,6 +214,7 @@ Luminaire maintenance acording to **CIE LMF** allows the specification of a **ma
   </GeneralDefinitions>
   <ProductDefinitions>
     <ProductMetaData>
+      <UniqueProductId>e1da63af-6e41-45ff-927b-d66f91d6b447</UniqueProductId>
       <ProductNumber>
         <Locale language="en">42</Locale>
       </ProductNumber>
@@ -244,6 +256,7 @@ Luminaire maintenance acording to **IES LLF** is similar to CIE LMF. Its again t
   </GeneralDefinitions>
   <ProductDefinitions>
     <ProductMetaData>
+      <UniqueProductId>e1da63af-6e41-45ff-927b-d66f91d6b447</UniqueProductId>
       <ProductNumber>
         <Locale language="en">42</Locale>
       </ProductNumber>
@@ -287,6 +300,7 @@ The Japanese standard **Jieg-001** does not differ greatly from CIE and IES. Onc
   </GeneralDefinitions>
   <ProductDefinitions>
     <ProductMetaData>
+      <UniqueProductId>e1da63af-6e41-45ff-927b-d66f91d6b447</UniqueProductId>
       <ProductNumber>
         <Locale language="en">42</Locale>
       </ProductNumber>
@@ -336,6 +350,7 @@ The **recommended** procedure is to first define all relevant properties on `Pro
   </GeneralDefinitions>
   <ProductDefinitions>
     <ProductMetaData>
+      <UniqueProductId>e1da63af-6e41-45ff-927b-d66f91d6b447</UniqueProductId>
       <ProductNumber>
         <Locale language="en">42</Locale>
       </ProductNumber>

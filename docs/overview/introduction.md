@@ -65,7 +65,7 @@ As long as not all chapters of the documentation are complete, you can find an o
   - <a href="/docs/tools-dev/relux"><span class="red-text">GLDF in RELUX</span></a>
   - **Tooling**
     - <a href="/docs/tools-dev/gldf-editor"><span class="red-text">GLDF Editor</span></a>
-    - <a href="/docs/tools-dev/l3d-editor"><span class="red-text">L3D Editor</span></a>
+    - <a href="/docs/tools-dev/l3d-editor"><span class="green-text">L3D Editor</span></a>
     - <a href="/docs/tools-dev/gldf-check"><span class="red-text">GLDF Check</span></a>
     - <a href="/docs/tools-dev/gldf-checksum-service"><span class="red-text">GLDF Checksum Service</span></a>
   - **Parsers**

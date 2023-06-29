@@ -9,6 +9,16 @@ module.exports = {
       "getting-started/requirements",
       "getting-started/create-first-gldf",
       "getting-started/examples",
+      {
+        "Examlpe files":[
+          "getting-started/examples/minimalgeo",
+          "getting-started/examples/minimalldc",
+          "getting-started/examples/philips",
+          "getting-started/examples/slv",
+          "getting-started/examples/trilux",
+          "getting-started/examples/zumtobel",
+        ],
+      },
       "getting-started/templates",
       "getting-started/xsd-reference",
     ],
@@ -36,9 +46,11 @@ module.exports = {
     ],
     "GLDF Container": [
       "container/about-container",
+      "container/meta-information",
       "container/container-specification",
     ],
     Conventions: [
+      "conventions/ids-and-timecodes",
       "conventions/measurement-units",
       "conventions/referencing",
       "conventions/gldf-over-ldc",
@@ -49,8 +61,9 @@ module.exports = {
       {
         "Parametric Geometry": [
           "geometry/parametric-introduction",
+          "geometry/parametric-features",
           {
-            "Types":[
+            "Parametric Types":[
               "geometry/types/parametric-round-recessed",
               "geometry/types/parametric-cuboid-recessed",
               "geometry/types/parametric-open-luminaire",

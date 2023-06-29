@@ -14,6 +14,7 @@ The current XML Schema files can be downloaded from our Github release pages her
 
 - GLDF: [Github Releases](https://github.com/globallightingdata/gldf/releases)
 - L3D: [Github Releases](https://github.com/globallightingdata/l3d/releases)
+- Meta-Info: [Github Releases](https://github.com/globallightingdata/meta-information/releases)
 
 ---
 
@@ -22,11 +23,13 @@ The current XML Schema files can be downloaded from our Github release pages her
 The current XML Schema files can also be referenced directly from gldf.io:
 
 - **Including** version 🠖 **content won't change** on new release
-  - GLDF: <a href="/xsd/gldf/1.0.0-rc.1/gldf.xsd" target="_blank">gldf.io/xsd/gldf/1.0.0-rc.1/gldf.xsd</a>
-  - L3D: <a href="/xsd/l3d/0.9.2/l3d.xsd" target="_blank">gldf.io/xsd/l3d/0.9.2/l3d.xsd</a>
+  - GLDF: <a href="/xsd/gldf/1.0.0-rc.3/gldf.xsd" target="_blank">gldf.io/xsd/gldf/1.0.0-rc.3/gldf.xsd</a>
+  - L3D: <a href="/xsd/l3d/0.11.0/l3d.xsd" target="_blank">gldf.io/xsd/l3d/0.11.0/l3d.xsd</a>
+  - Meta-Information: <a href="/xsd/meta/1.0.0/meta-information.xsd" target="_blank">gldf.io/xsd/meta/1.0.0/meta-information.xsd</a>
 - **Without** version 🠖 **content will change** on every new release
   - GLDF: <a href="/xsd/gldf/gldf.xsd" target="_blank">gldf.io/xsd/gldf/gldf.xsd</a>
   - L3D: <a href="/xsd/l3d/l3d.xsd" target="_blank">gldf.io/xsd/l3d/l3d.xsd</a>
+  - Meta-Information: <a href="/xsd/meta/meta-information.xsd" target="_blank">gldf.io/xsd/meta/meta-information.xsd</a>
 
 :::caution
 The XSD urls without version should only be referenced with caution, as the content can change anytime and may invalidate your GLDF XML unintentionally!
@@ -36,6 +39,8 @@ The XSD urls without version should only be referenced with caution, as the cont
 
 ### GLDF XSD history
 
+- GLDF: <a href="/xsd/gldf/1.0.0-rc.2/gldf.xsd" target="_blank">v1.0.0-rc.2</a>
+- GLDF: <a href="/xsd/gldf/1.0.0-rc.1/gldf.xsd" target="_blank">v1.0.0-rc.1</a>
 - GLDF: <a href="/xsd/gldf/0.9-beta.9/gldf.xsd" target="_blank">v0.9-beta.9</a>
 - GLDF: <a href="/xsd/gldf/0.9-beta.8/gldf.xsd" target="_blank">v0.9-beta.8</a>
 - GLDF: <a href="/xsd/gldf/0.9-beta.7/gldf.xsd" target="_blank">v0.9-beta.7</a>
@@ -50,6 +55,8 @@ The XSD urls without version should only be referenced with caution, as the cont
 
 ### L3D XSD history
 
+- L3D: <a href="/xsd/l3d/0.10.0/l3d.xsd" target="_blank">v0.10.0</a>
+- L3D: <a href="/xsd/l3d/0.9.2/l3d.xsd" target="_blank">v0.9.2</a>
 - L3D: <a href="/xsd/l3d/0.9.1/l3d.xsd" target="_blank">v0.9.1</a>
 - L3D: <a href="/xsd/l3d/0.9.0/l3d.xsd" target="_blank">v0.9.0</a>
 - L3D: <a href="/xsd/l3d/0.2.0/l3d.xsd" target="_blank">v0.2.0</a>

@@ -5,7 +5,7 @@
 .HeaderHero {
   padding-top: 20px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)),
-    url("/static/img/homepage/header.png");
+    url("/static/img/homepage/header.webp");
   background-size: cover;
   max-width: initial;
   align-items: center;
