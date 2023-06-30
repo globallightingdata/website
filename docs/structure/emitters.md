@@ -8,7 +8,7 @@ sidebar_label: Emitters
 
 `Emitters` is the eighth child-element of `GeneralDefinitions` - the part in the XML where **global and reusable** elements are defined (imagine them as the building blocks of each luminaire).
 
-Emitters define the **radiation emitting parts** of the luminaire. Be it in form of **visible light** of lamps or **infrared** EMR in case of motion detection sensors. However, they **define not** the lamps or sensors themselves. Emitters is the XML block, where many of these parts before come together. They are the parts of the luminaire description, where the measured photometry is finally placed. And get combined later in [Variants](/docs/structure/variant.md) with the geometrical definition of the luminaire:
+Emitters define the **radiation emitting parts** of the luminaire. Be it in form of **visible light** of lamps or **infrared** EMR in case of motion detection sensors. However, they **define not** the lamps or sensors themselves. Emitters is the XML block, where many of these parts before come together. They are the parts of the luminaire description, where the measured photometry is finally placed. And get combined later in [`Variants`](/docs/structure/variant.md) with the geometrical definition of the luminaire:
 
 <img src="/img/docs/structure/emitters-context.webp" alt="Emitter" width="450" /><br /><br />
 
@@ -16,17 +16,18 @@ Emitters define the **radiation emitting parts** of the luminaire. Be it in form
 
 ### `Emitter` root element
 
-First of all you have to decide which **type of emitter** is required for a your **radiation emitting part**. Each luminaire can contain multiple Emitter with different types. The following three types are available:
+First of all you have to decide which **type of emitter** is required for a your **radiation emitting part**. Each luminaire can contain multiple Emitter with different types. The following four types are available:
 
 - Emitter for a **lamp** that can be **replaced** in the luminaire ➜ choose `ChangeableLightEmitter`  
 - Emitter for a **lamp permanently installed** in the luminaire ➜ choose `FixedLightEmitter`
+- Emitter for a **multi channel** light source in the luminaire ➜ choose `MultiChannelLightEmitter`
 - Emitter for a **sensor** ➜ choose `SensorEmitter`
 
-<img src="/img/docs/structure/emitters-xsd.webp" alt="Emitters in XSD" width="460" />
+<img src="/img/docs/structure/emitters-xsd.webp" alt="Emitters in XSD" width="600" />
 
 :::important
 
-One <span class="blue-text">remarkable</span> part of the XSD definition above is the fact, that GLDF accepts **one or more** `ChangeableLightEmitter` for **each** single Emitter. Or one or more `FixedLightEmitter` or `Sensor` vice versa.
+One <span class="blue-text">remarkable</span> part of the XSD definition above is the fact, that GLDF accepts **one or more** `ChangeableLightEmitter` for **each** single Emitter. Or one or more `FixedLightEmitter`, `MultiChannelLightEmitter` or `Sensor` vice versa.
 
 This does **not** mean that these emitters are **all active at the same time**. But that they are **interchangeable**. The luminaire can only operate in one of this definitions. And lighting calculation software like DIALux or RELUX will be able to switch between this modes, as users need it.
 
@@ -63,7 +64,7 @@ Let assume we would like to define a luminaire with a changeable light output. S
 
 ### `ChangeableLightEmitter`
 
-An Emitter with child element(s) of type `ChangeableLightEmitter` is intended for light outputs with **changeable lamps**, as the name already says. Another functionality is to map multiple **emergency modes** or **different control gears** for one light output. All this variability can be achieved with this type. Choose the `ChangeableLightEmitter` as well, if you have defined [Equipments](/docs/structure/equipments.md) previously (a combination of [ChangeableLightSource](/docs/structure/light-sources.md) with optional [ControlGear](/docs/structure/control-gears.md)). And you would like to reference them now.
+An Emitter with child element(s) of type `ChangeableLightEmitter` is intended for light outputs with **changeable lamps**, as the name already says. Another functionality is to map multiple **emergency modes** or **different control gears** for one light output. All this variability can be achieved with this type. Choose the `ChangeableLightEmitter` as well, if you have defined [`Equipments`](/docs/structure/equipments.md) previously (a combination of [`ChangeableLightSource`](/docs/structure/light-sources.md) with optional [`ControlGear`](/docs/structure/control-gears.md)). And you would like to reference them now.
 
 #### XSD description
 
@@ -291,6 +292,129 @@ Compared to the first example, the following optional elements have been added:
 - Line 35: An additional `EmergencyBallastLumenFactor`. Its the ratio of the emergency luminous flux to the total luminous flux specified by `RatedLuminousFlux`. You can replace it with an `EmergencyRatedLuminousFlux` element instead, if an absolute flux value in emergency mode suits more.
 
 Add these additional elements as applicable.
+
+---
+
+### `MultiChannelLightEmitter`
+
+The third emitter type is intended for light outputs of luminaires with multiple channels. It is also the simplest of the three, as the properties of the different channels are defined at the [`MultiChannelLightSource`](/docs/structure/light-sources). In addition to the reference of a `MultiChannelLightSource`, the specification of a [`ControlGear`](/docs/structure/control-gears) is also possible, as well as the Emitter rotation ([see below](#emitter-rotation)) and the Emitters display name.
+
+<img src="/img/docs/structure/emitters-xsd-multichannel.webp" alt="MultiChannelLightEmitter" width="700" />
+
+---
+
+#### `MultiChannelLightEmitter` XML example
+
+An example of the `MultiChannelLightEmitter` illustrates well how the definition of the channels happens at the `MultiChannelLightSource` itself - in particular the photometry and spectrum of each channel:
+
+```xml {44,52,81,98-101} showLineNumbers
+<?xml version="1.0" encoding="UTF-8"?>
+<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Header/>  
+  <GeneralDefinitions>
+    <Files>
+      <File id="photometryRedFile" contentType="ldc/eulumdat" 
+            type="url">http://example.org/photometryRed.ldt</File>
+      <File id="photometryGreenFile" contentType="ldc/eulumdat" 
+            type="url">http://example.org/photometryGreen.ldt</File>
+      <File id="photometryBlueFile" contentType="ldc/eulumdat" 
+            type="url">http://example.org/photometryBlue.ldt</File>
+      <File id="spectrumRedFile" contentType="spectrum/text" 
+            type="url">http://example.org/spectrumRed.txt</File>
+      <File id="spectrumGreenFile" contentType="spectrum/text" 
+            type="url">http://example.org/spectrumGreen.txt</File>
+      <File id="spectrumBlueFile" contentType="spectrum/text" 
+            type="url">http://example.org/spectrumBlue.txt</File>
+      <File id="lightSourceImage" contentType="image/jpg" 
+            type="url">http://example.org/image.jpg</File>
+    </Files>
+    <Photometries>
+      <Photometry id="photometryRed">
+        <PhotometryFileReference fileId="photometryRedFile"/>
+      </Photometry>
+      <Photometry id="photometryGreen">
+        <PhotometryFileReference fileId="photometryGreenFile"/>
+      </Photometry>
+      <Photometry id="photometryBlue">
+        <PhotometryFileReference fileId="photometryBlueFile"/>
+      </Photometry>
+    </Photometries>
+    <Spectrums>
+      <Spectrum id="spectrumRed">
+        <SpectrumFileReference fileId="spectrumRedFile"/>
+      </Spectrum>
+      <Spectrum id="spectrumGreen">
+        <SpectrumFileReference fileId="spectrumGreenFile"/>
+      </Spectrum>
+      <Spectrum id="spectrumBlue">
+        <SpectrumFileReference fileId="spectrumBlueFile"/>
+      </Spectrum>
+    </Spectrums>
+    <LightSources>
+      <MultiChannelLightSource id="multiChannelLightSource">
+        <Name>
+          <Locale language="en">RGB MultiChannel</Locale>
+        </Name>
+        <RatedInputPower>50</RatedInputPower>
+        <LightSourceImages>
+          <Image fileId="lightSourceImage" imageType="Product Picture"/>
+        </LightSourceImages>
+        <Channels>
+          <Channel type="Red">
+            <DisplayName>
+              <Locale language="en">Red</Locale>
+            </DisplayName>
+            <SpectrumReference spectrumId="spectrumRed"/>
+            <PhotometryReference photometryId="photometryRed"/>
+            <RatedLuminousFlux>150</RatedLuminousFlux>
+          </Channel>
+          <Channel type="Green">
+            <DisplayName>
+              <Locale language="en">Green</Locale>
+            </DisplayName>
+            <SpectrumReference spectrumId="spectrumGreen"/>
+            <PhotometryReference photometryId="photometryGreen"/>
+            <RatedLuminousFlux>150</RatedLuminousFlux>
+          </Channel>
+          <Channel type="Blue">
+            <DisplayName>
+              <Locale language="en">Blue</Locale>
+            </DisplayName>
+            <SpectrumReference spectrumId="spectrumBlue"/>
+            <PhotometryReference photometryId="photometryBlue"/>
+            <RatedLuminousFlux>150</RatedLuminousFlux>
+          </Channel>
+        </Channels>
+      </MultiChannelLightSource>
+    </LightSources>
+    <ControlGears>
+      <ControlGear id="controlGear">
+        <Name>
+          <Locale language="en">Electronic ballast</Locale>
+        </Name>
+        <NominalVoltage>
+          <VoltageRange>
+            <Min>220</Min>
+            <Max>230</Max>
+          </VoltageRange>
+        </NominalVoltage>
+        <StandbyPower>5</StandbyPower>
+        <Dimmable>true</Dimmable>
+        <ColorControllable>true</ColorControllable>
+      </ControlGear>
+    </ControlGears>
+    <Emitters>
+      <Emitter id="emitter">
+        <MultiChannelLightEmitter>
+          <LightSourceReference multiChannelLightSourceId="multiChannelLightSource"/>
+          <ControlGearReference controlGearId="controlGear"/>
+        </MultiChannelLightEmitter>
+      </Emitter>
+    </Emitters>
+  </GeneralDefinitions>
+  <ProductDefinitions/>
+</Root>
+```
 
 ---
 
