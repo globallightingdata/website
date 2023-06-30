@@ -8,7 +8,7 @@ sidebar_label: GLDF Check
 
 The [GLDF Checker](https://gldf-checker.relux.com/) is in a beta state now. An online free to use tool to check the filling level of an GLDF for everyone. The GLDF checker shows the amount of filled structure and properties in an easy and graphical way. A good option for quality checks on GLDF files. The specific applications and groups help to identify the potential usage.
 
-<img src="static/img/docs/overview/GLDF_Checker.png" alt="GLDF Conzept" width="750" /><br/><br/>
+<img src="/img/docs/tools/gldf_checker.webp" alt="GLDF Checker" width="750" /><br/><br/>
 
 Just drag and drop a GLDF file or use the file dialog to upload one GLDF file.
 

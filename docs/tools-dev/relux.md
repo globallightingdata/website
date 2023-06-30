@@ -13,4 +13,4 @@ It will be possible to upload GLDF instead of the Relux Standard Database (MS Ac
 
 On the first months ReluxNet and ReluxDesktop will use just slightly more information out of GLDF compared to ROLF II or the Standard Database. The usage of the wide GLDF properties and options will be increased with time.
 
-<img src="static/img/docs/overview/ReluxNet.png" alt="GLDF Conzept" width="750" /><br/><br/>
+<img src="/img/docs/tools/reluxnet.webp" alt="GLDF Conzept" width="750" /><br/><br/>
