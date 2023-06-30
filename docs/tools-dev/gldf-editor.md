@@ -10,7 +10,7 @@ GLDF Editor is a web application to create and modify GLDF files. It runs in bro
 
 [GLDF Editor](https://gldf-editor.gldf.io/)
 
-<img src="img/docs/overview/gldf_editor_main.png" alt="GLDF Editor Pic" width="750" /><br/><br/>
+<img src="/img/docs/tools/gldf_editor_main.webp" alt="GLDF Editor Pic" width="750" /><br/><br/>
 
 ## View an GLDF
 
