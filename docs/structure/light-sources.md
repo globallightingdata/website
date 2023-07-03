@@ -7,10 +7,10 @@ sidebar_label: Light Sources
 `LightSources` is the fifth child-element of `GeneralDefinitions` - the part in the XML where **global and reusable** elements are defined (imagine them as the building blocks of each luminaire). The definition of LightSources is **optional**.
 
 `LightSources` are defined direct in GLDF. A distinction is made between two fundamentally different variants. 
-A `LightSource` in the GLDF can be defined in two ways
+A `LightSource` in the GLDF can be defined in two ways:
 
 1. `ChangeableLightSource`Represents a classic user-replaceable light source. Typically, such a lamp determines the light colour, the nominal luminous flux and the nominal power of the light source.
-2. `FixedLightSource` The light source is permanently installed and the end user no longer has any influence on light colour, rated luminous flux and rated power.
+2. `FixedLightSource` The light source is permanently installed, and the end user no longer has any influence on light colour, rated luminous flux and rated power.
 
 Basic data used for both types are combined in a common basic element `LightSourceBase`.
 
@@ -79,13 +79,13 @@ The `FixedLightSource` Element above describes a fixed light source. **Important
 ## Referencing a light source
 
 Once declared, all light sources will only be referenced in subsequent XML elements via their `id` attribute **one or several** times.
-A `FixedLightSource` will always referenced direct in `FixedLightEmitter`
+A `FixedLightSource` will always be referenced direct in `FixedLightEmitter`
 A `ChangeableLightSource` will referenced via a `Equipment` element in a `ChangeableLightEmitter`
 
 
 ## LightSourceBase / Lightsource MetaData
 
-It is possible to **optionally** specify various metadata inside a light source to **complement** its description with further details. :
+It is possible to **optionally** specify various metadata inside a light source to **complement** its description with further details:
 
 - **Description**  
   Translatable name of the light source

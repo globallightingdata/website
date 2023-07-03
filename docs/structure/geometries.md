@@ -18,7 +18,7 @@ sidebar_label: Geometries
 ## XSD description
 
 A `Simple geometry` corresponds to the descriptions known from the photometric format Eulumdat. Here a luminaire can be either rectangular box or a cylinder.
-More extensive and detailed descriptions can be achieved by reframing [**L3D files**](//docs/geometry/l3d-intro.md). Please inform yourself there about details
+More extensive and detailed descriptions can be achieved by reframing [**L3D files**](//docs/geometry/l3d-intro.md). Please inform yourself there about details!
 <!-- markdownlint-disable-next-line -->
 <img src="/img/docs/structure/geometries-xsd.webp" alt="Geometries in XSD" width="750" />
 
@@ -83,7 +83,7 @@ Once declared, all geometries can be referenced in subsequent XML elements via t
 </Root>
 ```
 
-The `Geometry` of subsequent element `Variant` refers in this example to `ModelGeometry` with `geometryId` *geometry01* (line 20), defines the geometry of this variant and link the `EmitterObject` in the L3D with the `EmitterReference`, in other words the photometry and light source .
+The `Geometry` of subsequent element `Variant` refers in this example to `ModelGeometry` with `geometryId` *geometry01* (line 20), defines the geometry of this variant and link the `EmitterObject` in the L3D with the `EmitterReference`, in other words the photometry and light source.
 
 
 

@@ -11,7 +11,7 @@ Please visit the page of [**sensNorm**](https://www.sensnorm.com) for further in
 
 `Sensors` are defined direct in GLDF.
 
-A single `Sensor` element references a [**File**](/docs/structure/files.md) element which describes the location of the file which descripes the detection range of the sensor. Furthermore, the `Sensor` element **can** contain various additional [**metadata**](#sensor-metadata) to complement the sensor file.
+A single `Sensor` element references a [**File**](/docs/structure/files.md) element which describes  the location of the file which describes the detection range of the sensor. Furthermore, the `Sensor` element **can** contain various additional [**metadata**](#sensor-metadata) to complement the sensor file.
 
 
 ## Location in XSD
@@ -61,13 +61,23 @@ The information can also be found in the measurement file, but for easy direct a
 **Important**: The information must be consistent with the file. 
 
 - **DetectorCharacteristic**  
-  Sensing device detection characteristic
-  `radial`
-  `tangential`
-- `presence`
+  Sensing device detection area
+  `Round`
+  `Square`
+  `Other`
 
-  Sensing device detection method technology, like infrared, radar, or radio frequency
- 
-**DetectorType**  
+- **DetectionMethod**
   Sensing device detection method technology
-- 
+  `Passive Infrared`
+  `High Frequency`
+  `Microwave`
+  `Ultrasonic`
+  `Camera`
+  `Other`
+ 
+- **DetectorType**  
+  Sensing device detection method technology
+  `Motion Detector`
+  `Presence Detector`
+  `Daylight Detector`
+  `Other`

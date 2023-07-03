@@ -8,26 +8,25 @@ In GLDF and L3D, units according to the **International System of Units**, or un
 
 The following units are currently in use:
 
-
-
-|**Value**|**Unit**|**Formula sign**|
+|**Quantity**|**Unit name**|**Symbol**|
 | :--- | :------: | :------: |
-| Dimensions | Millimetres | \[mm\] | 
-| Angle | Degrees | \[°\] | 
-| Luminance | Candela per square meter | \[cd/m²\] | 
-| Power | Watt | \[W\] | 
-| Voltage | Volt | \[V\] | 
-| Colour temperature | Kelvin | \[K\] | 
+| Dimensions | millimetres | \[mm\] | 
+| Angle | degrees | \[°\] | 
+| Luminance | candela per square meter | \[cd/m²\] | 
+| Power | watt | \[W\] | 
+| Voltage | volt | \[V\] | 
+| Colour temperature | kelvin | \[K\] | 
 | Luminous flux | lumen | \[lm\] | 
 | Time | hours | \[h\] | 
 | Mass | kilogram | \[kg\] | 
-| Frequency | heart | \[hz\] | 
-| Temperature | degrees Celsius | \[°C\] | 
+| Frequency | herz | \[hz\] | 
+| Temperature | degrees celsius | \[°C\] | 
 
 
 
 > In GLDF and **L3D** dimensions are given exclusively in milimetres
 
 
+Example of the specification of an electrical rated input power
 
 <img src="/img//docs/conventions/gldf_measuring_units.webp" alt="Measurement Units" width="950" />
