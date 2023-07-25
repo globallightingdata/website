@@ -15,7 +15,12 @@
 .env.test.local
 .env.production.local
 
+# Package managers
 npm-debug.log*
+yarn.lock
 yarn-debug.log*
 yarn-error.log*
+
+# IDE settings
 .vs
+.vscode
