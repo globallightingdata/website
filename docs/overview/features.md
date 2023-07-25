@@ -3,53 +3,57 @@ title: GLDF Features
 sidebar_label: Features
 ---
 <!-- markdownlint-disable MD033 (no html im markdown) -->
-### GLDF Technical Benefits
 
-One advantage is obvious: luminaire manufacture members of RELUX and DIAL only must create one format and one geometry. In addition, the format also offers these new technical features for everybody, even for non-members of the two software houses:
+One clear advantage stands out: luminaires manufacturers and members of RELUX and DIAL only need to create data in a **single format**. However, GLDF offers numerous advantages **accessible to all users**, regardless of their affiliation with either of the software houses:
 
-- several variants of a product with its own GTIN
-- definition of lamps in absolute (LED) or relative (conventional) state
-- embedding of pictures, geometries, documents etc. as a file or link
-- multi languages on all text data by using a link: dynamic assets form a central server are possible
-- geometry from Eulumdat, simple geometry or as a 3D model; multiple LOD
-- light emission surfaces, rotating elements, suspension points and electrical connection can be defined
-- luminaires with multiple light emitters and/or sensors
-- emergency lighting LDCs or Emergency Ballast Lumen Factor
-- constant light output CLO and international maintenance factors
-- spectrum and dimming curves
-- checksum for pure data validation or detection of manipulating
-- optional use of all ~400 CEN/TS 17623 - ISO/TS 7127 - lighting BIM properties
-- use of other BIM, IFC or even custom properties
+- Standard **XML**, covered by a fully documented **XML Schema (XSD)** for input assistance and validation
+- Definition of **global product data** as well as multiple **specific variants** - each variant with its own GTIN.
+- **Comprehensive metadata** elements to describe the company and contact possibilities.
+- Providing of **binary data** like pictures, 3D models, documents and more.
+- Binaries can either be **embedded as local files** or as referenced **online resources** through links.
+- **Sophisticated technical data** and a wide range of capabilities for **marketing data**
+- **Translations** with multiple languages for most textual properties.
+- Definition of **lamps in absolute state** (LED) **or relative** state (conventional).
+- Various **geometry possibilities**. From photometry to XML to complex **3D models**.
+- Embeding of 3D models with **multiple LOD** (level-of-detail).
+- Light **emission surfaces**, **rotating elements**, **suspension** points, **electrical connection** and more.
+- Luminaires with **multiple** light and/or sensor **emitters**.
+- **Emergency lighting** through photometry or Emergency Ballast Lumen Factors.
+- **Multichannel** luminaires with various properties for each channel.
+- Constant light output **CLO** and international **maintenance factors**.
+- **Spectrum** and **dimming** curves.
+- Definition of **control gears** and their combination with light sources in light outputs.
+- Optional use of many of the **BIM and IFC properties** (CEN/TS 17623, ISO/TS 7127).
+- Generic **custom properties** to transport own data, either textual or binary.
 
-### Lighting
+### Light-descriptive properties
 
-GLDF comes with all the lighting specials, which are needed to calculate and qualify the luminaire and sensors. Multiple Light Emitting Objects (LEO), Light Emitting Surfaces (LES), Joints, Lamp sets, Dim curves, Multichannel, CLO, Spectral data, and many more lighting data are the core of the GLDF. This is the big difference to all other complex and modern data formats.
+GLDF encompasses a comprehensive array of lighting specialties essential for **accurate luminaire and sensor qualification and calculation**. From multiple Light Emitting Objects (LEO) and Light Emitting Surfaces (LES). To Joints, lamp sets, dim curves, multichannel support, spectral data, and a wide range of other important lighting data – they all form the core building blocks of GLDF. It is this extensive inclusion of lighting-specific information combined with **marketing data** that sets GLDF apart as a distinctive lighting data format, exceptional in the industry.
 
-### Properties
+### Custom data
 
-Today there are 110 native properties in the GLDF to describe products. Additionally, the main product structure with geometry and variants in the xml hierarchy delivers more in-formation than just plain properties.
-With custom properties in the GLDF it is possible to add all kind of different properties of the product or the variant into the GLDF. This is quite efficient if the property source is official and public (e.g., an ISO standard). But it’s also possible to transport own properties just for internal usage like a PIM ID number. Custom properties could also be an application-specific property just for a certain tool or environment.
+Today there are way over **200 native properties** in the GLDF to describe products. Additionally, the **hierarchical product structure** delivers more information than just plain properties. With **generic properties** it is possible to add all kind of custom data of the product or the variant. This is quite efficient if the property source is official and public (e.g. norms and standards). But it’s also possible to transport own properties just for internal usage, like a PIM ID number for example. Custom properties can also be used application-specific for a certain tool or working environment.
+
+**Example**: If *rated luminous flux* was not already a native property on its own, it could also be specified generically in the GLDF as follows:
 
 <img src="/img/docs/overview/custom_properties.webp" alt="GLDF Custom Properties" width="750" /><br/><br/>
 
-In 2023 the ISO/TS 7127 is published. This ISO document is a property source for around 400 properties for lighting systems. The base is the European CEN/TS 17623 from 2021. The ISO technical specification incorporates more international properties and more properties in general.
-The GLDF custom properties can be used with values or with files.
+This empowers efficient lighting data transportation and opens the door to a new era of lighting data possibilities, facilitating easy communication and interoperability among various stakeholders in the lighting ecosystem.
 
 ### Variants
 
-The structure of GLDF allows an easy and effective handling of variants. Geometry, LDCs, all properties could be changed for each variant freely. There is one hierarchy level of variants. So, just one list of variants and not a matrix.
+The hierarchical structure of GLDF allows an easy and effective handling of global properties and specific variants. Most global properties of the luminaire, like the geometry or photometry, can be overwritten for each variant freely.
 
-### Asset Links
+### Asset links
 
-Instead of physical files in the GLDF container it is possible to refer links to all kind of assets. LDC files, pictures files, geometry files or PDF documents could be stated with a URL to the file source. This allows a slim GLDF file size, a flexible asset handling and a direct update of the product data. Please be sure to keep the URLs alive long and constantly.
-
-GLDF allows the use of several pictures with several types and all kind of documents.
-
-### Open Geometry
-
-With GLDF we also created L3D. A new and open XML based data format too. Based on the open OBJ 3D mesh format luminaire geometry is free to be created by any tool. L3D adds in an XML all lighting specific data to the geometry. Mounting point and electrical connectors are included too.
-GLDF support 3 LOD levels for geometry: low, mid, and high.
+In place of embedded physical files within the [**GLDF container**](/docs/container/about-container.md), links to all assets can be employed. Whether it's photometries, images, 3D models, or PDF documents, each asset can be **referenced through a URL to its source**. This approach not only ensures a **compact GLDF** file size but also facilitates a highly **adaptable asset management system** and enables **seamless updates** to product data. With GLDF, multiple pictures, various types of documents and more can be effortlessly incorporated.
 
 ### Emergency lighting
 
-In GLDF the type of emergency features could be transported with the luminous flux for an emergency case. Even complete LDCs for emergency could be used.
+GLDF provides comprehensive coverage of **emergency lighting characteristics**. From the simple specification of reduced luminous flux in emergency lighting environments. To a fully defined emergency light output with its own photometry, color information and power consumption.
+
+### Open geometry: L3D
+
+Together with GLDF, we also created [**L3D**](/docs/geometry/l3d-intro.md) for 3D models - a **versatile and open XML-based data format for luminaire geometry** description with lighting-Specific information.
+
+L3D is an innovative 3D data format for the lighting industry, built on top the open [**OBJ file format**](https://en.wikipedia.org/wiki/Wavefront_.obj_file). Designers can now freely create luminaire geometry **using any preferred tool**, while seamlessly integrating **lighting-specific data through an XML** extension. This includes vital information such as mounting points and electrical connectors, ensuring a **comprehensive and flexible representation** of the luminaire. GLDF can transport **3 LOD levels** for each geometry: low, medium, and high.
