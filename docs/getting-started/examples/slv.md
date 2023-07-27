@@ -7,9 +7,9 @@ sidebar_label: SLV - Tria 2 with sensor
 
 This example demonstrates a GLDF file with an l3d model, two light outputs, and an integrated sensor. Everything is put together via the geometry node.
 
-<img src="/img/docs/getting-started/slvprod.webp" alt="SLV NEW TRIA 2"/>
+<img src="/img/docs/getting-started/product_slv.webp" alt="SLV NEW TRIA 2"/>
 
-<img src="/img/docs/getting-started/slv3d.webp" alt="SLV NEW TRIA 2"/>
+<img src="/img/docs/getting-started/product_slv_3d.webp" alt="SLV NEW TRIA 2"/>
 
 ### product.xml
 

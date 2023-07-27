@@ -17,7 +17,7 @@ The file is referenced in line 16.
 
 It also references a basic L3D file in the file definitions. The screenshot below shows that the 3d file contains only one light-emitting object named LEO, which we will reference later in the Geomtry part of the product.xml file.
 
-<img src="/img/docs/getting-started/minimalgeor3d.webp" alt="Minimal Geo r3d model in editor" width="800" />
+<img src="/img/docs/getting-started/examples_minimalgeo_3d.webp" alt="Minimal Geo r3d model in editor" width="800" />
 
 The following XML code references the single light-emitting object of the 3d file. See line 68.
 

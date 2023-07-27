@@ -7,9 +7,9 @@ sidebar_label: Zumtobel P-EVO R100L
 
 Zumtobel P-EVO R100L ist a simple recessed luminaire using an l3d model.
 
-<img src="/img/docs/getting-started/zumtobelprod.webp" alt="SLV NEW TRIA 2"/>
+<img src="/img/docs/getting-started/product_zumtobel.webp" alt="SLV NEW TRIA 2"/>
 
-<img src="/img/docs/getting-started/zumtobel3d.webp" alt="SLV NEW TRIA 2"/>
+<img src="/img/docs/getting-started/product_zumtobel_3d.webp" alt="SLV NEW TRIA 2"/>
 
 ### product.xml
 
