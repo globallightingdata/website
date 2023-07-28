@@ -6,20 +6,19 @@ sidebar_label: Creating good GLDF files
 
 ## How to create GLDF?
 
-The best way is the creation of the GLDF right out of the PIM system. It is just an XML file where all files and properties are written in.
-If you were able to create ROLF or ULD directly out of your systems, then you almost certainly get GLDF created. The container aspect is maybe technically new. But this is just a zip event and a renaming of the file suffix. We have a lot of tools in mind to support the creation of GLDF in a similar way the DIAL or RELUX member tools supported the ULD or ROLF creation. There are a lot of options, from Excel template to database tool. The specification of GLDF and L3D is public available. The public could develop free and open tools too.
+The most efficient method is to create GLDF directly from the PIM system. It involves generating an XML file containing all the necessary files and properties. If you can already create ROLF or ULD files from your systems, creating GLDF should be a straightforward process. The container aspect is relatively new, but it's essentially just a zip archive with a renamed file suffix.
 
-Due to the open format some PIM system manufactures create and provide GLDF generators. So, the implementing should be quite easy.
-Here on GLDF.io some tooling to investigate and create L3D and GLDF is available.
-It is also possible to create GLDF files manually with an XML or text editor.
+We have various tools in mind to support the creation of GLDF, similar to how DIAL or RELUX member tools supported ULD or ROLF creation. These tools range from Excel templates to database tools. The specifications for GLDF and L3D are publicly available, allowing the community to develop free and open tools.
 
-GLDF is also quite optional on many structure elements. So, a start could be simply a LDC file and a product name in the GLDF. Of cause just a LDC is not enough for the most applications.
+Some PIM system manufacturers even provide GLDF generators due to the open format. Implementing GLDF should be relatively easy with such support. Additionally, on gldf.io, there are tools already available to investigate and create L3D and GLDF files. It's also possible to manually create GLDF files using an XML or text editor.
 
-A good start is the data amount of ROLF and ULD. So, a unique product name and number (and GTIN) is a must. A geometry, even a simple one, is mandatory. Use multiple light outputs and lamps in case the product has it. Also, a product picture and a description text in multi languages are basics. If the PIM system supports product variants, then the variant structure in GLDF should be filled.
+GLDF offers flexibility with many optional structure elements. You can start with a simple LDC file and the product name in GLDF, but, of course, this won't be sufficient for most applications.
 
-Next level is all the data of the creating PIM system. To fill up all the 110 native properties and use all the structure elements is close to impossible.
+A good starting point is to match the data amount of ROLF and ULD. Ensure you have a unique product name and number (and GTIN). A geometry, even a simple one, is mandatory. If the product has multiple light outputs and lamps, make sure to include them. It's recommended to add a product picture and a description in multiple languages. If your PIM system ,supports product variants, make sure to fill in the variant structure in GLDF.
 
-## Priciple GLDF creation tips
+The next level involves transporting all the data from your creating PIM system to GLDF. However, filling up all the native properties that GLDF offers can be quite challenging. It's essential to carefully consider the specific data and properties that are most relevant to your and your users needs.
+
+## Validation
 
 Many rules in the GLDF XML are already validated by the XML schema (XSD) and errors prevented this way. If the XML is valid against the schema, an essential step towards a good GLDF has already been taken. But not all constraints can be covered with the XSD schema. Therefore, on this page you will find further rules, recommendations or simply hints on how to create good GLDF files.
 
@@ -134,5 +133,3 @@ You can achive this in several ways:
 
 - Resize and compress your images. 1000 pixel and jpg with a 70% compression should be sufficient for most use cases
 - Offload files like PDFs to the web and link them only in the [`File`](/docs/structure/files) element - instead of delivering them within the GLDF
-
->>>>>>> e5548d355d7669cbf7bc11e443670aa6441bdcac

@@ -392,7 +392,7 @@ Try out our [L3D Editor](https://l3d-editor.gldf.io), read the [L3D Editor docum
 
 Another attribute of `ModelGeometryReference`, which isn't shown in the example, is `targetModelType`. However, it is only needed in probably very rare cases and **only necessary** if
 
-- you want to use the obsolete 3D formats m3d and r3d for your luminaire (or a combination of l3d and m3d/r3d)
+- you want to use the obsolete 3D formats m3d and r3d for your luminaire (or a combination of L3D and m3d/r3d)
 - and the light-emitting surface in these models is **named differently**:
 
 ```xml showLineNumbers {3-4,6-7}
