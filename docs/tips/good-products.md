@@ -4,6 +4,23 @@ sidebar_label: Creating good GLDF files
 ---
 <!-- markdownlint-disable MD033 (no html im markdown) -->
 
+## How to create GLDF?
+
+The best way is the creation of the GLDF right out of the PIM system. It is just an XML file where all files and properties are written in.
+If you were able to create ROLF or ULD directly out of your systems, then you almost certainly get GLDF created. The container aspect is maybe technically new. But this is just a zip event and a renaming of the file suffix. We have a lot of tools in mind to support the creation of GLDF in a similar way the DIAL or RELUX member tools supported the ULD or ROLF creation. There are a lot of options, from Excel template to database tool. The specification of GLDF and L3D is public available. The public could develop free and open tools too.
+
+Due to the open format some PIM system manufactures create and provide GLDF generators. So, the implementing should be quite easy.
+Here on GLDF.io some tooling to investigate and create L3D and GLDF is available.
+It is also possible to create GLDF files manually with an XML or text editor.
+
+GLDF is also quite optional on many structure elements. So, a start could be simply a LDC file and a product name in the GLDF. Of cause just a LDC is not enough for the most applications.
+
+A good start is the data amount of ROLF and ULD. So, a unique product name and number (and GTIN) is a must. A geometry, even a simple one, is mandatory. Use multiple light outputs and lamps in case the product has it. Also, a product picture and a description text in multi languages are basics. If the PIM system supports product variants, then the variant structure in GLDF should be filled.
+
+Next level is all the data of the creating PIM system. To fill up all the 110 native properties and use all the structure elements is close to impossible.
+
+## Priciple GLDF creation tips
+
 Many rules in the GLDF XML are already validated by the XML schema (XSD) and errors prevented this way. If the XML is valid against the schema, an essential step towards a good GLDF has already been taken. But not all constraints can be covered with the XSD schema. Therefore, on this page you will find further rules, recommendations or simply hints on how to create good GLDF files.
 
 ## Provide consistent translations
@@ -39,7 +56,7 @@ The GLDF allows translations to be specified in many places, in the form of the 
 :::
 
 - In the example above, the **first rule** is satisfied because the luminaire data contains at least one consistent translation for both - the `ProductNumber` and the `Name` element. In this case even two languages: German (`de`) and English (`en`) are completly translated.
-- The **first recommendation** is also fulfilled, as all elements contain an English translation (`en`). 
+- The **first recommendation** is also fulfilled, as all elements contain an English translation (`en`).
 - The **second recommendation**, however, is violated because only one of the two elements contain a French translation (`fr`) and the other does not.
 
 ## Provide a consistent default language
@@ -117,3 +134,5 @@ You can achive this in several ways:
 
 - Resize and compress your images. 1000 pixel and jpg with a 70% compression should be sufficient for most use cases
 - Offload files like PDFs to the web and link them only in the [`File`](/docs/structure/files) element - instead of delivering them within the GLDF
+
+>>>>>>> e5548d355d7669cbf7bc11e443670aa6441bdcac

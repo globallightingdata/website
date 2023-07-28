@@ -2,11 +2,14 @@
 title: GLDF Container Specification
 sidebar_label: Container Specification
 ---
+<!-- markdownlint-disable MD033 (no html im markdown) -->
 
 ## General
 
 - The container files' **underlying format** is a standard [ZIP archive](https://en.wikipedia.org/wiki/ZIP_(file_format))
 - The container file **extension** is `.gldf`
+
+<img src="/img/docs/container/container_schema.webp" alt="GLDF Container Schema" width="750" /><br/><br/>
 
 ## Root folder content
 

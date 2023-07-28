@@ -20,7 +20,7 @@ You can start here and read through these docs like a book. Or you can read the 
 As long as not all chapters of the documentation are complete, you can find an overview of the already finished documentation here
 
 - **Overview**
-  - <a href="/docs"><span class="red-text">GLDF Introduction</span></a>
+  - <a href="/docs"><span class="green-text">GLDF Introduction</span></a>
   - <a href="/docs/overview/purpose"><span class="red-text">GLDF Purpose</span></a>
   - <a href="/docs/overview/features"><span class="red-text">GLDF Features</span></a>
 - **Getting started**
