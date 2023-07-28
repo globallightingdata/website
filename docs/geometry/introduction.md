@@ -5,7 +5,6 @@ sidebar_label: Introduction
 
 ## Purpose
 
-
 There are many reasons for creating a three-dimensional model of a luminaire.
 
 They range from simple placeholder objects that help to avoid geometric overlaps to the most detailed product visualisations of design-oriented luminaires. 

@@ -2,6 +2,7 @@
 title: Descriptive Attributes
 sidebar_label: Descriptive Attributes
 ---
+<!-- markdownlint-disable MD033 (no html im markdown) -->
 
 ## Introduction
 
@@ -24,7 +25,6 @@ We split descriptive attributes into the following categories.
 
 <img src="/img/docs/structure/desciptiveattributes.webp" alt="Descriptive Attributes" width="561" />
 
-
 ## Mechanical
 
 This XML schema describes the `Mechanical` element, which provides information about the mechanical attributes of a luminaire.
@@ -34,27 +34,28 @@ This XML schema describes the `Mechanical` element, which provides information a
 <img src="/img/docs/structure/mechanical.webp" alt="Mechanical Attributes" width="435" />
 
 ### Example
+
 ```xml showLineNumbers
 <Mechanical>
-    <ProductSize>
-        <Length>500</Length>
-        <Width>200</Width>
-        <Height>100</Height>
-    </ProductSize>
-    <ProductForm>Cuboid</ProductForm>
-    <SealingMaterial>
-        <Locale language="en">Polycarbonate</Locale>
-        <Locale language="de">Polycarbonat</Locale>
-    </SealingMaterial>
-    <Adjustabilities>
-        <Adjustability>Fixed</Adjustability>
-        <Adjustability>Orientation</Adjustability>
-    </Adjustabilities>
-    <IKRating>IK08</IKRating>
-    <ProtectiveAreas>
-        <Area>Ball-impact proof</Area>
-    </ProtectiveAreas>
-    <Weight>3.5</Weight>
+  <ProductSize>
+      <Length>500</Length>
+      <Width>200</Width>
+      <Height>100</Height>
+  </ProductSize>
+  <ProductForm>Cuboid</ProductForm>
+  <SealingMaterial>
+      <Locale language="en">Polycarbonate</Locale>
+      <Locale language="de">Polycarbonat</Locale>
+  </SealingMaterial>
+  <Adjustabilities>
+      <Adjustability>Fixed</Adjustability>
+      <Adjustability>Orientation</Adjustability>
+  </Adjustabilities>
+  <IKRating>IK08</IKRating>
+  <ProtectiveAreas>
+      <Area>Ball-impact proof</Area>
+  </ProtectiveAreas>
+  <Weight>3.5</Weight>
 </Mechanical>
 ```
 
@@ -134,18 +135,19 @@ The `Electrical` element, which provides information about the electrical attrib
 <img src="/img/docs/structure/electrical.webp" alt="Electrical Attributes" width="433" />
 
 ### Example
+
 ```xml showLineNumbers
 <Electrical>
-    <ClampingRange>
-        <Lower>10.0</Lower>
-        <Upper>25.0</Upper>
-    </ClampingRange>
-    <SwitchingCapacity>1E-1, W 1E0, unitless</SwitchingCapacity>
-    <ElectricalSafetyClass>II</ElectricalSafetyClass>
-    <IngressProtectionIPCode>IP67</IngressProtectionIPCode>
-    <PowerFactor>0.95</PowerFactor>
-    <ConstantLightOutput>true</ConstantLightOutput>
-    <LightDistribution>Direct indirect</LightDistribution>
+  <ClampingRange>
+      <Lower>10.0</Lower>
+      <Upper>25.0</Upper>
+  </ClampingRange>
+  <SwitchingCapacity>1E-1, W 1E0, unitless</SwitchingCapacity>
+  <ElectricalSafetyClass>II</ElectricalSafetyClass>
+  <IngressProtectionIPCode>IP67</IngressProtectionIPCode>
+  <PowerFactor>0.95</PowerFactor>
+  <ConstantLightOutput>true</ConstantLightOutput>
+  <LightDistribution>Direct indirect</LightDistribution>
 </Electrical>
 ```
 
@@ -216,12 +218,12 @@ The `Emergency` element, which provides information about the emergency lighting
 
 ```xml showLineNumbers
 <Emergency>
-    <DurationTimeAndFlux>
-        <Flux hours="1">500</Flux>
-        <Flux hours="2">400</Flux>
-        <Flux hours="3">300</Flux>
-    </DurationTimeAndFlux>
-    <DedicatedEmergencyLightingType>Exit Light</DedicatedEmergencyLightingType>
+  <DurationTimeAndFlux>
+      <Flux hours="1">500</Flux>
+      <Flux hours="2">400</Flux>
+      <Flux hours="3">300</Flux>
+  </DurationTimeAndFlux>
+  <DedicatedEmergencyLightingType>Exit Light</DedicatedEmergencyLightingType>
 </Emergency>
 ```
 
@@ -242,7 +244,7 @@ The `DedicatedEmergencyLightingType` element describes the dedicated application
 - For Signage
 - For Lighting
 
-## Marketing 
+## Marketing
 
 The `Marketing` element contains descriptive attributes for marketing purposes.
 
@@ -253,38 +255,38 @@ The `Marketing` element contains descriptive attributes for marketing purposes.
 ```xml showLineNumbers
 <?xml version="1.0" encoding="UTF-8"?>
 <Marketing>
-    <ListPrices>
-        <ListPrice currency="USD">99.99</ListPrice>
-        <ListPrice currency="EUR">89.99</ListPrice>
-    </ListPrices>
-    <HousingColors>
-        <HousingColor ral="3016" lang="en">Coral Red</HousingColor>
-        <HousingColor ral="1016" lang="en">Sulfur Yellow</HousingColor>
-    </HousingColors>
-    <Markets>
-        <Region lang="en">North America</Region>
-        <Region lang="en">Europe</Region>
-    </Markets>
-    <Hyperlinks>
-        <Hyperlink lang="en" type="URL">https://www.example.com/product-info</Hyperlink>
-    </Hyperlinks>
-    <Designer>Jane Doe</Designer>
-    <ApprovalMarks>
-        <ApprovalMark>CE</ApprovalMark>
-        <ApprovalMark>ENEC</ApprovalMark>
-    </ApprovalMarks>
-    <DesignAwards>
-        <DesignAward>Red Dot Award</DesignAward>
-        <DesignAward>iF Design Award</DesignAward>
-    </DesignAwards>
-    <Labels>
-        <Label>CE</Label>
-        <Label>GS</Label>
-    </Labels>
-    <Applications>
-        <Application>Interior: Office</Application>
-        <Application>Interior: Office: Group Offices</Application>
-    </Applications>
+  <ListPrices>
+      <ListPrice currency="USD">99.99</ListPrice>
+      <ListPrice currency="EUR">89.99</ListPrice>
+  </ListPrices>
+  <HousingColors>
+      <HousingColor ral="3016" lang="en">Coral Red</HousingColor>
+      <HousingColor ral="1016" lang="en">Sulfur Yellow</HousingColor>
+  </HousingColors>
+  <Markets>
+      <Region lang="en">North America</Region>
+      <Region lang="en">Europe</Region>
+  </Markets>
+  <Hyperlinks>
+      <Hyperlink lang="en" type="URL">https://www.example.com/product-info</Hyperlink>
+  </Hyperlinks>
+  <Designer>Jane Doe</Designer>
+  <ApprovalMarks>
+      <ApprovalMark>CE</ApprovalMark>
+      <ApprovalMark>ENEC</ApprovalMark>
+  </ApprovalMarks>
+  <DesignAwards>
+      <DesignAward>Red Dot Award</DesignAward>
+      <DesignAward>iF Design Award</DesignAward>
+  </DesignAwards>
+  <Labels>
+      <Label>CE</Label>
+      <Label>GS</Label>
+  </Labels>
+  <Applications>
+      <Application>Interior: Office</Application>
+      <Application>Interior: Office: Group Offices</Application>
+  </Applications>
 </Marketing>
 ```
 
@@ -302,14 +304,14 @@ The `ListPrices` element is a container for a list of prices per unit.
 The `HousingColors` element contains housing colors of the luminaire.
 
 - `HousingColor` (0 or more occurrences): The translatable name of the color of the housing and/or RAL number. Inherits from `Locale` for localized names.
-    - `ral` (optional, int): RAL Classic color space system code, e.g., "RAL 3016" (coral-red). Must be a 4-digit number.
+- `ral` (optional, int): RAL Classic color space system code, e.g., "RAL 3016" (coral-red). Must be a 4-digit number.
 
 ### Markets
 
 The `Markets` element contains target markets.
 
- - `Region` (0 or more occurrences): The region can be defined by the user and should be translated to the applicable languages in the Locale element.
-   - Inherits from `Locale` for localized names.
+- `Region` (0 or more occurrences): The region can be defined by the user and should be translated to the applicable languages in the Locale element.
+- Inherits from `Locale` for localized names.
 
 ### Hyperlinks
 
@@ -358,8 +360,7 @@ The `Applications` element contains fields of application for the luminaire.
 
 `Application` (0 or more occurrences, `xs:string`): Field of application for the luminaire. Must be one of the predefined enumeration values.
 
-
-## Operations and Maintenance 
+## Operations and Maintenance
 
 This XML schema describes the `OperationsAndMaintenance` element, which provides information about the Operations and Maintenance attributes of a luminaire.
 
@@ -371,74 +372,75 @@ This XML schema describes the `OperationsAndMaintenance` element, which provides
 
 ```xml showLineNumbers
 <DescriptiveAttributes>
-	<OperationsAndMaintenance>
-		<UsefulLifeTimes>
-			<UsefulLife>L00B00 5000h</UsefulLife>
-		</UsefulLifeTimes>
-		<MedianUsefulLifeTimes>
-			<MedianUsefulLife>L00B00 5000h</MedianUsefulLife>
-		</MedianUsefulLifeTimes>
-		<OperatingTemperature>
-			<Lower>-20</Lower>
-			<Upper>40</Upper>
-		</OperatingTemperature>
-		<AmbientTemperature>
-			<Lower>-20</Lower>
-			<Upper>40</Upper>
-		</AmbientTemperature>
-		<RatedAmbientTemperature>25</RatedAmbientTemperature>
-		<ATEX>
-			<Directives>
-				<Directive>ATEX</Directive>
-			</Directives>
-			<Classes>
-				<Class>I</Class>
-			</Classes>
-			<Divisions>
-				<Division>1</Division>
-			</Divisions>
-			<DivisionGroups/>
-			<Zones>
-				<Gas>
-					<Zone>0</Zone>
-				</Gas>
-			</Zones>
-			<ZoneGroups>
-				<Gas>
-					<Group>IIA</Group>
-				</Gas>
-			</ZoneGroups>
-			<MaximumSurfaceTemperature>90°C</MaximumSurfaceTemperature>
-			<TemperatureClasses>
-				<TemperatureClass>T4</TemperatureClass>
-			</TemperatureClasses>
-			<ExCodes>
-				<ExCode>eb</ExCode>
-			</ExCodes>
-			<EquipmentProtectionLevels>
-				<EquipmentProtectionLevel>Gb</EquipmentProtectionLevel>
-			</EquipmentProtectionLevels>
-			<EquipmentGroups>
-				<EquipmentGroup>II</EquipmentGroup>
-			</EquipmentGroups>
-			<EquipmentCategories>
-				<EquipmentCategory>2G</EquipmentCategory>
-			</EquipmentCategories>
-			<Atmospheres>
-				<Atmosphere>G</Atmosphere>
-			</Atmospheres>
-			<Groups>
-				<Group>IIB</Group>
-			</Groups>
-		</ATEX>
-		<AcousticAbsorptionRates>
-			<AbsorptionRate hertz="1000">0.1</AbsorptionRate>
-		</AcousticAbsorptionRates>
-	</OperationsAndMaintenance>
+  <OperationsAndMaintenance>
+    <UsefulLifeTimes>
+      <UsefulLife>L00B00 5000h</UsefulLife>
+    </UsefulLifeTimes>
+    <MedianUsefulLifeTimes>
+      <MedianUsefulLife>L00B00 5000h</MedianUsefulLife>
+    </MedianUsefulLifeTimes>
+    <OperatingTemperature>
+      <Lower>-20</Lower>
+      <Upper>40</Upper>
+    </OperatingTemperature>
+    <AmbientTemperature>
+      <Lower>-20</Lower>
+      <Upper>40</Upper>
+    </AmbientTemperature>
+    <RatedAmbientTemperature>25</RatedAmbientTemperature>
+    <ATEX>
+      <Directives>
+        <Directive>ATEX</Directive>
+      </Directives>
+      <Classes>
+        <Class>I</Class>
+      </Classes>
+      <Divisions>
+        <Division>1</Division>
+      </Divisions>
+      <DivisionGroups/>
+      <Zones>
+        <Gas>
+          <Zone>0</Zone>
+        </Gas>
+      </Zones>
+      <ZoneGroups>
+        <Gas>
+          <Group>IIA</Group>
+        </Gas>
+      </ZoneGroups>
+      <MaximumSurfaceTemperature>90°C</MaximumSurfaceTemperature>
+      <TemperatureClasses>
+        <TemperatureClass>T4</TemperatureClass>
+      </TemperatureClasses>
+      <ExCodes>
+        <ExCode>eb</ExCode>
+      </ExCodes>
+      <EquipmentProtectionLevels>
+        <EquipmentProtectionLevel>Gb</EquipmentProtectionLevel>
+      </EquipmentProtectionLevels>
+      <EquipmentGroups>
+        <EquipmentGroup>II</EquipmentGroup>
+      </EquipmentGroups>
+      <EquipmentCategories>
+        <EquipmentCategory>2G</EquipmentCategory>
+      </EquipmentCategories>
+      <Atmospheres>
+        <Atmosphere>G</Atmosphere>
+      </Atmospheres>
+      <Groups>
+        <Group>IIB</Group>
+      </Groups>
+    </ATEX>
+    <AcousticAbsorptionRates>
+      <AbsorptionRate hertz="1000">0.1</AbsorptionRate>
+    </AcousticAbsorptionRates>
+  </OperationsAndMaintenance>
 </DescriptiveAttributes>
 ```
 
 ### UsefulLifeTimes
+
 Useful lifetimes of the luminaire with declaration of Lx, By and ambient temperature. E.g. L80B50 50000h 25°C
 
 - `UsefulLife` (1 or more occurrences, `xs:string`): Single useful lifetime of the luminaire with declaration of Lx, By and ambient temperature. E.g. L80B50 50000h 25°C
@@ -453,63 +455,73 @@ Single median useful lifetime during which 50% (B50) of a population of operatin
 Recommend fixed time values are 35k, 50k, 75k or 100k hours (depending on application). E.g. L80B50 75000h 25°C
 
 ### OperatingTemperature
+
 `OperatingTemperature` Operating range defined by a minimum and maximum temperature, at which the luminaire operates normally
 
-#### TemperatureRange 
+#### TemperatureRange
+
 - `Lower` (`xs:int`): Lower inclusive limit of the temperature (Unit: celsius)
 - `Upper` (`xs:int`): Upper inclusive limit of the temperature (Unit: celsius)
 
 ### AmbientTemperature
+
 `AmbientTemperature` is the Recommended ambient temperature range
 
 #### TemperatureRange
+
 - `Lower` (`xs:int`): Lower inclusive limit of the temperature (Unit: celsius)
 - `Upper` (`xs:int`): Upper inclusive limit of the temperature (Unit: celsius)
 
 ### RatedAmbientTemperature
+
 `RatedAmbientTemperature` (1 occurrence `xs:int`): Rated ambient performance temperature. It's the highest ambient temperature around the luminaire related to a rated performance of the luminaire under normal operating conditions (Unit: celsius)
 
 ### ATEX
+
 Specifies whether the fitting is intended for installation in an explosive environment. See ATEX directive 2014/34/EU
 
-
 #### Directives
+
 Hazardous area classification `directives`. E.g. European Union’s ATEX Directive, U.S. National Electrical Code (NEC) or Canadian Electrical Code (CEC).
 
 The `Directives` element has a complex type that contains a sequence of one or more Directive elements.
 
 It Contains `Directive` elements.
- - The maximum occurrence of Directive element is 4.
-    Directive (`xs:string`) Hazardous area classification directive
-    - The allowed values are "ATEX", "IECEx", "CEC", and "NEC".
 
+- The maximum occurrence of Directive element is 4.
+  - Directive (`xs:string`) Hazardous area classification directive
+  - The allowed values are "ATEX", "IECEx", "CEC", and "NEC".
 
 #### Classes
-  `Classes` Classification of substances. Gas, Dust or Fibers/Flyings
-  Contains:
-  - `Class` (`xs:string`) Posssible Enumerations:
-    - I
-    - II
-    - III
+
+`Classes` Classification of substances. Gas, Dust or Fibers/Flyings contains:
+
+- `Class` (`xs:string`) Posssible Enumerations:
+  - I
+  - II
+  - III
 
 #### Divisions
-  `Divisions` Division classifications. Corresponds to zones as follows: Zone 0|1 > Division 1. Zone 2 > Division 2
-  - Contains 1 or 2 `Division` Elements
-  - Enumtetions (`xs:string`)
-    - 1
-    - 2
+
+`Divisions` Division classifications. Corresponds to zones as follows: Zone 0|1 > Division 1. Zone 2 > Division 2
+
+- Contains 1 or 2 `Division` Elements
+- Enumtetions (`xs:string`)
+  - 1
+  - 2
 
 #### DivisionGroups
 
 `DivisionGroups` Hazardous atmosphere category groups A-G
 
   Contains `Gas`: Gas, fog, steam zones contains:
-  - `Group` (`xs:string`): Division group A,B,C,D
-    - Enumeration values:
-    - Value: A
-    - Value: B
-    - Value: C
-    - Value: D
+  
+- `Group` (`xs:string`): Division group A,B,C,D
+  - Enumeration values:
+  - Value: A
+  - Value: B
+  - Value: C
+  - Value: D
 
   `Dust`  Dust zones
 
@@ -521,11 +533,13 @@ It Contains `Directive` elements.
   - Value: G
 
 #### Zones
+
 `Zones` Classification of possible hazardous zones contains
 
 `Gas`: Gas, fog, steam zones Contains
 
 `Zone` (`xs:string`): Zone 0, 1, 2
+
 - Enumerations:
 - 0
 - 1
@@ -533,6 +547,7 @@ It Contains `Directive` elements.
 
 `Dust`: Dust zones contains
 `Zone` (`xs:string`): Zone 20, 21, 22
+
 - Enumerations:
 - 20
 - 21
@@ -557,10 +572,12 @@ It Contains `Directive` elements.
    - IIIB
    - IIIA
 
-#### MaximumSurfaceTemperature 
+#### MaximumSurfaceTemperature
+
 `MaximumSurfaceTemperature` (`xs:string`): Maximum temperature of a surface that can be reached by the ex atmosphere
 
 #### TemperatureClasses
+
 `TemperatureClasses`: Temperature classifications. E.g. T3 lower/equal 300°C Contains
 - `TemperatureClass`:  Temperature classification
   - Enumeration:
@@ -580,6 +597,7 @@ It Contains `Directive` elements.
   - T6
 
 #### ExCodes
+
 `xCodes`: Protection against the occurrence of an ignition source Contains
 - `ExCode` (`xs:string`): Type of protection short code
   - Enumeration:
@@ -611,6 +629,7 @@ It Contains `Directive` elements.
   - tc
 
 #### EquipmentProtectionLevels
+
 `EquipmentProtectionLevels`: Equipment Protection Level EPL. "M" Mining - "G" Gas - "D" Dust and respective protection level. Contains
  - `EquipmentProtectionLevel` (`xs:string`): Equipment protection level
   - Enumeration:
@@ -632,6 +651,7 @@ It Contains `Directive` elements.
   - II
 
 #### EquipmentCategories
+
 `EquipmentCategories` Defines in which zones the equipment can be used. With protection level from normal to high. Contsains:
 - `EquipmentCategory` (`xs:string`): Possible equipment hazardous zone. Mining, Gas, Dust and corresponding protection level
   - Enumerations:
@@ -645,6 +665,7 @@ It Contains `Directive` elements.
   - 3D
 
 #### Atmospheres
+
 `Atmospheres` Atmosphere classification. Contains:
 `Atmosphere` (`xs:string`): Gas, Dust
  - Enumeration:
@@ -652,6 +673,7 @@ It Contains `Directive` elements.
  - D
 
 #### Groups
+
 `Groups` (`xs:string`): Explosion groups (I Mining, II Gas, III Dust) and sub-group classification
 Enumeration Values:
  - I
@@ -664,8 +686,8 @@ Enumeration Values:
  - IIIB
  - IIIC
 
-
 ### AcousticAbsorptionRates
+
 `AcousticAbsorptionRates`: Sound absorption coefficient (ISO 354:2003), depending on frequencies in the human hearable range
 
 Contains:
@@ -682,20 +704,20 @@ Contains:
 
 ```xml showLineNumbers
 <CustomProperties>
-	<Property id="p1">
-		<Name>
-			<Locale language="en">custom name</Locale>
-		</Name>
-		<PropertySource>source</PropertySource>
-		<Value>5</Value>
-	</Property>
-	<Property id="p2">
-		<Name>
-			<Locale language="en">custom name 2</Locale>
-		</Name>
-		<PropertySource>source</PropertySource>
-		<FileReference fileId="f1">file 1</FileReference>
-	</Property>
+  <Property id="p1">
+    <Name>
+      <Locale language="en">custom name</Locale>
+    </Name>
+    <PropertySource>source</PropertySource>
+    <Value>5</Value>
+  </Property>
+  <Property id="p2">
+    <Name>
+      <Locale language="en">custom name 2</Locale>
+    </Name>
+    <PropertySource>source</PropertySource>
+    <FileReference fileId="f1">file 1</FileReference>
+  </Property>
 </CustomProperties>
 ```
 

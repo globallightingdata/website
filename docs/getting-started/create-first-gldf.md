@@ -19,29 +19,27 @@ GLDF is a container or ZIP-Archive. It contains all the product information and 
 
 ## Preparation
 
-In this example, we will use a template GLDF file from the GLDF Editor and recreate the product.xml file from scratch. This file contains all the necessary files, such as the product image, ldt-file, and 3d model. To download the sample, open the <a href="https://gldf-editor.gldf.io" target="_blank">GLDF Editor</a>.
+In this example, we will use a template GLDF file from the GLDF Editor and recreate the product.xml file from scratch. This file contains all the necessary files, such as the product image, ldt-file, and 3D model. To download the sample, open the <a href="https://gldf-editor.gldf.io" target="_blank">GLDF Editor</a>.
 
 :::tip Link
 <a href="https://gldf-editor.gldf.io" target="_blank">GLDF Editor</a>.
 :::
 
 Open the "single round 1 variant" template by clicking on open.
-
-<img src="/img/docs/getting-started/first-gldf_gldfeditor1.webp" alt="GLDF Editor" width="800" />
+<img src="/img/docs/getting-started/first-gldf_gldfeditor1.webp" alt="GLDF Editor" width="750" />
 
 You can then download the template GLDF file by clicking on the download GLDF button.
-<img src="/img/docs/getting-started/first-gldf_gldfeditor2.webp" alt="Download gldf file" width="800" />
+<img src="/img/docs/getting-started/first-gldf_gldfeditor2.webp" alt="Download gldf file" width="750" />
 
 You can open the GLDF file in your favorite archiver that supports the ZIP format. We are using 7Zip in the screenshot.
-
-<img src="/img/docs/getting-started/first-gldf_7zip.webp" alt="GLDF ZIP" width="800" />
+<img src="/img/docs/getting-started/first-gldf_7zip.webp" alt="GLDF ZIP" width="650" />
 
 You can see the products.xml file as well as three subfolders.
 
 - The `products.xml` file is the heart of the GLDF archive and defines the structure and properties of your product.
 - The folder `ldc` contains an Eulumdat file called diffuse.ldt. This is the light distribution curve.
 - The folder `image` contains the file bulb.jpg, which will be our product picture.
-- Finally, `geo` contains our 3d model called recessed_round.l3d.
+- Finally, `geo` contains our 3D model called recessed_round.l3d.
 
 We will now recreate the product.xml file from scratch in the following steps.
 
@@ -49,17 +47,15 @@ We will now recreate the product.xml file from scratch in the following steps.
 
 The heart of a GLDF file is the **product.xml** file, located in the root of the archive. It contains all the product information.
 
-The GLDF Schema defines the exact structure of the XML code in **product.xml**. You can validate your XML file against the schema to ensure your GLDF file works correctly. We describe this in the section <a href="" target="_self">validation</a>.
+The GLDF Schema defines the exact structure of the XML code in **product.xml**. You can validate your XML file against the schema to ensure your GLDF file works correctly.
 
 GLDF divides the XML structure into three sections.
 
-- Header
-- General Definitions
-- Product Definitions
+- `Header`
+- `GeneralDefinitions`
+- `ProductDefinitions`
 
-Please see [XML hierarchy](/docs/structure/xml-hierarchy.md) for more information.
-
-All sections are children of the `Root` element.
+All sections are children of the `Root` element. Please see [XML hierarchy](/docs/structure/xml-hierarchy.md) for more information.
 
 ### Step 1: Create the basic XML structure
 
@@ -119,7 +115,7 @@ The code for this will look like this:
 
 ### Step 3: Add Photometry
 
-We will add a [`photometry`](/docs/structure/photometries.md) definition with a LuminousEfficacy of 98.2 and gibe it a CIE-Flux code of 44 75 94 100 100.
+We will add a [`photometry`](/docs/structure/photometries.md) definition with a LuminousEfficacy of 98.2 and define the CIE-Flux code as *44 75 94 100 100*.
 
 ```xml
 <Photometries>
@@ -135,7 +131,7 @@ We will add a [`photometry`](/docs/structure/photometries.md) definition with a 
 
 ### Step 4: Add Light Source
 
-We will add a light source with a rated input power of 10.2, a Color rendering index of 95, and a color temperature of 3000. We can also set the lifetime in hours and add maintenance factor information.
+We will add a [light source](/docs/structure/light-sources.md) with a rated input power of 10.2, a color rendering index of 95, and a color temperature of 3000. We can also set the lifetime in hours and add maintenance factor information.
 
 ```xml
 <LightSources>
@@ -160,7 +156,7 @@ We will add a light source with a rated input power of 10.2, a Color rendering i
 
 ### Step 5: Add Control Gear
 
-Next we add a Control Gear with a name and description. We will also set power properties. For more information check the <a href="../conventions/measurement-units" target="_self">units</a> section.
+Next we add a [control gear](/docs/structure/control-gears.md) with a name and description. We will also set power properties. For more information check the [Units](/docs/conventions/measurement-units.md) section.
 
 ```xml
 <ControlGears>
@@ -181,9 +177,7 @@ Next we add a Control Gear with a name and description. We will also set power p
 
 ### Step 5: Add Emitter
 
-We will now combine the previously defined parts in an emitter. It can later be referenced via its id emitter01.
-
-We will now combine the previously defined parts in an emitter. You can later reference it via its id emitter01. In the same way, we are referencing the Photometry, Light source, and Control gear via their ids. We will also set the luminous flux.
+We will now combine the previously defined parts in an [Emitter](/docs/structure/emitters.md). It can later be referenced via its id *emitter01*. In the same way, we are referencing the Photometry, Light source, and Control gear via their ids. We will also set the luminous flux to 1000.
 
 ```xml
 <Emitters>
@@ -192,7 +186,7 @@ We will now combine the previously defined parts in an emitter. You can later re
       <PhotometryReference photometryId="photom01" />
       <LightSourceReference fixedLightSourceId="s01" />
       <ControlGearReference controlGearId="c01" />
-      <RatedLuminousFlux>1001</RatedLuminousFlux>
+      <RatedLuminousFlux>1000</RatedLuminousFlux>
     </FixedLightEmitter>
   </Emitter>
 </Emitters>
@@ -200,36 +194,32 @@ We will now combine the previously defined parts in an emitter. You can later re
 
 ### Step 6: Add Geometry
 
-Finally, we will define a geometry section that will reference our l3d file from the file definitions.
+Finally, we will define a [Geometry](/docs/structure/geometries.md) section that will reference our L3D file from the file definitions.
 
 ```xml
 <Geometries>
   <ModelGeometry id="geometry01">
-    <GeometryFileReference fileId="geo01"></GeometryFileReference>
+    <GeometryFileReference fileId="geo01" />
   </ModelGeometry>
 </Geometries>
 ```
 
 ## Product Definitions
 
-In the product definitions section, we can combine the building blocks we defined in the general definitions section into a final product.
+In the [product definitions](/docs/structure/product.md) section, we can combine the building blocks we defined in the general definitions section into a final product. The product definitions section consists of two two sections:
 
-The product definitions section consists of two two sections:
+- [**ProductMetadata**](/docs/structure/product.md)  
+  ProductMetadata defines global product information that applies to all variants of a GLDF. Instead of defining information multiple times for each variant, you can set the information in the global ProductMetadata instead.
+- [**Variants**](/docs/structure/variant.md)  
+  Variants are considered variations of a given product but not entirely different products. If your product comes in different variations like color or mounting types, you can create several variants for each version.
 
-- Product Metadata
-- Variants
-
-:::tip Metadata
-Metadata is product information that applies to all variants of a product. Instead of defining information multiple times for each variant, you can set the information in the metadata instead. See <a href="../structure/product" target="_self">Global Product Data</a> for detailed information.
-:::
-
-:::tip Variants
-Variants are considered variations of a given product but not entirely different products. If your product comes in different variations like color or mounting types, you can create several variants for each version. However, do not combine completely unrelated products in a single file. See <a href="../structure/product" target="_self">Variants</a> for detailed information.
+:::warning Warning
+Do not misuse variants to combine completely unrelated products in a single GLDF file.
 :::
 
 ### Step 7: Add Product Metadata
 
-Add the following code to the Product Definitions section. We define a product number and an english as well as a German name for the procuct. And lastly but not least a picture is defined.
+Add the following code to the Product Definitions section. We define a product number and a product name,  translated into English and German. And add a picture and labeled it as a product picture.
 
 ```xml
 <ProductMetaData>
@@ -252,12 +242,12 @@ Add the following code to the Product Definitions section. We define a product n
 
 ### Step 7: Add a Variant
 
-Last but not least, we will combine all the previously prepared building blocks into a variant. We added a simple name and description in English and German in this example.
+Last but not least, we will combine all the previously prepared building blocks into a [Variant](/docs/structure/variant.md). We add a simple name and description in English and German in this example.
 
-The core of every variant is Geometry. If you do not have a 3d model, you can base the geometry on the light source within the emitter or define some basic geometry within the XML code. Basic geometry is called simple geometry, and you can specify it in the general definitions section.
-The following two examples show how to use a 3d model or the light source as a geometry source.
+The core of every variant is Geometry. If you do not have a 3D model, you can base the geometry on the light source within the [Emitter](/docs/structure/emitters.md) or define some basic geometry within the XML code. Basic geometry is called simple geometry, and you can specify it in the general definitions section.
+The following two examples show how to use a 3D model or the light source as a geometry source.
 
-Uing an emitter for creating the geometry:
+- Using the geometry from [Photometry](/docs/structure/photometries.md):
 
 ```xml
 <Variant id="var_01">
@@ -275,7 +265,7 @@ Uing an emitter for creating the geometry:
 </Variant>
 ```
 
-Using the l3d model for the geometry:
+- Using the geometry from a L3D model:
 
 ```xml
 <Variant id="var_01">
@@ -298,12 +288,12 @@ Using the l3d model for the geometry:
 ```
 
 :::tip Tip
-For a detailed description on how to geometry see the section <a href="../geometry/introduction" target="_self">GLDF 3d Introduction</a>.
+For a detailed description on how to geometry see the section [GLDF 3D Introduction](/docs/geometry/introduction.md).
 :::
 
 ### Step 8: Finishing up
 
-For your file to work in Relux or DiaLUX, you may need to add your license key and member ID to the file. The header would then look like this:
+For your file to work in Relux or DIALux, you may need to add your license key and member ID to the file. The [Header](/docs/structure/header.md) would then look like this:
 
 ```xml
 <Header>
@@ -320,8 +310,6 @@ For your file to work in Relux or DiaLUX, you may need to add your license key a
 </Header>
 ```
 
-Copy your finished XML file to the root folder of your GLDF file and make sure it is named product.xml.
-Also, ensure the files referenced are located in the appropriate folders, as in the example downloaded from the GLDF editor.
+Copy your finished XML file to the root folder of your GLDF file and make sure it is named *product.xml*. Also, ensure the files referenced are located in the appropriate folders, as in the example downloaded from the GLDF editor.
 
-Congratulations, you have now successfully created a minimalist GLDF file. 
-We encourage you to browse the documentation and experiment for yourself to learn how to use the full potential GLDF has to offer. You can also find more advanced example templates in the GLDF editor.
+Congratulations, you have now successfully created a minimal GLDF file. We encourage you to browse the documentation and experiment for yourself to learn how to use the full potential GLDF has to offer. You can also find more advanced example templates in the GLDF editor.

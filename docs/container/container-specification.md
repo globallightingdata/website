@@ -48,7 +48,7 @@ See [Meta-Information](/docs/container/meta-information)
 ## Directories
 
 - The *root* directory may contain **further directories**
-- These directories can contain **assets** like images, photometries, spectrums, 3d models or documents
+- These directories can contain **assets** like images, photometries, spectrums, 3D models or documents
 - Directory **names**
   - The directory name must reflect the **first part** of the **`contentType`** of the files it contains
   - For possible content types please refer the [`Files` documentation](/docs/structure/files.md#available-content-types)
