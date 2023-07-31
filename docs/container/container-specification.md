@@ -2,11 +2,14 @@
 title: GLDF Container Specification
 sidebar_label: Container Specification
 ---
+<!-- markdownlint-disable MD033 (no html im markdown) -->
 
 ## General
 
 - The container files' **underlying format** is a standard [ZIP archive](https://en.wikipedia.org/wiki/ZIP_(file_format))
 - The container file **extension** is `.gldf`
+
+<img src="/img/docs/container/container_schema.webp" alt="GLDF Container Schema" width="750" /><br/><br/>
 
 ## Root folder content
 
@@ -45,7 +48,7 @@ See [Meta-Information](/docs/container/meta-information)
 ## Directories
 
 - The *root* directory may contain **further directories**
-- These directories can contain **assets** like images, photometries, spectrums, 3d models or documents
+- These directories can contain **assets** like images, photometries, spectrums, 3D models or documents
 - Directory **names**
   - The directory name must reflect the **first part** of the **`contentType`** of the files it contains
   - For possible content types please refer the [`Files` documentation](/docs/structure/files.md#available-content-types)
