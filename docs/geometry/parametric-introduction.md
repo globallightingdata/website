@@ -3,25 +3,30 @@ title: Parametric Geometry Introduction
 sidebar_label: Introduction
 ---
 
-## Concept
+## The Concept
 
-Parametric Geometry is a concept that allows you to create basic rudimentary 3D models of generic luminaires without having to model them. You can generate models based on a few product dimension parameters.
+Parametric Geometry is a concept that allows you to create basic, rudimentary 3D models of generic luminaires without having to model them. You can create models based on a few product dimensional parameters.
 
-Our parametric 3D model web service allows you to upload an input XML file and provides the download link after generating the new L3D file. You can then use the file within your GLDF file.
+Our Parametric 3D Model Web Service allows you to upload an input XML file and provides the download link after generating the new L3D file. You can then use the file within your GLDF file.
 
-## Step by Step guide
+## Step-by-Step Guide
 
-This guide will walk you through the steps to create an example parametric L3D model and help you understand how the web service works.
+This guide will walk you through the steps to create a sample parametric L3D model and help you understand how the Web Service works.
 
-The process outline is as follows:
+The outline of the process is as follows:
 
-- Create an input XML file according to our <a href="/xsd/p3d/p3d.xsd" target="_blank">XSD</a> file specification.
-- Send the input XML file to our Web service.
-- The web service will respond with an URL where you can download the generated L3D file.
+ - Create an input XML file according to our <a href="/xsd/p3d/p3d.xsd" target="_blank">XSD</a> file specification.
+ - Send the input XML file to our web service.
+ - The web service will respond with a URL where you can download the generated L3D file.
 
 In this example, we will create a BAT file and a sample source XML file to demonstrate and test the web service
 
-The following is a windows platform-based example.
+The following is an example based on the Windows platform.
+
+:::warning
+**Important note:** Before you start, you will need to obtain authentication information from Relux or Dialux. Replace the part *{REPLACE WITH CODE PROVIDED BY RELUX OR DIALUX}* with the code provided by Relux or Dialux.
+:::
+
 
 ### Step 1
 
@@ -34,35 +39,72 @@ Open notepad.exe on your system.
 Enter the following code, save the file and exit the editor.
 
 ```
-@Echo off
-REM File Dialog
-For /f "usebackqdelims=" %%A in (
-  `powershell -Executionpolicy ByPass -Command "[void][System.Reflection.Assembly]::LoadWithPartialName('System.Windows.Forms');$dlg = New-Object System.Windows.Forms.OpenFileDialog; if($dlg.ShowDialog() -eq 'OK'){return $dlg.FileNames}"`
-) Do Set file=%%A
+@echo off
+setlocal
 
-REM API Call
-curl --request "PUT" --header "Content-Type:application/xml" "https://p3d.relux.com/l3d/" --data @%file% --output out.xml
+:: Define the authentication credentials only once here
+set "{REPLACE WITH CODE PROVIDED BY RELUX OR DIALUX}"
 
-REM get URL out of JSON
-For /f "usebackqdelims=" %%A in (
-  `Powershell -Executionpolicy Bypass -command "([xml](gc 'out.xml')).SelectSingleNode('//root').innerText"`
-) Do Set url=%%A
-echo %url%
+:: Use PowerShell to show a file selection dialog
+echo Showing file selection dialog...
+for /f "delims=" %%I in ('powershell -command "[System.Reflection.Assembly]::LoadWithPartialName('System.windows.forms') | Out-Null; $OpenFileDialog = New-Object System.Windows.Forms.OpenFileDialog; $OpenFileDialog.ShowDialog() | Out-Null; $OpenFileDialog.FileName"') do set "xmlFile=%%I"
 
-REM Filename of URL
-for /f "tokens=1,2,3,4 delims=/ " %%a in ("%url%") do set filename=%%d
-echo %filename%
+:: Check if the user canceled the file selection dialog
+if "%xmlFile%"==" " (
+    echo No file selected. Exiting...
+    exit /b 1
+)
+echo Selected file: %xmlFile%
 
-REM URL downlaod
-powershell -Command "Invoke-WebRequest %url%" -OutFile %filename%.l3d"
+:: Ensure curl is installed and available
+echo Checking if curl is installed...
+where /q curl
+if errorlevel 1 (
+    echo curl is not installed or not in the PATH. Please install curl or add it to your PATH.
+    exit /b 1
+)
 
-REM clean up
-del out.xml
+:: Make the PUT request and save the output to temp file
+echo Making PUT request to server...
+curl --location --request PUT "https://p3d.relux.com/l3d/" ^
+--header "%auth%" ^
+--header "Content-Type: application/xml" ^
+--data "@%xmlFile%" > temp.xml
+echo PUT request completed.
+
+:: Extract URL from XML response using PowerShell
+echo Extracting URL from server response...
+for /f "delims=" %%I in ('powershell -command "$xml=[xml](Get-Content -Path temp.xml); $xml.root"') do set "downloadURL=%%I"
+echo Extracted URL: %downloadURL%
+
+:: Check if the URL is valid
+if not defined downloadURL (
+    echo Error: The server did not return a valid URL. Exiting...
+    exit /b 1
+)
+
+:: Extract the filename from the URL using PowerShell
+echo Extracting filename from URL...
+for /f "delims=" %%I in ('powershell -command "$url = '%downloadURL%'; $url.Split('/')[-1]"') do set "fileName=%%I"
+echo Extracted filename: %fileName%
+
+:: Download the file from the extracted URL and save it with the extracted filename, with authorization header
+echo Downloading file from server...
+curl --location --output "%fileName%" "%downloadURL%" ^
+--header "%auth%"
+echo File download completed.
+
+:: Check if the file was successfully downloaded
+if exist "%fileName%" (
+    echo The file was successfully downloaded and saved as %fileName%.
+) else (
+    echo Error: The file could not be downloaded.
+)
 
 pause
 ```
 
-![Open notepad.exe on windows 11](/img/docs/geometry/screenshots/notepad.webp)
+![Open notepad.exe on windows 11](/img/docs/geometry/screenshots/notepadbatcode.webp)
 
 ### Step 3
 
