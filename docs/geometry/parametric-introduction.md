@@ -2,43 +2,35 @@
 title: Parametric Geometry Introduction
 sidebar_label: Introduction
 ---
+<!-- markdownlint-disable MD033 (no html im markdown) -->
 
 ## The Concept
 
 Parametric Geometry is a concept that allows you to create basic, rudimentary 3D models of generic luminaires without having to model them. You can create models based on a few product dimensional parameters.
 
-Our Parametric 3D Model Web Service allows you to upload an input XML file and provides the download link after generating the new L3D file. You can then use the file within your GLDF file.
+Our Parametric 3D Model web service allows you to upload an input XML file and provides the download link after generating the new L3D file. You can then use the file within your GLDF file.
 
 ## Step-by-Step Guide
 
-This guide will walk you through the steps to create a sample parametric L3D model and help you understand how the Web Service works.
+This guide will walk you through the steps to create a sample parametric L3D model and help you understand how the web service works. The outline of the process is as follows:
 
-The outline of the process is as follows:
+- Create an input XML file according to our <a href="/xsd/p3d/p3d.xsd" target="_blank">XSD</a> file specification.
+- Send the input XML file to our web service.
+- The web service will respond with a URL where you can download the generated L3D file.
 
- - Create an input XML file according to our <a href="/xsd/p3d/p3d.xsd" target="_blank">XSD</a> file specification.
- - Send the input XML file to our web service.
- - The web service will respond with a URL where you can download the generated L3D file.
+The following is an example based on the Windows platform. We will create a Windows batchfile (.bat) and a sample source XML file to demonstrate and test the web service.
 
-In this example, we will create a BAT file and a sample source XML file to demonstrate and test the web service
+:::warning Important
+Before you start, you will need to obtain authentication information from Relux or DIAL.
 
-The following is an example based on the Windows platform.
-
-:::warning
-**Important note:** Before you start, you will need to obtain authentication information from Relux or Dialux. Replace the part *{REPLACE WITH CODE PROVIDED BY RELUX OR DIALUX}* with the code provided by Relux or Dialux.
+Replace then the part *{REPLACE WITH CODE PROVIDED BY RELUX OR DIALUX}* with the provided code.
 :::
-
 
 ### Step 1
 
-Open notepad.exe on your system.
+Open the windows text editor of your choice, enter the following code and save the file as *example.bat*
 
-![Open notepad.exe on windows 11](/img/docs/geometry/screenshots/opennotepad.webp)
-
-### Step 2
-
-Enter the following code, save the file and exit the editor.
-
-```
+```bash
 @echo off
 setlocal
 
@@ -104,17 +96,9 @@ if exist "%fileName%" (
 pause
 ```
 
-![Open notepad.exe on windows 11](/img/docs/geometry/screenshots/notepadbatcode.webp)
+### Step 2
 
-### Step 3
-
-Click on Save As. Select All files as file type and save the file as example.bat
-
-![Open notepad.exe on windows 11](/img/docs/geometry/screenshots/saveas.webp)
-
-### Step 4
-
-Open another instance of Notepad and paste the following text:
+Open another instance of your text editor, paste the following code and save the file as *example.xml*:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -130,22 +114,14 @@ Open another instance of Notepad and paste the following text:
 </P3D>
 ```
 
-![Open notepad.exe on windows 11](/img/docs/geometry/screenshots/xmlnotepad.webp)
+### Step 3
 
-### Step 5
+Double-click the example.bat batchfile created in step 1. Then a file selection dialog will appear. You can then select the example.xml file created in the step above and the script will download the result L3D file to your current directory. The result filename should start with *StandCuboidSide...* and end with *.l3d*. Your directory should look as in the image below.
 
-Click Save as again and save the file as example-geometry.xml. You should now have two files in your directory.
+![Result directory](/img/docs/geometry/screenshots/result.webp)
 
-![Open notepad.exe on windows 11](/img/docs/geometry/screenshots/files1.webp)
+### Step 4
 
-### Step 6
+Load up the [L3D Editor](https://l3d-editor.gldf.io) and open your new L3D file to see the result.
 
-Double-click the bat file. Then a file selection dialog will appear. You can then select the source XML file, and the script will download the result L3D file to the location of your bat file. The result filename should start with StandCuboidSide... and end with .l3d. Your directory should look as in the image below.
-
-![Open notepad.exe on windows 11](/img/docs/geometry/screenshots/result.webp)
-
-### Step 7
-
-Load up the <a href="https://l3d-editor.gldf.io" target="_blank">L3D Editor</a> and open your new file to see the result.
-
-![Open notepad.exe on windows 11](/img/docs/geometry/screenshots/resulteditor.webp)
+![Parametric geometry in the L3D Editor](/img/docs/geometry/screenshots/resulteditor.webp)
