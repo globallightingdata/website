@@ -2,77 +2,103 @@
 title: Parametric Geometry Introduction
 sidebar_label: Introduction
 ---
+<!-- markdownlint-disable MD033 (no html im markdown) -->
 
-## Concept
+## The Concept
 
-Parametric Geometry is a concept that allows you to create basic rudimentary 3D models of generic luminaires without having to model them. You can generate models based on a few product dimension parameters.
+Parametric Geometry is a concept that allows you to create basic, rudimentary 3D models of generic luminaires without having to model them. You can create models based on a few product dimensional parameters.
 
-Our parametric 3D model web service allows you to upload an input XML file and provides the download link after generating the new L3D file. You can then use the file within your GLDF file.
+Our Parametric 3D Model web service allows you to upload an input XML file and provides the download link after generating the new L3D file. You can then use the file within your GLDF file.
 
-## Step by Step guide
+## Step-by-Step Guide
 
-This guide will walk you through the steps to create an example parametric L3D model and help you understand how the web service works.
-
-The process outline is as follows:
+This guide will walk you through the steps to create a sample parametric L3D model and help you understand how the web service works. The outline of the process is as follows:
 
 - Create an input XML file according to our <a href="/xsd/p3d/p3d.xsd" target="_blank">XSD</a> file specification.
-- Send the input XML file to our Web service.
-- The web service will respond with an URL where you can download the generated L3D file.
+- Send the input XML file to our web service.
+- The web service will respond with a URL where you can download the generated L3D file.
 
-In this example, we will create a BAT file and a sample source XML file to demonstrate and test the web service
+The following is an example based on the Windows platform. We will create a Windows batchfile (.bat) and a sample source XML file to demonstrate and test the web service.
 
-The following is a windows platform-based example.
+:::warning Important
+Before you start, you will need to obtain authentication information from Relux or DIAL.
+
+Replace then the part *{REPLACE WITH CODE PROVIDED BY RELUX OR DIALUX}* with the provided code.
+:::
 
 ### Step 1
 
-Open notepad.exe on your system.
+Open the windows text editor of your choice, enter the following code and save the file as *example.bat*
 
-![Open notepad.exe on windows 11](/img/docs/geometry/screenshots/opennotepad.webp)
+```bash
+@echo off
+setlocal
 
-### Step 2
+:: Define the authentication credentials only once here
+set "{REPLACE WITH CODE PROVIDED BY RELUX OR DIALUX}"
 
-Enter the following code, save the file and exit the editor.
+:: Use PowerShell to show a file selection dialog
+echo Showing file selection dialog...
+for /f "delims=" %%I in ('powershell -command "[System.Reflection.Assembly]::LoadWithPartialName('System.windows.forms') | Out-Null; $OpenFileDialog = New-Object System.Windows.Forms.OpenFileDialog; $OpenFileDialog.ShowDialog() | Out-Null; $OpenFileDialog.FileName"') do set "xmlFile=%%I"
 
-```
-@Echo off
-REM File Dialog
-For /f "usebackqdelims=" %%A in (
-  `powershell -Executionpolicy ByPass -Command "[void][System.Reflection.Assembly]::LoadWithPartialName('System.Windows.Forms');$dlg = New-Object System.Windows.Forms.OpenFileDialog; if($dlg.ShowDialog() -eq 'OK'){return $dlg.FileNames}"`
-) Do Set file=%%A
+:: Check if the user canceled the file selection dialog
+if "%xmlFile%"==" " (
+    echo No file selected. Exiting...
+    exit /b 1
+)
+echo Selected file: %xmlFile%
 
-REM API Call
-curl --request "PUT" --header "Content-Type:application/xml" "https://p3d.relux.com/l3d/" --data @%file% --output out.xml
+:: Ensure curl is installed and available
+echo Checking if curl is installed...
+where /q curl
+if errorlevel 1 (
+    echo curl is not installed or not in the PATH. Please install curl or add it to your PATH.
+    exit /b 1
+)
 
-REM get URL out of JSON
-For /f "usebackqdelims=" %%A in (
-  `Powershell -Executionpolicy Bypass -command "([xml](gc 'out.xml')).SelectSingleNode('//root').innerText"`
-) Do Set url=%%A
-echo %url%
+:: Make the PUT request and save the output to temp file
+echo Making PUT request to server...
+curl --location --request PUT "https://p3d.relux.com/l3d/" ^
+--header "%auth%" ^
+--header "Content-Type: application/xml" ^
+--data "@%xmlFile%" > temp.xml
+echo PUT request completed.
 
-REM Filename of URL
-for /f "tokens=1,2,3,4 delims=/ " %%a in ("%url%") do set filename=%%d
-echo %filename%
+:: Extract URL from XML response using PowerShell
+echo Extracting URL from server response...
+for /f "delims=" %%I in ('powershell -command "$xml=[xml](Get-Content -Path temp.xml); $xml.root"') do set "downloadURL=%%I"
+echo Extracted URL: %downloadURL%
 
-REM URL downlaod
-powershell -Command "Invoke-WebRequest %url%" -OutFile %filename%.l3d"
+:: Check if the URL is valid
+if not defined downloadURL (
+    echo Error: The server did not return a valid URL. Exiting...
+    exit /b 1
+)
 
-REM clean up
-del out.xml
+:: Extract the filename from the URL using PowerShell
+echo Extracting filename from URL...
+for /f "delims=" %%I in ('powershell -command "$url = '%downloadURL%'; $url.Split('/')[-1]"') do set "fileName=%%I"
+echo Extracted filename: %fileName%
+
+:: Download the file from the extracted URL and save it with the extracted filename, with authorization header
+echo Downloading file from server...
+curl --location --output "%fileName%" "%downloadURL%" ^
+--header "%auth%"
+echo File download completed.
+
+:: Check if the file was successfully downloaded
+if exist "%fileName%" (
+    echo The file was successfully downloaded and saved as %fileName%.
+) else (
+    echo Error: The file could not be downloaded.
+)
 
 pause
 ```
 
-![Open notepad.exe on windows 11](/img/docs/geometry/screenshots/notepad.webp)
+### Step 2
 
-### Step 3
-
-Click on Save As. Select All files as file type and save the file as example.bat
-
-![Open notepad.exe on windows 11](/img/docs/geometry/screenshots/saveas.webp)
-
-### Step 4
-
-Open another instance of Notepad and paste the following text:
+Open another instance of your text editor, paste the following code and save the file as *example.xml*:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -88,22 +114,14 @@ Open another instance of Notepad and paste the following text:
 </P3D>
 ```
 
-![Open notepad.exe on windows 11](/img/docs/geometry/screenshots/xmlnotepad.webp)
+### Step 3
 
-### Step 5
+Double-click the example.bat batchfile created in step 1. Then a file selection dialog will appear. You can then select the example.xml file created in the step above and the script will download the result L3D file to your current directory. The result filename should start with *StandCuboidSide...* and end with *.l3d*. Your directory should look as in the image below.
 
-Click Save as again and save the file as example-geometry.xml. You should now have two files in your directory.
+![Result directory](/img/docs/geometry/screenshots/result.webp)
 
-![Open notepad.exe on windows 11](/img/docs/geometry/screenshots/files1.webp)
+### Step 4
 
-### Step 6
+Load up the [L3D Editor](https://l3d-editor.gldf.io) and open your new L3D file to see the result.
 
-Double-click the bat file. Then a file selection dialog will appear. You can then select the source XML file, and the script will download the result L3D file to the location of your bat file. The result filename should start with StandCuboidSide... and end with .l3d. Your directory should look as in the image below.
-
-![Open notepad.exe on windows 11](/img/docs/geometry/screenshots/result.webp)
-
-### Step 7
-
-Load up the <a href="https://l3d-editor.gldf.io" target="_blank">L3D Editor</a> and open your new file to see the result.
-
-![Open notepad.exe on windows 11](/img/docs/geometry/screenshots/resulteditor.webp)
+![Parametric geometry in the L3D Editor](/img/docs/geometry/screenshots/resulteditor.webp)
