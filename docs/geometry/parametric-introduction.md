@@ -35,7 +35,7 @@ Open the windows text editor of your choice, enter the following code and save t
 setlocal
 
 :: Define the authentication credentials only once here
-set "{REPLACE WITH CODE PROVIDED BY RELUX OR DIALUX}"
+set "auth={REPLACE WITH CODE PROVIDED BY RELUX OR DIALUX}"
 
 :: Use PowerShell to show a file selection dialog
 echo Showing file selection dialog...
@@ -59,7 +59,7 @@ if errorlevel 1 (
 :: Make the PUT request and save the output to temp file
 echo Making PUT request to server...
 curl --location --request PUT "https://p3d.relux.com/l3d/" ^
---header "%auth%" ^
+--header "Authorization: Basic %auth%" ^
 --header "Content-Type: application/xml" ^
 --data "@%xmlFile%" > temp.xml
 echo PUT request completed.
@@ -83,7 +83,7 @@ echo Extracted filename: %fileName%
 :: Download the file from the extracted URL and save it with the extracted filename, with authorization header
 echo Downloading file from server...
 curl --location --output "%fileName%" "%downloadURL%" ^
---header "%auth%"
+--header "Authorization: Basic %auth%"
 echo File download completed.
 
 :: Check if the file was successfully downloaded
