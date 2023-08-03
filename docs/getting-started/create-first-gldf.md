@@ -19,18 +19,17 @@ GLDF is a container or ZIP-Archive. It contains all the product information and 
 
 ## Preparation
 
-To create your first gldf file, create a parent directory named product. 
- - Create three subdirectories named image, geo, and ldc. Download the image file and save it in the image subdirectory. 
- - Download the <a href="/other/diffuse.ldt" target="_blank">ldc file</a> and store it in the ldc directory. 
- - Download the <a href="/other/recessed_round.l3d" target="_blank">l3d file</a> and store it in the geo directory.
- - Download the <a href="/other/bulb.jpg" target="_blank">image file</a> and store it in the image directory.
- - Create an xml file and place it in the parent directory. 
- 
- To create our first gldf file, we will edit the xml file in the following steps.
+To create your first gldf file, create a parent directory named product.
+
+- Create three subdirectories named image, geo, and ldc. Download the image file and save it in the image subdirectory.
+- Download the <a href="/other/diffuse.ldt" target="_blank">ldc file</a> and store it in the ldc directory.
+- Download the <a href="/other/recessed_round.l3d" target="_blank">l3d file</a> and store it in the geo directory.
+- Download the <a href="/other/bulb.jpg" target="_blank">image file</a> and store it in the image directory.
+- Create an xml file and place it in the parent directory.
+
+To create our first gldf file, we will edit the xml file in the following steps.
 
 ![Directory structure with subdirectories](/img/docs/getting-started/gldfdirectories.webp)
-
-
 
 ### The product.xml file
 
@@ -307,133 +306,133 @@ Your finished XML code should look like this:
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://gldf.io/xsd/gldf/1.0.0-rc.3/gldf.xsd">
-	<Header>
-		<Manufacturer>Your Coompany Name</Manufacturer>
-		<FormatVersion major="1" minor="0" pre-release="3"/>
-		<CreatedWithApplication>Your Code Editor</CreatedWithApplication>
-		<GldfCreationTimeCode>2023-08-02T16:22:47+02:00</GldfCreationTimeCode>
-		<UniqueGldfId>UniqueGldfId</UniqueGldfId>
-		<LicenseKeys>
-			<LicenseKey application="RELUX">ReluxKey</LicenseKey>
-			<LicenseKey application="DIALux">DialuxKey</LicenseKey>
-		</LicenseKeys>
-		<ReluxMemberId>demo</ReluxMemberId>
-		<DIALuxMemberId>demo</DIALuxMemberId>
-	</Header>
-	<GeneralDefinitions>
-		<Files>
-			<File id="ldtfile" contentType="ldc/eulumdat" type="localFileName">diffuse.ldt</File>
-			<File id="pic01" contentType="image/jpg" type="localFileName">PH-Lampan_1.jpg</File>
-			<File id="geo01" contentType="geo/l3d" type="localFileName">recessed_round.l3d</File>
-		</Files>
-		<Photometries>
-			<Photometry id="photom01">
-				<PhotometryFileReference fileId="ldtfile"/>
-				<DescriptivePhotometry>
-					<LuminousEfficacy>98.2</LuminousEfficacy>
-					<CIE-FluxCode>44 75 94 100 100</CIE-FluxCode>
-				</DescriptivePhotometry>
-			</Photometry>
-		</Photometries>
-		<LightSources>
-			<FixedLightSource id="s01">
-				<Name>
-					<Locale language="en">LED</Locale>
-				</Name>
-				<Description>
-					<Locale language="en">Module with 1 LED light source.</Locale>
-				</Description>
-				<RatedInputPower>10.2</RatedInputPower>
-				<ColorInformation>
-					<ColorRenderingIndex>95</ColorRenderingIndex>
-					<CorrelatedColorTemperature>3000</CorrelatedColorTemperature>
-				</ColorInformation>
-				<LightSourceMaintenance lifetime="50000">
-					<LedMaintenanceFactor hours="40000">0.94</LedMaintenanceFactor>
-				</LightSourceMaintenance>
-			</FixedLightSource>
-		</LightSources>
-		<ControlGears>
-			<ControlGear id="c01">
-				<Name>
-					<Locale language="en">LED drive 01</Locale>
-				</Name>
-				<Description>
-					<Locale language="en">LED driver</Locale>
-				</Description>
-				<StandbyPower>0.7</StandbyPower>
-				<ConstantLightOutputStartPower>10.2</ConstantLightOutputStartPower>
-				<ConstantLightOutputEndPower>14.7</ConstantLightOutputEndPower>
-				<PowerConsumptionControls>0.8</PowerConsumptionControls>
-			</ControlGear>
-		</ControlGears>
-		<Emitters>
-			<Emitter id="emitter01">
-				<FixedLightEmitter emergencyBehaviour="None">
-					<PhotometryReference photometryId="photom01"/>
-					<LightSourceReference fixedLightSourceId="s01"/>
-					<ControlGearReference controlGearId="c01"/>
-					<RatedLuminousFlux>1000</RatedLuminousFlux>
-				</FixedLightEmitter>
-			</Emitter>
-		</Emitters>
-		<Geometries>
-			<ModelGeometry id="geometry01">
-				<GeometryFileReference fileId="geo01"/>
-			</ModelGeometry>
-		</Geometries>
-	</GeneralDefinitions>
-	<ProductDefinitions>
-		<ProductMetaData>
-			<UniqueProductId>UniqueProductId</UniqueProductId>
-			<ProductNumber>
-				<Locale language="en">123</Locale>
-			</ProductNumber>
-			<Name>
-				<Locale language="en">Round Luminaire</Locale>
-				<Locale language="de">Runde Leuchte</Locale>
-			</Name>
-			<Description>
-				<Locale language="en">Round luminaire for indoors</Locale>
-				<Locale language="de">Runde Leuchte für Innenräume</Locale>
-			</Description>
-			<Pictures>
-				<Image imageType="Product Picture" fileId="pic01"/>
-			</Pictures>
-		</ProductMetaData>
-		<Variants>
-			<Variant id="var_01">
-				<Name>
-					<Locale language="en">Variant 1</Locale>
-					<Locale language="de">Variante 2</Locale>
-				</Name>
-				<Description>
-					<Locale language="en">Description of variant 1</Locale>
-					<Locale language="de">Beschreibung der Variante 1</Locale>
-				</Description>
-				<Geometry>
-					<EmitterReference emitterId="emitter01"/>
-				</Geometry>
-			</Variant>
-			<Variant id="var_02">
-				<Name>
-					<Locale language="en">Variant 1</Locale>
-					<Locale language="de">Variante 2</Locale>
-				</Name>
-				<Description>
-					<Locale language="en">Description of variant 1</Locale>
-					<Locale language="de">Beschreibung der Variante 1</Locale>
-				</Description>
-				<Geometry>
-					<ModelGeometryReference geometryId="geometry01">
-						<EmitterReference emitterId="emitter01">
-							<EmitterObjectExternalName>leo</EmitterObjectExternalName>
-						</EmitterReference>
-					</ModelGeometryReference>
-				</Geometry>
-			</Variant>
-		</Variants>
-	</ProductDefinitions>
+  <Header>
+    <Manufacturer>Your Coompany Name</Manufacturer>
+    <FormatVersion major="1" minor="0" pre-release="3"/>
+    <CreatedWithApplication>Your Code Editor</CreatedWithApplication>
+    <GldfCreationTimeCode>2023-08-02T16:22:47+02:00</GldfCreationTimeCode>
+    <UniqueGldfId>UniqueGldfId</UniqueGldfId>
+    <LicenseKeys>
+      <LicenseKey application="RELUX">ReluxKey</LicenseKey>
+      <LicenseKey application="DIALux">DialuxKey</LicenseKey>
+    </LicenseKeys>
+    <ReluxMemberId>demo</ReluxMemberId>
+    <DIALuxMemberId>demo</DIALuxMemberId>
+  </Header>
+  <GeneralDefinitions>
+    <Files>
+      <File id="ldtfile" contentType="ldc/eulumdat" type="localFileName">diffuse.ldt</File>
+      <File id="pic01" contentType="image/jpg" type="localFileName">PH-Lampan_1.jpg</File>
+      <File id="geo01" contentType="geo/l3d" type="localFileName">recessed_round.l3d</File>
+    </Files>
+    <Photometries>
+      <Photometry id="photom01">
+        <PhotometryFileReference fileId="ldtfile"/>
+        <DescriptivePhotometry>
+          <LuminousEfficacy>98.2</LuminousEfficacy>
+          <CIE-FluxCode>44 75 94 100 100</CIE-FluxCode>
+        </DescriptivePhotometry>
+      </Photometry>
+    </Photometries>
+    <LightSources>
+      <FixedLightSource id="s01">
+        <Name>
+          <Locale language="en">LED</Locale>
+        </Name>
+        <Description>
+          <Locale language="en">Module with 1 LED light source.</Locale>
+        </Description>
+        <RatedInputPower>10.2</RatedInputPower>
+        <ColorInformation>
+          <ColorRenderingIndex>95</ColorRenderingIndex>
+          <CorrelatedColorTemperature>3000</CorrelatedColorTemperature>
+        </ColorInformation>
+        <LightSourceMaintenance lifetime="50000">
+          <LedMaintenanceFactor hours="40000">0.94</LedMaintenanceFactor>
+        </LightSourceMaintenance>
+      </FixedLightSource>
+    </LightSources>
+    <ControlGears>
+      <ControlGear id="c01">
+        <Name>
+          <Locale language="en">LED drive 01</Locale>
+        </Name>
+        <Description>
+          <Locale language="en">LED driver</Locale>
+        </Description>
+        <StandbyPower>0.7</StandbyPower>
+        <ConstantLightOutputStartPower>10.2</ConstantLightOutputStartPower>
+        <ConstantLightOutputEndPower>14.7</ConstantLightOutputEndPower>
+        <PowerConsumptionControls>0.8</PowerConsumptionControls>
+      </ControlGear>
+    </ControlGears>
+    <Emitters>
+      <Emitter id="emitter01">
+        <FixedLightEmitter emergencyBehaviour="None">
+          <PhotometryReference photometryId="photom01"/>
+          <LightSourceReference fixedLightSourceId="s01"/>
+          <ControlGearReference controlGearId="c01"/>
+          <RatedLuminousFlux>1000</RatedLuminousFlux>
+        </FixedLightEmitter>
+      </Emitter>
+    </Emitters>
+    <Geometries>
+      <ModelGeometry id="geometry01">
+        <GeometryFileReference fileId="geo01"/>
+      </ModelGeometry>
+    </Geometries>
+  </GeneralDefinitions>
+  <ProductDefinitions>
+    <ProductMetaData>
+      <UniqueProductId>UniqueProductId</UniqueProductId>
+      <ProductNumber>
+        <Locale language="en">123</Locale>
+      </ProductNumber>
+      <Name>
+        <Locale language="en">Round Luminaire</Locale>
+        <Locale language="de">Runde Leuchte</Locale>
+      </Name>
+      <Description>
+        <Locale language="en">Round luminaire for indoors</Locale>
+        <Locale language="de">Runde Leuchte für Innenräume</Locale>
+      </Description>
+      <Pictures>
+        <Image imageType="Product Picture" fileId="pic01"/>
+      </Pictures>
+    </ProductMetaData>
+    <Variants>
+      <Variant id="var_01">
+        <Name>
+          <Locale language="en">Variant 1</Locale>
+          <Locale language="de">Variante 2</Locale>
+        </Name>
+        <Description>
+          <Locale language="en">Description of variant 1</Locale>
+          <Locale language="de">Beschreibung der Variante 1</Locale>
+        </Description>
+        <Geometry>
+          <EmitterReference emitterId="emitter01"/>
+        </Geometry>
+      </Variant>
+      <Variant id="var_02">
+        <Name>
+          <Locale language="en">Variant 1</Locale>
+          <Locale language="de">Variante 2</Locale>
+        </Name>
+        <Description>
+          <Locale language="en">Description of variant 1</Locale>
+          <Locale language="de">Beschreibung der Variante 1</Locale>
+        </Description>
+        <Geometry>
+          <ModelGeometryReference geometryId="geometry01">
+            <EmitterReference emitterId="emitter01">
+              <EmitterObjectExternalName>leo</EmitterObjectExternalName>
+            </EmitterReference>
+          </ModelGeometryReference>
+        </Geometry>
+      </Variant>
+    </Variants>
+  </ProductDefinitions>
 </Root>
 ```
 
