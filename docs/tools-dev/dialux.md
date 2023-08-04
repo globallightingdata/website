@@ -40,6 +40,6 @@ For **Silver** members, DIALux evo additionally displays the manufacturer name a
 Business Unit Director Sales  
 
 +49 2351 5674 311  
-[bremecker@dial.de](bremecker@dial.de)
+[bremecker@dial.de](mailto:bremecker@dial.de)
 
 ![ ](https://imgsh.net/i/k2SHFbZ.png)
