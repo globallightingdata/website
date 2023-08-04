@@ -107,7 +107,6 @@ module.exports = {
           "tools-dev/gldf-editor",
           "tools-dev/l3d-editor",
           "tools-dev/gldf-check",
-          "tools-dev/gldf-checksum-service",
         ],
         Parsers: ["tools-dev/gldf-net-parser", "tools-dev/l3d-net-parser"],
         Plugins: ["tools-dev/revit-plugin", "tools-dev/autodesk-plugin"],
