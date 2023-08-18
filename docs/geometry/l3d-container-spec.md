@@ -47,7 +47,7 @@ Optional
   - From the material file the **diffuse color** and **diffuse texture data** are supported, for now.  
 
 :::caution
-The .obj files must not contain more than one object per file.
+The .obj files must not contain more than one material per file.
 :::
 
 ## Textures
