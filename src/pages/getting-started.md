@@ -83,10 +83,10 @@ If you would like to test it out right away, copy and paste this XML of a minima
 ```xml showLineNumbers
 <?xml version="1.0" encoding="UTF-8"?>
 <Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:noNamespaceSchemaLocation="https://gldf.io/xsd/gldf/gldf.xsd">
+      xsi:noNamespaceSchemaLocation="https://gldf.io/xsd/gldf/1.0.0-rc.3/gldf.xsd">
   <Header>
     <Manufacturer>GlobalLightingData</Manufacturer>
-    <FormatVersion major="1" minor="0" pre-release="2" />
+    <FormatVersion major="1" minor="0" pre-release="3" />
     <CreatedWithApplication>Visual Studio Code</CreatedWithApplication>
     <GldfCreationTimeCode>2023-03-29T14:30:00Z</GldfCreationTimeCode>
     <UniqueGldfId>e19ed73e-fcd6-4469-a359-58fd80510e9c</UniqueGldfId>

@@ -40,7 +40,7 @@ And the following GLDF XML:
 ```xml showLineNumbers {9-10,24-25}
 <?xml version="1.0" encoding="UTF-8"?>
 <Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:noNamespaceSchemaLocation="https://gldf.io/xsd/gldf/gldf.xsd">
+      xsi:noNamespaceSchemaLocation="https://gldf.io/xsd/gldf/1.0.0-rc.3/gldf.xsd">
     <Header>
         <!-- Skipped for clarity -->
     </Header>

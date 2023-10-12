@@ -36,17 +36,16 @@ This allows to distinguish exactly when the GLDF as a whole has changed and the 
 
 The following is an example of both, the `UniqueGldfId` and `UniqueProductId`. As well as `GldfCreationTimeCode` and `ProductDataTimeCode`
 
-```xml showLineNumbers {8-10,16}
+```xml showLineNumbers {8-9,15}
 <?xml version="1.0" encoding="UTF-8"?>
 <Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:noNamespaceSchemaLocation="https://gldf.io/xsd/gldf/gldf.xsd">
+      xsi:noNamespaceSchemaLocation="https://gldf.io/xsd/gldf/1.0.0-rc.3/gldf.xsd">
   <Header>
     <Manufacturer>GlobalLightingData</Manufacturer>
-    <FormatVersion major="1" minor="0" pre-release="2" />
+    <FormatVersion major="1" minor="0" pre-release="3" />
     <CreatedWithApplication>Visual Studio Code</CreatedWithApplication>
     <GldfCreationTimeCode>2023-03-29T14:30:00Z</GldfCreationTimeCode>
     <UniqueGldfId>e19ed73e-fcd6-4469-a359-58fd80510e9c</UniqueGldfId>
-    <GldfCreationTimeCode>2019-01-01T00:00:00Z</GldfCreationTimeCode>
   </Header>
   <GeneralDefinitions>
   </GeneralDefinitions>
