@@ -14,7 +14,6 @@ The sensors listed here are understood to be motion detectors, optimally with a 
 
 ![Sensors in XSD](/img/docs/structure/sensors-hierarchy.webp)
 
-
 ## XSD description
 
 <!-- markdownlint-disable-next-line -->
@@ -22,20 +21,21 @@ The sensors listed here are understood to be motion detectors, optimally with a 
 
 ## XML example / Referencing a sensor
 
-```xml {8,15} showLineNumbers
-<Root>
+```xml {9,16} showLineNumbers
+<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+      xsi:noNamespaceSchemaLocation="https://gldf.io/xsd/gldf/1.0.0-rc.3/gldf.xsd">
   <Header/>
   <GeneralDefinitions>
     <Files>
-        <File id="sensor" contentType="sensor/sensldt" type="localFileName">sensor.ldt</File>
+        <File id="sensorFile" contentType="sensor/sensldt" type="localFileName">sensor.ldt</File>
     </Files>
     <Sensors>
         <Sensor id="sensor1">
-            <SensorFileReference fileId="sensor" />
+            <SensorFileReference fileId="sensorFile" />
         </Sensor>
     </Sensors>
     <Emitters>
-        <Emitter id="em-s">
+        <Emitter id="emitter1">
             <SensorEmitter>
                 <SensorReference sensorId="sensor1" />
             </SensorEmitter>

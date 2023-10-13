@@ -28,9 +28,10 @@ The first option to define a spectrum is within the GLDF XML as follows
 
 Simply add a collection of `Intensity` elements, in which the `wavelenth` attribute determines the wavelength in nanometer. And the content of the element the intensity of the wavelength.
 
-```xml {7-11} showLineNumbers
+```xml {8-12} showLineNumbers
 <?xml version="1.0" encoding="UTF-8"?>
-<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="gldf.xsd">
+<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="https://gldf.io/xsd/gldf/1.0.0-rc.3/gldf.xsd">
   <Header/>
   <GeneralDefinitions>
     <Spectrums>
@@ -51,9 +52,10 @@ Simply add a collection of `Intensity` elements, in which the `wavelenth` attrib
 
 A `Spectrum` can also reference a [**File**](/docs/structure/files.md) element which describes the location of the spectrum content file.
 
-```xml {6-7,11} showLineNumbers
+```xml {7-8,12} showLineNumbers
 <?xml version="1.0" encoding="UTF-8"?>
-<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="gldf.xsd">
+<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="https://gldf.io/xsd/gldf/1.0.0-rc.3/gldf.xsd">
   <Header/>
   <GeneralDefinitions>
     <Files>
@@ -104,9 +106,10 @@ A **complete spectrum example file** can be downloaded here: <a href="/other/Spe
 
 Once declared, all spectrums can be referenced in subsequent XML elements via their `id` attribute **one or several** times.
 
-```xml  {9,19} showLineNumbers
+```xml  {10,20} showLineNumbers
 <?xml version="1.0" encoding="UTF-8"?>
-<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="gldf.xsd">
+<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="https://gldf.io/xsd/gldf/1.0.0-rc.3/gldf.xsd">
   <Header/>
   <GeneralDefinitions>
     <Files>

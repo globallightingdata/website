@@ -17,14 +17,18 @@ In addition to the [`ProductMetaData`](/docs/structure/product.md) element, whic
 
 As with many GLDF parts, a `Variant` must contain only few mandatory elements to be valid: The `id` attribute and a (translatable) `Name` element
 
-```xml showLineNumbers {16-21}
-<Root>
+```xml showLineNumbers {17-22}
+<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="https://gldf.io/xsd/gldf/1.0.0-rc.3/gldf.xsd">
   <Header>
     <!-- Skipped for clarity -->
   </Header>
-  <GeneralDefinitions />
+  <GeneralDefinitions>
+    <!-- Skipped for clarity -->
+  </GeneralDefinitions>
   <ProductDefinitions>
     <ProductMetaData>
+      <UniqueProductId>4e0a1915-6e86-4ef4-86ff-136252887ebf</UniqueProductId>
       <ProductNumber>
         <Locale language="en">Global product number</Locale>
       </ProductNumber>
@@ -50,7 +54,8 @@ The following is a complete example of a `Variant` with many optional elements. 
 
 ```xml showLineNumbers {56-98}
 <?xml version="1.0" encoding="UTF-8"?>
-<Root>
+<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+      xsi:noNamespaceSchemaLocation="https://gldf.io/xsd/gldf/1.0.0-rc.3/gldf.xsd">
   <Header>
     <!-- Content skipped for clarity -->
   </Header>
@@ -233,7 +238,7 @@ The `SimpleGeometryReference` element allows to create a geometry in the complex
 ```xml showLineNumbers {29-35,38-48,65-68}
 <?xml version="1.0" encoding="UTF-8"?>
 <Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:noNamespaceSchemaLocation="https://gldf.io/xsd/gldf/gldf.xsd">
+      xsi:noNamespaceSchemaLocation="https://gldf.io/xsd/gldf/1.0.0-rc.1/gldf.xsd">
     <Header>
         <Manufacturer>Manufacturer X</Manufacturer>
         <CreationTimeCode>2022-11-30T09:00:00</CreationTimeCode>
@@ -318,7 +323,7 @@ Try out our [L3D Editor](https://l3d-editor.gldf.io), read the [L3D Editor docum
 ```xml showLineNumbers {33-39,42-45,63-67}
 <?xml version="1.0" encoding="UTF-8"?>
 <Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:noNamespaceSchemaLocation="https://gldf.io/xsd/gldf/gldf.xsd">
+      xsi:noNamespaceSchemaLocation="https://gldf.io/xsd/gldf/1.0.0-rc.1/gldf.xsd">
     <Header>
         <Manufacturer>Manufacturer X</Manufacturer>
         <CreationTimeCode>2022-11-30T09:00:00</CreationTimeCode>

@@ -16,7 +16,8 @@ This example demonstrates a simple minimal GLDF implementation of the Philips SP
 
 ```xml showLineNumbers
 <?xml version="1.0" encoding="UTF-8"?>
-<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://gldf.io/xsd/gldf/1.0.0-rc.1/gldf.xsd">
+<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="https://gldf.io/xsd/gldf/1.0.0-rc.1/gldf.xsd">
   <Header>
     <Manufacturer>Philips</Manufacturer>
     <CreationTimeCode>2021-01-25T09:30:47Z</CreationTimeCode>

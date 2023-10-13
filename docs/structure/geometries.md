@@ -25,9 +25,10 @@ More extensive and detailed descriptions can be achieved by reframing [**L3D fil
 
 ## XML example
 
-```xml {8-12} showLineNumbers
+```xml {9-13} showLineNumbers
 <?xml version="1.0" encoding="UTF-8"?>
-<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="gldf.xsd">
+<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+      xsi:noNamespaceSchemaLocation="https://gldf.io/xsd/gldf/1.0.0-rc.3/gldf.xsd">
   <Header/>
   <GeneralDefinitions>
     <Files>
@@ -50,9 +51,10 @@ Provided that these have been entered.
 
 Once declared, all geometries can be referenced in subsequent XML elements via their `id` attribute **one or several** times.
 
-```xml  {9,20} showLineNumbers
+```xml  {10,21} showLineNumbers
 <?xml version="1.0" encoding="UTF-8"?>
-<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="gldf.xsd">
+<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="https://gldf.io/xsd/gldf/1.0.0-rc.3/gldf.xsd">
   <Header/>
   <GeneralDefinitions>
     <Files>

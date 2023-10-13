@@ -28,9 +28,10 @@ In addition to the mandatory `id` attribute and `Name` element, `ControlGear`s *
 
 Below you can find an example definition of two control gears:
 
-```xml {5-18} showLineNumbers
+```xml {6-19} showLineNumbers
 <?xml version="1.0" encoding="UTF-8"?>
-<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="gldf.xsd">
+<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+      xsi:noNamespaceSchemaLocation="https://gldf.io/xsd/gldf/1.0.0-rc.3/gldf.xsd">
   <Header/>
   <GeneralDefinitions>
     <ControlGears>
@@ -61,10 +62,13 @@ Each `ControlGear` element contains only the **mandatory** `id` attribute and `N
 
 Once declared, all control gears can be referenced in subsequent XML elements via their `id` attribute **one or several** times.
 
-```xml  {11,21} showLineNumbers
+```xml  {14,24} showLineNumbers
 <?xml version="1.0" encoding="UTF-8"?>
-<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="gldf.xsd">
-  <Header />
+<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+      xsi:noNamespaceSchemaLocation="https://gldf.io/xsd/gldf/1.0.0-rc.3/gldf.xsd">
+  <Header>
+    <!-- Content skipped for clarity -->
+  </Header>
   <GeneralDefinitions>
   <LightSources>
     <ChangeableLightSource id="lightSource1">
@@ -87,9 +91,10 @@ Once declared, all control gears can be referenced in subsequent XML elements vi
     </Equipment>
   </Equipments>
   </GeneralDefinitions>
-  <ProductDefinitions />
+  <ProductDefinitions>
+    <!-- Content skipped for clarity -->
+  </ProductDefinitions>
 </Root>
-
 ```
 
 In the example above, the `ControlGear` with `id` *controlGear1* (line 11) is **referenced** once inside the element `Equipment` and defines the **luminaire's set of lamp and control gear** (line 20/21).
@@ -98,10 +103,13 @@ In the example above, the `ControlGear` with `id` *controlGear1* (line 11) is **
 
 It is possible to **optionally** specify various metadata inside a control gear to **complement** its description with further details:
 
-```xml {10-34} showLineNumbers
+```xml {13-37} showLineNumbers
 <?xml version="1.0" encoding="UTF-8"?>
-<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="gldf.xsd">
-  <Header/>
+<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="https://gldf.io/xsd/gldf/1.0.0-rc.3/gldf.xsd">
+  <Header>
+    <!-- Content skipped for clarity -->
+  </Header>
   <GeneralDefinitions>
     <ControlGears>
       <ControlGear id="controlGear1">
@@ -136,7 +144,9 @@ It is possible to **optionally** specify various metadata inside a control gear 
       </ControlGear>
     </ControlGears>
   </GeneralDefinitions>
-  <ProductDefinitions/>
+  <ProductDefinitions>
+    <!-- Content skipped for clarity -->
+  </ProductDefinitions>
 </Root>
 ```
 

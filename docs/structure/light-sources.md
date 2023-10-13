@@ -36,8 +36,9 @@ Basic data used for both types are combined in a common basic element `LightSour
 
 ## XML example
 
-```xml {5-14} showLineNumbers
-<Root>
+```xml {5-16} showLineNumbers
+<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+      xsi:noNamespaceSchemaLocation="https://gldf.io/xsd/gldf/1.0.0-rc.1/gldf.xsd">
  <Header/>
  <GeneralDefinitions>
   <LightSources>
@@ -52,16 +53,6 @@ Basic data used for both types are combined in a common basic element `LightSour
     </ColorInformation>
    </FixedLightSource>
   </LightSources>
-  <ControlGears>
-   <ControlGear id="controlGear01">
-    <Name>
-     <Locale language="de">Betriebsgerät 01</Locale>
-    </Name>
-    <Description>
-     <Locale language="de">PSD [Elektronisches Betriebsgerät, DALI-regelbar]</Locale>
-    </Description>
-   </ControlGear>
-  </ControlGears>
   <Emitters>
    <Emitter id="emitter01">
     <FixedLightEmitter>
@@ -76,7 +67,7 @@ Basic data used for both types are combined in a common basic element `LightSour
 </Root>
 ```
 
-The `FixedLightSource` Element above describes a fixed light source. **Important**, in this case the luminaire luminous flux, which is important for the calculation, is defined within the `FixedLightEmitter` together with photometry and maybe the `ControlGear`.
+The `FixedLightSource` Element above describes a fixed light source. **Important**, in this case the luminaire luminous flux, which is important for the calculation, is defined within the `FixedLightEmitter` together with photometry.
 
 ## Referencing a light source
 

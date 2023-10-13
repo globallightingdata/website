@@ -18,7 +18,8 @@ Trilux Belviso is an example of a standing luminaire with two individual heads. 
 
 ```xml showLineNumbers
 <?xml version="1.0" encoding="UTF-8"?>
-<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://gldf.io/xsd/gldf/1.0.0-rc.1/gldf.xsd">
+<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="https://gldf.io/xsd/gldf/1.0.0-rc.1/gldf.xsd">
   <Header>
     <Manufacturer>TRILUX</Manufacturer>
     <CreationTimeCode>2021-01-25T14:40:00Z</CreationTimeCode>

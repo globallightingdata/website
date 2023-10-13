@@ -24,7 +24,8 @@ The following XML code references the single light-emitting object of the 3D fil
 
 ```xml {15-16,70} showLineNumbers
 <?xml version="1.0" encoding="UTF-8"?>
-<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://gldf.io/xsd/gldf/1.0.0-rc.1/gldf.xsd">
+<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="https://gldf.io/xsd/gldf/1.0.0-rc.1/gldf.xsd">
   <Header>
     <Manufacturer>Philips Lighting</Manufacturer>
     <CreationTimeCode>2021-01-25T09:30:47Z</CreationTimeCode>
