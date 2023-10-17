@@ -104,12 +104,9 @@ module.exports = {
       "tools-dev/relux",
       {
         Tooling: [
-          "tools-dev/gldf-editor",
           "tools-dev/l3d-editor",
-          "tools-dev/gldf-check",
         ],
         Parsers: ["tools-dev/gldf-net-parser", "tools-dev/l3d-net-parser"],
-        Plugins: ["tools-dev/revit-plugin", "tools-dev/autodesk-plugin"],
       },
     ],
     "Get involved": ["contribute/contribute", "contribute/become-a-partner"],
