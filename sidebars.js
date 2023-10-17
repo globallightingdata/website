@@ -24,8 +24,8 @@ module.exports = {
     ],
     "XML Structure": [
       "structure/xml-hierarchy",
+      "structure/header",
       {
-        "Manufacturer Metadada": ["structure/header"],
         "General Definitions": [
           "structure/files",
           "structure/sensors",
