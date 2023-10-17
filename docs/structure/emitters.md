@@ -288,7 +288,7 @@ A complete `FixedLightEmitter` example adds an additional ballast, which shouldn
 Compared to the first example, the following optional elements have been added:
 
 - Line 23/32: A [`ControlGear`](/docs/structure/control-gears.md) and a `ControlGearReference` with the corresponding `controlGearId` attribute
-- Line 34: An `RatedLuminousFluxRGB` element to declare the flux of the coloured light only (the RGB module part)
+- Line 34: An `RatedLuminousFluxRGB` element to declare the flux of the colored light only (the RGB module part)
 - Line 35: An additional `EmergencyBallastLumenFactor`. Its the ratio of the emergency luminous flux to the total luminous flux specified by `RatedLuminousFlux`. You can replace it with an `EmergencyRatedLuminousFlux` element instead, if an absolute flux value in emergency mode suits more.
 
 Add these additional elements as applicable.

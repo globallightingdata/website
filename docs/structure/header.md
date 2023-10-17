@@ -4,17 +4,9 @@ sidebar_label: Header
 ---
 <!-- markdownlint-disable MD033 (no html im markdown) -->
 
-  The `Header` is the first part of the GLDF product.xml file. It contains meta-information about the manufacturer, GLDF version. And Relux/DIAL license information if applicable. It does not necessarily have product information.
+The `Header` is the first part of the GLDF product.xml file. It contains meta-information about the manufacturer and the used GLDF version. As well as license information if applicable. It does not contain any product information yet.
 
-<img src="/img/docs/structure/header.webp" alt="GLDF XML structure header" width="400" />
-
-## Author
-
-The `Author` describes the author of the GLDF file. The author can be a company or the name of an individual who made the file.
-
-:::important Convention
-Datatype: **xs:string**
-:::
+<img src="/img/docs/structure/header.webp" alt="GLDF XML structure header" width="500" />
 
 ## Manufacturer
 
@@ -24,27 +16,32 @@ The `Manufacturer` will typically be the name of the company that produces or se
 Datatype: **xs:string**
 :::
 
-## CreationTimeCode
+## FormatVersion
 
-`CreationTimeCode` is the date and time when you create or generate the GLDF file. The data type is xs:dateTime
+This element describes which Version of GLDF is being used.
 
 :::important Convention
-Datatype: **xs:dateTime**
+Datatype `major` attribute: **xs:int**  
+Datatype `minor` attribute: **xs:int**  
+Datatype `pre-release` attribute: **xs:int** (optional)
 :::
 
-:::important Convention
-The format of xs:dateTime is: yyyy-mm-ddThh:mm:ss.sssssssssssszzzzzz
+## CreatedWithApplication
 
-|**Lexical form**|**Value**|
-| :--- | :------: |
-| yyyy | A four-digit numeral that represents the year.  |
-| mm | A two-digit numeral that represents the month. |
-| dd | A two-digit numeral that represents the day. |
-| hh | A two-digit numeral that represents the hour. |
-| mm | A two-digit numeral that represents the minute. |
-| ss | A two-digit numeral that represents the second. |  
-| .ssssssssssss | Optional. 1-to-12 digit numeral that represents fractional seconds. |  
-| zzzzzz | Optional, represents the time zone. |
+This element describes which application generated the GLDF file, either by the author or programmatically.
+
+:::important Convention
+Datatype: **xs:string**
+:::
+
+## GldfCreationTimeCode
+
+`GldfCreationTimeCode` is the date and time when you create or generate the GLDF file. The data type is xs:dateTime and should be provided in UTC
+
+:::important Convention
+Datatype: **xs:dateTime** (yyyy-mm-ddThh:mm:ss.ss)
+
+See <https://www.w3schools.com/xml/schema_dtypes_date.asp>
 :::
 
 Example:
@@ -52,28 +49,6 @@ Example:
 ```xml
 <CreationTimeCode>2022-04-03T18:07:42Z</CreationTimeCode>
 ```
-
-Example:
-
-```xml
-<CreationTimeCode>2023-02-08T12:00:00-02:00</CreationTimeCode>
-```
-
-## CreatedWithApplication
-
-This section describes which application the author used to make the GLDF file.
-
-:::important Convention
-Datatype: **xs:string**
-:::
-
-## FormatVersion
-
-This section describes which Version of GLDF is being used.
-
-:::important Convention
-Datatype: **xs:string** must be **1.0.0-rc.1**
-:::
 
 ## DefaultLanguage
 
@@ -113,6 +88,14 @@ Datatype application: **xs:string**
 ## ReluxMemberId and DIALuxMemberId
 
 Relux and DIAL may assign company IDs to manufacturers. These Ids will help applications associate GLDF files with a specific manufacturer.
+
+:::important Convention
+Datatype: **xs:string**
+:::
+
+## Author
+
+The `Author` describes the author of the GLDF file. The author can be a company or the name of an individual who made the file.
 
 :::important Convention
 Datatype: **xs:string**

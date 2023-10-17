@@ -2,6 +2,7 @@
 title: Spectrums
 sidebar_label: Spectrums
 ---
+<!-- markdownlint-disable MD033 (no html im markdown) -->
 
 ## Description
 
@@ -14,7 +15,7 @@ A spectrum in the GLDF can be defined in two ways
 
 ## Location in XSD
 
-![Spectrums in XSD](/img/docs/structure/spectrums-hierarchy.webp)
+<img src="/img/docs/structure/spectrums-hierarchy.webp" alt="Spectrum location in XSD" width="550" />
 
 ## XSD description
 

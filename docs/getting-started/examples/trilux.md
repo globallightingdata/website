@@ -19,12 +19,13 @@ Trilux Belviso is an example of a standing luminaire with two individual heads. 
 ```xml showLineNumbers
 <?xml version="1.0" encoding="UTF-8"?>
 <Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:noNamespaceSchemaLocation="https://gldf.io/xsd/gldf/1.0.0-rc.1/gldf.xsd">
+  xsi:noNamespaceSchemaLocation="https://gldf.io/xsd/gldf/1.0.0-rc.3/gldf.xsd">
   <Header>
     <Manufacturer>TRILUX</Manufacturer>
-    <CreationTimeCode>2021-01-25T14:40:00Z</CreationTimeCode>
-    <CreatedWithApplication>Altova XMLSpy</CreatedWithApplication>
-    <FormatVersion>1.0.0-rc.1</FormatVersion>
+    <FormatVersion major="1" minor="0" pre-release="3" />
+    <CreatedWithApplication>Visual Studio Code</CreatedWithApplication>
+    <GldfCreationTimeCode>2023-03-29T14:30:00Z</GldfCreationTimeCode>
+    <UniqueGldfId>7dedd642-e5ba-4cdf-81f7-a21d7c4463fc</UniqueGldfId>
   </Header>
   <GeneralDefinitions>
     <Files>
@@ -50,7 +51,7 @@ Trilux Belviso is an example of a standing luminaire with two individual heads. 
     <LightSources>
       <FixedLightSource id="LightSource">
         <Name>
-          <Locale language="de">LED</Locale>
+          <Locale language="en">LED</Locale>
         </Name>
         <RatedInputPower>18</RatedInputPower>
         <ColorInformation>
@@ -63,25 +64,25 @@ Trilux Belviso is an example of a standing luminaire with two individual heads. 
     <ControlGears>
       <ControlGear id="ControlGear1">
         <Name>
-          <Locale language="de">Betriebsgerät 1</Locale>
+          <Locale language="en">Control Gear 1</Locale>
         </Name>
         <Description>
-          <Locale language="de">Mit Betriebsgeräten, getrennt dimmbar 1..10 V.</Locale>
+          <Locale language="en">Separately dimmable 1..10V</Locale>
         </Description>
       </ControlGear>
     </ControlGears>
     <Emitters>
       <Emitter id="LightEmitterMain">
         <FixedLightEmitter emergencyBehaviour="Combined">
-          <PhotometryReference photometryId="PhotometryMain"/>
-          <LightSourceReference fixedLightSourceId="LightSource"/>
+          <PhotometryReference photometryId="PhotometryMain" />
+          <LightSourceReference fixedLightSourceId="LightSource" />
           <RatedLuminousFlux>7800</RatedLuminousFlux>
         </FixedLightEmitter>
       </Emitter>
       <Emitter id="LightEmitterIndirect">
         <FixedLightEmitter emergencyBehaviour="None">
-          <PhotometryReference photometryId="PhotometryIndirect"/>
-          <LightSourceReference fixedLightSourceId="LightSource"/>
+          <PhotometryReference photometryId="PhotometryIndirect" />
+          <LightSourceReference fixedLightSourceId="LightSource" />
           <RatedLuminousFlux>1600</RatedLuminousFlux>
         </FixedLightEmitter>
       </Emitter>
@@ -94,15 +95,15 @@ Trilux Belviso is an example of a standing luminaire with two individual heads. 
   </GeneralDefinitions>
   <ProductDefinitions>
     <ProductMetaData>
+      <UniqueProductId>d2a7648d-4020-43e5-a479-85fa968e6054</UniqueProductId>
       <ProductNumber>
-        <Locale language="de">TOC: 6437657</Locale>
+        <Locale language="en">TOC: 6437657</Locale>
       </ProductNumber>
       <Name>
-        <Locale language="de">Belviso S CDP LED9400nw ETD 03</Locale>
+        <Locale language="en">Belviso S CDP LED9400nw ETD 03</Locale>
       </Name>
       <Description>
-        <Locale language="de">LED-Standleuchte mit separat ausgeführtem schwenkbarem Indirektstrahler. Mit mikroprismatischer Abdeckung für den Direktanteil. Mit umlaufender, exklusiver Lichtrahmung. Standleuchte mit individuellem Raumlicht. Mit hocheffizienter Mikroprismatik CDP. Direkt-indirekt strahlend. Blendungsbewertung nach UGR-Einstufung (EN 12464-1) 19. Bildschirmarbeitsplatzgerecht gemäß EN 12464-1. Bemessungslichtstrom 9400 lm, Bemessungsleistung 99,00 W, Leuchten-Lichtausbeute 94 lm/W. Lichtfarbe neutralweiß, ähnlichste Farbtemperatur (CCT) 4000 K, allgemeiner Farbwiedergabeindex (CRI) R a > 80. Mittlere Bemessungslebensdauer L 80 (t q 25 °C) = 70.000 h, mittlere Bemessungslebensdauer L 85 (t q 25 °C) = 50.000 h. Leuchtenkörper aus Aluminium-Druckguss. Standrohr aus Aluminium-Strangpressprofil, Leuchtenfuß aus Stahl. (RAL 9006). Mit am Leuchtenständer befestigten Positionierungsrollen. LED-Strahler für indirekten Lichtanteil um 30° schwenkbar. Schutzklasse (EN 61140): I, Schutzart (DIN EN 60529): IP20, Stoßfestigkeitsgrad nach IEC 62262: IK02, Prüftemperatur Glühdrahttest gemäß IEC 60695-2-11: 650 °C. Mit Betriebsgeräten, getrennt dimmbar 1..10 V. Das Produkt erfüllt die grundlegenden Anforderungen der anwendbaren EU-Richtlinien und des Produktsicherheitsgesetzes und trägt die CE-Kennzeichnung.</Locale>
-        <Locale language="en">Belviso S CDP LED9400nw ETD 03Free-standing LED luminaire with separately tiltable indirect spot. With microprismatic cover for direct component. With all-round, exclusive light frame. Free-standing luminaire with individual room light. With highly efficient CDP microprism. Direct-indirect distribution. Glare evaluation (EN 12464-1) according to UGR  19. VDU workstation-compliant in accordance with 12464-1. Luminaire luminous flux 9400 lm, connected load 99,00 W, luminous efficiency of luminaire 94 lm/W. Light colour neutral white, correlated colour temperature (CCT) 4000 K, general colour rendering index (CRI) Ra > 80. Mean rated service life L80(tq 25 °C) = 70,000 h, mean rated service life L85(tq 25 °C) = 50,000 h. Luminaire body of die-cast aluminium. Supporting column of extruded aluminium section, Luminaire base of steel. (RAL 9006). With positioning casters fixed to supporting column. LED spot for indirect light component can be swivelled through 30°. Safety class (EN 61140): I, protection rating (DIN EN 60529): IP20, impact resistance level in accordance with IEC 62262: IK02, testing temperature of wire glow test in accordance with IEC 60695-2-11: 650 °C. With electronic transformers, separately dimmable 1..10 V. The luminaire complies with fundamental requirements of applicable EU regulations and product safety legislation and bears the CE symbol. TRILUX Order code 6437657</Locale>
+        <Locale language="en">Free-standing LED luminaire with separately tiltable indirect spot</Locale>
       </Description>
       <Pictures>
         <Image fileId="productImage" imageType="Product Picture" />
@@ -141,26 +142,26 @@ Trilux Belviso is an example of a standing luminaire with two individual heads. 
     <Variants>
       <Variant id="variant1">
         <ProductNumber>
-          <Locale language="de">TOC: 6437657</Locale>
+          <Locale language="en">TOC: 6437657</Locale>
         </ProductNumber>
         <Name>
-          <Locale language="de">Belviso S CDP LED9400nw ETD 03</Locale>
+          <Locale language="en">Belviso S CDP LED9400nw ETD 03</Locale>
         </Name>
         <Mountings>
           <Ground>
             <FreeStanding></FreeStanding>
           </Ground>
         </Mountings>
-          <Geometry>
-            <ModelGeometryReference geometryId="Geometry1">
-              <EmitterReference emitterId="LightEmitterMain">
-                <EmitterObjectExternalName>fixed_leo</EmitterObjectExternalName>
-              </EmitterReference>
-              <EmitterReference emitterId="LightEmitterIndirect">
-                <EmitterObjectExternalName>rotatable_leo</EmitterObjectExternalName>
-              </EmitterReference>
-            </ModelGeometryReference>
-          </Geometry>
+        <Geometry>
+          <ModelGeometryReference geometryId="Geometry1">
+            <EmitterReference emitterId="LightEmitterMain">
+              <EmitterObjectExternalName>fixed_leo</EmitterObjectExternalName>
+            </EmitterReference>
+            <EmitterReference emitterId="LightEmitterIndirect">
+              <EmitterObjectExternalName>rotatable_leo</EmitterObjectExternalName>
+            </EmitterReference>
+          </ModelGeometryReference>
+        </Geometry>
         <DescriptiveAttributes>
           <Mechanical>
             <Weight>14.5</Weight>

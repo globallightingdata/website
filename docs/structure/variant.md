@@ -17,7 +17,7 @@ In addition to the [`ProductMetaData`](/docs/structure/product.md) element, whic
 
 As with many GLDF parts, a `Variant` must contain only few mandatory elements to be valid: The `id` attribute and a (translatable) `Name` element
 
-```xml showLineNumbers {17-22}
+```xml showLineNumbers {20-25}
 <Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:noNamespaceSchemaLocation="https://gldf.io/xsd/gldf/1.0.0-rc.3/gldf.xsd">
   <Header>
@@ -52,7 +52,7 @@ As with many GLDF parts, a `Variant` must contain only few mandatory elements to
 
 The following is a complete example of a `Variant` with many optional elements. Only the [`DescriptiveAttributes`](/docs/structure/descriptive-attributes.md) are listed shortend to not go beyond the scope.
 
-```xml showLineNumbers {56-98}
+```xml showLineNumbers {57-99}
 <?xml version="1.0" encoding="UTF-8"?>
 <Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
       xsi:noNamespaceSchemaLocation="https://gldf.io/xsd/gldf/1.0.0-rc.3/gldf.xsd">
@@ -235,15 +235,16 @@ The `SimpleGeometryReference` element allows to create a geometry in the complex
 
 <img src="/img/docs/structure/variant-simple-geometry-reference.webp" alt="Variant SimpleGeometryReference" width="530" />
 
-```xml showLineNumbers {29-35,38-48,65-68}
+```xml showLineNumbers {30-36,39-49,67-70}
 <?xml version="1.0" encoding="UTF-8"?>
 <Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:noNamespaceSchemaLocation="https://gldf.io/xsd/gldf/1.0.0-rc.1/gldf.xsd">
+      xsi:noNamespaceSchemaLocation="https://gldf.io/xsd/gldf/1.0.0-rc.3/gldf.xsd">
     <Header>
         <Manufacturer>Manufacturer X</Manufacturer>
-        <CreationTimeCode>2022-11-30T09:00:00</CreationTimeCode>
+        <FormatVersion major="1" minor="0" pre-release="3" />
         <CreatedWithApplication>Visual Studio Code</CreatedWithApplication>
-        <FormatVersion>1.0.0-rc.1</FormatVersion>
+        <GldfCreationTimeCode>2023-03-29T14:30:00Z</GldfCreationTimeCode>
+        <UniqueGldfId>b592f355-58ed-42da-961e-ada47215b9c7</UniqueGldfId>
     </Header>
     <GeneralDefinitions>
         <Files>
@@ -288,6 +289,7 @@ The `SimpleGeometryReference` element allows to create a geometry in the complex
     </GeneralDefinitions>
     <ProductDefinitions>
         <ProductMetaData>
+            <UniqueProductId>9fc0c42c-524d-4a42-bbc0-1433c7aaf312</UniqueProductId>
             <ProductNumber>
                 <Locale language="en">42</Locale>
             </ProductNumber>
@@ -320,28 +322,29 @@ Try out our [L3D Editor](https://l3d-editor.gldf.io), read the [L3D Editor docum
 
 <img src="/img/docs/structure/variant-model-geometry-reference.webp" alt="Variant ModelGeometryReference" width="800" />
 
-```xml showLineNumbers {33-39,42-45,63-67}
+```xml showLineNumbers {34-40,43-46,65-69}
 <?xml version="1.0" encoding="UTF-8"?>
 <Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:noNamespaceSchemaLocation="https://gldf.io/xsd/gldf/1.0.0-rc.1/gldf.xsd">
+    xsi:noNamespaceSchemaLocation="https://gldf.io/xsd/gldf/1.0.0-rc.3/gldf.xsd">
     <Header>
-        <Manufacturer>Manufacturer X</Manufacturer>
-        <CreationTimeCode>2022-11-30T09:00:00</CreationTimeCode>
+        <Manufacturer>Manufacturer XY</Manufacturer>
+        <FormatVersion major="1" minor="0" pre-release="3" />
         <CreatedWithApplication>Visual Studio Code</CreatedWithApplication>
-        <FormatVersion>1.0.0-rc.1</FormatVersion>
+        <GldfCreationTimeCode>2023-03-29T14:30:00Z</GldfCreationTimeCode>
+        <UniqueGldfId>e19ed73e-fcd6-4469-a359-58fd80510e9c</UniqueGldfId>
     </Header>
     <GeneralDefinitions>
         <Files>
-            <File id="photometryFile" contentType="ldc/eulumdat" 
-                  type="localFileName">SomePhotometry.ldt</File>
-            <File id="geometryFileLowDetail" contentType="geo/l3d" 
-                  type="localFileName">geometryLowPoly.l3d</File>
-            <File id="geometryFileHighDetail" contentType="geo/l3d" 
-                  type="localFileName">geometryHighPoly.l3d</File>
+            <File id="photometryFile" contentType="ldc/eulumdat"
+                type="localFileName">SomePhotometry.ldt</File>
+            <File id="geometryFileLowDetail" contentType="geo/l3d"
+                type="localFileName">geometryLowPoly.l3d</File>
+            <File id="geometryFileHighDetail" contentType="geo/l3d"
+                type="localFileName">geometryHighPoly.l3d</File>
         </Files>
         <Photometries>
             <Photometry id="photometry">
-                <PhotometryFileReference fileId="photometryFile"/>
+                <PhotometryFileReference fileId="photometryFile" />
             </Photometry>
         </Photometries>
         <LightSources>
@@ -355,21 +358,22 @@ Try out our [L3D Editor](https://l3d-editor.gldf.io), read the [L3D Editor docum
         <Emitters>
             <Emitter id="fixedEmitter">
                 <FixedLightEmitter>
-                    <PhotometryReference photometryId="photometry"/>
-                    <LightSourceReference fixedLightSourceId="fixedLightSource"/>
+                    <PhotometryReference photometryId="photometry" />
+                    <LightSourceReference fixedLightSourceId="fixedLightSource" />
                     <RatedLuminousFlux>400</RatedLuminousFlux>
                 </FixedLightEmitter>
             </Emitter>
         </Emitters>
         <Geometries>
             <ModelGeometry id="modelGeometry">
-                <GeometryFileReference fileId="geometryFileLowDetail" levelOfDetail="Low"/>
-                <GeometryFileReference fileId="geometryFileHighDetail" levelOfDetail="High"/>
+                <GeometryFileReference fileId="geometryFileLowDetail" levelOfDetail="Low" />
+                <GeometryFileReference fileId="geometryFileHighDetail" levelOfDetail="High" />
             </ModelGeometry>
         </Geometries>
     </GeneralDefinitions>
     <ProductDefinitions>
         <ProductMetaData>
+            <UniqueProductId>a8fefa50-1597-40b0-b22d-3c19ce9ac6ce</UniqueProductId>
             <ProductNumber>
                 <Locale language="en">42</Locale>
             </ProductNumber>
