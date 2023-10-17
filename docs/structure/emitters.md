@@ -16,7 +16,7 @@ Emitters define the **radiation emitting parts** of the luminaire. Be it in form
 
 ### `Emitter` root element
 
-First of all you have to decide which **type of emitter** is required for a your **radiation emitting part**. Each luminaire can contain multiple Emitter with different types. The following four types are available:
+First of all you have to decide which **type of emitter** is required for your **radiation emitting part**. Each luminaire can contain multiple Emitter with different types. The following four types are available:
 
 - Emitter for a **lamp** that can be **replaced** in the luminaire ➜ choose `ChangeableLightEmitter`  
 - Emitter for a **lamp permanently installed** in the luminaire ➜ choose `FixedLightEmitter`
@@ -29,7 +29,7 @@ First of all you have to decide which **type of emitter** is required for a your
 
 One <span class="blue-text">remarkable</span> part of the XSD definition above is the fact, that GLDF accepts **one or more** `ChangeableLightEmitter` for **each** single Emitter. Or one or more `FixedLightEmitter`, `MultiChannelLightEmitter` or `Sensor` vice versa.
 
-This does **not** mean that these emitters are **all active at the same time**. But that they are **interchangeable**. The luminaire can only operate in one of this definitions. And lighting calculation software like DIALux or RELUX will be able to switch between this modes, as users need it.
+This does **not** mean that all these emitters **are active simultaneously**. Instead, they are **interchangeable**. The luminaire can operate in only one of these modes. Users in lighting calculation software, such as DIALux or RELUX, can switch between these modes as needed.
 
 <details>
 <summary>Examples</summary>
@@ -40,7 +40,7 @@ This does **not** mean that these emitters are **all active at the same time**. 
 </details>
 :::
 
-Let assume we would like to define a luminaire with a changeable light output. So for the moment a first `Emitter` XML example could look as follows:
+Let's assume we would like to define a luminaire with a changeable light output. So for the moment a first `Emitter` XML example could look as follows:
 
 ```xml {6-12} showLineNumbers
 <?xml version="1.0" encoding="UTF-8"?>
