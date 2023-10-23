@@ -5,17 +5,17 @@ sidebar_label: IDs and timecodes
 
 In the GLDF XML there are two important IDs and two timestamps, which are intended to **distinguish different GLDFs and/or products** from each other:
 
-- `UniqueGldfId` and the `UniqueProductId` - inside the Header and the ProductMetaData elements
-- `GldfCreationTimeCode` and the `ProductDataTimeCode` - both inside the Header element
+- `UniqueGldfId` and the `UniqueProductId` - inside the [`Header`](/docs/structure/header.md) and the [`ProductMetaData`](/docs/structure/product.md) elements
+- `GldfCreationTimeCode` and the `ProductDataTimeCode` - both inside the [`Header`](/docs/structure/header.md) element
 
 ## IDs
 
 Each GLDF must have 2 unique IDs. The difference between `UniqueGldfId` and `UniqueProductId` is the following:
 
 - **`UniqueGldfId`**  
-  Should **always** be unique, even for the same product in two GLDFs. Every GLDF file should have a **worldwide-unique** `UniqueGldfId`, so UUIDs (GUIDs) are **strongly recommended**. This is supposed to help recognise the exact same GLDF in an easy way.
+  This id is part of the [`Header`](/docs/structure/header.md) element and should **always** be unique, even for the same product in two GLDFs. Every GLDF file should have a **worldwide-unique** `UniqueGldfId`, so UUIDs (sometimes called GUIDs) are **strongly recommended**. This is supposed to help recognise the exact same GLDF in an easy way.
 - **`UniqueProductId`**  
-  On the other hand, the `UniqueProductId` should **be unique only across different products** (at least for the same manufacturer). So they can be equal in different GLDF files - and should be, if they depict the same product.
+  This id is part of [`ProductMetaData`](/docs/structure/product.md). And on the other hand should be **unique only across different products** (at least for the same manufacturer). So they can be equal in different GLDF files - and should be, if they depict the same product.
   
   This is supposed to help to **recognise same products of a manufacturer across different GLDF files** - for example in case of product data updates. You could use the product's article number, GTIN or EAN for this use case - but we recommend UUIDs here as well.
 
@@ -23,14 +23,27 @@ Worldwide unique UUIDs can be generated for example here: [guidgenerator.com](ht
 
 ## Timecodes
 
-Timestamps describe when a GLDF was generated and edited. And which time stamp the product data have. While the `GldfCreationTimeCode` is a mandatory field, the `ProductDataTimeCode` is an optional field. It is nevertheless recommended to maintain both. The difference is as follows:
+:::note TLDR;
+GLDF contains two timestamps in the [`Header`](/docs/structure/header.md) element, that allows to precisely distinguish the last time:
+
+- When a **GLDF as a whole** has changed -> `GldfCreationTimeCode`
+- When **anything product related** inside the GLDF has changed. -> `ProductDataTimeCode`
+:::
+
+The difference in detail is the following:
 
 - **`GldfCreationTimeCode`**  
-  The date of `GldfCreationTimeCode` must be set to the current date for every single change to the GLDF - **except** for changes inside [meta-information.xml](/docs/container/meta-information), as this file is intended only for signatures and similar. The `GldfCreationTimeCode` allows to recognise when a GLDF has been created or updated.
+  The `GldfCreationTimeCode` describes when a GLDF file was generated or anything inside it edited. I.e. the date of `GldfCreationTimeCode` must be set to the current date and time **on every single change** to the GLDF. As a result, the `GldfCreationTimeCode` allows to recognise, when a GLDF has been created or updated as a whole the last time. **Except** changes to the [*meta-information.xml*](/docs/container/meta-information.md) - see the caution box below.
 - **`ProductDataTimeCode`**  
-  This date must reflect the last time something inside the product data has changed. This applies to any child elements of `GeneralDefinitions` and `ProductDefinitions`, but not to the elements in the `Header` area.
+  This element must reflect **the last time**, when something **only related to the product data** has **changed**. **Excluding any metadata** like manufacturer contact information in the [`Header`](/docs/structure/header.md). So this applies to any changes in XML childs of [`GeneralDefinitions`](/docs/structure/xml-hierarchy.md) and [`ProductDefinitions`](/docs/structure/xml-hierarchy.md), as well as files related to the product like product images or photometries. But not to the elements in the [`Header`](/docs/structure/header.md) area or files like the manufacturer image.
 
-This allows to distinguish exactly when the GLDF as a whole has changed and the last time the product within the GLDF has changed.
+:::caution Important
+Both timestamps must completly ignore changes to the [**meta-information.xml**](/docs/container/meta-information) file. Whether it is created, deleted or modified. As this file is intended only for digital signatures and similar. And is otherwise completly unrelated to the GLDF content at all.
+:::
+
+While the `GldfCreationTimeCode` is a mandatory element, the `ProductDataTimeCode` is optional. It is nevertheless **recommended to maintain both**.
+
+The **string format** for timecodes in XML is *yyyy-mm-ddThh:mm:ss.ss* (xs:dateTime). And is **preferable provided in UTC**. For examples see [w3schools.com](https://www.w3schools.com/xml/schema_dtypes_date.asp) or the XML example below.
 
 ## Example XML
 
