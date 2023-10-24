@@ -425,14 +425,14 @@ In our example, we create one `Variant` of our luminaire. We reference the previ
 </Variant>
 ```
 
-### Step 10: Finishing up
+### Step 11: Finishing up
 
 The final XML code should look like this:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:noNamespaceSchemaLocation="https://gldf.io/xsd/gldf/1.0.0-rc.3/gldf.xsd">
+      xsi:noNamespaceSchemaLocation="https://gldf.io/xsd/gldf/1.0.0-rc.3/gldf.xsd">
   <Header>
     <Manufacturer>ACME lighting</Manufacturer>
     <FormatVersion major="1" minor="0" pre-release="3" />
@@ -443,11 +443,11 @@ The final XML code should look like this:
   <GeneralDefinitions>
     <Files>
       <File id="ldtFile-1" contentType="ldc/eulumdat"
-        type="localFileName">photometry.ldt</File>
+            type="localFileName">photometry.ldt</File>
       <File id="pictureFile-1" contentType="image/png"
-        type="localFileName">luminaire.png</File>
+            type="localFileName">luminaire.png</File>
       <File id="geometryFile-1" contentType="geo/l3d"
-        type="localFileName">geometry.l3d</File>
+            type="localFileName">geometry.l3d</File>
     </Files>
     <Photometries>
       <Photometry id="photometry-1">
@@ -554,7 +554,7 @@ The final XML code should look like this:
 
 ## GLDF archive
 
-### Step 11: Create the .gldf archive
+### Step 12: Create the .gldf archive
 
 Finally, compress your just created folder containing
 
