@@ -8,7 +8,7 @@ In the GLDF XML there are two important IDs and two timestamps, which are intend
 - `UniqueGldfId` and the `UniqueProductId` - inside the [`Header`](/docs/structure/header.md) and the [`ProductMetaData`](/docs/structure/product.md) elements
 - `GldfCreationTimeCode` and the `ProductDataTimeCode` - both inside the [`Header`](/docs/structure/header.md) element
 
-## IDs
+## Unique IDs
 
 Each GLDF must have 2 unique IDs. The difference between `UniqueGldfId` and `UniqueProductId` is the following:
 
