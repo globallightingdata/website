@@ -43,9 +43,10 @@ Most **marketing information** are **optional**. However, the more are specified
 
 `ProductMetaData` is a relatively straightforward element and in its simplest form only requires three mandatory fields: An **unique product id**, the **product number** and the **product name** in one language (preferably English):
 
-```xml {10-17} showLineNumbers
+```xml {11-19} showLineNumbers
 <?xml version="1.0" encoding="UTF-8"?>
-<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="gldf.xsd">
+<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="https://gldf.io/xsd/gldf/1.0.0-rc.3/gldf.xsd">
   <Header>
     <!--Skipped for clarity-->
   </Header>
@@ -79,9 +80,10 @@ The element `UniqueProductId` is particularly important, as it makes it possible
 
 A complete example, on the other hand, could look as follows. In general, it is recommended to provide as much information about the product as possible:
 
-```xml {10-57} showLineNumbers
+```xml {11-59} showLineNumbers
 <?xml version="1.0" encoding="UTF-8"?>
-<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="gldf.xsd">
+<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="https://gldf.io/xsd/gldf/1.0.0-rc.3/gldf.xsd">
   <Header>
     <!--Skipped for clarity-->
   </Header>
@@ -170,9 +172,10 @@ The luminaire maintenance according to **CIE 97** is indicated by **specifying a
 - `Enclosed Indirect (Uplight)`
 - `Airhandling, Forced Ventilated`
 
-```xml {18} showLineNumbers
+```xml {20} showLineNumbers
 <?xml version="1.0" encoding="UTF-8"?>
-<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="gldf.xsd">
+<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="https://gldf.io/xsd/gldf/1.0.0-rc.3/gldf.xsd">
   <Header>
     <!--Skipped for clarity-->
   </Header>
@@ -203,9 +206,10 @@ The luminaire maintenance according to **CIE 97** is indicated by **specifying a
 
 Luminaire maintenance acording to **CIE LMF** allows the specification of a **maintenance factor** (lumen **degradation** due to pollution) for different room **conditions and years**, that have past
 
-```xml {18-27} showLineNumbers
+```xml {20-29} showLineNumbers
 <?xml version="1.0" encoding="UTF-8"?>
-<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="gldf.xsd">
+<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="https://gldf.io/xsd/gldf/1.0.0-rc.3/gldf.xsd">
   <Header>
     <!--Skipped for clarity-->
   </Header>
@@ -245,9 +249,10 @@ Luminaire maintenance acording to **CIE LMF** allows the specification of a **ma
 
 Luminaire maintenance acording to **IES LLF** is similar to CIE LMF. Its again the **ratio of illuminance** for a given area to the value that would occur if lamps operated at their **initial rated lumens**. In comparison, the element is only named differently and now called `LuminaireDirtDepreciation`. As well as the description of the room characteristic is minimally different: The specification `Normal` in the CIE standard is now called `Moderate`. And an additional room condition `Very Dirty` is possible.
 
-```xml {18-29} showLineNumbers
+```xml {20-31} showLineNumbers
 <?xml version="1.0" encoding="UTF-8"?>
-<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="gldf.xsd">
+<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="https://gldf.io/xsd/gldf/1.0.0-rc.3/gldf.xsd">
   <Header>
     <!--Skipped for clarity-->
   </Header>
@@ -289,9 +294,10 @@ Luminaire maintenance acording to **IES LLF** is similar to CIE LMF. Its again t
 
 The Japanese standard **Jieg-001** does not differ greatly from CIE and IES. Once again, maintenance factors can be specified depending on the room condition and duration in years. The room conditions are limited to three types, with the possible values `Clean`, `Normal` and `Dirty`
 
-```xml {18-25} showLineNumbers
+```xml {20-27} showLineNumbers
 <?xml version="1.0" encoding="UTF-8"?>
-<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="gldf.xsd">
+<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="https://gldf.io/xsd/gldf/1.0.0-rc.3/gldf.xsd">
   <Header>
     <!--Skipped for clarity-->
   </Header>
@@ -339,9 +345,10 @@ Some of the child properties can be defined at the level of `ProductMetaData` as
 
 The **recommended** procedure is to first define all relevant properties on `ProductMetaData`. And **if these change** for individual variants of the luminaire, only then **overwrite** them. An example:
 
-```xml {11-19,23-25,28-36} showLineNumbers
+```xml {13-21,25-27,30-38} showLineNumbers
 <?xml version="1.0" encoding="UTF-8"?>
-<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="gldf.xsd">
+<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="https://gldf.io/xsd/gldf/1.0.0-rc.3/gldf.xsd">
   <Header>
     <!--Skipped for clarity-->
   </Header>

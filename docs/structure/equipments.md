@@ -30,10 +30,13 @@ Once definied, equipments can be [referenced in `Emitters`](/docs/structure/emit
 
 Below you can find an example definition of an equipment:
 
-```xml {15-21} showLineNumbers
+```xml {18-24} showLineNumbers
 <?xml version="1.0" encoding="UTF-8"?>
-<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="gldf.xsd">
-  <Header />
+<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="https://gldf.io/xsd/gldf/1.0.0-rc.3/gldf.xsd">
+  <Header>
+    <!-- Content skipped for clarity -->
+  </Header>
   <GeneralDefinitions>
     <LightSources>
       <ChangeableLightSource id="lightSource1">
@@ -53,7 +56,9 @@ Below you can find an example definition of an equipment:
       </Equipment>
     </Equipments>
   </GeneralDefinitions>
-  <ProductDefinitions />
+  <ProductDefinitions>
+    <!-- Content skipped for clarity -->
+  </ProductDefinitions>
 </Root>
 ```
 
@@ -66,10 +71,13 @@ Each `Equipment` element must contain the **mandatory** `id` attribute, a `Light
 
 Once declared, all equipments can be referenced in subsequent XML elements via their `id` attribute **one or several** times.
 
-```xml  {16,25} showLineNumbers
+```xml  {19,28} showLineNumbers
 <?xml version="1.0" encoding="UTF-8"?>
-<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="gldf.xsd">
-  <Header />
+<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="https://gldf.io/xsd/gldf/1.0.0-rc.3/gldf.xsd">
+  <Header>
+    <!-- Content skipped for clarity -->
+  </Header>
   <GeneralDefinitions>
     <LightSources>
       <ChangeableLightSource id="lightSource1">
@@ -97,7 +105,9 @@ Once declared, all equipments can be referenced in subsequent XML elements via t
       </Emitter>
     </Emitters>
   </GeneralDefinitions>
-  <ProductDefinitions />
+  <ProductDefinitions>
+    <!-- Content skipped for clarity -->
+  </ProductDefinitions>
 </Root>
 ```
 
@@ -107,10 +117,13 @@ In the example above, the `Equipment` with `id` *equipment11* (line 18) is **ref
 
 It is possible to **optionally** specify some metadata inside equipment to **complement** its description with further details:
 
-```xml {18,20-21} showLineNumbers
+```xml {19-24} showLineNumbers
 <?xml version="1.0" encoding="UTF-8"?>
-<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="gldf.xsd">
-  <Header />
+<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="https://gldf.io/xsd/gldf/1.0.0-rc.3/gldf.xsd">
+  <Header>
+    <!-- Content skipped for clarity -->
+  </Header>
   <GeneralDefinitions>
     <LightSources>
       <ChangeableLightSource id="lightSource1">
@@ -128,12 +141,26 @@ It is possible to **optionally** specify some metadata inside equipment to **com
         <ControlGearReference controlGearId="controlGear1" />
         <RatedInputPower>100</RatedInputPower>
         <EmergencyBallastLumenFactor>0.1</EmergencyBallastLumenFactor>
-        <EmergencyRatedLuminousFlux>8</EmergencyRatedLuminousFlux>
       </Equipment>
     </Equipments>
   </GeneralDefinitions>
-  <ProductDefinitions />
+  <ProductDefinitions>
+    <!-- Content skipped for clarity -->
+  </ProductDefinitions>
 </Root>
+```
+
+Alternatively, the luminous flux in emergency lighting scenarios can also be specified as an absolute value:
+
+```xml {6} showLineNumbers
+<Equipments>
+  <Equipment id="equipment1">
+    <LightSourceReference changeableLightSourceId="lightSource1" />
+    <ControlGearReference controlGearId="controlGear1" />
+    <RatedInputPower>100</RatedInputPower>
+    <EmergencyRatedLuminousFlux>8</EmergencyRatedLuminousFlux>
+  </Equipment>
+</Equipments>
 ```
 
 - **ControlGearReference**  

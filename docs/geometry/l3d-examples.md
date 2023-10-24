@@ -23,7 +23,7 @@ The following example xml creates exactly what we want.
 ```xml showLineNumbers
 <?xml version="1.0" encoding="UTF-8"?>
 <Luminaire xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-  xsi:noNamespaceSchemaLocation="https://gldf.io/xsd/l3d/l3d.xsd">
+  xsi:noNamespaceSchemaLocation="https://gldf.io/xsd/l3d/0.11.0/l3d.xsd">
   <Header>
     <CreatedWithApplication>Example-Tool</CreatedWithApplication>
     <CreationTimeCode>2021-03-03T10:10:10</CreationTimeCode>
@@ -103,7 +103,7 @@ The xml below contains these adjustments.
 ```xml showLineNumbers
 <?xml version="1.0" encoding="UTF-8"?>
 <Luminaire xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-  xsi:noNamespaceSchemaLocation="https://gldf.io/xsd/l3d/l3d.xsd">
+  xsi:noNamespaceSchemaLocation="https://gldf.io/xsd/l3d/0.11.0/l3d.xsd">
   <Header>
     <CreatedWithApplication>Example-Tool</CreatedWithApplication>
     <CreationTimeCode>2021-03-03T10:10:10</CreationTimeCode>

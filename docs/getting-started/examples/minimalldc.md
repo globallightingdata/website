@@ -20,22 +20,21 @@ Download the example here: <a href="https://github.com/globallightingdata/exampl
 
 ### product.xml
 
-```xml {14-38,55} showLineNumbers
+```xml {16-36,55} showLineNumbers
 <?xml version="1.0" encoding="UTF-8"?>
-<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://gldf.io/xsd/gldf/1.0.0-rc.1/gldf.xsd">
+<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="https://gldf.io/xsd/gldf/1.0.0-rc.3/gldf.xsd">
   <Header>
     <Manufacturer>Philips Lighting</Manufacturer>
-    <CreationTimeCode>2021-01-25T09:30:47Z</CreationTimeCode>
-    <CreatedWithApplication>N/A</CreatedWithApplication>
-    <FormatVersion>1.0.0-rc.1</FormatVersion>
-    <LicenseKeys>
-      <LicenseKey application="RELUX">LicenseKey</LicenseKey>
-    </LicenseKeys>
-    <ReluxMemberId>ReluxMemberId</ReluxMemberId>
+    <FormatVersion major="1" minor="0" pre-release="3" />
+    <CreatedWithApplication>Visual Studio Code</CreatedWithApplication>
+    <GldfCreationTimeCode>2023-03-29T14:30:00Z</GldfCreationTimeCode>
+    <UniqueGldfId>d0c97760-6e30-4ed7-ad3e-7ce11d105438</UniqueGldfId>
   </Header>
   <GeneralDefinitions>
     <Files>
-      <File id="ldtFile" contentType="ldc/eulumdat" type="localFileName">SP542P SRD L1480 U3 1 xLED66S_940 OC.ldt</File>
+      <File id="ldtFile" contentType="ldc/eulumdat" 
+            type="localFileName">SP542P SRD L1480 U3 1 xLED66S_940 OC.ldt</File>
     </Files>
     <Photometries>
       <Photometry id="photometry01">
@@ -53,8 +52,8 @@ Download the example here: <a href="https://github.com/globallightingdata/exampl
     <Emitters>
       <Emitter id="emitter01">
         <FixedLightEmitter>
-          <PhotometryReference photometryId="photometry01"/>
-          <LightSourceReference fixedLightSourceId="lightSource01"/>
+          <PhotometryReference photometryId="photometry01" />
+          <LightSourceReference fixedLightSourceId="lightSource01" />
           <RatedLuminousFlux>6600</RatedLuminousFlux>
         </FixedLightEmitter>
       </Emitter>
@@ -62,20 +61,21 @@ Download the example here: <a href="https://github.com/globallightingdata/exampl
   </GeneralDefinitions>
   <ProductDefinitions>
     <ProductMetaData>
+      <UniqueProductId>86acec52-1dab-4f14-874e-d9251c5c093f</UniqueProductId>
       <ProductNumber>
         <Locale language="de">SP542P</Locale>
       </ProductNumber>
       <Name>
-        <Locale language="de">Pendelleuchten SP542P LED66S/940</Locale>
+        <Locale language="de">Pendelleuchte SP542P LED66S/940</Locale>
       </Name>
     </ProductMetaData>
     <Variants>
       <Variant id="variant1">
         <Name>
-          <Locale language="en">Variant 1</Locale>
+          <Locale language="de">Variante 1</Locale>
         </Name>
         <Geometry>
-          <EmitterReference emitterId="emitter01"></EmitterReference>
+          <EmitterReference emitterId="emitter01" />
         </Geometry>
       </Variant>
     </Variants>

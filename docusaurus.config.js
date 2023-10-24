@@ -109,7 +109,7 @@ const config = {
           },
           {
             to: "tools/",
-            label: "Tools",
+            label: "L3D Editor",
             position: "left",
           },
           /* Lokalisierung */

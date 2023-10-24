@@ -20,9 +20,10 @@ A single `File` element contains various **metadata** about a concrete file. Wha
 
 ## XML example
 
-```xml {5-7}
+```xml {6-8}
 <?xml version="1.0" encoding="UTF-8"?>
-<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="gldf.xsd">
+<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+      xsi:noNamespaceSchemaLocation="https://gldf.io/xsd/gldf/1.0.0-rc.3/gldf.xsd">
   <Header/>
   <GeneralDefinitions>
     <Files>
@@ -45,8 +46,9 @@ Once declared, all files can be referenced in subsequent XML elements via their 
 
 ```xml showLineNumbers
 <?xml version="1.0" encoding="UTF-8"?>
-<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="gldf.xsd">
-  <Header/
+<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="https://gldf.io/xsd/gldf/1.0.0-rc.3/gldf.xsd">
+  <Header/>
   <GeneralDefinitions>
     <Files>
       // highlight-next-line
@@ -123,7 +125,8 @@ The example below shows a `File` element with a **reference** to a binary file *
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="gldf.xsd">
+<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+      xsi:noNamespaceSchemaLocation="https://gldf.io/xsd/gldf/1.0.0-rc.3/gldf.xsd">
   <Header/>
   <GeneralDefinitions>
     <Files>
@@ -167,7 +170,8 @@ The other way to reference a file is to store it online and specify the URI in t
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="gldf.xsd">
+<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+      xsi:noNamespaceSchemaLocation="https://gldf.io/xsd/gldf/1.0.0-rc.3/gldf.xsd">
   <Header/>
   <GeneralDefinitions>
     <Files>
@@ -187,9 +191,10 @@ Make sure that the file **can be accessed** and that the address **does not chan
 
 With the optional attribute `language` it is possible to specify in which language a file is available
 
-```xml {6,7}
+```xml {7,8}
 <?xml version="1.0" encoding="UTF-8"?>
-<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="gldf.xsd">
+<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+      xsi:noNamespaceSchemaLocation="https://gldf.io/xsd/gldf/1.0.0-rc.3/gldf.xsd">
   <Header/>
   <GeneralDefinitions>
     <Files>

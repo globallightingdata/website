@@ -16,12 +16,14 @@ This example demonstrates a GLDF file with an L3D model, two light outputs, and 
 
 ```xml showLineNumbers
 <?xml version="1.0" encoding="UTF-8"?>
-<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://gldf.io/xsd/gldf/1.0.0-rc.1/gldf.xsd">
+<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="https://gldf.io/xsd/gldf/1.0.0-rc.3/gldf.xsd">
   <Header>
     <Manufacturer>SLV</Manufacturer>
-    <CreationTimeCode>2021-05-25T14:40:00Z</CreationTimeCode>
-    <CreatedWithApplication>Keyboard</CreatedWithApplication>
-    <FormatVersion>1.0.0-rc.1</FormatVersion>
+    <FormatVersion major="1" minor="0" pre-release="3" />
+    <CreatedWithApplication>Visual Studio Code</CreatedWithApplication>
+    <GldfCreationTimeCode>2023-03-29T14:30:00Z</GldfCreationTimeCode>
+    <UniqueGldfId>d23f5211-3ee0-44bc-aaa6-56d86add35d1</UniqueGldfId>
   </Header>
   <GeneralDefinitions>
     <Files>
@@ -34,26 +36,26 @@ This example demonstrates a GLDF file with an L3D model, two light outputs, and 
     </Files>
     <Sensors>
       <Sensor id="sensor1">
-        <SensorFileReference fileId="sensor"/>
+        <SensorFileReference fileId="sensor" />
       </Sensor>
     </Sensors>
     <Photometries>
       <Photometry id="LightEmitterNarrow">
-        <PhotometryFileReference fileId="ldtnarrow"/>
+        <PhotometryFileReference fileId="ldtnarrow" />
         <DescriptivePhotometry>
           <LuminousEfficacy>89</LuminousEfficacy>
           <CIE-FluxCode>98 100 100 100 100</CIE-FluxCode>
         </DescriptivePhotometry>
       </Photometry>
       <Photometry id="LightEmitterMiddle">
-        <PhotometryFileReference fileId="ldtmiddle"/>
+        <PhotometryFileReference fileId="ldtmiddle" />
         <DescriptivePhotometry>
           <LuminousEfficacy>96</LuminousEfficacy>
           <CIE-FluxCode>93 98 99 100 100</CIE-FluxCode>
         </DescriptivePhotometry>
       </Photometry>
       <Photometry id="LightEmitterWide">
-        <PhotometryFileReference fileId="ldtwide"/>
+        <PhotometryFileReference fileId="ldtwide" />
         <DescriptivePhotometry>
           <LuminousEfficacy>96</LuminousEfficacy>
           <CIE-FluxCode>69 95 99 100 100</CIE-FluxCode>
@@ -79,9 +81,6 @@ This example demonstrates a GLDF file with an L3D model, two light outputs, and 
         <Name>
           <Locale language="en">LED</Locale>
         </Name>
-        <Description>
-          <Locale language="en">LED module</Locale>
-        </Description>
         <RatedInputPower>81</RatedInputPower>
         <ColorInformation>
           <ColorRenderingIndex>80</ColorRenderingIndex>
@@ -107,39 +106,36 @@ This example demonstrates a GLDF file with an L3D model, two light outputs, and 
     <ControlGears>
       <ControlGear id="ControlGear1">
         <Name>
-          <Locale language="en">Control Gear1 1</Locale>
+          <Locale language="en">Control Gear 1</Locale>
         </Name>
-        <Description>
-          <Locale language="en">Control Gear1 1</Locale>
-        </Description>
       </ControlGear>
     </ControlGears>
     <Emitters>
       <Emitter id="em-n-n">
         <FixedLightEmitter emergencyBehaviour="None">
-          <PhotometryReference photometryId="LightEmitterNarrow"/>
-          <LightSourceReference fixedLightSourceId="LightSource1"/>
+          <PhotometryReference photometryId="LightEmitterNarrow" />
+          <LightSourceReference fixedLightSourceId="LightSource1" />
           <RatedLuminousFlux>1600</RatedLuminousFlux>
         </FixedLightEmitter>
       </Emitter>
       <Emitter id="em-m-n">
         <FixedLightEmitter emergencyBehaviour="None">
-          <PhotometryReference photometryId="LightEmitterMiddle"/>
-          <LightSourceReference fixedLightSourceId="LightSource2"/>
+          <PhotometryReference photometryId="LightEmitterMiddle" />
+          <LightSourceReference fixedLightSourceId="LightSource2" />
           <RatedLuminousFlux>7800</RatedLuminousFlux>
         </FixedLightEmitter>
       </Emitter>
       <Emitter id="em-w-n">
         <FixedLightEmitter emergencyBehaviour="None">
-          <PhotometryReference photometryId="LightEmitterWide"/>
-          <LightSourceReference fixedLightSourceId="LightSource3"/>
+          <PhotometryReference photometryId="LightEmitterWide" />
+          <LightSourceReference fixedLightSourceId="LightSource3" />
           <RatedLuminousFlux>7800</RatedLuminousFlux>
         </FixedLightEmitter>
       </Emitter>
       <Emitter id="em-w-c">
         <FixedLightEmitter emergencyBehaviour="Combined">
-          <PhotometryReference photometryId="LightEmitterWide"/>
-          <LightSourceReference fixedLightSourceId="LightSource3"/>
+          <PhotometryReference photometryId="LightEmitterWide" />
+          <LightSourceReference fixedLightSourceId="LightSource3" />
           <RatedLuminousFlux>7800</RatedLuminousFlux>
           <EmergencyRatedLuminousFlux>100</EmergencyRatedLuminousFlux>
         </FixedLightEmitter>
@@ -152,17 +148,20 @@ This example demonstrates a GLDF file with an L3D model, two light outputs, and 
         </FixedLightEmitter>
       </Emitter>
       <Emitter id="em-s">
-        <Sensor sensorId="sensor1"/>
+        <SensorEmitter>
+          <SensorReference sensorId="sensor1" />
+        </SensorEmitter>
       </Emitter>
     </Emitters>
     <Geometries>
       <ModelGeometry id="ModelGeometry">
-        <GeometryFileReference fileId="geometryFile" levelOfDetail="Medium"/>
+        <GeometryFileReference fileId="geometryFile" levelOfDetail="Medium" />
       </ModelGeometry>
     </Geometries>
   </GeneralDefinitions>
   <ProductDefinitions>
     <ProductMetaData>
+      <UniqueProductId>2fc6275d-1ecd-496a-8c55-b3d1b3b5d462</UniqueProductId>
       <ProductNumber>
         <Locale language="en">111352</Locale>
       </ProductNumber>
@@ -170,21 +169,21 @@ This example demonstrates a GLDF file with an L3D model, two light outputs, and 
         <Locale language="en">NEW TRIA 2</Locale>
       </Name>
       <Description>
-        <Locale language="de">Einbauleuchte, zweiflammig, QR-C51, rechteckig, aluminium  gebürstet, max. 100W, inkl. Clipfedern</Locale>
-        <Locale language="en">Recessed luminaire, two.....</Locale>
+        <Locale language="en">Recessed luminaire, two-flame, QR-C51, rectangular, 
+          brushed aluminum, max. 100W, incl. clip springs</Locale>
       </Description>
       <ProductSeries>
-        <ProductSerie>
+        <ProductSerie id="serie1">
           <Name>
             <Locale language="en">TRIA</Locale>
           </Name>
           <Hyperlinks>
-            <Hyperlink href="https://slv.com">Manufacturer URL</Hyperlink>
+            <Hyperlink href="https://slv.com">SLV Website</Hyperlink>
           </Hyperlinks>
         </ProductSerie>
       </ProductSeries>
       <Pictures>
-        <Image fileId="productImage" imageType="Product Picture"/>
+        <Image fileId="productImage" imageType="Product Picture" />
       </Pictures>
       <DescriptiveAttributes>
         <Electrical>
@@ -208,7 +207,7 @@ This example demonstrates a GLDF file with an L3D model, two light outputs, and 
         </Description>
         <Mountings>
           <Ceiling>
-            <Recessed recessedDepth="11"/>
+            <Recessed recessedDepth="11" />
           </Ceiling>
         </Mountings>
         <Geometry>
@@ -236,7 +235,7 @@ This example demonstrates a GLDF file with an L3D model, two light outputs, and 
         </Description>
         <Mountings>
           <Ceiling>
-            <Recessed recessedDepth="11"/>
+            <Recessed recessedDepth="11" />
           </Ceiling>
         </Mountings>
         <Geometry>
@@ -267,7 +266,7 @@ This example demonstrates a GLDF file with an L3D model, two light outputs, and 
         </Description>
         <Mountings>
           <Ceiling>
-            <Recessed recessedDepth="11"/>
+            <Recessed recessedDepth="11" />
           </Ceiling>
         </Mountings>
         <Geometry>
@@ -276,11 +275,11 @@ This example demonstrates a GLDF file with an L3D model, two light outputs, and 
               <EmitterObjectExternalName>LEO0</EmitterObjectExternalName>
             </EmitterReference>
             <EmitterReference emitterId="em-w-n">
-            <EmitterObjectExternalName>LEO1</EmitterObjectExternalName>
-          </EmitterReference>
-          <EmitterReference emitterId="em-s">
-            <EmitterObjectExternalName>Sensor</EmitterObjectExternalName>
-          </EmitterReference>
+              <EmitterObjectExternalName>LEO1</EmitterObjectExternalName>
+            </EmitterReference>
+            <EmitterReference emitterId="em-s">
+              <EmitterObjectExternalName>Sensor</EmitterObjectExternalName>
+            </EmitterReference>
           </ModelGeometryReference>
         </Geometry>
         <DescriptiveAttributes>

@@ -22,18 +22,16 @@ It also references a basic L3D file in the file definitions. The screenshot belo
 
 The following XML code references the single light-emitting object of the 3D file. The 3D file is referenced in line 15-16 and the LEO inside this 3D file in the Emitter in line 68.
 
-```xml {15-16,70} showLineNumbers
+```xml {15-16,69} showLineNumbers
 <?xml version="1.0" encoding="UTF-8"?>
-<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://gldf.io/xsd/gldf/1.0.0-rc.1/gldf.xsd">
+<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="https://gldf.io/xsd/gldf/1.0.0-rc.3/gldf.xsd">
   <Header>
     <Manufacturer>Philips Lighting</Manufacturer>
-    <CreationTimeCode>2021-01-25T09:30:47Z</CreationTimeCode>
-    <CreatedWithApplication>N/A</CreatedWithApplication>
-    <FormatVersion>1.0.0-rc.1</FormatVersion>
-    <LicenseKeys>
-      <LicenseKey application="RELUX">LicenseKey</LicenseKey>
-    </LicenseKeys>
-    <ReluxMemberId>LicenseKey</ReluxMemberId>
+    <FormatVersion major="1" minor="0" pre-release="3" />
+    <CreatedWithApplication>Visual Studio Code</CreatedWithApplication>
+    <GldfCreationTimeCode>2023-03-29T14:30:00Z</GldfCreationTimeCode>
+    <UniqueGldfId>03fe1a15-8691-4cf0-876c-f9a67aa0e66b</UniqueGldfId>
   </Header>
   <GeneralDefinitions>
     <Files>
@@ -72,17 +70,18 @@ The following XML code references the single light-emitting object of the 3D fil
   </GeneralDefinitions>
   <ProductDefinitions>
     <ProductMetaData>
+      <UniqueProductId>b1f7c1d1-d325-4640-862f-b732a98a1926</UniqueProductId>
       <ProductNumber>
         <Locale language="de">SP542P</Locale>
       </ProductNumber>
       <Name>
-        <Locale language="de">Pendelleuchten SP542P LED66S/940</Locale>
+        <Locale language="de">Pendelleuchte SP542P LED66S/940</Locale>
       </Name>
     </ProductMetaData>
     <Variants>
       <Variant id="variant1">
         <Name>
-          <Locale language="en">Variant 1</Locale>
+          <Locale language="de">Variante 1</Locale>
         </Name>
         <Mountings>
           <Ceiling>

@@ -16,12 +16,14 @@ This example demonstrates a simple minimal GLDF implementation of the Philips SP
 
 ```xml showLineNumbers
 <?xml version="1.0" encoding="UTF-8"?>
-<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://gldf.io/xsd/gldf/1.0.0-rc.1/gldf.xsd">
+<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="https://gldf.io/xsd/gldf/1.0.0-rc.3/gldf.xsd">
   <Header>
-    <Manufacturer>Philips</Manufacturer>
-    <CreationTimeCode>2021-01-25T09:30:47Z</CreationTimeCode>
-    <CreatedWithApplication>N/A</CreatedWithApplication>
-    <FormatVersion>1.0.0-rc.1</FormatVersion>
+    <Manufacturer>Philips Lighting</Manufacturer>
+    <FormatVersion major="1" minor="0" pre-release="3" />
+    <CreatedWithApplication>Visual Studio Code</CreatedWithApplication>
+    <GldfCreationTimeCode>2023-03-29T14:30:00Z</GldfCreationTimeCode>
+    <UniqueGldfId>badec930-7355-44b6-8808-4682f1887b4c</UniqueGldfId>
   </Header>
   <GeneralDefinitions>
     <Files>
@@ -55,10 +57,10 @@ This example demonstrates a simple minimal GLDF implementation of the Philips SP
     <ControlGears>
       <ControlGear id="controlGear01">
         <Name>
-          <Locale language="de">Betriebsgerät 01</Locale>
+          <Locale language="de">Elektronisches Vorschaltgerät</Locale>
         </Name>
         <Description>
-          <Locale language="de">PSD [Elektronisches Betriebsgerät, DALI-regelbar]</Locale>
+          <Locale language="de">DALI-regelbar</Locale>
         </Description>
       </ControlGear>
     </ControlGears>
@@ -83,33 +85,20 @@ This example demonstrates a simple minimal GLDF implementation of the Philips SP
         <Locale language="de">SP542P LED66S/940 PSD ACL SMT L1480 WH</Locale>
       </ProductNumber>
       <Name>
-        <Locale language="de">TrueLevel, Pendelleuchten SP542P LED66S/940 PSD ACL SMT L1480 WH</Locale>
+        <Locale language="de">TrueLevel, Pendelleuchte SP542P LED66S/940 PSD ACL SMT L1480 WH</Locale>
       </Name>
       <Description>
-        <Locale language="de">Die Leuchten von heute müssen mit mehr glänzen als nur mit Licht. In Büroräumen
-          muss die ideale Leuchte Energieeinsparungen mit sich bringen und auch in Zukunft
-          verwendbar ein. Außerdem muss es möglich sein, sie mit Lichtregelsystemen zu
-          verbinden. Natürlich sollte sie sich auch nahtlos in die Einrichtung der Büros
-          einfügen. Philips TrueLevel erfüllt all diese Anforderungen und hat noch mehr zu
-          bieten. TrueLevel basiert auf der überlegenen Lichttechnik der Philips TrueLine
-          Produktserie für Büroräume und überzeugt mit hoher Effizienz, der besten
-          normgerechten Bürobeleuchtung und der Möglichkeit der Einbindung in
-          Lichtsysteme. Nicht zuletzt fügen sich die edlen TrueLevel Leuchten mit ihrem
-          minimalistischen Design harmonisch in die Inneneinrichtung ein und werten diese als
-          eigenes Designelement auf.</Locale>
-        <Locale language="en">No translation available</Locale>
+        <Locale language="de">TrueLevel basiert auf Philips TrueLine</Locale>
       </Description>
       <ProductSeries>
         <ProductSerie>
           <Name>
-            <Locale language="en">Family 01</Locale>
-            <Locale language="de">Familie 01</Locale>
+            <Locale language="de">Philips TrueLevel</Locale>
           </Name>
         </ProductSerie>
         <ProductSerie>
           <Name>
-            <Locale language="en">E2</Locale>
-            <Locale language="de">D2</Locale>
+            <Locale language="de">Philips TrueLine</Locale>
           </Name>
         </ProductSerie>
       </ProductSeries>
@@ -130,15 +119,13 @@ This example demonstrates a simple minimal GLDF implementation of the Philips SP
     <Variants>
       <Variant id="variant1">
         <ProductNumber>
-          <Locale language="de">Variant: SP542P LED66S/940 PSD ACL SMT L1480 WH</Locale>
+          <Locale language="de">SP542P LED66S/940 PSD ACL SMT L1480 WH</Locale>
         </ProductNumber>
         <Name>
           <Locale language="de">Variante 1</Locale>
-          <Locale language="en">Variant 1</Locale>
         </Name>
         <Description>
           <Locale language="de">Keine Variantenbeschreibung vorhanden</Locale>
-          <Locale language="en">No variant description available</Locale>
         </Description>
         <GTIN>11111111</GTIN>
         <Mountings>

@@ -21,7 +21,7 @@ The following units are currently in use:
 | Luminance | candela per square meter | \[cd/m²\] |
 | Power | watt | \[W\] |
 | Voltage | volt | \[V\] |
-| Colour temperature | kelvin | \[K\] |
+| Color temperature | kelvin | \[K\] |
 | Luminous flux | lumen | \[lm\] |
 | Time | hours | \[h\] |
 | Mass | kilogram | \[kg\] |

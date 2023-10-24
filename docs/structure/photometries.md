@@ -20,9 +20,10 @@ First of all, a single `Photometry` element references a [**File**](/docs/struct
 
 ## XML example
 
-```xml {8-12} showLineNumbers
+```xml {9-13} showLineNumbers
 <?xml version="1.0" encoding="UTF-8"?>
-<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="gldf.xsd">
+<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="https://gldf.io/xsd/gldf/1.0.0-rc.3/gldf.xsd">
   <Header/>
   <GeneralDefinitions>
     <Files>
@@ -50,9 +51,10 @@ Its simply the **definition of a ldc file as a photometry** for further usage in
 
 Once declared, all photometries can be referenced in subsequent XML elements via their `id` attribute **one or several** times.
 
-```xml  {9,20} showLineNumbers
+```xml  {10,21} showLineNumbers
 <?xml version="1.0" encoding="UTF-8"?>
-<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="gldf.xsd">
+<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="https://gldf.io/xsd/gldf/1.0.0-rc.3/gldf.xsd">
   <Header/>
   <GeneralDefinitions>
     <Files>
@@ -84,9 +86,10 @@ The `Photometry` with `id` *photometry1* (line 9) is referenced once inside the 
 
 It is possible to **optionally** specify various metadata inside a photometry element to **complement** the content of the somewhat limited ldc file formats like IES and Eulumdat.
 
-```xml {11-35} showLineNumbers
+```xml {12-36} showLineNumbers
 <?xml version="1.0" encoding="UTF-8"?>
-<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="gldf.xsd">
+<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="https://gldf.io/xsd/gldf/1.0.0-rc.3/gldf.xsd">
   <Header/>
   <GeneralDefinitions>
     <Files>

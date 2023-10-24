@@ -33,7 +33,7 @@ The following sources can of course be viewed in any order. However, if you have
   With the knowledge from the documentation and GLDF example files, we recommend creating your own GLDFs for the first time. Our predesigned templates can provide a starting point for this. A separate chapter in the documentation is dedicated to them here: [**Templates**](/docs/getting-started/templates). Or visit the [**Github reposity**](https://github.com/globallightingdata/templates) directly. If you are inexperienced in working with XML, we recommend to read the [**Requirements**](#requirements) chapter beforehand.
 
 1. **Tools**  
-  Not everything has to be written by hand. In the [**Tooling section**](/tools) you can find useful applications for working with GLDF. And in the [**Download**](/download#gldf-parser) area  you will find further libraries that can be used in your own software to read and write GLDF & L3D - again open source. There are also separate chapters on both in the documentation: [**GLDF Parser**](/docs/tools-dev/gldf-net-parser), [**L3D Parser**](/docs/tools-dev/l3d-net-parser), [**L3D Editor**](/docs/tools-dev/l3d-editor) and [**GLDF Editor**](/docs/tools-dev/gldf-editor)
+  Not everything has to be written by hand. In the [**Download**](/download#gldf-parser) area  you will find libraries that can be used in your own software to read and write GLDF & L3D - again open source. There are also separate chapters on both in the documentation: [**GLDF Parser**](/docs/tools-dev/gldf-net-parser), [**L3D Parser**](/docs/tools-dev/l3d-net-parser). Finally, you can use our [**L3D Editor**](/docs/tools-dev/l3d-editor) to create you own 3D models for GLDF.
 
 1. **XSD reference**  
   And lastly, the [**XSD reference**](pathname:///xsd-reference/index_Root.html) is intended for the daily work with GLDF. It describes the complete XML Schema visually. And is useful to look up possible elements and attributes, their required order, data types, enumerations and more easily. How to use the XSD reference is described [**in the documentation**](/docs/getting-started/xsd-reference) as well.
@@ -83,10 +83,10 @@ If you would like to test it out right away, copy and paste this XML of a minima
 ```xml showLineNumbers
 <?xml version="1.0" encoding="UTF-8"?>
 <Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:noNamespaceSchemaLocation="https://gldf.io/xsd/gldf/gldf.xsd">
+      xsi:noNamespaceSchemaLocation="https://gldf.io/xsd/gldf/1.0.0-rc.3/gldf.xsd">
   <Header>
-    <Manufacturer>GlobalLightingData</Manufacturer>
-    <FormatVersion major="1" minor="0" pre-release="2" />
+    <Manufacturer>Manufacturer XY</Manufacturer>
+    <FormatVersion major="1" minor="0" pre-release="3" />
     <CreatedWithApplication>Visual Studio Code</CreatedWithApplication>
     <GldfCreationTimeCode>2023-03-29T14:30:00Z</GldfCreationTimeCode>
     <UniqueGldfId>e19ed73e-fcd6-4469-a359-58fd80510e9c</UniqueGldfId>
@@ -100,13 +100,13 @@ If you would like to test it out right away, copy and paste this XML of a minima
         <Locale language="en">42</Locale>
       </ProductNumber>
       <Name>
-        <Locale language="en">Example Luminaire</Locale>
+        <Locale language="en">Example Luminaire of Manufacturer XY</Locale>
       </Name>
     </ProductMetaData>
     <Variants>
       <Variant id="variant-1">
         <Name>
-          <Locale language="en">Example Luminaire Variant 1</Locale>
+          <Locale language="en">Example Luminaire Variant 1 of Manufacturer XY</Locale>
         </Name>
       </Variant>
     </Variants>

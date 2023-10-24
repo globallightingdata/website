@@ -4,182 +4,200 @@ sidebar_label: Header
 ---
 <!-- markdownlint-disable MD033 (no html im markdown) -->
 
-  The `Header` is the first part of the GLDF product.xml file. It contains meta-information about the manufacturer, GLDF version. And Relux/DIAL license information if applicable. It does not necessarily have product information.
+The `Header` is the first part of the GLDF **product.xml** file und the first child element below `Root`. It contains **meta-information** about the manufacturer, **contact information** and the used **GLDF version**. As well as **license information** if applicable. It does **not contain any product information** yet.
 
-<img src="/img/docs/structure/header.webp" alt="GLDF XML structure header" width="400" />
+<img src="/img/docs/structure/header-xsd.webp" alt="GLDF XML header XSD location" width="440" />
 
-## Author
+## Mandatory `Header` part
 
-The `Author` describes the author of the GLDF file. The author can be a company or the name of an individual who made the file.
+Some of the metadata are **mandatory for every GLDF**. They are intended to make it easier for users as well as applications to **identify when, by whom, and how** a GLDF was created. And which **version** of the format was used. Therefore every `Header` element **must** begin with **5 mandatory children**:
 
-:::important Convention
-Datatype: **xs:string**
-:::
+<img src="/img/docs/structure/header-mandatory.webp" alt="GLDF XML header mandatory childs" width="430" />
 
-## Manufacturer
+- `Manufacturer`  
+  The probably most important element first: The manufacturer of the product inside the GLDF. Its typically the **name of the company** that produces and/or distributes the luminaire.
+- `FormatVersion`  
+  This element specifies the **GLDF version in use**. For versioning, we adhere to the [**SemVer**](https://semver.org) standard. SemVer helps to determine if updates to the *product.xml*  file are needed, particularly in cases of breaking changes. Or if a newer XSD can be referenced without risking data incompatibility.
+- `CreatedWithApplication`
+  `CreatedWithApplication` describes **which application** was used to **create** this GLDF file. Ths could be the name of the text editor the author used. The PIM system it was exported from, a software service running in background, an online GLDF editor or a data converter perhaps. This information can be very useful in **debugging scenarios** when something went wrong.
+- `GldfCreationTimeCode`
+  Please refer to [**Timecodes**](/docs/conventions/ids-and-timecodes/#timecodes) where `GldfCreationTimeCode`, and its counterpart `ProductDataTimeCode`, are explained in detail.
+- `UniqueGldfId`  
+  For the last but not least important element please refer to [**Unique Ids**](/getting-started/#unique-ids). **Caution**: **Never** copy `UniqueGldfId` between multiple GLDFs. Even not for the same product like in the `UniqueProductId` element. Create **always** a **new id** for each and every GLDF file you write and deploy. We **strongly recommend to use UUIDS** for this without exception.
 
-The `Manufacturer` will typically be the name of the company that produces or sells the luminaire.
+### Mandatory XML example
 
-:::important Convention
-Datatype: **xs:string**
-:::
+Here is an example of **all mandatory child elements** which each `Header` element in GLDF **must contain**. The `Header` itself is the first child of `Root` - the parent element of all content in GLDF. The example itself begins in line 5:
 
-## CreationTimeCode
+- Line 5: This GLDF is from the fictive **manufacturer ACME**.
+- Line 6: It is based on the GLDF version **1.0-rc.3**.
+- Line 7: The IDE it was created with was Visual Studio Code.
+- Line 8: The GLDF was created on October 19th 2023, at 05:30 Coordinated Universal Time (Z).
+- Line 9: The **worldwide unique** id for **this** GLDF would be **93b821be-e4a6-4758-bc5e-7d98499fe664**.
 
-`CreationTimeCode` is the date and time when you create or generate the GLDF file. The data type is xs:dateTime
-
-:::important Convention
-Datatype: **xs:dateTime**
-:::
-
-:::important Convention
-The format of xs:dateTime is: yyyy-mm-ddThh:mm:ss.sssssssssssszzzzzz
-
-|**Lexical form**|**Value**|
-| :--- | :------: |
-| yyyy | A four-digit numeral that represents the year.  |
-| mm | A two-digit numeral that represents the month. |
-| dd | A two-digit numeral that represents the day. |
-| hh | A two-digit numeral that represents the hour. |
-| mm | A two-digit numeral that represents the minute. |
-| ss | A two-digit numeral that represents the second. |  
-| .ssssssssssss | Optional. 1-to-12 digit numeral that represents fractional seconds. |  
-| zzzzzz | Optional, represents the time zone. |
-:::
-
-Example:
-
-```xml
-<CreationTimeCode>2022-04-03T18:07:42Z</CreationTimeCode>
+```xml {4-10} showLineNumbers
+<?xml version="1.0" encoding="UTF-8"?>
+<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="https://gldf.io/xsd/gldf/1.0.0-rc.3/gldf.xsd">
+  <Header>
+    <Manufacturer>ACME</Manufacturer>
+    <FormatVersion major="1" minor="0" pre-release="3" />
+    <CreatedWithApplication>Visual Studio Code</CreatedWithApplication>
+    <GldfCreationTimeCode>2023-10-19T05:30:00Z</GldfCreationTimeCode>
+    <UniqueGldfId>93b821be-e4a6-4758-bc5e-7d98499fe664</UniqueGldfId>
+  </Header>
+  <GeneralDefinitions>
+    <!-- Skipped for now -->
+  </GeneralDefinitions>
+  <ProductDefinitions>
+    <!-- Skipped for now -->
+  </ProductDefinitions>
+</Root>
 ```
 
-Example:
+## Optional `Header` part
+
+The next part of the `Header` is not mandatory. However, we **recommend to include details** such as the manufacturer's image and contact information for **potential customers**. And especially member Ids for [DIALux](https://www.dialux.com) and [RELUX](https://relux.com/en/relux-desktop.html) as well as possibly further license information, should these be necessary for certain applications.
+
+<img src="/img/docs/structure/header-optional.webp" alt="GLDF XML header optional childs" width="430" />
+
+The highlighted child elements are described in more detail below.
+
+### `ProductDataTimeCode`
+
+Please refer to [**Timecodes**](/docs/conventions/ids-and-timecodes/#timecodes) where `ProductDataTimeCode` and the difference to `GldfCreationTimeCode` are explained.
+
+### `DefaultLanguage`
+
+Should the GLDF file provide multiple translations, `DefaultLanguage` specifies the language, that applications should use as a **fallback** when the user's current GUI language doesn't match any of the available translations. If `DefaultLanguage` is not provided, the implementation will be **application-specific** and preferably use English. See also [**Creating good GLDF files**](/docs/tips/good-products/#provide-a-consistent-default-language)
+
+The data type for `DefaultLanguage` is *xs:language* and has to be provided in lowercase as a [**2-letter ISO 639-1 language code**](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes).
 
 ```xml
-<CreationTimeCode>2023-02-08T12:00:00-02:00</CreationTimeCode>
+<DefaultLanguage>en</DefaultLanguage>
 ```
 
-## CreatedWithApplication
+### `ManufacturerLogo`
 
-This section describes which application the author used to make the GLDF file.
+This element allows to distribute a manufacturer logo or image within the GLDF. You have to define the image as a [File](/docs/structure/files.md) element first. And can then simply [reference](/docs/conventions/referencing.md) the `File` in the `Header` using the `ManufacturerLogo` element. [Files](/docs/structure/files.md) can be either locally inside the [GLDF Zip container](/docs/container/about-container.md) or point to a file hosted online. See [Files](/docs/structure/files.md) documentation for futher [details](/docs/structure/files#file-location).
 
-:::important Convention
-Datatype: **xs:string**
-:::
+An manufacturer logo hosted online could be written in GLDF like this:
 
-## FormatVersion
-
-This section describes which Version of GLDF is being used.
-
-:::important Convention
-Datatype: **xs:string** must be **1.0.0-rc.1**
-:::
-
-## DefaultLanguage
-
-If the GLDF file provides mutiple translations, `DefaultLanguage` describes the language which applications should fall back to display this GLDF, if no one matches the applications current GUI language. Should `DefaultLanguage` not be provided, the implementation will be application-specific (and preferably English).
-
-:::important Convention
-Datatype: **xs:language**
-:::
-
-## LicenseKeys
-
-For Relux and DIALux to utilize the GLDF file to its full extent, you may need to add a license key. The key is provided to the manufacturers by Relux and DIAL. Further 3rd party license keys are also possible, should the be required.
-
-<img src="/img/docs/structure/licensekeys.webp" alt="GLDF XML structure header" width="700" />
-
-The content of the `LicenceKey` Element shall be the key as provided by Relux or DIALux. The application tag will determine the company the license key is intended for.
-
-:::important Convention
-Datatype LicenseKey: **xs:string**
-
-Datatype application: **xs:string**
-:::
-
-```xml {6-9} showLineNumbers
+```xml {10,14-15} showLineNumbers
+<?xml version="1.0" encoding="UTF-8"?>
+<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+      xsi:noNamespaceSchemaLocation="https://gldf.io/xsd/gldf/1.0.0-rc.3/gldf.xsd">
 <Header>
-  <Manufacturer>Manufacturer</Manufacturer>
-  <CreationTimeCode>2021-01-25T09:30:47Z</CreationTimeCode>
-  <CreatedWithApplication>n/a</CreatedWithApplication>
-  <FormatVersion>1.0.0-rc.1</FormatVersion>
-  <LicenseKeys>
-    <LicenseKey application="RELUX">Relux Key</LicenseKey>
-    <LicenseKey application="DIALux">DIALux Key</LicenseKey>
-  </LicenseKeys>
-</Header>
+    <Manufacturer>Manufacturer XY</Manufacturer>
+    <FormatVersion major="1" minor="0" pre-release="3" />
+    <CreatedWithApplication>Visual Studio Code</CreatedWithApplication>
+    <GldfCreationTimeCode>2023-09-17T09:30:47Z</GldfCreationTimeCode>
+    <UniqueGldfId>b1d2fd82-0402-4aaa-a8db-cefcf10d71ae</UniqueGldfId>
+    <ManufacturerLogo fileId="manufacturerLogo" />
+  </Header>
+  <GeneralDefinitions>
+    <Files>
+      <File id="manufacturerLogo" contentType="image/jpg" 
+            type="url">https://example.org/logo.jpg</File>
+    </Files>
+  </GeneralDefinitions>
+  <ProductDefinitions>
+    <!-- Skipped for clarity -->
+  </ProductDefinitions>
+</Root>
 ```
 
-## ReluxMemberId and DIALuxMemberId
+### `LicenseKeys`
 
-Relux and DIAL may assign company IDs to manufacturers. These Ids will help applications associate GLDF files with a specific manufacturer.
+To fully utilize GLDF, you may need to add license keys, which can be provided by Relux, DIAL, or other third-party companies.
 
-:::important Convention
-Datatype: **xs:string**
-:::
+<img src="/img/docs/structure/header-license-keys.webp" alt="GLDF XML structure header" width="800" />
 
-## Contact
+The content of the `LicenseKey` element shall be the string provided by the respective company. The application tag determines the software for which the license key is intended for.
 
-This section holds contact information for the manufacturer. You can add an unlimited amount of contacts. Most fields are strings and you can fill them as you wish - except for email addresses and hyperlinks with a specific structure. Email addresses are the only mandatory contact information if you add contact information to the header.
-
-<img src="/img/docs/structure/contactstruct.webp" alt="GLDF XML structure for contact information within header" width="500" />
-
-You can add an unlimited amount of email addresses. The tag must contain a description and a valid E-Mail address in the "mailto" attribute of the element.
-
-<img src="/img/docs/structure/emailhyperlinks.webp" alt="GLDF XML structure for contact information within header" width="450" />
-
-```xml showLineNumbers
-<Contact>
-  <Address>
-    <Name>Name</Name>
-    <Street>Street</Street>
-    <Number>1</Number>
-    <ZIPCode>123456</ZIPCode>
-    <City>Duisburg</City>
-    <Country>Germany</Country>
-    <EMailAddresses>
-      <EMail mailto="sample@samlpe.com">E-Mail</EMail>
-      <EMail mailto="sample2@damlpe.com">E-Mail2</EMail>
-    </EMailAddresses>
-    <Websites>
-      <Hyperlink href="http://www.relux.com">Light Sample</Hyperlink>
-    </Websites>
-  </Address>
-</Contact>
+```xml {10-14} showLineNumbers
+<?xml version="1.0" encoding="UTF-8"?>
+<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+      xsi:noNamespaceSchemaLocation="https://gldf.io/xsd/gldf/1.0.0-rc.3/gldf.xsd">
+<Header>
+    <Manufacturer>Manufacturer XY</Manufacturer>
+    <FormatVersion major="1" minor="0" pre-release="3" />
+    <CreatedWithApplication>Visual Studio Code</CreatedWithApplication>
+    <GldfCreationTimeCode>2023-09-17T09:30:47Z</GldfCreationTimeCode>
+    <UniqueGldfId>9be9f0c0-7ea2-442b-8a61-464e652772d7</UniqueGldfId>
+    <LicenseKeys>
+      <LicenseKey application="RELUX">Relux Key</LicenseKey>
+      <LicenseKey application="DIALux">DIALux Key</LicenseKey>
+      <LicenseKey application="3rd party app">Other Key</LicenseKey>
+    </LicenseKeys>
+  </Header>
+  <GeneralDefinitions/>
+  <ProductDefinitions>
+    <!-- Skipped for clarity -->
+  </ProductDefinitions>
+</Root>
 ```
 
-:::important Convention
+### `DIALux/Relux MemberId`
 
-FirstName: **xs:string**
+DIAL and Relux may assign company IDs to manufacturers. These Ids will help [DIALux](https://www.dialux.com) and [RELUX](https://relux.com/en/relux-desktop.html) to associate GLDF files with a specific manufacturer and **enable his membership feature set** for GLDF.
 
-Name: **xs:string**
+See also [**Become a partner**](/docs/contribute/become-a-partner.md)
 
-Street: **xs:string**
+```xml
+<ReluxMemberId>Your Relux member id</ReluxMemberId>
+<DIALuxMemberId>Your DIALux member id</DIALuxMemberId>
+```
 
-Number: **xs:string**
+### `Author`
 
-ZIPCode: **xs:string**
+The `Author` element describes the author of the GLDF file. This could be the name of an individual who made the file, a department, a contractor or simply the company.
 
-City: **xs:string**
+```xml
+<Author>Glowbert Lightenstein</Author>
+```
 
-Country: **xs:string**
+### `Contact`
 
-Phone: **xs:string**
+This section holds **contact information of the manufacturer**. You can add multiple contacts. Most fields are strings and you can fill them as you wish - except for `EMailAddresses` and `Hyperlink` with a specific structure. At least **one email is mandatory** should you decide to add the `Contact` element to the `Header`.
 
-EMailAddresses: **xs:string**
+<img src="/img/docs/structure/header-contact.webp" alt="Contact XSD" width="650" />
 
-Attribute mailto: **xs:string**
-
-Websites: **see EMailAddresses**
-
-Hyperlink: **xs:string**
-
-href" **xs:string**
-
-language: **xs:language**
-
-region: **xs:language**
-
-countryCode: **xs:language** pattern value="[a-zA-Z]{2}
-
-AdditionalInfo: **xs:string**
+```xml {10-30} showLineNumbers
+<?xml version="1.0" encoding="UTF-8"?>
+<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="https://gldf.io/xsd/gldf/1.0.0-rc.3/gldf.xsd">
+  <Header>
+    <Manufacturer>Manufacturer XY</Manufacturer>
+    <FormatVersion major="1" minor="0" pre-release="3" />
+    <CreatedWithApplication>Visual Studio Code</CreatedWithApplication>
+    <GldfCreationTimeCode>2023-09-17T09:30:47Z</GldfCreationTimeCode>
+    <UniqueGldfId>93b821be-e4a6-4758-bc5e-7d98499fe664</UniqueGldfId>
+    <Contact>
+      <Address>
+        <Name>Example Company</Name>
+        <Street>Main Street</Street>
+        <Number>42</Number>
+        <ZIPCode>10115</ZIPCode>
+        <City>Berlin</City>
+        <Country>Germany</Country>
+        <EMailAddresses>
+          <EMail mailto="support@example.org">Contact Support</EMail>
+          <EMail mailto="sales@example.org">Contact Sales</EMail>
+        </EMailAddresses>
+        <Websites>
+          <Hyperlink href="https://example.org">Our Website</Hyperlink>
+          <Hyperlink countryCode="uk" 
+                     href="https://uk.example.org">Our UK Website</Hyperlink>
+          <Hyperlink countryCode="de" 
+                     href="https://de.example.org">Our German Website</Hyperlink>
+        </Websites>
+      </Address>
+    </Contact>
+  </Header>
+  <GeneralDefinitions />
+  <ProductDefinitions>
+    <!-- Skipped for clarity -->
+  </ProductDefinitions>
+</Root>
+```

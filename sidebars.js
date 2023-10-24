@@ -10,7 +10,7 @@ module.exports = {
       "getting-started/create-first-gldf",
       "getting-started/examples",
       {
-        "Examlpe files":[
+        "Example files":[
           "getting-started/examples/minimalgeo",
           "getting-started/examples/minimalldc",
           "getting-started/examples/philips",
@@ -24,8 +24,8 @@ module.exports = {
     ],
     "XML Structure": [
       "structure/xml-hierarchy",
+      "structure/header",
       {
-        "Manufacturer Metadada": ["structure/header"],
         "General Definitions": [
           "structure/files",
           "structure/sensors",
@@ -104,12 +104,9 @@ module.exports = {
       "tools-dev/relux",
       {
         Tooling: [
-          "tools-dev/gldf-editor",
           "tools-dev/l3d-editor",
-          "tools-dev/gldf-check",
         ],
         Parsers: ["tools-dev/gldf-net-parser", "tools-dev/l3d-net-parser"],
-        Plugins: ["tools-dev/revit-plugin", "tools-dev/autodesk-plugin"],
       },
     ],
     "Get involved": ["contribute/contribute", "contribute/become-a-partner"],
