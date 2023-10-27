@@ -2,32 +2,36 @@
 title: Sensors
 sidebar_label: Sensors
 ---
+<!-- markdownlint-disable MD033 (no html im markdown) -->
+
 ## Sensor Description
 
-The sensors listed here are understood to be motion detectors, optimally with a measured detection range, for light control. Please visit the page of [**sensNorm**](https://www.sensnorm.com) for further information about measurement procedures and accurate planning data.
+Sensors in GLDF are understood to be motion detectors for light control, optimally with a measured detection range. Please visit the page of [**sensNorm**](https://www.sensnorm.com) for further information about measurement procedures and accurate planning data.
 
-`Sensors` is the second child-element of `GeneralDefinitions` - the part in the XML where **global and reusable** elements are defined (imagine them as the building blocks of each luminaire). The definition of Sensors is **optional**.
+`Sensors` is the second child-element of `GeneralDefinitions` - the part in the XML where **global and reusable** elements are defined (imagine them as the building blocks of each luminaire). The definition of sensors is **optional**.
 
-`Sensors` are defined direct in GLDF. A single `Sensor` element references a [**File**](/docs/structure/files.md) element which describes  the location of the file which describes the detection range of the sensor. Furthermore, the `Sensor` element **can** contain various additional [**metadata**](#sensor-metadata) to complement the sensor file.
+`Sensors` are defined directly in GLDF. A single `Sensor` element references a [**File**](/docs/structure/files.md) element which describes the location of the file which describes the detection range of the sensor. Furthermore, the `Sensor` element **can** contain various additional [**metadata**](#sensor-metadata) to complement the sensor file.
 
 ## Location in XSD
 
-![Sensors in XSD](/img/docs/structure/sensors-hierarchy.webp)
+<img src="/img/docs/structure/sensors-hierarchy.webp" alt="Sensors in XSD" width="550" />
 
 ## XSD description
 
-<!-- markdownlint-disable-next-line -->
-<img src="/img/docs/structure/sensor-xsd.webp" alt="Sensors in XSD" width="550" />
+<img src="/img/docs/structure/sensors-xsd.webp" alt="Sensors in XSD" width="760" />
 
-## XML example / Referencing a sensor
+## XML example
 
-```xml {9,16} showLineNumbers
+```xml {8-9,12-14,18-20} showLineNumbers
 <Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
       xsi:noNamespaceSchemaLocation="https://gldf.io/xsd/gldf/1.0.0-rc.3/gldf.xsd">
-  <Header/>
+  <Header>
+    <!-- Skipped for clarity -->
+  </Header>
   <GeneralDefinitions>
     <Files>
-        <File id="sensorFile" contentType="sensor/sensldt" type="localFileName">sensor.ldt</File>
+        <File id="sensorFile" contentType="sensor/sensldt" 
+              type="localFileName">sensor.ldt</File>
     </Files>
     <Sensors>
         <Sensor id="sensor1">
@@ -42,7 +46,9 @@ The sensors listed here are understood to be motion detectors, optimally with a 
         </Emitter>
     </Emitters>
   </GeneralDefinitions>
-  <ProductDefinitions/>
+  <ProductDefinitions>
+    <!-- Skipped for clarity -->
+  </ProductDefinitions>
 </Root>
 ```
 
@@ -50,9 +56,7 @@ Once declared, all sensors can be referenced in subsequent XML elements via thei
 
 ## Sensor MetaData
 
-It is possible to **optionally** specify various metadata inside a sensor element to **complement** the content.
-The information can also be found in the measurement file, but for easy direct access it can also be stored here.
-**Important**: The information must be consistent with the file.
+Various **additional metadata** can be optionally specified within a `Sensor` element to **complement the sensor file** content. While this information can also be found in the measurement file, storing it here allows for **easier access**. It's important to note that this information **must be consistent with the file**.
 
 - **DetectorCharacteristic**  
   Sensing device detection area
@@ -68,7 +72,7 @@ The information can also be found in the measurement file, but for easy direct a
   - `Camera`
   - `Other`
 - **DetectorType**  
-  Sensing device detection method technology
+  Sensing device detector type
   - `Motion Detector`
   - `Presence Detector`
   - `Daylight Detector`
