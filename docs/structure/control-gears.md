@@ -2,26 +2,24 @@
 title: Control Gears
 sidebar_label: Control Gears
 ---
+<!-- markdownlint-disable MD033 (no html im markdown) -->
 
-## Description
+## ControlGear Description
 
 `ControlGears` is the sixth child-element of `GeneralDefinitions` - the part in the XML where **global and reusable** elements are defined (imagine them as the building blocks of each luminaire).
 
 Control gears primarily usage is to depict **luminaires with classic lamps** (i.e. not LEDs) and  - once definied - can be [referenced in `Equipments`](/docs/structure/equipments.md) later on. There they can be one part of a set of a classical lamp and its corresponding control gear:
 
-<!-- markdownlint-disable-next-line -->
 <img src="/img/docs/structure/controlgears-use-in-equipment.webp" alt="Use in Equipment" width="550" />
 
 ## Location in XSD
 
-<!-- markdownlint-disable-next-line -->
 <img src="/img/docs/structure/controlgears-hierarchy.webp" alt="Control gears in XSD" width="550" />
 
 ## XSD description
 
 In addition to the mandatory `id` attribute and `Name` element, `ControlGear`s **can** contain various additional [**metadata**](#controlgear-metadata). However, the whole definition of control gears is **optional**.
 
-<!-- markdownlint-disable-next-line -->
 <img src="/img/docs/structure/controlgears-xsd.webp" alt="Control gears in XSD" width="390" />
 
 ## XML example

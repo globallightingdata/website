@@ -4,7 +4,7 @@ sidebar_label: Files
 ---
 <!-- markdownlint-disable MD033 (no html im markdown) -->
 
-## Description
+## File Description
 
 `Files` is the first child element of `GeneralDefinitions` - the part in the XML where **global and reusable** elements are defined (imagine them as the building blocks of each luminaire). Probably most GLDF will contain one or more files.
 

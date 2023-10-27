@@ -28,8 +28,9 @@ The following units are currently in use:
 | Frequency | herz | \[hz\] |
 | Temperature | degrees celsius | \[°C\] |
 
-## Example
+## Units in XSD Reference
 
-Example of the specification of `RatedInputPower`
+We did our best to provide all units also in the [XSD Reference](pathname:///xsd-reference/index_Root.html).  
+Here exemplarily illustrated for the `PowerRange` element:
 
-![Units](/img//docs/conventions/gldf_measuring_units.webp)
+<img src="/img//docs/conventions/gldf_measuring_units.webp" alt="Units in the XSD reference" width="700" />

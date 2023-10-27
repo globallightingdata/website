@@ -122,6 +122,6 @@ Double-click the example.bat batchfile created in step 1. Then a file selection 
 
 ### Step 4
 
-Load up the [L3D Editor](https://l3d-editor.gldf.io) and open your new L3D file to see the result.
+Open the [L3D Editor](https://l3d-editor.gldf.io) and load your new L3D file to see the result.
 
 ![Parametric geometry in the L3D Editor](/img/docs/geometry/screenshots/resulteditor.webp)

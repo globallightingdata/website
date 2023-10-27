@@ -17,7 +17,7 @@ In summary the XSD allows...
 
 The only problem is, that the XSD is **difficult to read**. Therefore, it can also be viewed **visually** on gldf.io - in the XSD Reference section accessible via the navigation menu or here:
 
-:::tip
+:::tip link
 [XSD Reference](pathname:///xsd-reference/index_Root.html)
 :::
 

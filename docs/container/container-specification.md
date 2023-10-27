@@ -9,8 +9,6 @@ sidebar_label: Container Specification
 - The container files' **underlying format** is a standard [ZIP archive](https://en.wikipedia.org/wiki/ZIP_(file_format))
 - The container file **extension** is `.gldf`
 
-<img src="/img/docs/container/container_schema.webp" alt="GLDF Container Schema" width="750" /><br/><br/>
-
 ## Root folder content
 
 In the root of the container file the following **elements** are **expected**
@@ -21,9 +19,9 @@ Mandatory
 
 Optional
 
-- **GLDF-XSD** Schema file, with the filename `gldf.xsd`
 - Multiple **directories** for assets like photometries, images, geometry files and other
-- A `meta-information.xml` file. Intended for **additional information** like **[digital signatures](https://en.wikipedia.org/wiki/Digital_signature)**
+- A `meta-information.xml` file. Intended for **additional information** like [digital signatures](https://en.wikipedia.org/wiki/Digital_signature)
+- **GLDF-XSD** Schema file, with the filename `gldf.xsd`
 
 ## GLDF-XML file (`product.xml`)
 
@@ -65,7 +63,7 @@ For a manufacturer with the name *ManufacturerXY* and a luminaire with the name 
 ```bash
     ManufacturerXY-Pendulum-50W-LED.gldf
     |—— product.xml
-    |—— signature
+    |—— meta-information.xml
     |—— image/
     |   |—— productimage.jpg
     |   |—— familyimage.jpg
