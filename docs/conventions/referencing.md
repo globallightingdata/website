@@ -11,12 +11,12 @@ For this purpose, each block, that can be **referenced in subsequent blocks**, h
 
 ID values can be freely chosen, but must fulfil some restrictions. The most important are
 
-- Ids must be globally unique. This means that an ID may not be used more than once in the entire GLDF XML.
-- Ids must not contain white spaces.
-- Ids are case sensitive. For example, *photometryFile* and *photometryfile* are therefor two different values Ids.
-- We recommend naming Ids in a semantically meaningful way to keep the overview. So instead of e.g. *id-1*, a better naming would be *lightSourceImageFile* or *emitterEmergencyMode*.
+- Ids must be **globally unique**. This means that an ID may not be used more than once in the entire GLDF XML.
+- Ids must **not contain white spaces**.
+- Ids are **case sensitive**. For example, *photometryFile* and *photometryfile* are therefor two different values Ids.
+- We recommend naming Ids in a **semantically meaningful way** to keep the overview. So instead of e.g. *id-1*, a better naming would be *lightSourceImageFile* or *emitterEmergencyMode*.
 
-The `id` value of a `File` element in this example is `photometryFile`:
+The `id` value of a `File` element in this example is *photometryFile*:
 
 ```xml showLineNumbers {9}
 <?xml version="1.0" encoding="UTF-8"?>
@@ -37,13 +37,13 @@ The `id` value of a `File` element in this example is `photometryFile`:
 </Root>
 ```
 
-These blocks can now be referenced in subsequent elements.
+This `File` can now be referenced in subsequent elements.
 
 :::tip Convention
 For the purpose of referencing prepreviously defined blocks, subsequent XML node(s) contains XML elements, which **ends** with `...Reference` in their **name**.
 :::
 
-As an example, the following `Photometry` specification contains an XML element called `PhotometryFileReference`. Its content must be a previously defined `id` of a `File` element. The `File` itself indicates where the actual photometry file is stored.
+As an example, the following `Photometry` specification contains an XML element called `PhotometryFileReference`. Its content must be a previously defined `id` of a `File` element. The `File` itself indicates where the actual photometry file is stored inside the [GLDF container](/docs/container/about-container.md).
 
 ```xml showLineNumbers {9-10,14}
 <?xml version="1.0" encoding="UTF-8"?>
