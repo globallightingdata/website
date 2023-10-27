@@ -6,7 +6,7 @@ sidebar_label: Sensors
 
 ## Sensor Description
 
-Sensors in GLDF are understood to be motion detectors for light control, optimally with a measured detection range. Please visit the page of [**sensNorm**](https://www.sensnorm.com) for further information about measurement procedures and accurate planning data.
+Sensors in GLDF are understood to be **motion detectors for light control**, optimally with a measured detection range. Please visit the page of [**sensNorm**](https://www.sensnorm.com) for further information about measurement procedures and accurate planning data.
 
 `Sensors` is the second child-element of `GeneralDefinitions` - the part in the XML where **global and reusable** elements are defined (imagine them as the building blocks of each luminaire). The definition of sensors is **optional**.
 
