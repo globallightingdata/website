@@ -4,7 +4,7 @@ sidebar_label: Light Sources
 ---
 <!-- markdownlint-disable MD033 (no html im markdown) -->
 
-## Description
+## LightSource Description
 
 `LightSources` is the fifth child-element of `GeneralDefinitions` - the part in the XML where **global and reusable** elements are defined (imagine them as the building blocks of each luminaire). The definition of `LightSources` is **optional**.
 

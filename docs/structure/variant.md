@@ -5,6 +5,8 @@ sidebar_label: Specific Variant Data
 
 <!-- markdownlint-disable MD033 (no html im markdown) -->
 
+## Variant Description
+
 In addition to the [`ProductMetaData`](/docs/structure/product.md) element, which contains **global** metadata of a luminaire (global across all variants), **at least one** `Variant` element with **specific luminaire metadata** must exist in the GLDF:
 
 <img src="/img/docs/structure/variant-xsd-1.webp" alt="Variant in XSD" width="770" />

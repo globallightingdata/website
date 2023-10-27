@@ -2,7 +2,7 @@
 title: Sensors
 sidebar_label: Sensors
 ---
-## Description
+## Sensor Description
 
 The sensors listed here are understood to be motion detectors, optimally with a measured detection range, for light control. Please visit the page of [**sensNorm**](https://www.sensnorm.com) for further information about measurement procedures and accurate planning data.
 

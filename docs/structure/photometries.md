@@ -2,8 +2,9 @@
 title: Photometries
 sidebar_label: Photometries
 ---
+<!-- markdownlint-disable MD033 (no html im markdown) -->
 
-## Description
+## Photometry Description
 
 `Photometries` is the third child-element of `GeneralDefinitions` - the part in the XML where **global and reusable** elements are defined (imagine them as the building blocks of each luminaire). Probably most GLDF will contain one or more photometries. However, the definition of photometries is **optional**.
 
@@ -15,7 +16,6 @@ First of all, a single `Photometry` element references a [**File**](/docs/struct
 
 ## XSD description
 
-<!-- markdownlint-disable-next-line -->
 <img src="/img/docs/structure/photometries-xsd.webp" alt="Photometries in XSD" width="750" />
 
 ## XML example

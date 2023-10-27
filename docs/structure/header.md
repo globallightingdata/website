@@ -4,6 +4,8 @@ sidebar_label: Header
 ---
 <!-- markdownlint-disable MD033 (no html im markdown) -->
 
+## Header Description
+
 The `Header` is the first part of the GLDF **product.xml** file und the first child element below `Root`. It contains **meta-information** about the manufacturer, **contact information** and the used **GLDF version**. As well as **license information** if applicable. It does **not contain any product information** yet.
 
 <img src="/img/docs/structure/header-xsd.webp" alt="GLDF XML header XSD location" width="440" />

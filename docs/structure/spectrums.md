@@ -4,7 +4,7 @@ sidebar_label: Spectrums
 ---
 <!-- markdownlint-disable MD033 (no html im markdown) -->
 
-## Description
+## Spectrum Description
 
 `Spectrums` is the fourth child-element of `GeneralDefinitions` - the part in the XML where **global and reusable** elements are defined (imagine them as the building blocks of each luminaire). The definition of spectrums is **optional**.
 
@@ -21,7 +21,7 @@ A spectrum in the GLDF can be defined in two ways
 
 ![Spectrums in XSD](/img/docs/structure/spectrums-xsd.webp)
 
-## 1. Spectrum definition within GLDF XML
+## 1. Spectrum within GLDF XML
 
 The first option to define a spectrum is within the GLDF XML as follows
 
@@ -49,7 +49,7 @@ Simply add a collection of `Intensity` elements, in which the `wavelenth` attrib
 </Root>
 ```
 
-## 2. Defining the spectrum through `File` reference
+## 2. Spectrum through `File` reference
 
 A `Spectrum` can also reference a [**File**](/docs/structure/files.md) element which describes the location of the spectrum content file.
 

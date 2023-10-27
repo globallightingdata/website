@@ -4,7 +4,7 @@ sidebar_label: Global Product Data
 ---
 <!-- markdownlint-disable MD033 (no html im markdown) -->
 
-## ProductDefinitions
+## ProductDefinitions Description
 
 After the [`Header`](/docs/structure/header.md) (1) and [`GeneralDefinitions`](/docs/structure/files.md) (2) elements have beed defined, the **actual product description** in form of a third `Root` child element named `ProductDefinitions` (3) element can follow now:
 

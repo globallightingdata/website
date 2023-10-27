@@ -2,29 +2,27 @@
 title: Equipments
 sidebar_label: Equipments
 ---
+<!-- markdownlint-disable MD033 (no html im markdown) -->
 
-## Description
+## Equipment Description
 
 `Eqipments` is the seventh child-element of `GeneralDefinitions` - the part in the XML where **global and reusable** elements are defined (imagine them as the building blocks of each luminaire).
 
 Equipments primarily usage is to depict **luminaires with classic lamps** (i.e. not LEDs). They combine a classic lamp and optionally a control gear together with the required input power into one single unit. Which can be referenced later on:
 
-### XSD description
+## Location in XSD
 
-<!-- markdownlint-disable-next-line -->
+<img src="/img/docs/structure/equipments-hierarchy.webp" alt="Equipments in XSD" width="550" />
+
+## XSD description
+
 <img src="/img/docs/structure/equipments-xsd.webp" alt="Equipment in XSD" width="540" />
 
 In addition to the mandatory `id` attribute for later reference, `Equipment`s **can** contain some additional [**metadata**](#equipment-metadata). However, the whole definition of equipments is **optional**. If no `lightSourceCount` or `controlGearCount` is provided, the value "1" is assumed for both.
 
 Once definied, equipments can be [referenced in `Emitters`](/docs/structure/emitters.md). There their usage is to define **further details for a changeable light emitter**, which otherwise would consist of a photometry only instead:
 
-<!-- markdownlint-disable-next-line -->
 <img src="/img/docs/structure/equipments-use-in-emitters.webp" alt="Use in Emitter" width="800" />
-
-## Location in XSD
-
-<!-- markdownlint-disable-next-line -->
-<img src="/img/docs/structure/equipments-hierarchy.webp" alt="Equipments in XSD" width="550" />
 
 ## XML example
 
