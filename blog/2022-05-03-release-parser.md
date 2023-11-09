@@ -34,7 +34,7 @@ As you may already know, we've release GLDF 1.0.0-rc.1 a few day ago. The update
 To download GLDF.NET simply use our Nuget package published on nuget.org
 
 :::tip
-<https://www.nuget.org/packages/GLDF.Net>
+[GLDF.Net on nuget.org](https://www.nuget.org/packages/GLDF.Net)
 :::
 
 ## How can I use it

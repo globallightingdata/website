@@ -23,4 +23,4 @@ With the L3D Editor it is possible to **create a full L3D file from custom geome
 
 ## Feedback
 
-We are happy to get your feedback, failure reports and wishes. You can contact DIAL at <support@dialux.com>.
+We are happy to get your feedback, failure reports and wishes. You can contact DIAL at [support@dialux.com](mailto:support@dialux.com).

@@ -22,7 +22,7 @@ This post is a **brief summary** of what has changed since the beta version. As 
 ## Where can I get it
 
 :::tip
-A short **description** and links to the **docs** and the **L3D Editor** itself can be found in the [**Tooling Section**](/tools/#l3d-editor).
+A short **description** and links to the **docs** and the **L3D Editor** itself can be found [**here**](/l3d-editor).
 :::
 
 ---
