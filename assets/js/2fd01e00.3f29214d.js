@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkgldf=self.webpackChunkgldf||[]).push([[7759],{8497:l=>{l.exports=JSON.parse('{"label":"gldf","permalink":"/blog/tags/gldf","allTagsPath":"/blog/tags","count":3,"unlisted":false}')}}]);
