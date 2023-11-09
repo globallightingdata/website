@@ -1,8 +1,7 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require("prism-react-renderer/themes/palenight");
-const darkCodeTheme = require("prism-react-renderer/themes/palenight");
+import { themes as prismThemes } from "prism-react-renderer";
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -36,9 +35,9 @@ const config = {
         },
         theme: {
           customCss: [
-            require.resolve("./src/css/custom.css"),
-            require.resolve("./src/css/index.css"),
-            require.resolve("./src/css/imprint.css"),
+            "./src/css/custom.css",
+            "./src/css/index.css",
+            "./src/css/imprint.css",
           ],
         },
       }),
@@ -108,7 +107,7 @@ const config = {
             target: "_blank",
           },
           {
-            to: "tools/",
+            to: "l3d-editor/",
             label: "L3D Editor",
             position: "left",
           },
@@ -218,8 +217,8 @@ const config = {
       prism: {
         defaultLanguage: "xml",
         additionalLanguages: ["csharp"],
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
+        theme: prismThemes.palenight,
+        darkTheme: prismThemes.palenight,
       },
       // scripts: [
       //   {

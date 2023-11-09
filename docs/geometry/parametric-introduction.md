@@ -23,7 +23,7 @@ The following is an example based on the Windows platform. We will create a Wind
 :::warning Important
 Before you start, you will need to obtain authentication information from Relux or DIAL.
 
-Replace then the part *{REPLACE WITH CODE PROVIDED BY RELUX OR DIALUX}* with the provided code.
+Replace then the part *[REPLACE WITH CODE PROVIDED BY RELUX OR DIALUX]* with the provided code.
 :::
 
 ### Step 1
@@ -35,7 +35,7 @@ Open the windows text editor of your choice, enter the following code and save t
 setlocal
 
 :: Define the authentication credentials only once here
-set "auth={REPLACE WITH CODE PROVIDED BY RELUX OR DIALUX}"
+set "auth=[REPLACE WITH CODE PROVIDED BY RELUX OR DIALUX]"
 
 :: Use PowerShell to show a file selection dialog
 echo Showing file selection dialog...
