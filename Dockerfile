@@ -1,5 +1,5 @@
 ### BUILD ###
-FROM node:19-buster-slim AS build
+FROM node:20-buster-slim AS build
 
 WORKDIR /build
 COPY . /
