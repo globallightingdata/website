@@ -170,7 +170,7 @@ In addition to the mounting place, the **luminaire shape** must be taken into ac
 - **LEO C0** should face **X+**
 
 :::tip
-Yo can **rotate the C0 plane** by selecting the LEO and clicking on *Rotate G0* Button (to rotate the C0 plane **around** the G0 axis)
+You can **rotate the C0 plane** by selecting the LEO and clicking on *Rotate G0* Button (to rotate the C0 plane **around** the G0 axis)
 :::
 
 <img src="/img/docs/tools/l3d-editor-alignment.webp" alt="L3D Editor" width="600" />
