@@ -34,7 +34,7 @@ Finally, 3D models of luminaires can be assigned to the products, using either t
 
 Each luminaire generated with GLDF displays article names and numbers regardless of the license. Moreover, GLDF luminaires from non-members utilize complete photometric data and product variants. Luminaires from **DIALux members** however, provide **particularly valuable information**, thus supporting the lighting planner.
 
-For **Silver** members, DIALux evo additionally displays the manufacturer name and logo and contributes to the promotion of the brand. GLDF luminaires from **Gold and Platinum** members utilize the **complete data scope**, including images, description texts, installation types, and 3D models. If you have any questions regarding membership and license types, please visit us on [**DIALux membership**](https://www.dialux.com/en-GB/dialux-business/membership). Or contact
+For **Silver** members, DIALux evo additionally displays the manufacturer name and logo and contributes to the promotion of the brand. GLDF luminaires from **Gold and Platinum** members utilize the **complete data scope**, including images, description texts, installation types, and 3D models. If you have any questions regarding membership and license types, please visit us on [**DIALux membership**](https://business.dialux.com). Or contact
 
 **Friedrich W. Bremecker**  
 Business Unit Director Sales  
