@@ -122,10 +122,8 @@
 <ul>
 <li>
 <p><strong>L3D XSD 1.0 support</strong><br>
-<!-- -->Currently, the L3D Editor supports the L3D XSD in version 0.10. One upcoming major change will be the integration of the final L3D XSD specification 1.0.
-:::warning Important
-Even though the L3D Editor is already final, the L3D XSD is still close to finalisation. It is unlikely, but we cannot guarantee that the final version won't introduce <strong>breaking changes</strong>. Keep this in mind when creating L3Ds.
-:::</p>
+<!-- -->Currently, the L3D Editor supports the L3D XSD in version 0.10. One upcoming major change will be the integration of the final L3D XSD specification 1.0.</p>
+<div class="theme-admonition theme-admonition-warning admonition_xJq3 alert alert--warning"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>Important</div><div class="admonitionContent_BuS1"><p>Even though the L3D Editor is already final, the L3D XSD is still close to finalisation. It is unlikely, but we cannot guarantee that the final version won't introduce <strong>breaking changes</strong>. Keep this in mind when creating L3Ds.</p></div></div>
 </li>
 <li>
 <p><strong>More units</strong><br>
