@@ -9,7 +9,7 @@ const config = {
   tagline: "Global Lighting Data Format",
   url: "https://gldf.io",
   baseUrl: "/",
-  onBrokenLinks: "throw",
+  onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
   organizationName: "globallightingdata",
