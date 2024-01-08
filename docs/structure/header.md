@@ -23,9 +23,9 @@ Some of the metadata are **mandatory for every GLDF**. They are intended to make
 - `CreatedWithApplication`
   `CreatedWithApplication` describes **which application** was used to **create** this GLDF file. Ths could be the name of the text editor the author used. The PIM system it was exported from, a software service running in background, an online GLDF editor or a data converter perhaps. This information can be very useful in **debugging scenarios** when something went wrong.
 - `GldfCreationTimeCode`
-  Please refer to [**Timecodes**](/docs/conventions/ids-and-timecodes/#timecodes) where `GldfCreationTimeCode`, and its counterpart `ProductDataTimeCode`, are explained in detail.
+  Please refer to [**Timecodes**](/docs/conventions/ids-and-timecodes#timecodes) where `GldfCreationTimeCode`, and its counterpart `ProductDataTimeCode`, are explained in detail.
 - `UniqueGldfId`  
-  For the last but not least important element please refer to [**Unique Ids**](/getting-started/#unique-ids). **Caution**: **Never** copy `UniqueGldfId` between multiple GLDFs. Even not for the same product like in the `UniqueProductId` element. Create **always** a **new id** for each and every GLDF file you write and deploy. We **strongly recommend to use UUIDS** for this without exception.
+  For the last but not least important element please refer to [**Unique Ids**](/getting-started#unique-ids). **Caution**: **Never** copy `UniqueGldfId` between multiple GLDFs. Even not for the same product like in the `UniqueProductId` element. Create **always** a **new id** for each and every GLDF file you write and deploy. We **strongly recommend to use UUIDS** for this without exception.
 
 ### Mandatory XML example
 
@@ -67,11 +67,11 @@ The highlighted child elements are described in more detail below.
 
 ### `ProductDataTimeCode`
 
-Please refer to [**Timecodes**](/docs/conventions/ids-and-timecodes/#timecodes) where `ProductDataTimeCode` and the difference to `GldfCreationTimeCode` are explained.
+Please refer to [**Timecodes**](/docs/conventions/ids-and-timecodes#timecodes) where `ProductDataTimeCode` and the difference to `GldfCreationTimeCode` are explained.
 
 ### `DefaultLanguage`
 
-Should the GLDF file provide multiple translations, `DefaultLanguage` specifies the language, that applications should use as a **fallback** when the user's current GUI language doesn't match any of the available translations. If `DefaultLanguage` is not provided, the implementation will be **application-specific** and preferably use English. See also [**Creating good GLDF files**](/docs/tips/good-products/#provide-a-consistent-default-language)
+Should the GLDF file provide multiple translations, `DefaultLanguage` specifies the language, that applications should use as a **fallback** when the user's current GUI language doesn't match any of the available translations. If `DefaultLanguage` is not provided, the implementation will be **application-specific** and preferably use English. See also [**Creating good GLDF files**](/docs/tips/good-products#provide-a-consistent-default-language)
 
 The data type for `DefaultLanguage` is *xs:language* and has to be provided in lowercase as a [**2-letter ISO 639-1 language code**](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes).
 

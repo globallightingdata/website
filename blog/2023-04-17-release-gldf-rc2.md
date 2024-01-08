@@ -41,7 +41,7 @@ Otherwise, adapt your elements and their order according to the [**XSD-Reference
 
 Add to your `ProductMetaData` an `UniqueProductId` as first child element.
 
-The topic [**Unique IDs**](/getting-started/#unique-ids) describes the differences between `UniqueGldfId` in the Header and `UniqueProductId` inside ProducMetaData. Containig only mandatory fields, `ProducMetaData` should now look like this:
+The topic [**Unique IDs**](/getting-started#unique-ids) describes the differences between `UniqueGldfId` in the Header and `UniqueProductId` inside ProducMetaData. Containig only mandatory fields, `ProducMetaData` should now look like this:
 
 ```xml showLineNumbers {2}
 <ProductMetaData>
