@@ -131,15 +131,15 @@ Luminaire with a complete [`ProductMetaData`](/docs/structure/product.md) elemen
 
 ---
 
-#### [`014_variant_simple_lightemitter`](https://github.com/globallightingdata/templates/tree/master/015_variant_simple_lightemitter)
+#### [`015_variant_simple_lightemitter`](https://github.com/globallightingdata/templates/tree/master/015_variant_simple_lightemitter)
 
 Luminaire with a complete [`Variant`](../structure/variant.md) element.
 
-#### [`015_variant_simple_sensoremitter`](https://github.com/globallightingdata/templates/tree/master/016_variant_simple_sensoremitter)
+#### [`016_variant_simple_sensoremitter`](https://github.com/globallightingdata/templates/tree/master/016_variant_simple_sensoremitter)
 
 Luminaire with a complete [`Variant`](../structure/variant.md) element containing a reference to a [`SensorEmitter`](../structure/emitters.md).
 
-#### [`016_variant_geometry_reference`](https://github.com/globallightingdata/templates/tree/master/017_variant_geometry_reference)
+#### [`017_variant_geometry_reference`](https://github.com/globallightingdata/templates/tree/master/017_variant_geometry_reference)
 
 Luminaire with a complete [`Variant`](../structure/variant.md) element containing all possible elements, a [l3d geometry](../geometry/introduction.md) and a [`Sensor`](../structure/sensors.md).
 
@@ -147,6 +147,6 @@ Luminaire with a complete [`Variant`](../structure/variant.md) element containin
 
 ### DescriptiveAttributes
 
-#### [`017_descriptive_attributes`](https://github.com/globallightingdata/templates/tree/master/018_descriptive_attributes)
+#### [`018_descriptive_attributes`](https://github.com/globallightingdata/templates/tree/master/018_descriptive_attributes)
 
 Luminaire with a complete [`DescriptiveAttributes`](../structure/descriptive-attributes.md) element inside [`ProductMetadata`](../structure/product.md) and [`Variant`](../structure/variant.md). [`DescriptiveAttributes`](../structure/descriptive-attributes.md) values inside a [`Variant`](../structure/variant.md) will override the global defined values in [`ProductMetadata`](../structure/product.md).
