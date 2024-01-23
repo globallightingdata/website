@@ -101,11 +101,15 @@ Template with mandatory only elements of a [`ChangeableLightSource`](../structur
 
 Template with a [`ChangeableLightSource`](../structure/light-sources.md) element containing all possible elements. As well as an [`Equipment`](../structure/equipments.md), which is used to reference the [`ChangeableLightSource`](../structure/light-sources.md) inside the luminaires [`Variant`](../structure/variant.md).
 
+#### [`011_lightsource_multichannel`](https://github.com/globallightingdata/templates/tree/master/011_lightsource_multichannel)
+
+Template with a [`MultiChannelLightSource`](../structure/light-sources.md) element, referenced by a [`MultiChannelLightEmitter`](../structure/emitters.md).
+
 ---
 
 ### Spectrum
 
-#### [`011_spectrum`](https://github.com/globallightingdata/templates/tree/master/011_spectrum)
+#### [`012_spectrum`](https://github.com/globallightingdata/templates/tree/master/012_spectrum)
 
 Luminaire with a [`Spectrum`](../structure/spectrums.md) element. Note in particular how the [`Spectrum`](../structure/spectrums.md) is referenced inside a [`ChangeableLightSource`](../structure/light-sources.md). Which in turn is referenced through an [`Equipment`](../structure/equipments.md) element. And how it is possible to define a [`Spectrum`](../structure/spectrums.md) as a file reference (spectrum1) and inside the XML itself (spectrum2).
 
@@ -113,7 +117,7 @@ Luminaire with a [`Spectrum`](../structure/spectrums.md) element. Note in partic
 
 ### ControlGears
 
-#### [`012_control_gear`](https://github.com/globallightingdata/templates/tree/master/012_control_gear)
+#### [`013_control_gear`](https://github.com/globallightingdata/templates/tree/master/013_control_gear)
 
 Luminaire with a complete [`ControlGear`](../structure/control-gears.md) element containing all possible childs elements. As well as an [`Equipment`](../structure/equipments.md) referencing the [`ControlGear`](../structure/control-gears.md) through `ControlGearReference`.
 
@@ -121,21 +125,21 @@ Luminaire with a complete [`ControlGear`](../structure/control-gears.md) element
 
 ### Product
 
-#### [`013_product_metadata`](https://github.com/globallightingdata/templates/tree/master/013_product_metadata)
+#### [`014_product_metadata`](https://github.com/globallightingdata/templates/tree/master/014_product_metadata)
 
 Luminaire with a complete [`ProductMetaData`](/docs/structure/product.md) element containing all possible child elements. [`ProductMetaData`](../structure/product.md) is intended for global properties of a product.
 
 ---
 
-#### [`014_variant_simple_lightemitter`](https://github.com/globallightingdata/templates/tree/master/014_variant_simple_lightemitter)
+#### [`014_variant_simple_lightemitter`](https://github.com/globallightingdata/templates/tree/master/015_variant_simple_lightemitter)
 
 Luminaire with a complete [`Variant`](../structure/variant.md) element.
 
-#### [`015_variant_simple_sensoremitter`](https://github.com/globallightingdata/templates/tree/master/015_variant_simple_sensoremitter)
+#### [`015_variant_simple_sensoremitter`](https://github.com/globallightingdata/templates/tree/master/016_variant_simple_sensoremitter)
 
 Luminaire with a complete [`Variant`](../structure/variant.md) element containing a reference to a [`SensorEmitter`](../structure/emitters.md).
 
-#### [`016_variant_geometry_reference`](https://github.com/globallightingdata/templates/tree/master/016_variant_geometry_reference)
+#### [`016_variant_geometry_reference`](https://github.com/globallightingdata/templates/tree/master/017_variant_geometry_reference)
 
 Luminaire with a complete [`Variant`](../structure/variant.md) element containing all possible elements, a [l3d geometry](../geometry/introduction.md) and a [`Sensor`](../structure/sensors.md).
 
@@ -143,6 +147,6 @@ Luminaire with a complete [`Variant`](../structure/variant.md) element containin
 
 ### DescriptiveAttributes
 
-#### [`017_descriptive_attributes`](https://github.com/globallightingdata/templates/tree/master/017_descriptive_attributes)
+#### [`017_descriptive_attributes`](https://github.com/globallightingdata/templates/tree/master/018_descriptive_attributes)
 
 Luminaire with a complete [`DescriptiveAttributes`](../structure/descriptive-attributes.md) element inside [`ProductMetadata`](../structure/product.md) and [`Variant`](../structure/variant.md). [`DescriptiveAttributes`](../structure/descriptive-attributes.md) values inside a [`Variant`](../structure/variant.md) will override the global defined values in [`ProductMetadata`](../structure/product.md).
