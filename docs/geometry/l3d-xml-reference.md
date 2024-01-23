@@ -226,8 +226,8 @@ Assigns a surface/triangle in the model to act as a light emitting surface.
   The zero based index of the surface/triangle in the model.
 - `lightEmittingPartName` (mandatory)  
   The `partName` of the `LightEmittingObject` the surface/triangle should be related to.
-- `partIndex`  
-  If the model contains more than one part, this attribute can be used to indicate which part the surface/triangle index belongs to.
+- `groupIndex`  
+  If the model contains more than one part, this attribute can be used to indicate which part the surface/triangle index belongs to. This Index is also zero based.
 
 ### `RangeAssignment`
 
@@ -237,9 +237,9 @@ Assigns multiple surfaces/triangles in the model to act as light emitting surfac
 
 - `faceIndexBegin` (mandatory)  
 The starting index which should be assigned. Must be lower than `faceIndexEnd`.
-- `faceIndexEnd` (mandatory)
+- `faceIndexEnd` (mandatory)  
 The last index which should be assigned. Must be greater than `faceIndexBegin`.
 - `lightEmittingPartName` (mandatory)  
 The `partName` of the `LightEmittingObject` the surface/triangle should be related to.
-- `partIndex`  
-If the model contains more than one part, this attribute can be used to indicate which part the surface/triangle index belongs to.
+- `groupIndex`  
+If the model contains more than one part, this attribute can be used to indicate which part the surface/triangle index belongs to. This Index is also zero based.
