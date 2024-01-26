@@ -39,7 +39,7 @@ In addition, all elements are annotated with a **short documentation**. So to ob
 
 ## Header Example
 
-Let's take a closer look at the first child element of `Root`, the `Header`. To do this, just click on the [Header node](/xsd-reference/index_Root.html#Link1A) in the XSD reference to navigate to it:
+Let's take a closer look at the first child element of `Root`, the `Header`. To do this, just click on the [Header node](pathname:///xsd-reference/index_Root.html) in the XSD reference to navigate to it:
 
 ![XSD Root](/img/docs/getting-started/xsd-reference_xsd-headerclick.webp)
 
