@@ -23,13 +23,12 @@ The following is an example based on the Windows platform. We will create a Wind
 :::warning Important
 Before you start, you will need to obtain authentication information from Relux or DIAL.
 
-Replace then the part *[REPLACE WITH CODE PROVIDED BY RELUX OR DIALUX]* with the provided code.
+Make sure that you substitute "EMAIL" and "PASSWORD" with your actual email address and password as registered with the Relux API service. If you have any doubts, please reach out to support@relux.com for assistance.
 :::
 
 ### Step 1
 
 Open the windows text editor of your choice, enter the following code and save the file as *example.bat*
-Ensure you substitute "EMAIL" and "PASSWORD" with your actual email address and password as registered with the Relux API service. If you have any doubts, please reach out to support@relux.com for assistance.
 
 ```bash
 @Echo off
