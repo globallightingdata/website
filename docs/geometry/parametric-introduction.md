@@ -49,7 +49,7 @@ For /f "usebackqdelims=" %%A in (
 echo %idtoken%
 
 REM API Call
-curl --header "Authorization: Bearer %idtoken%" --request "PUT" --header "Content-Type:application/xml" "https://p3d.relux.com/l3d/" --data @%file% --output out.xml
+curl --header "Authorization: Bearer %idtoken%" --request "PUT" --header "Content-Type:application/xml" "https://p3d.relux.com/l3d/" --data "@%file%" --output out.xml
 
 REM get URL out of JSON
 For /f "usebackqdelims=" %%A in (
