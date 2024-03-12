@@ -23,7 +23,7 @@ The following is an example based on the Windows platform. We will create a Wind
 :::warning Important
 Before you start, you will need to obtain authentication information from Relux or DIAL.
 
-Replace then the part *[REPLACE WITH CODE PROVIDED BY RELUX OR DIALUX]* with the provided code.
+Make sure that you substitute "EMAIL" and "PASSWORD" with your actual email address and password as registered with the Relux API service. If you have any doubts, please reach out to support@relux.com for assistance.
 :::
 
 ### Step 1
@@ -31,67 +31,42 @@ Replace then the part *[REPLACE WITH CODE PROVIDED BY RELUX OR DIALUX]* with the
 Open the windows text editor of your choice, enter the following code and save the file as *example.bat*
 
 ```bash
-@echo off
-setlocal
+@Echo off
 
-:: Define the authentication credentials only once here
-set "auth=[REPLACE WITH CODE PROVIDED BY RELUX OR DIALUX]"
+REM File Dialog
+For /f "usebackqdelims=" %%A in (
+  `powershell -Executionpolicy ByPass -Command "[void][System.Reflection.Assembly]::LoadWithPartialName('System.Windows.Forms');$dlg = New-Object System.Windows.Forms.OpenFileDialog; if($dlg.ShowDialog() -eq 'OK'){return $dlg.FileNames}"`
+) Do Set file=%%A
+echo %file%
 
-:: Use PowerShell to show a file selection dialog
-echo Showing file selection dialog...
-for /f "delims=" %%I in ('powershell -command "[System.Reflection.Assembly]::LoadWithPartialName('System.windows.forms') | Out-Null; $OpenFileDialog = New-Object System.Windows.Forms.OpenFileDialog; $OpenFileDialog.ShowDialog() | Out-Null; $OpenFileDialog.FileName"') do set "xmlFile=%%I"
+REM auth Call
+curl --location "https://relux.com/en/account/api/login/" --form "username="EMAIL"" --form "password="PASSWORD"" --output token.json
 
-:: Check if the user canceled the file selection dialog
-if "%xmlFile%"==" " (
-    echo No file selected. Exiting...
-    exit /b 1
-)
-echo Selected file: %xmlFile%
+REM get token out of json
+For /f "usebackqdelims=" %%A in (
+  `Powershell -Executionpolicy Bypass -command "return (Get-Content -Raw -Encoding UTF8 token.json) | ConvertFrom-Json | ForEach-Object id_token"`
+) Do Set idtoken=%%A
+echo %idtoken%
 
-:: Ensure curl is installed and available
-echo Checking if curl is installed...
-where /q curl
-if errorlevel 1 (
-    echo curl is not installed or not in the PATH. Please install curl or add it to your PATH.
-    exit /b 1
-)
+REM API Call
+curl --header "Authorization: Bearer %idtoken%" --request "PUT" --header "Content-Type:application/xml" "https://p3d.relux.com/l3d/" --data "@%file%" --output out.xml
 
-:: Make the PUT request and save the output to temp file
-echo Making PUT request to server...
-curl --location --request PUT "https://p3d.relux.com/l3d/" ^
---header "Authorization: Basic %auth%" ^
---header "Content-Type: application/xml" ^
---data "@%xmlFile%" > temp.xml
-echo PUT request completed.
+REM get URL out of JSON
+For /f "usebackqdelims=" %%A in (
+  `Powershell -Executionpolicy Bypass -command "([xml](gc 'out.xml')).SelectSingleNode('//root').innerText"`
+) Do Set url=%%A
+echo %url%
 
-:: Extract URL from XML response using PowerShell
-echo Extracting URL from server response...
-for /f "delims=" %%I in ('powershell -command "$xml=[xml](Get-Content -Path temp.xml); $xml.root"') do set "downloadURL=%%I"
-echo Extracted URL: %downloadURL%
+REM Filename of URL
+for /f "tokens=1,2,3,4 delims=/ " %%a in ("%url%") do set filename=%%d
+echo %filename%
 
-:: Check if the URL is valid
-if not defined downloadURL (
-    echo Error: The server did not return a valid URL. Exiting...
-    exit /b 1
-)
+REM URL downlaod
+curl --header "Authorization: Bearer %idtoken%" -L -X GET %url% --output %filename%
 
-:: Extract the filename from the URL using PowerShell
-echo Extracting filename from URL...
-for /f "delims=" %%I in ('powershell -command "$url = '%downloadURL%'; $url.Split('/')[-1]"') do set "fileName=%%I"
-echo Extracted filename: %fileName%
-
-:: Download the file from the extracted URL and save it with the extracted filename, with authorization header
-echo Downloading file from server...
-curl --location --output "%fileName%" "%downloadURL%" ^
---header "Authorization: Basic %auth%"
-echo File download completed.
-
-:: Check if the file was successfully downloaded
-if exist "%fileName%" (
-    echo The file was successfully downloaded and saved as %fileName%.
-) else (
-    echo Error: The file could not be downloaded.
-)
+REM clean up
+del out.xml
+del token.json
 
 pause
 ```
