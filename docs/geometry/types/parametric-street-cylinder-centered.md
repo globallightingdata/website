@@ -47,8 +47,8 @@ Classic street light with the luminous head in cylinder shape centered on the po
   <StreetCylinderCentered>
     <Diameter>500</Diameter>
     <TopDiameter>900</TopDiameter>
-    <LuminousDiameter>600</LuminousDiameter>
-    <TotalHeight>3000</TotalHeight>
+    <LuminousDiameter>490</LuminousDiameter>
+    <Height>3000</Height>
   </StreetCylinderCentered>
 </P3D>
 ```
