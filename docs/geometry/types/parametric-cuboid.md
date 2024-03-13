@@ -24,7 +24,7 @@ sidebar_label: Cuboid
 | LuminousHeight | int  |      value in mm       |
 | TopWidth       | int  |      value in mm       |
 | TopLength      | int  |      value in mm       |
-| Mounting       | int  | Ceiling, Wall or Floor |
+| Mounting       | int  | Ceiling, Wall, Floor or Pendulum |
 | PendulumLength | int  |      value in mm       |
 
 ## XSD
