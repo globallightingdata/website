@@ -26,10 +26,12 @@ The current XML Schema files can also be referenced directly from gldf.io:
   - GLDF: <a href="/xsd/gldf/1.0.0-rc.3/gldf.xsd" target="_blank">gldf.io/xsd/gldf/1.0.0-rc.3/gldf.xsd</a>
   - L3D: <a href="/xsd/l3d/0.11.0/l3d.xsd" target="_blank">gldf.io/xsd/l3d/0.11.0/l3d.xsd</a>
   - Meta-Information: <a href="/xsd/meta/1.0.0/meta-information.xsd" target="_blank">gldf.io/xsd/meta/1.0.0/meta-information.xsd</a>
+  - P3D: <a href="/xsd/p3d/0.9/p3d.xsd" target="_blank">gldf.io/xsd/p3d/0.9/p3d.xsd</a>
 - **Without** version 🠖 **content will change** on every new release
   - GLDF: <a href="/xsd/gldf/gldf.xsd" target="_blank">gldf.io/xsd/gldf/gldf.xsd</a>
   - L3D: <a href="/xsd/l3d/l3d.xsd" target="_blank">gldf.io/xsd/l3d/l3d.xsd</a>
   - Meta-Information: <a href="/xsd/meta/meta-information.xsd" target="_blank">gldf.io/xsd/meta/meta-information.xsd</a>
+  - P3D: <a href="/xsd/p3d/p3d.xsd" target="_blank">gldf.io/xsd/p3d/p3d.xsd</a>
 
 :::caution
 The XSD urls without version should only be referenced with caution, as the content can change anytime and may invalidate your GLDF XML unintentionally!
