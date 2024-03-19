@@ -52,12 +52,15 @@ A Spotlight in cube shape mounted on a bracket attached to a cubic plate.
 ```xml
 <P3D>
   <SpotCuboid>
-    <Width>300</Width>
-    <Length>600</Length>
-    <Height>200</Height>
-    <LuminousWidth>280</LuminousWidth>
-    <LuminousLength>580</LuminousLength>
-    <LuminousHeight>90</LuminousHeight>
+    <Width>100</Width>
+    <Length>100</Length>
+    <Height>30</Height>
+    <LuminousWidth>90</LuminousWidth>
+    <LuminousLength>90</LuminousLength>
+    <LuminousHeight>10</LuminousHeight>
+    <BaseWidth>30</BaseWidth>
+    <BaseLength>30</BaseLength>
+    <BaseHeight>10</BaseHeight>
   </SpotCuboid>
 </P3D>
 ```

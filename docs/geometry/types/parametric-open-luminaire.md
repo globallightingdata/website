@@ -45,12 +45,12 @@ Open Luminaire has a base with openly accessible luminous object.
 ```xml
 <P3D>
   <OpenLuminaire>
-    <Width>400</Width>
-    <Length>1800</Length>
-    <Height>400</Height>
-    <LuminousWidth>500</LuminousWidth>
-    <LuminousLength>1900</LuminousLength>
-    <LuminousHeight>500</LuminousHeight>
+    <Width>20</Width>
+    <Length>850</Length>
+    <Height>20</Height>
+    <LuminousWidth>16</LuminousWidth>
+    <LuminousLength>850</LuminousLength>
+    <LuminousHeight>16</LuminousHeight>
   </OpenLuminaire>
 </P3D>
 ```

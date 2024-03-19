@@ -48,13 +48,13 @@ This type is a cylinder-Shaped luminaire that is attached to a wall.
 ```
 
 ## XML
-
 ```xml
 <P3D>
   <WallCylinder>
     <Diameter>100</Diameter>
-    <Height>300</Height>
-    <LuminousDiameter>80</LuminousDiameter>
+    <Height>200</Height>
+    <LuminousDiameter>100</LuminousDiameter>
+    <LuminousHeight>0</LuminousHeight>
     <Type>DirectIndirect</Type>
   </WallCylinder>
 </P3D>

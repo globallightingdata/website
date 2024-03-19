@@ -47,7 +47,10 @@ Classic street light with the luminous head cube-shaped attached to the pole on 
   <StreetCuboidSide>
     <Width>300</Width>
     <Length>190</Length>
-    <Height>200</Height>
+    <Height>80</Height>
+    <LuminousWidth>280</LuminousWidth>
+    <LuminousLength>120</LuminousLength>
+    <LuminousHeight>0</LuminousHeight>
   </StreetCuboidSide>
 </P3D>
 ```

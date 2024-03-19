@@ -41,8 +41,8 @@ Classic street light with the luminous head cylinder-shaped attached to the pole
 ```xml
 <P3D>
   <StreetCylinderSide>
-    <Diameter>300</Diameter>
-    <LuminousDiameter>180</LuminousDiameter>
+    <Diameter>500</Diameter>
+    <LuminousDiameter>460</LuminousDiameter>
   </StreetCylinderSide>
 </P3D>
 ```

@@ -50,10 +50,10 @@ sidebar_label: Bollard Cylinder
 ```xml
 <P3D>
   <BollardCylinder>
-    <Diameter>300</Diameter>
-    <Height>200</Height>
-    <LuminousHeight>200</LuminousHeight>
-    <TotalHeight>1300</TotalHeight>
+    <Diameter>190</Diameter>
+    <Height>1200</Height>
+    <LuminousHeight>240</LuminousHeight>
+    <TotalHeight>1200</TotalHeight>
   </BollardCylinder>
 </P3D>
 ```
