@@ -58,9 +58,13 @@ Parabolic shaped luminaire.
 ```xml
 <P3D>
   <Parabolic>
-    <Diameter>400</Diameter>
-    <Height>600</Height>
-    <Mounting>Floor</Mounting>
+    <Diameter>120</Diameter>
+    <Height>200</Height>
+    <LuminousDiameter>110</LuminousDiameter>
+    <LuminousHeight>50</LuminousHeight>
+    <BaseDiameter>80</BaseDiameter>
+    <BaseHeight>40</BaseHeight>
+    <Mounting>Ceiling</Mounting>
   </Parabolic>
 </P3D>
 ```

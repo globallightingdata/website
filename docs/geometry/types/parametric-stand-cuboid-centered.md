@@ -63,11 +63,11 @@ A cube-shaped standing luminaire. This parametric model allows you to define the
 ```xml
 <P3D>
   <StandCuboidCentered>
-    <Width>400</Width>
-    <Length>400</Length>
-    <Height>400</Height>
-    <LuminousWidth>350</LuminousWidth>
-    <LuminousLength>350</LuminousLength>
+    <Width>350</Width>
+    <Length>350</Length>
+    <Height>80</Height>
+    <LuminousWidth>330</LuminousWidth>
+    <LuminousLength>330</LuminousLength>
     <TotalHeight>1800</TotalHeight>
   </StandCuboidCentered>
 </P3D>

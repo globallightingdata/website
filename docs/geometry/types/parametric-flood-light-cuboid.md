@@ -46,13 +46,13 @@ A Spotlight in cube shape mounted on a bracket attached to a cubic plate.
 ```xml
 <P3D>
   <FloodLightCuboid>
-    <Width>500</Width>
-    <Length>500</Length>
-    <Height>300</Height>
-    <LuminousWidth>480</LuminousWidth>
-    <LuminousLength>480</LuminousLength>
-    <LuminousHeight>100</LuminousHeight>
-    <TotalHeight>900</TotalHeight>
+    <Width>400</Width>
+    <Length>400</Length>
+    <Height>100</Height>
+    <LuminousWidth>380</LuminousWidth>
+    <LuminousLength>380</LuminousLength>
+    <LuminousHeight>10</LuminousHeight>
+    <TotalHeight>250</TotalHeight>
   </FloodLightCuboid>
 </P3D>
 ```

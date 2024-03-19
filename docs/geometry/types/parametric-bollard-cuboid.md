@@ -56,13 +56,13 @@ sidebar_label: Bollard Cuboid
 ```xml
 <P3D>
   <BollardCuboid>
-    <Width>300</Width>
-    <Length>100</Length>
-    <Height>200</Height>
-    <LuminousWidth>50</LuminousWidth>
-    <LuminousLength>50</LuminousLength>
-    <LuminousHeight>50</LuminousHeight>
-    <TotalHeight>1200</TotalHeight>
+    <Width>110</Width>
+    <Length>110</Length>
+    <Height>650</Height>
+    <LuminousWidth>100</LuminousWidth>
+    <LuminousLength>0</LuminousLength>
+    <LuminousHeight>100</LuminousHeight>
+    <TotalHeight>650</TotalHeight>
   </BollardCuboid>
 </P3D>
 ```

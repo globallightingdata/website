@@ -62,14 +62,16 @@ sidebar_label: Cuboid
 ```xml
 <P3D>
   <Cuboid>
-    <Width>400</Width>
-    <Length>400</Length>
+    <Width>300</Width>
+    <Length>300</Length>
     <Height>200</Height>
-    <LuminousWidth>300</LuminousWidth>
-    <LuminousLength>300</LuminousLength>
-    <LuminousHeight>10</LuminousHeight>
+    <LuminousWidth>280</LuminousWidth>
+    <LuminousLength>280</LuminousLength>
+    <LuminousHeight>0</LuminousHeight>
+    <TopWidth>250</TopWidth>
+    <TopLength>250</TopLength>
     <Mounting>Pendulum</Mounting>
-    <PendulumLength>600</PendulumLength>
+    <PendulumLength>400</PendulumLength>
   </Cuboid>
 </P3D>
 ```

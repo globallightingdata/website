@@ -47,12 +47,13 @@ sidebar_label: Bollard Side
 ```xml
 <P3D>
   <BollardSide>
-    <Width>400</Width>
-    <Length>400</Length>
-    <Height>1300</Height>
-    <LuminousWidth>300</LuminousWidth>
-    <LuminousLength>100</LuminousLength>
+    <Width>110</Width>
+    <Length>110</Length>
+    <Height>650</Height>
+    <LuminousWidth>100</LuminousWidth>
+    <LuminousLength>0</LuminousLength>
     <LuminousHeight>100</LuminousHeight>
+    <TotalHeight>650</TotalHeight>
   </BollardSide>
 </P3D>
 ```

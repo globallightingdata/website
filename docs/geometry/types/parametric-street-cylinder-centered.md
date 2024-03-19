@@ -45,10 +45,12 @@ Classic street light with the luminous head in cylinder shape centered on the po
 ```xml
 <P3D>
   <StreetCylinderCentered>
-    <Diameter>500</Diameter>
-    <TopDiameter>900</TopDiameter>
-    <LuminousDiameter>490</LuminousDiameter>
-    <Height>3000</Height>
+    <Diameter>80</Diameter>
+    <TopDiameter>700</TopDiameter>
+    <LuminousDiameter>80</LuminousDiameter>
+    <TopLuminousDiameter>680</TopLuminousDiameter>
+    <LuminousHeight>400</LuminousHeight>
+    <Height>500</Height>
   </StreetCylinderCentered>
 </P3D>
 ```
