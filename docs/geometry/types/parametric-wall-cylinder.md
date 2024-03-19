@@ -48,7 +48,7 @@ This type is a cylinder-Shaped luminaire that is attached to a wall.
 ```
 
 ## XML
-
+```xml
 <P3D>
   <WallCylinder>
     <Diameter>100</Diameter>
@@ -58,3 +58,4 @@ This type is a cylinder-Shaped luminaire that is attached to a wall.
     <Type>DirectIndirect</Type>
   </WallCylinder>
 </P3D>
+```
