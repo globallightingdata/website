@@ -51,9 +51,9 @@ A cylinder-shaped standing luminaire. This parametric model allows you to define
 ```xml
 <P3D>
   <StandCylinder>
-    <Diameter>310</Diameter>
-    <Height>310</Height>
-    <LuminousDiameter>300</LuminousDiameter>
+    <Diameter>390</Diameter>
+    <Height>80</Height>
+    <LuminousDiameter>370</LuminousDiameter>
     <TotalHeight>1800</TotalHeight>
   </StandCylinder>
 </P3D>

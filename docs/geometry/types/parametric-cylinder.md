@@ -55,11 +55,13 @@ sidebar_label: Cylinder
 ```xml
 <P3D>
   <Cylinder>
-    <Diameter>500</Diameter>
-    <Height>900</Height>
-    <LuminousDiameter>450</LuminousDiameter>
+    <Diameter>340</Diameter>
+    <Height>200</Height>
+    <TopDiameter>250</TopDiameter>
+    <LuminousDiameter>320</LuminousDiameter>
+    <LuminousHeight>0</LuminousHeight>
     <Mounting>Pendulum</Mounting>
-    <PendulumLength>800</PendulumLength>
+    <PendulumLength>400</PendulumLength>
   </Cylinder>
 </P3D>
 ```

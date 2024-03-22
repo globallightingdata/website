@@ -45,10 +45,10 @@ A Spotlight in cylinder shape mounted on a bracket attached to a plate.
 <P3D>
   <FloodLightCylinder>
     <Diameter>300</Diameter>
-    <Height>600</Height>
+    <Height>100</Height>
     <LuminousDiameter>280</LuminousDiameter>
-    <LuminousHeight>100</LuminousHeight>
-    <TotalHeight>800</TotalHeight>
+    <LuminousHeight>10</LuminousHeight>
+    <TotalHeight>250</TotalHeight>
   </FloodLightCylinder>
 </P3D>
 ```
