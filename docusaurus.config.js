@@ -173,8 +173,8 @@ const config = {
                 href: "https://www.dialux.com",
               },
               {
-                label: "LUMsearch",
-                href: "https://lumsearch.com",
+                label: "DIALux Luminaire Finder",
+                href: "https://luminaires.dialux.com",
               },
             ],
           },
