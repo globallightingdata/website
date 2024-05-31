@@ -5,7 +5,7 @@
 test.gldf.io {
   root * /srv
   encode zstd gzip
-  basicauth * {
+  basic_auth * {
     dial JDJhJDE0JElsZkFMOFJmeU5YWmE2WlF4cFFQaXVmeTdkaU9ETWJ1Q2htcE5PYzhEMGkwTFNiSS92Yzdx
   }
   file_server
