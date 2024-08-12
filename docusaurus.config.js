@@ -1,5 +1,4 @@
 // @ts-check
-// Note: type annotations allow type checking and IDEs autocompletion
 
 import { themes as prismThemes } from "prism-react-renderer";
 
@@ -26,11 +25,15 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: require.resolve("./sidebars.js"),
+          sidebarPath: "./sidebars.js",
           editUrl: "https://github.com/globallightingdata/website/tree/master",
         },
         blog: {
           showReadingTime: true,
+          feedOptions: {
+            type: ["rss", "atom"],
+            xslt: true,
+          },
           editUrl: "https://github.com/globallightingdata/website/tree/master",
         },
         theme: {
@@ -229,4 +232,4 @@ const config = {
     }),
 };
 
-module.exports = config;
+export default config;
