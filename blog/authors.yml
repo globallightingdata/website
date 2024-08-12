@@ -1,0 +1,38 @@
+Kurpanik:
+  name: Alex Kurpanik
+  title: Developer DIAL GmbH
+  url: https://github.com/Kurpanik
+  image_url: https://avatars.githubusercontent.com/u/71767601?s=460
+  socials:
+    github: kurpanik
+    linkedin: alexander-kurpanik-399b23322
+    DIAL GmbH: https://www.dial.de
+
+Kock:
+  name: Thorsten Kock
+  title: Business Unit Manager Software DIAL GmbH
+  url: https://github.com/tkock-dx
+  image_url: https://i.imgur.com/sEEUP2O.jpeg
+  socials:
+    github: tkock-dx
+    linkedin: thorsten-kock-0315246a
+    DIAL GmbH: https://www.dial.de
+
+Bremecker:
+  name: Friedrich Bremecker
+  title: Business Unit Director Sales DIAL GmbH
+  url: https://www.licht2021.de/referenten/279
+  image_url: https://i.imgur.com/QxSPjLr.jpg
+  socials:
+    linkedin: friedrich-wilhelm-bremecker-87689426
+    DIAL GmbH: https://www.dial.de
+
+Heinze:
+  name: Robert Heinze
+  title: CTO Relux AG
+  url: https://github.com/robertrelux
+  image_url: https://avatars.githubusercontent.com/u/71825892
+  socials:
+    github: robertrelux
+    linkedin: robert-heinze-lighting
+    RELUX AG: https://relux.com

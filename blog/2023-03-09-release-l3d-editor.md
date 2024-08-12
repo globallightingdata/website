@@ -1,10 +1,7 @@
 ---
 title: L3D Editor 1.0 - Final Release
 description: Final release of the L3D Editor for GLDF 3D gemetry
-author: Alex
-author_title: Developer DIAL
-author_url: https://github.com/Kurpanik
-author_image_url: https://avatars.githubusercontent.com/u/71767601?s=460
+authors: Kurpanik
 hide_table_of_contents: false
 tags: [l3d, tools, release, roadmap]
 ---
