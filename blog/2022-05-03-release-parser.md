@@ -1,10 +1,7 @@
 ---
 title: DotNet Serializer for GLDF
 description: Release v0.5.0 of the GLDF.NET Parser
-author: Alex
-author_title: Developer DIAL
-author_url: https://github.com/Kurpanik
-author_image_url: https://avatars.githubusercontent.com/u/71767601?s=460
+authors: Kurpanik
 hide_table_of_contents: false
 tags: [gldf.net, tools, release]
 ---

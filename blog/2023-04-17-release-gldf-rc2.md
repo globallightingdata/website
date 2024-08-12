@@ -1,10 +1,7 @@
 ---
 title: GLDF Release v1.0.rc2
 description: GLDF v1.0 releace candidate 2
-author: Alex
-author_title: Developer DIAL
-author_url: https://github.com/Kurpanik
-author_image_url: https://avatars.githubusercontent.com/u/71767601?s=460
+authors: Kurpanik
 hide_table_of_contents: false
 tags: [gldf, release]
 ---
