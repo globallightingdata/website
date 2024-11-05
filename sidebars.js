@@ -64,7 +64,6 @@ module.exports = {
           "geometry/parametric-features",
           {
             "Parametric Types":[
-              "geometry/types/p3d-ceiling-recessed-cylinder",
               "geometry/types/parametric-round-recessed",
               "geometry/types/parametric-cuboid-recessed",
               "geometry/types/parametric-open-luminaire",
