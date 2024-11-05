@@ -10,24 +10,32 @@ sidebar_label: Stand Cuboid Centered
 A cube-shaped standing luminaire. This parametric model allows you to define the `TotalHeight` and the `Height` of the luminaire, not including the stand.
 
 - The stand height is the `TotalHeight` minus the luminaire `Height`. The stand is always in the middle of the luminaire.
-- Default length and width of the foot will be the same as the main `Length` and `Width`.
-- Default height of the foot is 2 cm. Width and length of the stand are 5 cm. Luminous dimensions must be smaller than the main dimensions.
-- `Type` ➜ `Direct`: LEO and LES placed at the bottom center of the luminaire. All four sides grow upwards with `LumimousHeight`.
-- `Type` ➜ `Indirect`: LEO and LES placed at the top center of the luminaire. All four sides grow downwards with `LumimousHeight`.
-- `Type` ➜ `DirectIndirect`: LEO placed in the center of the luminaire. LES on top and bottom surfaces centered. `LuminousHeight` > 0 means LES on all four surfaces.
+- The default length and width of the foot will be the same as the main `Length` and `Width`.
+- The default height of the foot is 2 cm. The width and length of the stand are 5 cm.
+- Luminous dimensions must be smaller than the main dimensions.
+- Either `LuminousHeight` or `ReflectorDepth` can be specified to describe how the luminaire interacts with the stand:
+  - The `LuminousHeight` describes how far the luminous part sticks out of the body.
+  - The `ReflectorDepth` describes how far the luminous part is recessed into the body.
+- `Type` defines the placement and growth direction of light emitters:
+  - **Direct**: LEO and LES placed at the bottom center of the luminaire. All four sides grow upwards with `LuminousHeight`.
+  - **Indirect**: LEO and LES placed at the top center of the luminaire. All four sides grow downwards with `LuminousHeight`.
+  - **DirectIndirect**: LEO placed in the center of the luminaire. LES on top and bottom surfaces are centered. `LuminousHeight` > 0 means LES on all four surfaces.
 
-| Parameter      | Type | Explanation                      |
-| -------------- | :--: | :------------------------------: |
-| Width          | int  | value in mm                      |
-| Length         | int  | value in mm                      |
-| Height         | int  | value in mm                      |
-| LuminousWidth  | int  | value in mm                      |
-| LuminousLength | int  | value in mm                      |
-| LuminousHeight | int  | value in mm                      |
-| TopWidth       | int  | value in mm                      |
-| TopLength      | int  | value in mm                      |
-| TotalHeight    | int  | value in mm                      |
-| Type           | int  | Direct, Indirect, DirectIndirect |
+## Parameters
+
+| Parameter        | Type    | Explanation                                               |
+| ---------------- | :-----: | :-------------------------------------------------------: |
+| Width            | int     | Value in mm                                               |
+| Length           | int     | Value in mm                                               |
+| Height           | int     | Value in mm                                               |
+| LuminousWidth    | int     | Value in mm                                               |
+| LuminousLength   | int     | Value in mm                                               |
+| TopWidth         | int     | Value in mm (default is 80% of `Width`)                   |
+| TopLength        | int     | Value in mm (default is 80% of `Length`)                  |
+| TotalHeight      | int     | Value in mm                                               |
+| LuminousHeight   | int     | Value in mm                                               |
+| ReflectorDepth   | int     | Value in mm                                               |
+| Type             | string  | Direct, Indirect, DirectIndirect                         |
 
 ## XSD
 
@@ -43,7 +51,10 @@ A cube-shaped standing luminaire. This parametric model allows you to define the
       <xs:element name="TopWidth" type="xs:int" minOccurs="0"/>
       <xs:element name="TopLength" type="xs:int" minOccurs="0"/>
       <xs:element name="TotalHeight" type="xs:int"/>
-      <xs:element name="LuminousHeight" type="xs:int" minOccurs="0"/>
+      <xs:choice minOccurs="0">
+        <xs:element name="LuminousHeight" type="xs:int" minOccurs="0"/>
+        <xs:element name="ReflectorDepth" type="xs:int" minOccurs="0"/>
+      </xs:choice>
       <xs:element name="Type" minOccurs="0">
         <xs:simpleType>
           <xs:restriction base="xs:string">
@@ -57,8 +68,8 @@ A cube-shaped standing luminaire. This parametric model allows you to define the
   </xs:complexType>
 </xs:element>
 ```
-
 ## XML
+### Example with LuminousHeight and Type set to Direct
 
 ```xml
 <P3D>
@@ -68,7 +79,49 @@ A cube-shaped standing luminaire. This parametric model allows you to define the
     <Height>80</Height>
     <LuminousWidth>330</LuminousWidth>
     <LuminousLength>330</LuminousLength>
+    <TopWidth>280</TopWidth>
+    <TopLength>280</TopLength>
     <TotalHeight>1800</TotalHeight>
+    <LuminousHeight>50</LuminousHeight>
+    <Type>Direct</Type>
+  </StandCuboidCentered>
+</P3D>
+```
+
+### Example with ReflectorDepth and Type set to Indirect
+
+```xml
+<P3D>
+  <StandCuboidCentered>
+    <Width>350</Width>
+    <Length>350</Length>
+    <Height>80</Height>
+    <LuminousWidth>330</LuminousWidth>
+    <LuminousLength>330</LuminousLength>
+    <TopWidth>280</TopWidth>
+    <TopLength>280</TopLength>
+    <TotalHeight>1800</TotalHeight>
+    <ReflectorDepth>30</ReflectorDepth>
+    <Type>Indirect</Type>
+  </StandCuboidCentered>
+</P3D>
+```
+
+### Example with LuminousHeight and Type set to DirectIndirect
+
+```xml
+<P3D>
+  <StandCuboidCentered>
+    <Width>350</Width>
+    <Length>350</Length>
+    <Height>80</Height>
+    <LuminousWidth>330</LuminousWidth>
+    <LuminousLength>330</LuminousLength>
+    <TopWidth>280</TopWidth>
+    <TopLength>280</TopLength>
+    <TotalHeight>1800</TotalHeight>
+    <LuminousHeight>50</LuminousHeight>
+    <Type>DirectIndirect</Type>
   </StandCuboidCentered>
 </P3D>
 ```

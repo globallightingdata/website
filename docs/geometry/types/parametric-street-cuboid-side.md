@@ -7,21 +7,28 @@ sidebar_label: Street Cuboid Side
 
 ![Street Cuboid Side](/img/docs/geometry/parametric/street-cuboid-side.webp)
 
-Classic street light with the luminous head cube-shaped attached to the pole on its edge.
+A classic street light featuring a cuboid-shaped luminous head attached to the side of a pole.
 
-- The pole will not be modeled.
-- You can adjust the dimensions of the head by setting the `LuminousLength`, `LuminousWidth`, and `LuminousHeight`.
-- The luminous center is located at 0,0,0.
-- There is an offset aligned to C0.
+- **Width**, **Length**, and **Height**: Define the overall dimensions of the luminaire's housing.
+- **LuminousWidth** and **LuminousLength** *(optional)*: Specify the size of the luminous surfaces.
+- **LuminousHeight** or **ReflectorDepth** *(optional)*:
+  - **LuminousHeight**: Describes how far the luminous part sticks out from the housing.
+  - **ReflectorDepth**: Describes how far the luminous part is recessed into the housing.
+- **TotalHeight** *(optional)*: Defines the overall height of the entire model, including the stand. If specified, the stand height is calculated as `TotalHeight` minus the luminaire `Height`.
+- The pole itself is **not modeled** within this luminaire configuration.
 
-| Parameter      | Type | Explanation |
-| -------------- | :--: | :---------: |
-| Width          | int  | value in mm |
-| Length         | int  | value in mm |
-| Height         | int  | value in mm |
-| LuminousWidth  | int  | value in mm |
-| LuminousLength | int  | value in mm |
-| LuminousHeight | int  | value in mm |
+## Parameters
+
+| Parameter           | Type   | Explanation                                                           |
+| ------------------- | :----: | :-------------------------------------------------------------------: |
+| Width               | int    | Base width of the luminaire in millimeters (mm).                      |
+| Length              | int    | Base length of the luminaire in millimeters (mm).                     |
+| Height              | int    | Height of the luminaire head in millimeters (mm).                     |
+| LuminousWidth       | int    | Width of the luminous surface in millimeters (mm) *(optional)*.        |
+| LuminousLength      | int    | Length of the luminous surface in millimeters (mm) *(optional)*.       |
+| LuminousHeight      | int    | Extent to which the luminous part protrudes from the housing (mm) *(optional)*. |
+| ReflectorDepth      | int    | Extent to which the luminous part is recessed into the housing (mm) *(optional)*. |
+| TotalHeight         | int    | Overall height of the luminaire including the stand in millimeters (mm) *(optional)*. |
 
 ## XSD
 
@@ -34,13 +41,18 @@ Classic street light with the luminous head cube-shaped attached to the pole on 
       <xs:element name="Height" type="xs:int"/>
       <xs:element name="LuminousWidth" type="xs:int" minOccurs="0"/>
       <xs:element name="LuminousLength" type="xs:int" minOccurs="0"/>
-      <xs:element name="LuminousHeight" type="xs:int" minOccurs="0"/>
+      <xs:choice minOccurs="0">
+        <xs:element name="LuminousHeight" type="xs:int" minOccurs="0"/>
+        <xs:element name="ReflectorDepth" type="xs:int" minOccurs="0"/>
+      </xs:choice>
+      <xs:element name="TotalHeight" type="xs:int" minOccurs="0"/>
     </xs:sequence>
   </xs:complexType>
 </xs:element>
 ```
 
 ## XML
+### Example with LuminousHeight
 
 ```xml
 <P3D>
@@ -50,7 +62,41 @@ Classic street light with the luminous head cube-shaped attached to the pole on 
     <Height>80</Height>
     <LuminousWidth>280</LuminousWidth>
     <LuminousLength>120</LuminousLength>
-    <LuminousHeight>0</LuminousHeight>
+    <LuminousHeight>50</LuminousHeight>
+    <TotalHeight>130</TotalHeight>
+  </StreetCuboidSide>
+</P3D>
+```
+
+### Example with ReflectorDepth
+
+```xml
+<P3D>
+  <StreetCuboidSide>
+    <Width>300</Width>
+    <Length>190</Length>
+    <Height>80</Height>
+    <LuminousWidth>280</LuminousWidth>
+    <LuminousLength>120</LuminousLength>
+    <ReflectorDepth>30</ReflectorDepth>
+    <TotalHeight>130</TotalHeight>
+  </StreetCuboidSide>
+</P3D>
+```
+
+### Example with Both LuminousHeight and ReflectorDepth
+
+```xml
+<P3D>
+  <StreetCuboidSide>
+    <Width>300</Width>
+    <Length>190</Length>
+    <Height>80</Height>
+    <LuminousWidth>280</LuminousWidth>
+    <LuminousLength>120</LuminousLength>
+    <LuminousHeight>50</LuminousHeight>
+    <ReflectorDepth>30</ReflectorDepth>
+    <TotalHeight>130</TotalHeight>
   </StreetCuboidSide>
 </P3D>
 ```

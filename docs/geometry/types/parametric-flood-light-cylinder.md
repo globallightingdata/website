@@ -5,23 +5,29 @@ sidebar_label: Floodlight Cylinder
 
 ## Description
 
-FloodlightCylinder
-
 ![Floodlight Cylinder](/img/docs/geometry/parametric/flood-light-cylinder.webp)
 
-A Spotlight in cylinder shape mounted on a bracket attached to a plate.
+A spotlight with a cylinder-shaped luminous head mounted on a bracket attached to a base plate.
 
-- You can adjust the dimensions of the light by setting the `LuminousDiameter` and `LuminousHeight`.
-- Setting the `TotalHeight` parameter will affect the size of the bracket.
-- The plate size can be changed using the base `Diameter` parameter.
+- **Diameter** and **Height**: Define the overall dimensions of the luminaire's housing.
+- **LuminousDiameter**: Sets the size of the main luminous surface.
+- **LuminousHeight** or **ReflectorDepth** *(optional)*:
+  - **LuminousHeight**: Describes how far the luminous part protrudes from the housing.
+  - **ReflectorDepth**: Describes how far the luminous part is recessed into the housing.
+- **TotalHeight** *(optional)*: Defines the overall height of the entire model, including the bracket. If specified, the bracket size is calculated as `TotalHeight` minus the luminaire `Height`.
 
-| Parameter        | Type | Explanation |
-| ---------------- | :--: | :---------: |
-| Diameter         | int  | value in mm |
-| Height           | int  | value in mm |
-| LuminousDiameter | int  | value in mm |
-| LuminousHeight   | int  | value in mm |
-| TotalHeight      | int  | value in mm |
+**Note**: The pole itself is **not modeled** within this luminaire configuration.
+
+## Parameters
+
+| Parameter        | Type  | Explanation                                                                                     |
+| ---------------- | :---: | :---------------------------------------------------------------------------------------------: |
+| Diameter         | int   | Base diameter of the luminaire in millimeters (mm).                                            |
+| Height           | int   | Height of the luminaire head in millimeters (mm).                                              |
+| LuminousDiameter | int   | Diameter of the main luminous surface in millimeters (mm).                                      |
+| LuminousHeight   | int   | Extent to which the luminous part protrudes from the housing *(optional)* (mm).                 |
+| ReflectorDepth   | int   | Extent to which the luminous part is recessed into the housing *(optional)* (mm).               |
+| TotalHeight      | int   | Overall height of the luminaire including the bracket in millimeters (mm) *(optional)*.         |
 
 ## XSD
 
@@ -32,7 +38,10 @@ A Spotlight in cylinder shape mounted on a bracket attached to a plate.
       <xs:element name="Diameter" type="xs:int"/>
       <xs:element name="Height" type="xs:int"/>
       <xs:element name="LuminousDiameter" type="xs:int"/>
-      <xs:element name="LuminousHeight" type="xs:int"/>
+      <xs:choice>
+        <xs:element name="LuminousHeight" type="xs:int"/>
+        <xs:element name="ReflectorDepth" type="xs:int"/>
+      </xs:choice>
       <xs:element name="TotalHeight" type="xs:int" minOccurs="0"/>
     </xs:sequence>
   </xs:complexType>
@@ -40,6 +49,7 @@ A Spotlight in cylinder shape mounted on a bracket attached to a plate.
 ```
 
 ## XML
+### Example with LuminousHeight
 
 ```xml
 <P3D>
@@ -48,6 +58,20 @@ A Spotlight in cylinder shape mounted on a bracket attached to a plate.
     <Height>100</Height>
     <LuminousDiameter>280</LuminousDiameter>
     <LuminousHeight>10</LuminousHeight>
+    <TotalHeight>250</TotalHeight>
+  </FloodLightCylinder>
+</P3D>
+```
+
+### Example with ReflectorDepth
+
+```xml
+<P3D>
+  <FloodLightCylinder>
+    <Diameter>300</Diameter>
+    <Height>100</Height>
+    <LuminousDiameter>280</LuminousDiameter>
+    <ReflectorDepth>5</ReflectorDepth>
     <TotalHeight>250</TotalHeight>
   </FloodLightCylinder>
 </P3D>

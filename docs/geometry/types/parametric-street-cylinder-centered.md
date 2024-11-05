@@ -7,21 +7,31 @@ sidebar_label: Street Cylinder Centered
 
 ![Street Cylinder Centered](/img/docs/geometry/parametric/street-cylinder-centered.webp)
 
-Classic street light with the luminous head in cylinder shape centered on the pole.
+A classic street light featuring a cylinder-shaped luminous head centered on the pole.
 
-- You can adjust the dimensions of the cylinder by setting the `Diameter` and `Height`. Skewing is possible by selecting a different `TopDiameter`.
-- The height of the lid on top is 2% of the `LuminousHeight`.
-- The luminous center is located at 0,0,0. There is an offset aligned to C0.
-- The pole is not modelled.
+- **Diameter** and **Height**: Define the overall dimensions of the luminaire's housing.
+- **TopDiameter**: Allows for skewing the cylinder by adjusting the diameter at the top.
+- **LuminousDiameter**: Sets the size of the main luminous surface.
+- **TopLuminousDiameter** (optional): Defines the size of the luminous surface at the top, allowing for additional design flexibility.
+- **LuminousHeight** or **ReflectorDepth** (optional):
+  - **LuminousHeight**: Describes how far the luminous part sticks out from the housing.
+  - **ReflectorDepth**: Describes how far the luminous part is recessed into the housing.
+- **Height** (optional): Sets the height of the luminaire head separately from the overall model.
 
-| Parameter           | Type | Explanation |
-| ------------------- | :--: | :---------: |
-| Diameter            | int  | value in mm |
-| TopDiameter         | int  | value in mm |
-| LuminousDiameter    | int  | value in mm |
-| TopLuminousDiameter | int  | value in mm |
-| LuminousHeight      | int  | value in mm |
-| Height              | int  | value in mm |
+**Note**: The pole itself is not modeled within this luminaire configuration.
+
+## Parameters
+
+| Parameter           | Type   | Explanation                                                       |
+| ------------------- | :----: | :----------------------------------------------------------------: |
+| Diameter            | int    | Base diameter of the luminaire in millimeters (mm).               |
+| TopDiameter         | int    | Diameter at the top of the luminaire, allowing for skewing.       |
+| LuminousDiameter    | int    | Diameter of the main luminous surface in millimeters (mm).        |
+| TopLuminousDiameter | int    | Diameter of the luminous surface at the top (optional).           |
+| LuminousHeight      | int    | Extent to which the luminous part protrudes from the housing (mm).|
+| ReflectorDepth      | int    | Extent to which the luminous part is recessed into the housing (mm).|
+| Height              | int    | Height of the luminaire head in millimeters (mm) (optional).      |
+| TotalHeight         | int    | Overall height of the luminaire including the stand (mm) (optional).|
 
 ## XSD
 
@@ -33,14 +43,19 @@ Classic street light with the luminous head in cylinder shape centered on the po
       <xs:element name="TopDiameter" type="xs:int"/>
       <xs:element name="LuminousDiameter" type="xs:int"/>
       <xs:element name="TopLuminousDiameter" type="xs:int" minOccurs="0"/>
-      <xs:element name="LuminousHeight" type="xs:int" minOccurs="0"/>
+      <xs:choice minOccurs="0">
+        <xs:element name="LuminousHeight" type="xs:int" minOccurs="0"/>
+        <xs:element name="ReflectorDepth" type="xs:int" minOccurs="0"/>
+      </xs:choice>
       <xs:element name="Height" type="xs:int" minOccurs="0"/>
+      <xs:element name="TotalHeight" type="xs:int" minOccurs="0"/>
     </xs:sequence>
   </xs:complexType>
 </xs:element>
 ```
 
 ## XML
+### Example with LuminousHeight
 
 ```xml
 <P3D>
@@ -51,6 +66,40 @@ Classic street light with the luminous head in cylinder shape centered on the po
     <TopLuminousDiameter>680</TopLuminousDiameter>
     <LuminousHeight>400</LuminousHeight>
     <Height>500</Height>
+    <TotalHeight>900</TotalHeight>
+  </StreetCylinderCentered>
+</P3D>
+```
+
+### Example with ReflectorDepth
+
+```xml
+<P3D>
+  <StreetCylinderCentered>
+    <Diameter>80</Diameter>
+    <TopDiameter>700</TopDiameter>
+    <LuminousDiameter>80</LuminousDiameter>
+    <TopLuminousDiameter>680</TopLuminousDiameter>
+    <ReflectorDepth>30</ReflectorDepth>
+    <Height>500</Height>
+    <TotalHeight>900</TotalHeight>
+  </StreetCylinderCentered>
+</P3D>
+```
+
+### Example with Both LuminousHeight and ReflectorDepth
+
+```xml
+<P3D>
+  <StreetCylinderCentered>
+    <Diameter>80</Diameter>
+    <TopDiameter>700</TopDiameter>
+    <LuminousDiameter>80</LuminousDiameter>
+    <TopLuminousDiameter>680</TopLuminousDiameter>
+    <LuminousHeight>400</LuminousHeight>
+    <ReflectorDepth>30</ReflectorDepth>
+    <Height>500</Height>
+    <TotalHeight>900</TotalHeight>
   </StreetCylinderCentered>
 </P3D>
 ```
