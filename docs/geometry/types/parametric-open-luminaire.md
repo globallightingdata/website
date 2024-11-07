@@ -5,23 +5,37 @@ sidebar_label: Open Luminaire
 
 ## Description
 
-![Open Luminaire ](/img/docs/geometry/parametric/open-luminaire.webp)
+![Open Luminaire](/img/docs/geometry/parametric/open-luminaire.webp)
 
-Open Luminaire has a base with openly accessible luminous object.
+The **Open Luminaire** features a base with an openly accessible luminous object, designed for versatile mounting options.
 
-- `Width`, `Length` and `Height` will define the total size in the form of a bounding box.
-- `LuminousWidth`, `LuminousLength` and `LuminousHeight` describe the bounding box of the luminous elements.
-- The width of the luminaire determines the number of luminous objects.
-- Open luminaires are ceiling mounted.
+- **Dimensions**:
+  - **Width**, **Length**, and **Height** define the total size of the luminaire's housing in the form of a bounding box.
+  - **LuminousDiameter** and **LuminousLength** describe the dimensions of the luminous elements.
+- **Mounting**:
+  - **Ceiling**: The luminaire is designed to be mounted on ceilings.
+  - **Wall**: The luminaire is designed to be mounted on walls.
+- **NumberOfTubes**:
+  - Determines the number of luminous tubes or elements within the luminaire.
+- **Base Dimensions**:
+  - The base's size is controlled by the `Diameter` parameter, ensuring stability and aesthetic integration.
+- **Mounting Details**:
+  - The luminaire is securely attached based on the selected `Mounting` type.
+  - The number of luminous tubes can be adjusted to achieve the desired lighting effect.
 
-| Parameter      | Type | Explanation |
-| -------------- | :--: | :---------: |
-| Width          | int  | value in mm |
-| Length         | int  | value in mm |
-| Height         | int  | value in mm |
-| LuminousWidth  | int  | value in mm |
-| LuminousLength | int  | value in mm |
-| LuminousHeight | int  | value in mm |
+**Note**: The pole itself is **not modeled** within this luminaire configuration.
+
+## Parameters
+
+| Parameter        | Type  | Explanation                                                                                       |
+| ---------------- | :---: | :-----------------------------------------------------------------------------------------------: |
+| Width            | int   | Base width of the luminaire in millimeters (mm).                                                  |
+| Length           | int   | Base length of the luminaire in millimeters (mm).                                                 |
+| Height           | int   | Height of the luminaire's housing in millimeters (mm).                                            |
+| LuminousDiameter | int   | Diameter of the main luminous object in millimeters (mm).                                         |
+| LuminousLength   | int   | Length of the luminous elements in millimeters (mm).                                              |
+| Mounting         | enum  | Mounting type of the luminaire. Possible values: `Ceiling`, `Wall`.                              |
+| NumberOfTubes    | int   | Number of luminous tubes or elements within the luminaire.                                       |
 
 ## XSD
 
@@ -32,25 +46,67 @@ Open Luminaire has a base with openly accessible luminous object.
       <xs:element name="Width" type="xs:int"/>
       <xs:element name="Length" type="xs:int"/>
       <xs:element name="Height" type="xs:int"/>
-      <xs:element name="LuminousWidth" type="xs:int"/>
       <xs:element name="LuminousLength" type="xs:int"/>
-      <xs:element name="LuminousHeight" type="xs:int"/>
+      <xs:element name="LuminousDiameter" type="xs:int"/>
+      <xs:element name="Mounting">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Ceiling"/>
+            <xs:enumeration value="Wall"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="NumberOfTubes" type="xs:int"/>
     </xs:sequence>
   </xs:complexType>
 </xs:element>
 ```
 
 ## XML
+### Example Mounted on Ceiling with Multiple Tubes
 
 ```xml
 <P3D>
   <OpenLuminaire>
-    <Width>20</Width>
+    <Width>300</Width>
     <Length>850</Length>
-    <Height>20</Height>
-    <LuminousWidth>16</LuminousWidth>
+    <Height>200</Height>
+    <LuminousDiameter>160</LuminousDiameter>
     <LuminousLength>850</LuminousLength>
-    <LuminousHeight>16</LuminousHeight>
+    <Mounting>Ceiling</Mounting>
+    <NumberOfTubes>4</NumberOfTubes>
+  </OpenLuminaire>
+</P3D>
+```
+
+### Example Mounted on Wall with Single Tube
+
+```xml
+<P3D>
+  <OpenLuminaire>
+    <Width>250</Width>
+    <Length>750</Length>
+    <Height>150</Height>
+    <LuminousDiameter>120</LuminousDiameter>
+    <LuminousLength>750</LuminousLength>
+    <Mounting>Wall</Mounting>
+    <NumberOfTubes>1</NumberOfTubes>
+  </OpenLuminaire>
+</P3D>
+```
+
+### Example with Maximum Tubes
+
+```xml
+<P3D>
+  <OpenLuminaire>
+    <Width>350</Width>
+    <Length>900</Length>
+    <Height>250</Height>
+    <LuminousDiameter>200</LuminousDiameter>
+    <LuminousLength>900</LuminousLength>
+    <Mounting>Ceiling</Mounting>
+    <NumberOfTubes>6</NumberOfTubes>
   </OpenLuminaire>
 </P3D>
 ```
