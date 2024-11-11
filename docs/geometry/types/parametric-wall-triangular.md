@@ -66,56 +66,17 @@ Triangular-shaped wall-mounted luminaire.
 ```
 
 ## XML
-### Example with LuminousHeight and Type set to Direct
+### Example
 
 ```xml
 <P3D>
   <WallTriangular>
-    <Width>300</Width>
-    <Length>200</Length>
+    <Width>120</Width>
+    <Length>250</Length>
     <Height>200</Height>
-    <LuminousWidth>150</LuminousWidth>
-    <LuminousLength>150</LuminousLength>
+    <LuminousWidth>100</LuminousWidth>
+    <LuminousLength>220</LuminousLength>
     <LuminousHeight>20</LuminousHeight>
-    <TopWidth>240</TopWidth>
-    <TopLength>160</TopLength>
-    <Type>Direct</Type>
-  </WallTriangular>
-</P3D>
-```
-
-### Example with ReflectorDepth and Type set to Indirect
-
-```xml
-<P3D>
-  <WallTriangular>
-    <Width>300</Width>
-    <Length>200</Length>
-    <Height>200</Height>
-    <LuminousWidth>150</LuminousWidth>
-    <LuminousLength>150</LuminousLength>
-    <ReflectorDepth>30</ReflectorDepth>
-    <TopWidth>240</TopWidth>
-    <TopLength>160</TopLength>
-    <Type>Indirect</Type>
-  </WallTriangular>
-</P3D>
-```
-
-### Example with LuminousHeight and Type set to DirectIndirect
-
-```xml
-<P3D>
-  <WallTriangular>
-    <Width>300</Width>
-    <Length>200</Length>
-    <Height>200</Height>
-    <LuminousWidth>150</LuminousWidth>
-    <LuminousLength>150</LuminousLength>
-    <LuminousHeight>20</LuminousHeight>
-    <TopWidth>240</TopWidth>
-    <TopLength>160</TopLength>
-    <Type>DirectIndirect</Type>
   </WallTriangular>
 </P3D>
 ```

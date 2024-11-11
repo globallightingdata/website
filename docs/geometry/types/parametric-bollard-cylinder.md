@@ -75,50 +75,15 @@ sidebar_label: Bollard Cylinder
 ```
 
 ## XML
-### Example with LuminousHeight and Type set to Direct
+### Example 
 
 ```xml
 <P3D>
   <BollardCylinder>
     <Diameter>190</Diameter>
     <Height>1200</Height>
-    <LuminousHeight>240</LuminousHeight>
+    <LuminousHeight>200</LuminousHeight>
     <TotalHeight>1200</TotalHeight>
-    <C0>20</C0>
-    <Type>Direct</Type>
-  </BollardCylinder>
-</P3D>
-```
-
-### Example with ReflectorDepth and Type set to Indirect
-
-```xml
-<P3D>
-  <BollardCylinder>
-    <Diameter>190</Diameter>
-    <Height>1200</Height>
-    <ReflectorDepth>30</ReflectorDepth>
-    <TotalHeight>1200</TotalHeight>
-    <C90>20</C90>
-    <Type>Indirect</Type>
-  </BollardCylinder>
-</P3D>
-```
-
-### Example with LuminousHeight and Type set to DirectIndirect
-
-```xml
-<P3D>
-  <BollardCylinder>
-    <Diameter>190</Diameter>
-    <Height>1200</Height>
-    <LuminousHeight>240</LuminousHeight>
-    <TotalHeight>1200</TotalHeight>
-    <C0>20</C0>
-    <C90>20</C90>
-    <C180>20</C180>
-    <C270>20</C270>
-    <Type>DirectIndirect</Type>
   </BollardCylinder>
 </P3D>
 ```

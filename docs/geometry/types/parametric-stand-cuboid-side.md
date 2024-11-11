@@ -59,16 +59,17 @@ A cube-shaped standing luminaire with the head attached on the side rather than 
 ```
 
 ## XML
+### Example
 
 ```xml
 <P3D>
   <StandCuboidSide>
-    <Width>350</Width>
+    <Width>250</Width>
     <Length>350</Length>
-    <Height>80</Height>
-    <LuminousWidth>330</LuminousWidth>
-    <LuminousLength>330</LuminousLength>
-    <TotalHeight>1800</TotalHeight>
+    <Height>40</Height>
+    <LuminousWidth>240</LuminousWidth>
+    <LuminousLength>340</LuminousLength>
+    <TotalHeight>600</TotalHeight>
     <Type>DirectIndirect</Type>
   </StandCuboidSide>
 </P3D>

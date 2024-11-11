@@ -64,57 +64,19 @@ sidebar_label: Cuboid
 ```
 
 ## XML
-### Example with LuminousHeight
+### Example
 
 ```xml
 <P3D>
   <Cuboid>
-    <Width>300</Width>
-    <Length>300</Length>
-    <Height>200</Height>
-    <LuminousWidth>280</LuminousWidth>
-    <LuminousLength>280</LuminousLength>
-    <LuminousHeight>50</LuminousHeight>
-    <TopWidth>240</TopWidth>
-    <TopLength>240</TopLength>
-    <Mounting>Ceiling</Mounting>
-  </Cuboid>
-</P3D>
-```
-
-### Example with ReflectorDepth
-
-```xml
-<P3D>
-  <Cuboid>
-    <Width>300</Width>
-    <Length>300</Length>
-    <Height>200</Height>
-    <LuminousWidth>280</LuminousWidth>
-    <LuminousLength>280</LuminousLength>
-    <ReflectorDepth>20</ReflectorDepth>
-    <TopWidth>240</TopWidth>
-    <TopLength>240</TopLength>
-    <Mounting>Wall</Mounting>
-  </Cuboid>
-</P3D>
-```
-
-### Example with Pendulum
-
-```xml
-<P3D>
-  <Cuboid>
-    <Width>300</Width>
-    <Length>300</Length>
-    <Height>200</Height>
-    <LuminousWidth>280</LuminousWidth>
-    <LuminousLength>280</LuminousLength>
-    <LuminousHeight>50</LuminousHeight>
-    <TopWidth>240</TopWidth>
-    <TopLength>240</TopLength>
+    <Width>40</Width>
+    <Length>600</Length>
+    <Height>50</Height>
+    <LuminousWidth>34</LuminousWidth>
+    <LuminousLength>596</LuminousLength>
+    <LuminousHeight>20</LuminousHeight>
     <Mounting>Pendulum</Mounting>
-    <PendulumLength>400</PendulumLength>
+    <PendulumLength>500</PendulumLength>
   </Cuboid>
 </P3D>
 ```

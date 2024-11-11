@@ -55,7 +55,7 @@ A classic street light featuring a cylinder-shaped luminous head centered on the
 ```
 
 ## XML
-### Example with LuminousHeight
+### Example
 
 ```xml
 <P3D>
@@ -63,43 +63,9 @@ A classic street light featuring a cylinder-shaped luminous head centered on the
     <Diameter>80</Diameter>
     <TopDiameter>700</TopDiameter>
     <LuminousDiameter>80</LuminousDiameter>
-    <TopLuminousDiameter>680</TopLuminousDiameter>
+    <TopLuminousDiameter>600</TopLuminousDiameter>
     <LuminousHeight>400</LuminousHeight>
     <Height>500</Height>
-    <TotalHeight>900</TotalHeight>
-  </StreetCylinderCentered>
-</P3D>
-```
-
-### Example with ReflectorDepth
-
-```xml
-<P3D>
-  <StreetCylinderCentered>
-    <Diameter>80</Diameter>
-    <TopDiameter>700</TopDiameter>
-    <LuminousDiameter>80</LuminousDiameter>
-    <TopLuminousDiameter>680</TopLuminousDiameter>
-    <ReflectorDepth>30</ReflectorDepth>
-    <Height>500</Height>
-    <TotalHeight>900</TotalHeight>
-  </StreetCylinderCentered>
-</P3D>
-```
-
-### Example with Both LuminousHeight and ReflectorDepth
-
-```xml
-<P3D>
-  <StreetCylinderCentered>
-    <Diameter>80</Diameter>
-    <TopDiameter>700</TopDiameter>
-    <LuminousDiameter>80</LuminousDiameter>
-    <TopLuminousDiameter>680</TopLuminousDiameter>
-    <LuminousHeight>400</LuminousHeight>
-    <ReflectorDepth>30</ReflectorDepth>
-    <Height>500</Height>
-    <TotalHeight>900</TotalHeight>
   </StreetCylinderCentered>
 </P3D>
 ```

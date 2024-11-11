@@ -69,59 +69,20 @@ A cube-shaped standing luminaire. This parametric model allows you to define the
 </xs:element>
 ```
 ## XML
-### Example with LuminousHeight and Type set to Direct
+### Example
 
 ```xml
 <P3D>
   <StandCuboidCentered>
     <Width>350</Width>
     <Length>350</Length>
-    <Height>80</Height>
-    <LuminousWidth>330</LuminousWidth>
-    <LuminousLength>330</LuminousLength>
-    <TopWidth>280</TopWidth>
-    <TopLength>280</TopLength>
-    <TotalHeight>1800</TotalHeight>
+    <Height>150</Height>
+    <LuminousWidth>340</LuminousWidth>
+    <LuminousLength>340</LuminousLength>
+    <TopWidth>250</TopWidth>
+    <TopLength>250</TopLength>
+    <TotalHeight>600</TotalHeight>
     <LuminousHeight>50</LuminousHeight>
-    <Type>Direct</Type>
-  </StandCuboidCentered>
-</P3D>
-```
-
-### Example with ReflectorDepth and Type set to Indirect
-
-```xml
-<P3D>
-  <StandCuboidCentered>
-    <Width>350</Width>
-    <Length>350</Length>
-    <Height>80</Height>
-    <LuminousWidth>330</LuminousWidth>
-    <LuminousLength>330</LuminousLength>
-    <TopWidth>280</TopWidth>
-    <TopLength>280</TopLength>
-    <TotalHeight>1800</TotalHeight>
-    <ReflectorDepth>30</ReflectorDepth>
-    <Type>Indirect</Type>
-  </StandCuboidCentered>
-</P3D>
-```
-
-### Example with LuminousHeight and Type set to DirectIndirect
-
-```xml
-<P3D>
-  <StandCuboidCentered>
-    <Width>350</Width>
-    <Length>350</Length>
-    <Height>80</Height>
-    <LuminousWidth>330</LuminousWidth>
-    <LuminousLength>330</LuminousLength>
-    <TopWidth>280</TopWidth>
-    <TopLength>280</TopLength>
-    <TotalHeight>1800</TotalHeight>
-    <LuminousHeight>50</LuminousHeight>
-    <Type>DirectIndirect</Type>
   </StandCuboidCentered>
 </P3D>
 ```

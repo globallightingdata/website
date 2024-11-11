@@ -77,7 +77,7 @@ sidebar_label: Bollard Cuboid
 </xs:element>
 ```
 ## XML
-### Example with LuminousHeight and Type set to Direct
+### Example 
 
 ```xml
 <P3D>
@@ -86,50 +86,9 @@ sidebar_label: Bollard Cuboid
     <Length>110</Length>
     <Height>650</Height>
     <LuminousWidth>100</LuminousWidth>
-    <LuminousLength>100</LuminousLength>
-    <LuminousHeight>50</LuminousHeight>
+    <LuminousLength>50</LuminousLength>
+    <LuminousHeight>100</LuminousHeight>
     <TotalHeight>650</TotalHeight>
-    <C0>20</C0>
-    <Type>Direct</Type>
-  </BollardCuboid>
-</P3D>
-```
-
-### Example with ReflectorDepth and Type set to Indirect
-
-```xml
-<P3D>
-  <BollardCuboid>
-    <Width>110</Width>
-    <Length>110</Length>
-    <Height>650</Height>
-    <LuminousWidth>100</LuminousWidth>
-    <LuminousLength>100</LuminousLength>
-    <ReflectorDepth>30</ReflectorDepth>
-    <TotalHeight>650</TotalHeight>
-    <C90>20</C90>
-    <Type>Indirect</Type>
-  </BollardCuboid>
-</P3D>
-```
-
-### Example with LuminousHeight and Type set to DirectIndirect
-
-```xml
-<P3D>
-  <BollardCuboid>
-    <Width>110</Width>
-    <Length>110</Length>
-    <Height>650</Height>
-    <LuminousWidth>100</LuminousWidth>
-    <LuminousLength>100</LuminousLength>
-    <LuminousHeight>50</LuminousHeight>
-    <TotalHeight>650</TotalHeight>
-    <C0>20</C0>
-    <C90>20</C90>
-    <C180>20</C180>
-    <C270>20</C270>
-    <Type>DirectIndirect</Type>
   </BollardCuboid>
 </P3D>
 ```

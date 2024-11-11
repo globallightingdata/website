@@ -63,56 +63,17 @@ This type is a cube-shaped luminaire that is attached to a wall.
 ```
 
 ## XML
-
-### Example with LuminousHeight and Type set to Direct
-
-```xml
-<P3D>
-  <WallCuboid>
-    <Width>400</Width>
-    <Length>400</Length>
-    <Height>800</Height>
-    <LuminousWidth>390</LuminousWidth>
-    <LuminousLength>390</LuminousLength>
-    <LuminousHeight>20</LuminousHeight>
-    <TopWidth>320</TopWidth>
-    <TopLength>320</TopLength>
-    <Type>Direct</Type>
-  </WallCuboid>
-</P3D>
-```
-
-### Example with ReflectorDepth and Type set to Indirect
+### Example
 
 ```xml
 <P3D>
   <WallCuboid>
-    <Width>400</Width>
-    <Length>400</Length>
-    <Height>800</Height>
-    <LuminousWidth>390</LuminousWidth>
-    <LuminousLength>390</LuminousLength>
-    <ReflectorDepth>30</ReflectorDepth>
-    <TopWidth>320</TopWidth>
-    <TopLength>320</TopLength>
-    <Type>Indirect</Type>
-  </WallCuboid>
-</P3D>
-```
-
-### Example with LuminousHeight and Type set to DirectIndirect
-
-```xml
-<P3D>
-  <WallCuboid>
-    <Width>400</Width>
-    <Length>400</Length>
-    <Height>800</Height>
-    <LuminousWidth>390</LuminousWidth>
-    <LuminousLength>390</LuminousLength>
-    <LuminousHeight>20</LuminousHeight>
-    <TopWidth>320</TopWidth>
-    <TopLength>320</TopLength>
+    <Width>100</Width>
+    <Length>100</Length>
+    <Height>300</Height>
+    <LuminousWidth>90</LuminousWidth>
+    <LuminousLength>90</LuminousLength>
+    <LuminousHeight>40</LuminousHeight>
     <Type>DirectIndirect</Type>
   </WallCuboid>
 </P3D>

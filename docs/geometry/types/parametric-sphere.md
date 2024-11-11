@@ -49,15 +49,16 @@ This model consists of a sphere on a base if the base height is greater than 0.
 ```
 
 ## XML
+### Example
 
 ```xml
 <P3D>
   <Sphere>
     <Diameter>200</Diameter>
-    <BaseHeight>40</BaseHeight>
+    <BaseHeight>100</BaseHeight>
     <BaseDiameter>80</BaseDiameter>
     <Mounting>Ceiling</Mounting>
-    <PendulumLength>0</PendulumLength>
+    <PendulumLength>500</PendulumLength>
   </Sphere>
 </P3D>
 ```

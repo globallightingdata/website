@@ -63,56 +63,19 @@ A spotlight with a cuboid-shaped luminous head mounted on a bracket attached to 
 ```
 
 ## XML
-### Example with LuminousHeight
+### Example
 
 ```xml
 <P3D>
   <SpotCuboid>
-    <Width>100</Width>
-    <Length>100</Length>
-    <Height>30</Height>
-    <LuminousWidth>90</LuminousWidth>
-    <LuminousLength>90</LuminousLength>
-    <LuminousHeight>10</LuminousHeight>
-    <BaseWidth>30</BaseWidth>
-    <BaseLength>30</BaseLength>
-    <BaseHeight>10</BaseHeight>
-  </SpotCuboid>
-</P3D>
-```
-
-### Example with ReflectorDepth
-
-```xml
-<P3D>
-  <SpotCuboid>
-    <Width>100</Width>
-    <Length>100</Length>
-    <Height>30</Height>
-    <LuminousWidth>90</LuminousWidth>
-    <LuminousLength>90</LuminousLength>
-    <ReflectorDepth>5</ReflectorDepth>
-    <BaseWidth>30</BaseWidth>
-    <BaseLength>30</BaseLength>
-    <BaseHeight>10</BaseHeight>
-  </SpotCuboid>
-</P3D>
-```
-
-### Example with Both LuminousHeight and ReflectorDepth
-
-```xml
-<P3D>
-  <SpotCuboid>
-    <Width>100</Width>
-    <Length>100</Length>
-    <Height>30</Height>
-    <LuminousWidth>90</LuminousWidth>
-    <LuminousLength>90</LuminousLength>
-    <LuminousHeight>10</LuminousHeight>
-    <ReflectorDepth>5</ReflectorDepth>
-    <BaseWidth>30</BaseWidth>
-    <BaseLength>30</BaseLength>
+    <Width>70</Width>
+    <Length>70</Length>
+    <Height>120</Height>
+    <LuminousWidth>60</LuminousWidth>
+    <LuminousLength>60</LuminousLength>
+    <LuminousHeight>30</LuminousHeight>
+    <BaseWidth>100</BaseWidth>
+    <BaseLength>20</BaseLength>
     <BaseHeight>10</BaseHeight>
   </SpotCuboid>
 </P3D>

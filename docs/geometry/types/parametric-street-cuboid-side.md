@@ -52,7 +52,7 @@ A classic street light featuring a cuboid-shaped luminous head attached to the s
 ```
 
 ## XML
-### Example with LuminousHeight
+### Example
 
 ```xml
 <P3D>
@@ -61,42 +61,8 @@ A classic street light featuring a cuboid-shaped luminous head attached to the s
     <Length>190</Length>
     <Height>80</Height>
     <LuminousWidth>280</LuminousWidth>
-    <LuminousLength>120</LuminousLength>
-    <LuminousHeight>50</LuminousHeight>
-    <TotalHeight>130</TotalHeight>
-  </StreetCuboidSide>
-</P3D>
-```
-
-### Example with ReflectorDepth
-
-```xml
-<P3D>
-  <StreetCuboidSide>
-    <Width>300</Width>
-    <Length>190</Length>
-    <Height>80</Height>
-    <LuminousWidth>280</LuminousWidth>
-    <LuminousLength>120</LuminousLength>
-    <ReflectorDepth>30</ReflectorDepth>
-    <TotalHeight>130</TotalHeight>
-  </StreetCuboidSide>
-</P3D>
-```
-
-### Example with Both LuminousHeight and ReflectorDepth
-
-```xml
-<P3D>
-  <StreetCuboidSide>
-    <Width>300</Width>
-    <Length>190</Length>
-    <Height>80</Height>
-    <LuminousWidth>280</LuminousWidth>
-    <LuminousLength>120</LuminousLength>
-    <LuminousHeight>50</LuminousHeight>
-    <ReflectorDepth>30</ReflectorDepth>
-    <TotalHeight>130</TotalHeight>
+    <LuminousLength>170</LuminousLength>
+    <LuminousHeight>40</LuminousHeight>
   </StreetCuboidSide>
 </P3D>
 ```

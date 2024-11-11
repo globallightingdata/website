@@ -61,37 +61,20 @@ The `RecessedCuboid` is a cube-shaped recessed luminaire.
 ```
 
 ## XML
-### Example with LuminousHeight
+### Example
 
 ```xml
 <P3D>
   <RecessedCuboid>
-    <Width>80</Width>
-    <Length>80</Length>
-    <Height>80</Height>
-    <LuminousWidth>70</LuminousWidth>
-    <LuminousLength>70</LuminousLength>
-    <LuminousHeight>10</LuminousHeight>
-    <TopWidth>64</TopWidth>
-    <TopLength>64</TopLength>
+    <Width>100</Width>
+    <Length>100</Length>
+    <Height>40</Height>
+    <LuminousWidth>80</LuminousWidth>
+    <LuminousLength>80</LuminousLength>
+    <LuminousHeight>20</LuminousHeight>
+    <TopWidth>100</TopWidth>
+    <TopLength>100</TopLength>
     <Mounting>Ceiling</Mounting>
-  </RecessedCuboid>
-</P3D>
-```
-### Example with ReflectorDepth
-
-```xml
-<P3D>
-  <RecessedCuboid>
-    <Width>80</Width>
-    <Length>80</Length>
-    <Height>80</Height>
-    <LuminousWidth>70</LuminousWidth>
-    <LuminousLength>70</LuminousLength>
-    <ReflectorDepth>5</ReflectorDepth>
-    <TopWidth>64</TopWidth>
-    <TopLength>64</TopLength>
-    <Mounting>Wall</Mounting>
   </RecessedCuboid>
 </P3D>
 ```

@@ -59,46 +59,16 @@ sidebar_label: Cylinder
 ```
 
 ## XML
-### Example with LuminousHeight
+### Example
 
 ```xml
 <P3D>
   <Cylinder>
-    <Diameter>340</Diameter>
-    <Height>200</Height>
-    <TopDiameter>272</TopDiameter>
-    <LuminousDiameter>320</LuminousDiameter>
-    <LuminousHeight>50</LuminousHeight>
-    <Mounting>Ceiling</Mounting>
-  </Cylinder>
-</P3D>
-```
-
-### Example with ReflectorDepth
-
-```xml
-<P3D>
-  <Cylinder>
-    <Diameter>340</Diameter>
-    <Height>200</Height>
-    <TopDiameter>272</TopDiameter>
-    <LuminousDiameter>320</LuminousDiameter>
-    <ReflectorDepth>30</ReflectorDepth>
-    <Mounting>Wall</Mounting>
-  </Cylinder>
-</P3D>
-```
-
-### Example with Pendulum
-
-```xml
-<P3D>
-  <Cylinder>
-    <Diameter>340</Diameter>
-    <Height>200</Height>
-    <TopDiameter>272</TopDiameter>
-    <LuminousDiameter>320</LuminousDiameter>
-    <LuminousHeight>50</LuminousHeight>
+    <Diameter>100</Diameter>
+    <Height>150</Height>
+    <TopDiameter>100</TopDiameter>
+    <LuminousDiameter>90</LuminousDiameter>
+    <LuminousHeight>20</LuminousHeight>
     <Mounting>Pendulum</Mounting>
     <PendulumLength>400</PendulumLength>
   </Cylinder>

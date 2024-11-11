@@ -62,43 +62,15 @@ This type is a cylinder-shaped luminaire that is attached to a wall.
 ```
 
 ## XML
-### Example with LuminousHeight and Type set to Direct
+### Example
 
 ```xml
 <P3D>
   <WallCylinder>
-    <Diameter>100</Diameter>
-    <Height>200</Height>
-    <LuminousDiameter>100</LuminousDiameter>
-    <LuminousHeight>20</LuminousHeight>
-    <Type>Direct</Type>
-  </WallCylinder>
-</P3D>
-```
-
-### Example with ReflectorDepth and Type set to Indirect
-
-```xml
-<P3D>
-  <WallCylinder>
-    <Diameter>100</Diameter>
-    <Height>200</Height>
-    <LuminousDiameter>100</LuminousDiameter>
-    <ReflectorDepth>30</ReflectorDepth>
-    <Type>Indirect</Type>
-  </WallCylinder>
-</P3D>
-```
-
-### Example with LuminousHeight and Type set to DirectIndirect
-
-```xml
-<P3D>
-  <WallCylinder>
-    <Diameter>100</Diameter>
-    <Height>200</Height>
-    <LuminousDiameter>100</LuminousDiameter>
-    <LuminousHeight>20</LuminousHeight>
+    <Diameter>90</Diameter>
+    <Height>220</Height>
+    <LuminousDiameter>80</LuminousDiameter>
+    <LuminousHeight>50</LuminousHeight>
     <Type>DirectIndirect</Type>
   </WallCylinder>
 </P3D>

@@ -62,34 +62,18 @@ A spotlight with a cuboid-shaped luminous head mounted on a bracket attached to 
 ```
 
 ## XML
-### Example with LuminousHeight
+### Example
 
 ```xml
 <P3D>
   <FloodLightCuboid>
     <Width>400</Width>
-    <Length>400</Length>
-    <Height>100</Height>
+    <Length>300</Length>
+    <Height>80</Height>
     <LuminousWidth>380</LuminousWidth>
-    <LuminousLength>380</LuminousLength>
-    <LuminousHeight>10</LuminousHeight>
-    <TotalHeight>250</TotalHeight>
-  </FloodLightCuboid>
-</P3D>
-```
-
-### Example with ReflectorDepth
-
-```xml
-<P3D>
-  <FloodLightCuboid>
-    <Width>400</Width>
-    <Length>400</Length>
-    <Height>100</Height>
-    <LuminousWidth>380</LuminousWidth>
-    <LuminousLength>380</LuminousLength>
-    <ReflectorDepth>5</ReflectorDepth>
-    <TotalHeight>250</TotalHeight>
+    <LuminousLength>280</LuminousLength>
+    <LuminousHeight>30</LuminousHeight>
+    <TotalHeight>150</TotalHeight>
   </FloodLightCuboid>
 </P3D>
 ```

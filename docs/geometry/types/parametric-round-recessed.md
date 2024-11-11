@@ -54,33 +54,18 @@ Round recessed luminaire.
 </xs:element>
 ```
 
-# XML
-## Example with LuminousHeight
+## XML
+### Example
 
 ```xml
 <P3D>
   <RecessedRound>
-    <Diameter>50</Diameter>
-    <Height>50</Height>
-    <LuminousDiameter>40</LuminousDiameter>
-    <TopDiameter>40</TopDiameter>
-    <LuminousHeight>10</LuminousHeight>
+    <Diameter>100</Diameter>
+    <Height>150</Height>
+    <LuminousDiameter>80</LuminousDiameter>
+    <TopDiameter>100</TopDiameter>
+    <LuminousHeight>20</LuminousHeight>
     <Mounting>Ceiling</Mounting>
-  </RecessedRound>
-</P3D>
-```
-
-## Example with ReflectorDepth
-
-```xml
-<P3D>
-  <RecessedRound>
-    <Diameter>50</Diameter>
-    <Height>50</Height>
-    <LuminousDiameter>40</LuminousDiameter>
-    <TopDiameter>40</TopDiameter>
-    <ReflectorDepth>5</ReflectorDepth>
-    <Mounting>Wall</Mounting>
   </RecessedRound>
 </P3D>
 ```

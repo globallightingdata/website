@@ -42,14 +42,15 @@ A Spotlight in cylinder shape mounted on a bracket attached to a plate.
 ```
 
 ## XML
+### Example
 
 ```xml
 <P3D>
   <SpotCylinder>
-    <Diameter>60</Diameter>
-    <Height>70</Height>
-    <LuminousDiameter>50</LuminousDiameter>
-    <TotalHeight>130</TotalHeight>
+    <Diameter>80</Diameter>
+    <Height>100</Height>
+    <LuminousDiameter>70</LuminousDiameter>
+    <TotalHeight>140</TotalHeight>
   </SpotCylinder>
 </P3D>
 ```

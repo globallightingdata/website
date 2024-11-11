@@ -64,52 +64,18 @@ Parabolic shaped luminaire.
 ```
 
 ## XML
-### Example with LuminousHeight
+### Example
 
 ```xml
-
 <P3D>
   <Parabolic>
-    <Diameter>120</Diameter>
-    <Height>200</Height>
-    <LuminousDiameter>110</LuminousDiameter>
+    <Diameter>200</Diameter>
+    <Height>150</Height>
+    <LuminousDiameter>180</LuminousDiameter>
     <LuminousHeight>50</LuminousHeight>
-    <BaseDiameter>60</BaseDiameter>
-    <BaseHeight>100</BaseHeight>
+    <BaseDiameter>80</BaseDiameter>
+    <BaseHeight>80</BaseHeight>
     <Mounting>Ceiling</Mounting>
-  </Parabolic>
-</P3D>
-```
-
-### Example with ReflectorDepth
-
-```xml
-<P3D>
-  <Parabolic>
-    <Diameter>120</Diameter>
-    <Height>200</Height>
-    <LuminousDiameter>110</LuminousDiameter>
-    <ReflectorDepth>30</ReflectorDepth>
-    <BaseDiameter>60</BaseDiameter>
-    <BaseHeight>100</BaseHeight>
-    <Mounting>Wall</Mounting>
-  </Parabolic>
-</P3D>
-```
-
-### Example with Pendulum
-
-```xml
-<P3D>
-  <Parabolic>
-    <Diameter>120</Diameter>
-    <Height>200</Height>
-    <LuminousDiameter>110</LuminousDiameter>
-    <LuminousHeight>50</LuminousHeight>
-    <BaseDiameter>60</BaseDiameter>
-    <BaseHeight>100</BaseHeight>
-    <Mounting>Pendulum</Mounting>
-    <PendulumLength>400</PendulumLength>
   </Parabolic>
 </P3D>
 ```

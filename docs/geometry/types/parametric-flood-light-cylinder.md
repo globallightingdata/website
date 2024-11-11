@@ -49,30 +49,16 @@ A spotlight with a cylinder-shaped luminous head mounted on a bracket attached t
 ```
 
 ## XML
-### Example with LuminousHeight
+### Example
 
 ```xml
 <P3D>
   <FloodLightCylinder>
-    <Diameter>300</Diameter>
-    <Height>100</Height>
-    <LuminousDiameter>280</LuminousDiameter>
-    <LuminousHeight>10</LuminousHeight>
-    <TotalHeight>250</TotalHeight>
-  </FloodLightCylinder>
-</P3D>
-```
-
-### Example with ReflectorDepth
-
-```xml
-<P3D>
-  <FloodLightCylinder>
-    <Diameter>300</Diameter>
-    <Height>100</Height>
-    <LuminousDiameter>280</LuminousDiameter>
-    <ReflectorDepth>5</ReflectorDepth>
-    <TotalHeight>250</TotalHeight>
+    <Diameter>150</Diameter>
+    <Height>250</Height>
+    <LuminousDiameter>140</LuminousDiameter>
+    <LuminousHeight>50</LuminousHeight>
+    <TotalHeight>300</TotalHeight>
   </FloodLightCylinder>
 </P3D>
 ```
