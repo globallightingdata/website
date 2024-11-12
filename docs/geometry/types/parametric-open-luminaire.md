@@ -71,9 +71,10 @@ The `Open Luminaire` features a base with an openly accessible luminous object, 
     <Width>20</Width>
     <Length>500</Length>
     <Height>20</Height>
-    <LuminousWidth>16</LuminousWidth>
-    <LuminousLength>500</LuminousLength>
-    <LuminousHeight>16</LuminousHeight>
+    <LuminousLength>490</LuminousLength>
+    <LuminousDiameter>16</LuminousDiameter>
+    <Mounting>Ceiling</Mounting>
+    <NumberOfTubes>1</NumberOfTubes>
   </OpenLuminaire>
 </P3D>
 ```
