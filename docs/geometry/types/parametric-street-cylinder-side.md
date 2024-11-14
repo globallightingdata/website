@@ -9,15 +9,15 @@ sidebar_label: Street Cylinder Side
 
 A classic street light featuring a cylinder-shaped luminous head attached to the side of a pole.
 
-- **Diameter** and **Height**: Define the overall dimensions of the luminaire's housing.
-- **TopDiameter** *(optional)*: Allows for skewing the cylinder by adjusting the diameter at the top.
-- **LuminousDiameter**: Sets the size of the main luminous surface.
-- **TopLuminousDiameter** *(optional)*: Defines the size of the luminous surface at the top for additional design flexibility.
-- **LuminousHeight** or **ReflectorDepth** *(optional)*:
-  - **LuminousHeight**: Describes how far the luminous part protrudes from the housing.
-  - **ReflectorDepth**: Describes how far the luminous part is recessed into the housing.
-- **Height** *(optional)*: Sets the height of the luminaire head separately from the overall model.
-- **TotalHeight** *(optional)*: Defines the overall height of the entire model, including the stand. If specified, the stand height is calculated as `TotalHeight` minus the luminaire `Height`.
+- `Diameter` and `Height`: Define the overall dimensions of the luminaire's housing.
+- `TopDiameter` *(optional)*: Allows for skewing the cylinder by adjusting the diameter at the top.
+- `LuminousDiameter`: Sets the size of the main luminous surface.
+- `TopLuminousDiameter` *(optional)*: Defines the size of the luminous surface at the top for additional design flexibility.
+- `LuminousHeight` or `ReflectorDepth` *(optional)*:
+  - `LuminousHeight`: Describes how far the luminous part protrudes from the housing.
+  - `ReflectorDepth`: Describes how far the luminous part is recessed into the housing.
+- `Height` *(optional)*: Sets the height of the luminaire head separately from the overall model.
+- `TotalHeight` *(optional)*: Defines the overall height of the entire model, including the stand. If specified, the stand height is calculated as `TotalHeight` minus the luminaire `Height`.
 
 **Note**: The pole itself is **not modeled** within this luminaire configuration.
 

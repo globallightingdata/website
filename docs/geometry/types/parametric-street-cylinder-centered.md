@@ -9,14 +9,14 @@ sidebar_label: Street Cylinder Centered
 
 A classic street light featuring a cylinder-shaped luminous head centered on the pole.
 
-- **Diameter** and **Height**: Define the overall dimensions of the luminaire's housing.
-- **TopDiameter**: Allows for skewing the cylinder by adjusting the diameter at the top.
-- **LuminousDiameter**: Sets the size of the main luminous surface.
-- **TopLuminousDiameter** (optional): Defines the size of the luminous surface at the top, allowing for additional design flexibility.
-- **LuminousHeight** or **ReflectorDepth** (optional):
-  - **LuminousHeight**: Describes how far the luminous part sticks out from the housing.
-  - **ReflectorDepth**: Describes how far the luminous part is recessed into the housing.
-- **Height** (optional): Sets the height of the luminaire head separately from the overall model.
+- `Diameter` and `Height`: Define the overall dimensions of the luminaire's housing.
+- `TopDiameter`: Allows for skewing the cylinder by adjusting the diameter at the top.
+- `LuminousDiameter`: Sets the size of the main luminous surface.
+- `TopLuminousDiameter` (optional): Defines the size of the luminous surface at the top, allowing for additional design flexibility.
+- `LuminousHeight` or `ReflectorDepth` (optional):
+  - `LuminousHeight`: Describes how far the luminous part sticks out from the housing.
+  - `ReflectorDepth`: Describes how far the luminous part is recessed into the housing.
+- `Height` (optional): Sets the height of the luminaire head separately from the overall model.
 
 **Note**: The pole itself is not modeled within this luminaire configuration.
 

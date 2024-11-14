@@ -9,16 +9,16 @@ sidebar_label: Spot Cuboid
 
 A spotlight with a cuboid-shaped luminous head mounted on a bracket attached to a cubic base plate.
 
-- **Dimensions**: Adjust the size of the luminaire by setting the `Width`, `Length`, and `Height`.
-- **Luminous Features**:
-  - **LuminousWidth** and **LuminousLength**: Define the size of the luminous surfaces.
-  - **LuminousHeight** or **ReflectorDepth** *(optional)*:
-    - **LuminousHeight**: Describes how far the luminous part protrudes from the housing.
-    - **ReflectorDepth**: Describes how far the luminous part is recessed into the housing.
-- **Base Dimensions** *(optional)*: Modify the size of the base plate using `BaseWidth`, `BaseLength`, and `BaseHeight`.
-  - **BaseWidth** and **BaseLength**: Determine the footprint of the base plate.
-  - **BaseHeight**: Sets the height of the base plate.
-- **Bracket Connection**:
+- `Dimensions`: Adjust the size of the luminaire by setting the `Width`, `Length`, and `Height`.
+- `Luminous Features`:
+  - `LuminousWidth` and `LuminousLength`: Define the size of the luminous surfaces.
+  - `LuminousHeight` or `ReflectorDepth` *(optional)*:
+    - `LuminousHeight`: Describes how far the luminous part protrudes from the housing.
+    - `ReflectorDepth`: Describes how far the luminous part is recessed into the housing.
+- `Base Dimensions` *(optional)*: Modify the size of the base plate using `BaseWidth`, `BaseLength`, and `BaseHeight`.
+  - `BaseWidth` and `BaseLength`: Determine the footprint of the base plate.
+  - `BaseHeight`: Sets the height of the base plate.
+- `Bracket Connection`:
   - The distance from the connector of the bracket to the luminaire is equal to the `Height` of the luminaire head.
   - The length of the connection from the base surface to the bracket is 10% of the `Height`.
 

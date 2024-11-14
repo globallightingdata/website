@@ -9,12 +9,12 @@ sidebar_label: Floodlight Cylinder
 
 A spotlight with a cylinder-shaped luminous head mounted on a bracket attached to a base plate.
 
-- **Diameter** and **Height**: Define the overall dimensions of the luminaire's housing.
-- **LuminousDiameter**: Sets the size of the main luminous surface.
-- **LuminousHeight** or **ReflectorDepth** *(optional)*:
-  - **LuminousHeight**: Describes how far the luminous part protrudes from the housing.
-  - **ReflectorDepth**: Describes how far the luminous part is recessed into the housing.
-- **TotalHeight** *(optional)*: Defines the overall height of the entire model, including the bracket. If specified, the bracket size is calculated as `TotalHeight` minus the luminaire `Height`.
+- `Diameter` and `Height`: Define the overall dimensions of the luminaire's housing.
+- `LuminousDiameter`: Sets the size of the main luminous surface.
+- `LuminousHeight` or `ReflectorDepth` *(optional)*:
+  - `LuminousHeight`: Describes how far the luminous part protrudes from the housing.
+  - `ReflectorDepth`: Describes how far the luminous part is recessed into the housing.
+- `TotalHeight` *(optional)*: Defines the overall height of the entire model, including the bracket. If specified, the bracket size is calculated as `TotalHeight` minus the luminaire `Height`.
 
 **Note**: The pole itself is **not modeled** within this luminaire configuration.
 

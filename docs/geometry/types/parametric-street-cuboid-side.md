@@ -9,12 +9,12 @@ sidebar_label: Street Cuboid Side
 
 A classic street light featuring a cuboid-shaped luminous head attached to the side of a pole.
 
-- **Width**, **Length**, and **Height**: Define the overall dimensions of the luminaire's housing.
-- **LuminousWidth** and **LuminousLength** *(optional)*: Specify the size of the luminous surfaces.
-- **LuminousHeight** or **ReflectorDepth** *(optional)*:
-  - **LuminousHeight**: Describes how far the luminous part sticks out from the housing.
-  - **ReflectorDepth**: Describes how far the luminous part is recessed into the housing.
-- **TotalHeight** *(optional)*: Defines the overall height of the entire model, including the stand. If specified, the stand height is calculated as `TotalHeight` minus the luminaire `Height`.
+- `Width`, `Length`, and `Height`: Define the overall dimensions of the luminaire's housing.
+- `LuminousWidth` and `LuminousLength` *(optional)*: Specify the size of the luminous surfaces.
+- `LuminousHeight` or `ReflectorDepth` *(optional)*:
+  - `LuminousHeight`: Describes how far the luminous part sticks out from the housing.
+  - `ReflectorDepth`: Describes how far the luminous part is recessed into the housing.
+- `TotalHeight` *(optional)*: Defines the overall height of the entire model, including the stand. If specified, the stand height is calculated as `TotalHeight` minus the luminaire `Height`.
 - The pole itself is **not modeled** within this luminaire configuration.
 
 ## Parameters

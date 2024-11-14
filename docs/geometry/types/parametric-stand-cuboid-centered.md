@@ -17,9 +17,9 @@ A cube-shaped standing luminaire. This parametric model allows you to define the
   - The `LuminousHeight` describes how far the luminous part sticks out of the body.
   - The `ReflectorDepth` describes how far the luminous part is recessed into the body.
 - `Type` defines the placement and growth direction of light emitters:
-  - **Direct**: LEO and LES placed at the bottom center of the luminaire. All four sides grow upwards with `LuminousHeight`.
-  - **Indirect**: LEO and LES placed at the top center of the luminaire. All four sides grow downwards with `LuminousHeight`.
-  - **DirectIndirect**: LEO placed in the center of the luminaire. LES on top and bottom surfaces are centered. `LuminousHeight` > 0 means LES on all four surfaces.
+  - `Direct`: LEO and LES placed at the bottom center of the luminaire. All four sides grow upwards with `LuminousHeight`.
+  - `Indirect`: LEO and LES placed at the top center of the luminaire. All four sides grow downwards with `LuminousHeight`.
+  - `DirectIndirect`: LEO placed in the center of the luminaire. LES on top and bottom surfaces are centered. `LuminousHeight` > 0 means LES on all four surfaces.
 
 ## Parameters
 
