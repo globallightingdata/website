@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkgldf=self.webpackChunkgldf||[]).push([[1302],{7433:l=>{l.exports=JSON.parse('{"tag":{"label":"l3d","permalink":"/blog/tags/l-3-d","allTagsPath":"/blog/tags","count":2,"unlisted":false},"listMetadata":{"permalink":"/blog/tags/l-3-d","page":1,"postsPerPage":10,"totalPages":1,"totalCount":2,"blogDescription":"Blog","blogTitle":"Blog"}}')}}]);

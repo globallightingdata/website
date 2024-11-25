@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkgldf=self.webpackChunkgldf||[]).push([[1714],{6074:l=>{l.exports=JSON.parse('{"tag":{"label":"tools","permalink":"/blog/tags/tools","allTagsPath":"/blog/tags","count":3,"unlisted":false},"listMetadata":{"permalink":"/blog/tags/tools","page":1,"postsPerPage":10,"totalPages":1,"totalCount":3,"blogDescription":"Blog","blogTitle":"Blog"}}')}}]);
