@@ -14,7 +14,7 @@ Some PIM system manufacturers even provide GLDF generators due to the open forma
 
 GLDF offers flexibility with many optional structure elements. You can start with a simple LDC file and the product name in GLDF, but, of course, this won't be sufficient for most applications.
 
-A good starting point is to match the data amount of ROLF and ULD. Ensure you have a unique product name and number (and GTIN). A geometry, even a simple one, is mandatory. If the product has multiple light outputs and lamps, make sure to include them. It's recommended to add a product picture and a description in multiple languages. If your PIM system ,supports product variants, make sure to fill in the variant structure in GLDF.
+A good starting point is to match the data amount of ROLF and ULD. Ensure you have a unique product name and number (and GTIN). A geometry, even a simple one, is mandatory. If the product has multiple light outputs and lamps, make sure to include them. It's recommended to add a product picture and a description in multiple languages. If your PIM system supports product variants, make sure to fill in the variant structure in GLDF.
 
 The next level involves transporting all the data from your creating PIM system to GLDF. However, filling up all the native properties that GLDF offers can be quite challenging. It's essential to carefully consider the specific data and properties that are most relevant to your and your users needs.
 

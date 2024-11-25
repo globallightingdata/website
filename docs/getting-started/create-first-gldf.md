@@ -37,7 +37,6 @@ Your directory should look like this now:
 
 The heart of a GLDF file is the **product.xml** file, located in the root of the zip archive. It contains all the manufacturer and product information written in [XML](https://en.wikipedia.org/wiki/XML). The [GLDF XML Schema (XSD)](https://en.wikipedia.org/wiki/XML_Schema_(W3C)) defines the exact structure of the XML code in *product.xml*. You can validate your XML file against this XSD to ensure your GLDF has no errors.
 
-welches wiederum
 At top level, GLDF XML begins with a `Root` element, which in turn contains three child elements:
 
 - `Header`
