@@ -1,5 +1,5 @@
 ### BUILD ###
-FROM node:20-buster-slim AS build
+FROM node:22-bookworm-slim AS build
 
 WORKDIR /build
 COPY . /
@@ -8,7 +8,7 @@ RUN npm ci --no-audit --no-fund && npm run build
 
 ### RELEASE ###
 # https://hub.docker.com/_/caddy/tags
-FROM caddy:2.8.4-alpine
+FROM caddy:2.9-alpine
 
 COPY Caddyfile /etc/caddy/Caddyfile
 COPY --from=build /build /srv
