@@ -31,6 +31,7 @@ Parabolic shaped luminaire.
 | BaseHeight       | int     | Value in mm (default is 50% of `Height`)              |
 | Mounting         | string  | Ceiling, Wall, Floor or Pendulum                      |
 | PendulumLength   | int     | Value in mm (required if `Mounting` is `Pendulum`)    |
+| HousingColor     | string  | 4 digit RAL color code                                |
 
 ## XSD
 
@@ -58,6 +59,17 @@ Parabolic shaped luminaire.
         </xs:simpleType>
       </xs:element>
       <xs:element name="PendulumLength" type="xs:int" minOccurs="0"/>
+      <xs:element name="HousingColor" minOccurs="0">
+        <xs:complexType>
+          <xs:attribute name="ral">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:pattern value="[1-9][0-9]{3}"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
+        </xs:complexType>
+      </xs:element>
     </xs:sequence>
   </xs:complexType>
 </xs:element>
@@ -67,7 +79,7 @@ Parabolic shaped luminaire.
 ### Example
 
 ```xml
-<P3D>
+<P3D filename="Parabolic">
   <Parabolic>
     <Diameter>200</Diameter>
     <Height>150</Height>
@@ -76,6 +88,7 @@ Parabolic shaped luminaire.
     <BaseDiameter>80</BaseDiameter>
     <BaseHeight>80</BaseHeight>
     <Mounting>Ceiling</Mounting>
+    <HousingColor ral="9005"/> 
   </Parabolic>
 </P3D>
 ```

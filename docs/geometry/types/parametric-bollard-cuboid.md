@@ -42,6 +42,7 @@ sidebar_label: Bollard Cuboid
 | C180             | int     | Value in mm (0 means no luminous surface at C180 direction)|
 | C270             | int     | Value in mm (0 means no luminous surface at C270 direction)|
 | Type             | string  | Direct, Indirect, DirectIndirect                         |
+| HousingColor     | string  | 4 digit RAL color code                                   |
 
 ## XSD
 
@@ -63,14 +64,16 @@ sidebar_label: Bollard Cuboid
       <xs:element name="C90" type="xs:int" minOccurs="0"/>
       <xs:element name="C180" type="xs:int" minOccurs="0"/>
       <xs:element name="C270" type="xs:int" minOccurs="0"/>
-      <xs:element name="Type" minOccurs="0">
-        <xs:simpleType>
-          <xs:restriction base="xs:string">
-            <xs:enumeration value="Direct"/>
-            <xs:enumeration value="Indirect"/>
-            <xs:enumeration value="DirectIndirect"/>
-          </xs:restriction>
-        </xs:simpleType>
+      <xs:element name="HousingColor" minOccurs="0">
+        <xs:complexType>
+          <xs:attribute name="ral">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:pattern value="[1-9][0-9]{3}"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
+        </xs:complexType>
       </xs:element>
     </xs:sequence>
   </xs:complexType>
@@ -80,7 +83,7 @@ sidebar_label: Bollard Cuboid
 ### Example 
 
 ```xml
-<P3D>
+<P3D filename="BollardCuboid">
   <BollardCuboid>
     <Width>110</Width>
     <Length>110</Length>
@@ -89,6 +92,7 @@ sidebar_label: Bollard Cuboid
     <LuminousLength>50</LuminousLength>
     <LuminousHeight>100</LuminousHeight>
     <TotalHeight>650</TotalHeight>
+    <HousingColor ral="9005"/> 
   </BollardCuboid>
 </P3D>
 ```

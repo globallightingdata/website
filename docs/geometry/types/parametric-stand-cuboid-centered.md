@@ -35,7 +35,8 @@ A cube-shaped standing luminaire. This parametric model allows you to define the
 | TotalHeight      | int     | Value in mm                                               |
 | LuminousHeight   | int     | Value in mm                                               |
 | ReflectorDepth   | int     | Value in mm                                               |
-| Type             | string  | Direct, Indirect, DirectIndirect                         |
+| Type             | string  | Direct, Indirect, DirectIndirect                          |
+| HousingColor     | string  | 4 digit RAL color code                                    |
 
 ## XSD
 
@@ -64,6 +65,17 @@ A cube-shaped standing luminaire. This parametric model allows you to define the
           </xs:restriction>
         </xs:simpleType>
       </xs:element>
+      <xs:element name="HousingColor" minOccurs="0">
+        <xs:complexType>
+          <xs:attribute name="ral">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:pattern value="[1-9][0-9]{3}"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
+        </xs:complexType>
+      </xs:element>
     </xs:sequence>
   </xs:complexType>
 </xs:element>
@@ -72,7 +84,7 @@ A cube-shaped standing luminaire. This parametric model allows you to define the
 ### Example
 
 ```xml
-<P3D>
+<P3D filename="SpotCylinder">
   <StandCuboidCentered>
     <Width>350</Width>
     <Length>350</Length>
@@ -83,6 +95,7 @@ A cube-shaped standing luminaire. This parametric model allows you to define the
     <TopLength>250</TopLength>
     <TotalHeight>600</TotalHeight>
     <LuminousHeight>50</LuminousHeight>
+    <HousingColor ral="9005"/> 
   </StandCuboidCentered>
 </P3D>
 ```

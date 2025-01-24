@@ -22,6 +22,7 @@ This model consists of a sphere on a base if the base height is greater than 0.
 | BaseDiameter   | int  |          value in mm           |
 | Mounting       | int  | Ceiling, Wall, Floor, Pendulum |
 | PendulumLength | int  |          value in mm           |
+| HousingColor   | string | 4 digit RAL color code       |
 
 ## XSD
 
@@ -43,6 +44,17 @@ This model consists of a sphere on a base if the base height is greater than 0.
         </xs:simpleType>
       </xs:element>
       <xs:element name="PendulumLength" type="xs:int" minOccurs="0"/>
+      <xs:element name="HousingColor" minOccurs="0">
+        <xs:complexType>
+          <xs:attribute name="ral">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:pattern value="[1-9][0-9]{3}"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
+        </xs:complexType>
+      </xs:element>
     </xs:sequence>
   </xs:complexType>
 </xs:element>
@@ -52,13 +64,14 @@ This model consists of a sphere on a base if the base height is greater than 0.
 ### Example
 
 ```xml
-<P3D>
+<P3D filename="Sphere">
   <Sphere>
     <Diameter>200</Diameter>
     <BaseHeight>100</BaseHeight>
     <BaseDiameter>80</BaseDiameter>
     <Mounting>Ceiling</Mounting>
     <PendulumLength>500</PendulumLength>
+    <HousingColor ral="9005"/>        
   </Sphere>
 </P3D>
 ```

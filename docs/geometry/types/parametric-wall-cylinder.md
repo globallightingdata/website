@@ -32,7 +32,8 @@ This type is a cylinder-shaped luminaire that is attached to a wall.
 | ReflectorDepth   | int     | Value in mm                                               |
 | TopWidth         | int     | Value in mm (default is 80% of `Width`)                   |
 | TopLength        | int     | Value in mm (default is 80% of `Length`)                  |
-| Type             | string  | Direct, Indirect, DirectIndirect                         |
+| Type             | string  | Direct, Indirect, DirectIndirect                          |
+| HousingColor     | string  | 4 digit RAL color code                                    |
 
 ## XSD
 
@@ -56,6 +57,17 @@ This type is a cylinder-shaped luminaire that is attached to a wall.
           </xs:restriction>
         </xs:simpleType>
       </xs:element>
+      <xs:element name="HousingColor" minOccurs="0">
+        <xs:complexType>
+          <xs:attribute name="ral">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:pattern value="[1-9][0-9]{3}"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
+        </xs:complexType>
+      </xs:element>
     </xs:sequence>
   </xs:complexType>
 </xs:element>
@@ -65,13 +77,14 @@ This type is a cylinder-shaped luminaire that is attached to a wall.
 ### Example
 
 ```xml
-<P3D>
+<P3D filename="WallCylinder">
   <WallCylinder>
     <Diameter>90</Diameter>
     <Height>220</Height>
     <LuminousDiameter>80</LuminousDiameter>
     <LuminousHeight>50</LuminousHeight>
     <Type>DirectIndirect</Type>
+    <HousingColor ral="9005"/>
   </WallCylinder>
 </P3D>
 ```

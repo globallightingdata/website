@@ -29,7 +29,8 @@ This type is a cube-shaped luminaire that is attached to a wall.
 | ReflectorDepth   | int     | Value in mm                                               |
 | TopWidth         | int     | Value in mm                                               |
 | TopLength        | int     | Value in mm                                               |
-| Type             | string  | Direct, Indirect, DirectIndirect                         |
+| Type             | string  | Direct, Indirect, DirectIndirect                          |
+| HousingColor     | string  | 4 digit RAL color code                                    |
 
 ## XSD
 
@@ -57,6 +58,17 @@ This type is a cube-shaped luminaire that is attached to a wall.
           </xs:restriction>
         </xs:simpleType>
       </xs:element>
+      <xs:element name="HousingColor" minOccurs="0">
+        <xs:complexType>
+          <xs:attribute name="ral">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:pattern value="[1-9][0-9]{3}"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
+        </xs:complexType>
+      </xs:element>
     </xs:sequence>
   </xs:complexType>
 </xs:element>
@@ -66,7 +78,7 @@ This type is a cube-shaped luminaire that is attached to a wall.
 ### Example
 
 ```xml
-<P3D>
+<P3D filename="WallCuboid">
   <WallCuboid>
     <Width>100</Width>
     <Length>100</Length>
@@ -75,6 +87,7 @@ This type is a cube-shaped luminaire that is attached to a wall.
     <LuminousLength>90</LuminousLength>
     <LuminousHeight>40</LuminousHeight>
     <Type>DirectIndirect</Type>
+    <HousingColor ral="9005"/> 
   </WallCuboid>
 </P3D>
 ```

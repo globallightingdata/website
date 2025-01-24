@@ -29,6 +29,7 @@ A cylinder-shaped standing luminaire. This parametric model allows you to define
 | LuminousHeight   | int     | Value in mm                                           |
 | ReflectorDepth   | int     | Value in mm                                           |
 | TotalHeight      | int     | Value in mm                                           |
+| HousingColor     | string  | 4 digit RAL color code                                |
 
 ## XSD
 
@@ -45,6 +46,17 @@ A cylinder-shaped standing luminaire. This parametric model allows you to define
         <xs:element name="ReflectorDepth" type="xs:int" minOccurs="0"/>
       </xs:choice>
       <xs:element name="TotalHeight" type="xs:int"/>
+      <xs:element name="HousingColor" minOccurs="0">
+        <xs:complexType>
+          <xs:attribute name="ral">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:pattern value="[1-9][0-9]{3}"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
+        </xs:complexType>
+      </xs:element>
     </xs:sequence>
   </xs:complexType>
 </xs:element>
@@ -54,13 +66,14 @@ A cylinder-shaped standing luminaire. This parametric model allows you to define
 ### Example
 
 ```xml
-<P3D>
+<P3D filename="StandCylinder">
   <StandCylinder>
     <Diameter>300</Diameter>
     <Height>80</Height>
     <LuminousDiameter>290</LuminousDiameter>
     <LuminousHeight>40</LuminousHeight>
     <TotalHeight>500</TotalHeight>
+    <HousingColor ral="9005"/> 
   </StandCylinder>
 </P3D>
 ```

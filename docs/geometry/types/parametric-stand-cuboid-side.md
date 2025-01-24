@@ -31,6 +31,7 @@ A cube-shaped standing luminaire with the head attached on the side rather than 
 | LuminousLength | int  |           value in mm            |
 | TotalHeight    | int  |           value in mm            |
 | Type           | int  | Direct, Indirect, DirectIndirect |
+| HousingColor   | string | 4 digit RAL color code         |
 
 ## XSD
 
@@ -53,6 +54,17 @@ A cube-shaped standing luminaire with the head attached on the side rather than 
           </xs:restriction>
         </xs:simpleType>
       </xs:element>
+      <xs:element name="HousingColor" minOccurs="0">
+        <xs:complexType>
+          <xs:attribute name="ral">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:pattern value="[1-9][0-9]{3}"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
+        </xs:complexType>
+      </xs:element>
     </xs:sequence>
   </xs:complexType>
 </xs:element>
@@ -62,7 +74,7 @@ A cube-shaped standing luminaire with the head attached on the side rather than 
 ### Example
 
 ```xml
-<P3D>
+<P3D filename="StandCuboidSide">
   <StandCuboidSide>
     <Width>250</Width>
     <Length>350</Length>
@@ -71,6 +83,7 @@ A cube-shaped standing luminaire with the head attached on the side rather than 
     <LuminousLength>340</LuminousLength>
     <TotalHeight>600</TotalHeight>
     <Type>DirectIndirect</Type>
+    <HousingColor ral="9005"/> 
   </StandCuboidSide>
 </P3D>
 ```

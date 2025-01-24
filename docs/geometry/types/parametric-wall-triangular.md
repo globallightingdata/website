@@ -32,7 +32,8 @@ Triangular-shaped wall-mounted luminaire.
 | ReflectorDepth   | int     | Value in mm                                               |
 | TopWidth         | int     | Value in mm (default is 80% of `Width`)                   |
 | TopLength        | int     | Value in mm (default is 80% of `Length`)                  |
-| Type             | string  | Direct, Indirect, DirectIndirect                         |
+| Type             | string  | Direct, Indirect, DirectIndirect                          |
+| HousingColor     | string  | 4 digit RAL color code                                    |
 
 ## XSD
 
@@ -49,8 +50,6 @@ Triangular-shaped wall-mounted luminaire.
         <xs:element name="LuminousHeight" type="xs:int"/>
         <xs:element name="ReflectorDepth" type="xs:int"/>
       </xs:choice>
-      <xs:element name="TopWidth" type="xs:int" minOccurs="0"/>
-      <xs:element name="TopLength" type="xs:int" minOccurs="0"/>
       <xs:element name="Type" minOccurs="0">
         <xs:simpleType>
           <xs:restriction base="xs:string">
@@ -59,6 +58,17 @@ Triangular-shaped wall-mounted luminaire.
             <xs:enumeration value="DirectIndirect"/>
           </xs:restriction>
         </xs:simpleType>
+      </xs:element>
+      <xs:element name="HousingColor" minOccurs="0">
+        <xs:complexType>
+          <xs:attribute name="ral">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:pattern value="[1-9][0-9]{3}"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
+        </xs:complexType>
       </xs:element>
     </xs:sequence>
   </xs:complexType>
@@ -69,7 +79,7 @@ Triangular-shaped wall-mounted luminaire.
 ### Example
 
 ```xml
-<P3D>
+<P3D filename="WallTriangular">
   <WallTriangular>
     <Width>120</Width>
     <Length>250</Length>
@@ -77,6 +87,7 @@ Triangular-shaped wall-mounted luminaire.
     <LuminousWidth>100</LuminousWidth>
     <LuminousLength>220</LuminousLength>
     <LuminousHeight>20</LuminousHeight>
+    <HousingColor ral="9005"/>
   </WallTriangular>
 </P3D>
 ```

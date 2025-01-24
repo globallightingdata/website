@@ -27,6 +27,7 @@ sidebar_label: Cylinder
 | ReflectorDepth   | int     | Value in mm                                           |
 | Mounting         | string  | Ceiling, Wall, Floor or Pendulum                      |
 | PendulumLength   | int     | Value in mm (required if `Mounting` is `Pendulum`)    |
+| HousingColor     | string  | 4 digit RAL color code                                |
 
 ## XSD
 
@@ -53,6 +54,17 @@ sidebar_label: Cylinder
         </xs:simpleType>
       </xs:element>
       <xs:element name="PendulumLength" type="xs:int" minOccurs="0"/>
+      <xs:element name="HousingColor" minOccurs="0">
+        <xs:complexType>
+          <xs:attribute name="ral">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:pattern value="[1-9][0-9]{3}"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
+        </xs:complexType>
+      </xs:element>
     </xs:sequence>
   </xs:complexType>
 </xs:element>
@@ -62,7 +74,7 @@ sidebar_label: Cylinder
 ### Example
 
 ```xml
-<P3D>
+<P3D filename="Cylinder">
   <Cylinder>
     <Diameter>100</Diameter>
     <Height>150</Height>
@@ -71,6 +83,7 @@ sidebar_label: Cylinder
     <LuminousHeight>20</LuminousHeight>
     <Mounting>Pendulum</Mounting>
     <PendulumLength>400</PendulumLength>
+    <HousingColor ral="9005"/> 
   </Cylinder>
 </P3D>
 ```

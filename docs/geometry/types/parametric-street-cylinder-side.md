@@ -33,6 +33,7 @@ A classic street light featuring a cylinder-shaped luminous head attached to the
 | ReflectorDepth      | int    | Extent to which the luminous part is recessed into the housing *(optional)* (mm).  |
 | Height              | int    | Height of the luminaire head in millimeters (mm) *(optional)*.                     |
 | TotalHeight         | int    | Overall height of the luminaire including the stand in millimeters (mm) *(optional)*.|
+| HousingColor        | string | 4 digit RAL color code                                                             |
 
 ## XSD
 
@@ -49,7 +50,17 @@ A classic street light featuring a cylinder-shaped luminous head attached to the
         <xs:element name="ReflectorDepth" type="xs:int" minOccurs="0"/>
       </xs:choice>
       <xs:element name="Height" type="xs:int" minOccurs="0"/>
-      <xs:element name="TotalHeight" type="xs:int" minOccurs="0"/>
+      <xs:element name="HousingColor" minOccurs="0">
+        <xs:complexType>
+          <xs:attribute name="ral">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:pattern value="[1-9][0-9]{3}"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
+        </xs:complexType>
+      </xs:element>
     </xs:sequence>
   </xs:complexType>
 </xs:element>
@@ -59,12 +70,13 @@ A classic street light featuring a cylinder-shaped luminous head attached to the
 ### Example
 
 ```xml
-<P3D>
+<P3D filename="StreetCylinderSide">
   <StreetCylinderSide>
     <Diameter>500</Diameter>
     <LuminousDiameter>460</LuminousDiameter>
     <TopLuminousDiameter>350</TopLuminousDiameter>
     <LuminousHeight>100</LuminousHeight>
-    </StreetCylinderSide>
+    <HousingColor ral="9005"/> 
+  </StreetCylinderSide>
 </P3D>
 ```

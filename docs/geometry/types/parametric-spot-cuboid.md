@@ -38,6 +38,7 @@ A spotlight with a cuboid-shaped luminous head mounted on a bracket attached to 
 | BaseWidth           | int   | Width of the base plate in millimeters (mm) *(optional)*.                               |
 | BaseLength          | int   | Length of the base plate in millimeters (mm) *(optional)*.                              |
 | BaseHeight          | int   | Height of the base plate in millimeters (mm) *(optional)*.                              |
+| HousingColor        | string | 4 digit RAL color code                                                                 |
 
 ## XSD
 
@@ -57,6 +58,17 @@ A spotlight with a cuboid-shaped luminous head mounted on a bracket attached to 
       <xs:element name="BaseWidth" type="xs:int" minOccurs="0"/>
       <xs:element name="BaseLength" type="xs:int" minOccurs="0"/>
       <xs:element name="BaseHeight" type="xs:int" minOccurs="0"/>
+      <xs:element name="HousingColor" minOccurs="0">
+        <xs:complexType>
+          <xs:attribute name="ral">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:pattern value="[1-9][0-9]{3}"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
+        </xs:complexType>
+      </xs:element>
     </xs:sequence>
   </xs:complexType>
 </xs:element>
@@ -66,7 +78,7 @@ A spotlight with a cuboid-shaped luminous head mounted on a bracket attached to 
 ### Example
 
 ```xml
-<P3D>
+<P3D filename="SpotCuboid">
   <SpotCuboid>
     <Width>70</Width>
     <Length>70</Length>

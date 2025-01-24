@@ -25,6 +25,7 @@ Round recessed luminaire.
 | LuminousHeight   | int    | Value in mm              |
 | ReflectorDepth   | int    | Value in mm              |
 | Mounting         | string | Ceiling, Wall or Floor   |
+| HousingColor     | string | 4 digit RAL color code   |
 
 ## XSD
 
@@ -49,6 +50,17 @@ Round recessed luminaire.
           </xs:restriction>
         </xs:simpleType>
       </xs:element>
+      <xs:element name="HousingColor" minOccurs="0">
+        <xs:complexType>
+          <xs:attribute name="ral">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:pattern value="[1-9][0-9]{3}"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
+        </xs:complexType>
+      </xs:element>
     </xs:sequence>
   </xs:complexType>
 </xs:element>
@@ -58,7 +70,7 @@ Round recessed luminaire.
 ### Example
 
 ```xml
-<P3D>
+<P3D filename="RecessedRound">
   <RecessedRound>
     <Diameter>100</Diameter>
     <Height>150</Height>
@@ -66,6 +78,7 @@ Round recessed luminaire.
     <TopDiameter>100</TopDiameter>
     <LuminousHeight>20</LuminousHeight>
     <Mounting>Ceiling</Mounting>
+    <HousingColor ral="9005"/>     
   </RecessedRound>
 </P3D>
 ```

@@ -28,6 +28,7 @@ The `RecessedCuboid` is a cube-shaped recessed luminaire.
 | TopWidth         | int     | Value in mm                  |
 | TopLength        | int     | Value in mm                  |
 | Mounting         | string  | Ceiling, Wall or Floor       |
+| HousingColor     | string  | 4 digit RAL color code       |
 
 ## XSD
 
@@ -55,6 +56,17 @@ The `RecessedCuboid` is a cube-shaped recessed luminaire.
           </xs:restriction>
         </xs:simpleType>
       </xs:element>
+      <xs:element name="HousingColor" minOccurs="0">
+        <xs:complexType>
+          <xs:attribute name="ral">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:pattern value="[1-9][0-9]{3}"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
+        </xs:complexType>
+      </xs:element>
     </xs:sequence>
   </xs:complexType>
 </xs:element>
@@ -64,7 +76,7 @@ The `RecessedCuboid` is a cube-shaped recessed luminaire.
 ### Example
 
 ```xml
-<P3D>
+<P3D filename="RecessedCuboid">
   <RecessedCuboid>
     <Width>100</Width>
     <Length>100</Length>
@@ -75,6 +87,7 @@ The `RecessedCuboid` is a cube-shaped recessed luminaire.
     <TopWidth>100</TopWidth>
     <TopLength>100</TopLength>
     <Mounting>Ceiling</Mounting>
+    <HousingColor ral="9005"/> 
   </RecessedCuboid>
 </P3D>
 ```

@@ -29,6 +29,7 @@ sidebar_label: Cuboid
 | TopLength        | int     | Value in mm                       |
 | Mounting         | string  | Ceiling, Wall, Floor or Pendulum   |
 | PendulumLength   | int     | Value in mm (required if `Mounting` is `Pendulum`) |
+| HousingColor     | string  | 4 digit RAL color code            |
 
 ## XSD
 
@@ -58,6 +59,17 @@ sidebar_label: Cuboid
         </xs:simpleType>
       </xs:element>
       <xs:element name="PendulumLength" type="xs:int" minOccurs="0"/>
+      <xs:element name="HousingColor" minOccurs="0">
+        <xs:complexType>
+          <xs:attribute name="ral">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:pattern value="[1-9][0-9]{3}"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
+        </xs:complexType>
+      </xs:element>
     </xs:sequence>
   </xs:complexType>
 </xs:element>
@@ -67,7 +79,7 @@ sidebar_label: Cuboid
 ### Example
 
 ```xml
-<P3D>
+<P3D filename="BollardCuboid">
   <Cuboid>
     <Width>40</Width>
     <Length>600</Length>
@@ -77,6 +89,7 @@ sidebar_label: Cuboid
     <LuminousHeight>20</LuminousHeight>
     <Mounting>Pendulum</Mounting>
     <PendulumLength>500</PendulumLength>
+    <HousingColor ral="9005"/> 
   </Cuboid>
 </P3D>
 ```

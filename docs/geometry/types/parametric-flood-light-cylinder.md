@@ -28,6 +28,7 @@ A spotlight with a cylinder-shaped luminous head mounted on a bracket attached t
 | LuminousHeight   | int   | Extent to which the luminous part protrudes from the housing *(optional)* (mm).                 |
 | ReflectorDepth   | int   | Extent to which the luminous part is recessed into the housing *(optional)* (mm).               |
 | TotalHeight      | int   | Overall height of the luminaire including the bracket in millimeters (mm) *(optional)*.         |
+| HousingColor     | string  | 4 digit RAL color code                                                                        |
 
 ## XSD
 
@@ -43,6 +44,17 @@ A spotlight with a cylinder-shaped luminous head mounted on a bracket attached t
         <xs:element name="ReflectorDepth" type="xs:int"/>
       </xs:choice>
       <xs:element name="TotalHeight" type="xs:int" minOccurs="0"/>
+      <xs:element name="HousingColor" minOccurs="0">
+        <xs:complexType>
+          <xs:attribute name="ral">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:pattern value="[1-9][0-9]{3}"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
+        </xs:complexType>
+      </xs:element>
     </xs:sequence>
   </xs:complexType>
 </xs:element>
@@ -52,13 +64,14 @@ A spotlight with a cylinder-shaped luminous head mounted on a bracket attached t
 ### Example
 
 ```xml
-<P3D>
+<P3D filename="FloodLightCylinder">
   <FloodLightCylinder>
     <Diameter>150</Diameter>
     <Height>250</Height>
     <LuminousDiameter>140</LuminousDiameter>
     <LuminousHeight>50</LuminousHeight>
     <TotalHeight>300</TotalHeight>
+    <HousingColor ral="9005"/> 
   </FloodLightCylinder>
 </P3D>
 ```

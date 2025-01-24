@@ -42,6 +42,7 @@ sidebar_label: Bollard Cylinder
 | C180             | int     | Value in mm (0 means no luminous surface at C180 direction)        |
 | C270             | int     | Value in mm (0 means no luminous surface at C270 direction)        |
 | Type             | string  | Direct, Indirect, DirectIndirect                                   |
+| HousingColor     | string  | 4 digit RAL color code                                   |
 
 ## XSD
 
@@ -60,14 +61,16 @@ sidebar_label: Bollard Cylinder
       <xs:element name="C90" type="xs:int" minOccurs="0"/>
       <xs:element name="C180" type="xs:int" minOccurs="0"/>
       <xs:element name="C270" type="xs:int" minOccurs="0"/>
-      <xs:element name="Type" minOccurs="0">
-        <xs:simpleType>
-          <xs:restriction base="xs:string">
-            <xs:enumeration value="Direct"/>
-            <xs:enumeration value="Indirect"/>
-            <xs:enumeration value="DirectIndirect"/>
-          </xs:restriction>
-        </xs:simpleType>
+      <xs:element name="HousingColor" minOccurs="0">
+        <xs:complexType>
+          <xs:attribute name="ral">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:pattern value="[1-9][0-9]{3}"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
+        </xs:complexType>
       </xs:element>
     </xs:sequence>
   </xs:complexType>
@@ -78,12 +81,13 @@ sidebar_label: Bollard Cylinder
 ### Example 
 
 ```xml
-<P3D>
+<P3D filename="BollardCylinder">
   <BollardCylinder>
     <Diameter>190</Diameter>
     <Height>1200</Height>
     <LuminousHeight>200</LuminousHeight>
     <TotalHeight>1200</TotalHeight>
+    <HousingColor ral="9005"/> 
   </BollardCylinder>
 </P3D>
 ```

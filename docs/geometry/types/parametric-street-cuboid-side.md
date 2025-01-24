@@ -29,6 +29,7 @@ A classic street light featuring a cuboid-shaped luminous head attached to the s
 | LuminousHeight      | int    | Extent to which the luminous part protrudes from the housing (mm) *(optional)*. |
 | ReflectorDepth      | int    | Extent to which the luminous part is recessed into the housing (mm) *(optional)*. |
 | TotalHeight         | int    | Overall height of the luminaire including the stand in millimeters (mm) *(optional)*. |
+| HousingColor        | string | 4 digit RAL color code                                                |
 
 ## XSD
 
@@ -45,7 +46,17 @@ A classic street light featuring a cuboid-shaped luminous head attached to the s
         <xs:element name="LuminousHeight" type="xs:int" minOccurs="0"/>
         <xs:element name="ReflectorDepth" type="xs:int" minOccurs="0"/>
       </xs:choice>
-      <xs:element name="TotalHeight" type="xs:int" minOccurs="0"/>
+      <xs:element name="HousingColor" minOccurs="0">
+        <xs:complexType>
+          <xs:attribute name="ral">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:pattern value="[1-9][0-9]{3}"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
+        </xs:complexType>
+      </xs:element>
     </xs:sequence>
   </xs:complexType>
 </xs:element>
@@ -55,7 +66,7 @@ A classic street light featuring a cuboid-shaped luminous head attached to the s
 ### Example
 
 ```xml
-<P3D>
+<P3D filename="StreetCuboidSide">
   <StreetCuboidSide>
     <Width>300</Width>
     <Length>190</Length>
@@ -63,6 +74,7 @@ A classic street light featuring a cuboid-shaped luminous head attached to the s
     <LuminousWidth>280</LuminousWidth>
     <LuminousLength>170</LuminousLength>
     <LuminousHeight>40</LuminousHeight>
+    <HousingColor ral="9005"/> 
   </StreetCuboidSide>
 </P3D>
 ```
