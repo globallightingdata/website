@@ -10,21 +10,25 @@ sidebar_label: Recessed Cuboid
 The `RecessedCuboid` is a cube-shaped recessed luminaire.
 
 - `Width`, `Length`, and `Height` describe the total size of the entire luminaire.
-- `LuminousWidth`, `LuminousLength` and `LuminousHeight` describe the dimensions of the luminous surfaces.
-- The `LuminousHeight` describes how far the luminous part sticks out of the mounting surface.
+- `LuminousWidth`, `LuminousLength`, and either `LuminousHeight` or `ReflectorDepth` describe the dimensions of the luminous surfaces.
+- The `LuminousHeight` describes how far the luminous part sticks out of the housing.
+- The `ReflectorDepth` describes how far the luminous part is recessed into the housing.
 - Top dimensions are by default 80% of the lower dimensions.
+- The luminaire can be mounted on ceilings, walls, or floors (`Mounting`).
 
-| Parameter      | Type |      Explanation       |
-| -------------- | :--: | :--------------------: |
-| Width          | int  |      value in mm       |
-| Length         | int  |      value in mm       |
-| Height         | int  |      value in mm       |
-| LuminousWidth  | int  |      value in mm       |
-| LuminousLength | int  |      value in mm       |
-| LuminousHeight | int  |      value in mm       |
-| TopWidth       | int  |      value in mm       |
-| TopLength      | int  |      value in mm       |
-| Mounting       | int  | Ceiling, Wall or Floor |
+| Parameter        | Type    | Explanation                  |
+| ---------------- | :-----: | :--------------------------: |
+| Width            | int     | Value in mm                  |
+| Length           | int     | Value in mm                  |
+| Height           | int     | Value in mm                  |
+| LuminousWidth    | int     | Value in mm                  |
+| LuminousLength   | int     | Value in mm                  |
+| LuminousHeight   | int     | Value in mm                  |
+| ReflectorDepth   | int     | Value in mm                  |
+| TopWidth         | int     | Value in mm                  |
+| TopLength        | int     | Value in mm                  |
+| Mounting         | string  | Ceiling, Wall or Floor       |
+| HousingColor     | string  | 4 digit RAL color code       |
 
 ## XSD
 
@@ -37,7 +41,10 @@ The `RecessedCuboid` is a cube-shaped recessed luminaire.
       <xs:element name="Height" type="xs:int"/>
       <xs:element name="LuminousWidth" type="xs:int"/>
       <xs:element name="LuminousLength" type="xs:int"/>
-      <xs:element name="LuminousHeight" type="xs:int"/>
+      <xs:choice>
+        <xs:element name="LuminousHeight" type="xs:int"/>
+        <xs:element name="ReflectorDepth" type="xs:int"/>
+      </xs:choice>
       <xs:element name="TopWidth" type="xs:int" minOccurs="0"/>
       <xs:element name="TopLength" type="xs:int" minOccurs="0"/>
       <xs:element name="Mounting">
@@ -49,23 +56,38 @@ The `RecessedCuboid` is a cube-shaped recessed luminaire.
           </xs:restriction>
         </xs:simpleType>
       </xs:element>
+      <xs:element name="HousingColor" minOccurs="0">
+        <xs:complexType>
+          <xs:attribute name="ral">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:pattern value="[1-9][0-9]{3}"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
+        </xs:complexType>
+      </xs:element>
     </xs:sequence>
   </xs:complexType>
 </xs:element>
 ```
 
 ## XML
+### Example
 
 ```xml
-<P3D>
+<P3D filename="RecessedCuboid">
   <RecessedCuboid>
-    <Width>80</Width>
-    <Length>80</Length>
-    <Height>80</Height>
-    <LuminousWidth>70</LuminousWidth>
-    <LuminousLength>70</LuminousLength>
-    <LuminousHeight>70</LuminousHeight>
+    <Width>100</Width>
+    <Length>100</Length>
+    <Height>40</Height>
+    <LuminousWidth>80</LuminousWidth>
+    <LuminousLength>80</LuminousLength>
+    <LuminousHeight>20</LuminousHeight>
+    <TopWidth>100</TopWidth>
+    <TopLength>100</TopLength>
     <Mounting>Ceiling</Mounting>
+    <HousingColor ral="9005"/> 
   </RecessedCuboid>
 </P3D>
 ```

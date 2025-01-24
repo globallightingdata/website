@@ -23,6 +23,7 @@ A Spotlight in cylinder shape mounted on a bracket attached to a plate.
 | TotalHeight      | int  | value in mm |
 | BaseDiameter     | int  | value in mm |
 | BaseHeight       | int  | value in mm |
+| HousingColor     | string | 4 digit RAL color code |
 
 ## XSD
 
@@ -36,20 +37,33 @@ A Spotlight in cylinder shape mounted on a bracket attached to a plate.
       <xs:element name="TotalHeight" type="xs:int"/>
       <xs:element name="BaseDiameter" type="xs:int" minOccurs="0"/>
       <xs:element name="BaseHeight" type="xs:int" minOccurs="0"/>
+      <xs:element name="HousingColor" minOccurs="0">
+        <xs:complexType>
+          <xs:attribute name="ral">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:pattern value="[1-9][0-9]{3}"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
+        </xs:complexType>
+      </xs:element>
     </xs:sequence>
   </xs:complexType>
 </xs:element>
 ```
 
 ## XML
+### Example
 
 ```xml
-<P3D>
+<P3D filename="SpotCylinder">
   <SpotCylinder>
-    <Diameter>60</Diameter>
-    <Height>70</Height>
-    <LuminousDiameter>50</LuminousDiameter>
-    <TotalHeight>130</TotalHeight>
+    <Diameter>80</Diameter>
+    <Height>100</Height>
+    <LuminousDiameter>70</LuminousDiameter>
+    <TotalHeight>140</TotalHeight>
+    <HousingColor ral="9005"/> 
   </SpotCylinder>
 </P3D>
 ```

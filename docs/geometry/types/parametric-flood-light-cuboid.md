@@ -7,21 +7,39 @@ sidebar_label: Floodlight Cuboid
 
 ![Floodlight Cuboid](/img/docs/geometry/parametric/flood-light-cuboid.webp)
 
-A Spotlight in cube shape mounted on a bracket attached to a cubic plate.
+A spotlight with a cuboid-shaped luminous head mounted on a bracket attached to a cubic base plate.
 
-- You can adjust the dimensions of the light by setting the `Length`, `Width` and `Height`.
-- Setting the `TotalHeight` parameter will affect the size of the bracket.
-- The plate size can be changed using the base dimensions.
+- `Dimensions`: Adjust the size of the luminaire by setting the `Width`, `Length`, and `Height`.
+- `Luminous Features`:
+  - `LuminousWidth` and `LuminousLength`: Define the size of the main luminous surfaces.
+  - `LuminousHeight` or `ReflectorDepth` *(optional)*:
+    - `LuminousHeight`: Describes how far the luminous part protrudes from the housing.
+    - `ReflectorDepth`: Describes how far the luminous part is recessed into the housing.
+- `Bracket Connection`:
+  - The distance from the connector of the bracket to the luminaire is equal to the `Height` of the luminaire head.
+  - The length of the connection from the base surface to the bracket is 10% of the `Height`.
+- `Base Dimensions` *(optional)*: Modify the size of the base plate using `BaseWidth`, `BaseLength`, and `BaseHeight`.
+  - `BaseWidth` and `BaseLength`: Determine the footprint of the base plate.
+  - `BaseHeight`: Sets the height of the base plate.
 
-| Parameter      | Type | Explanation |
-| -------------- | :--: | :---------: |
-| Width          | int  | value in mm |
-| Length         | int  | value in mm |
-| Height         | int  | value in mm |
-| LuminousWidth  | int  | value in mm |
-| LuminousLength | int  | value in mm |
-| LuminousHeight | int  | value in mm |
-| TotalHeight    | int  | value in mm |
+**Note**: The pole itself is **not modeled** within this luminaire configuration.
+
+## Parameters
+
+| Parameter        | Type   | Explanation                                                                                     |
+| ---------------- | :----: | :---------------------------------------------------------------------------------------------: |
+| Width            | int    | Base width of the luminaire in millimeters (mm).                                                |
+| Length           | int    | Base length of the luminaire in millimeters (mm).                                               |
+| Height           | int    | Height of the luminaire head in millimeters (mm).                                               |
+| LuminousWidth    | int    | Width of the luminous surfaces in millimeters (mm).                                              |
+| LuminousLength   | int    | Length of the luminous surfaces in millimeters (mm).                                             |
+| LuminousHeight   | int    | Extent to which the luminous part protrudes from the housing *(optional)* (mm).                  |
+| ReflectorDepth   | int    | Extent to which the luminous part is recessed into the housing *(optional)* (mm).                |
+| TotalHeight      | int    | Overall height of the luminaire including the bracket in millimeters (mm) *(optional)*.         |
+| BaseWidth        | int    | Width of the base plate in millimeters (mm) *(optional)*.                                       |
+| BaseLength       | int    | Length of the base plate in millimeters (mm) *(optional)*.                                      |
+| BaseHeight       | int    | Height of the base plate in millimeters (mm) *(optional)*.                                      |
+| HousingColor     | string  | 4 digit RAL color code                                                                         |
 
 ## XSD
 
@@ -34,25 +52,41 @@ A Spotlight in cube shape mounted on a bracket attached to a cubic plate.
       <xs:element name="Height" type="xs:int"/>
       <xs:element name="LuminousWidth" type="xs:int"/>
       <xs:element name="LuminousLength" type="xs:int"/>
-      <xs:element name="LuminousHeight" type="xs:int"/>
+      <xs:choice>
+        <xs:element name="LuminousHeight" type="xs:int"/>
+        <xs:element name="ReflectorDepth" type="xs:int"/>
+      </xs:choice>
       <xs:element name="TotalHeight" type="xs:int" minOccurs="0"/>
+      <xs:element name="HousingColor" minOccurs="0">
+        <xs:complexType>
+          <xs:attribute name="ral">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:pattern value="[1-9][0-9]{3}"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
+        </xs:complexType>
+      </xs:element>
     </xs:sequence>
   </xs:complexType>
 </xs:element>
 ```
 
 ## XML
+### Example
 
 ```xml
-<P3D>
+<P3D filename="BollardCuboid">
   <FloodLightCuboid>
     <Width>400</Width>
-    <Length>400</Length>
-    <Height>100</Height>
+    <Length>300</Length>
+    <Height>80</Height>
     <LuminousWidth>380</LuminousWidth>
-    <LuminousLength>380</LuminousLength>
-    <LuminousHeight>10</LuminousHeight>
-    <TotalHeight>250</TotalHeight>
+    <LuminousLength>280</LuminousLength>
+    <LuminousHeight>30</LuminousHeight>
+    <TotalHeight>150</TotalHeight>
+    <HousingColor ral="9005"/> 
   </FloodLightCuboid>
 </P3D>
 ```
