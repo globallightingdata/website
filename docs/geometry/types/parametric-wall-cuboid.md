@@ -7,30 +7,33 @@ sidebar_label: Wall Cuboid
 
 ![Wall Cuboid](/img/docs/geometry/parametric/wall-cuboid.webp)
 
-This type is a cube-shaped luminaire that is attached to a wall.
+`Wall Cuboid` is a cube-shaped luminaire that is attached to a wall.
 
 - The parameters `Length`, `Width`, and `Height` determine the housing dimensions.
-- `LuminousLength`, `LuminousWidth`, and either `LuminousHeight` or `ReflectorDepth` determine the size of the luminous surfaces.
-  - The `LuminousHeight` describes how far the luminous part sticks out of the body.
-  - The `ReflectorDepth` describes how far the luminous part is recessed into the body.
-- You can skew the housing by setting `TopLength` and `TopWidth`.
-- You can define the light output areas through `Type` as `Direct`, `Indirect`, or `DirectIndirect`.
+- `LuminousLength`, `LuminousWidth`, and either `LuminousHeight` or `ReflectorDepth` determine the size of the luminous surfaces:
+  - `LuminousHeight` describes how far the luminous part sticks out of the body.
+  - `ReflectorDepth` describes how far the luminous part is recessed into the body.
+- You can skew the housing by setting `TopLength` and `TopWidth` *(optional)*.
+- You can define the light output areas through `Type` as `Direct`, `Indirect`, or `DirectIndirect` *(optional)*.
+- Optionally, `HousingColor` can be provided as a 4-digit RAL color code.
+- Optionally, `FileName` can be provided (without an extension).
 
 ## Parameters
 
-| Parameter        | Type    | Explanation                                               |
-| ---------------- | :-----: | :-------------------------------------------------------: |
-| Width            | int     | Value in mm                                               |
-| Length           | int     | Value in mm                                               |
-| Height           | int     | Value in mm                                               |
-| LuminousWidth    | int     | Value in mm                                               |
-| LuminousLength   | int     | Value in mm                                               |
-| LuminousHeight   | int     | Value in mm                                               |
-| ReflectorDepth   | int     | Value in mm                                               |
-| TopWidth         | int     | Value in mm                                               |
-| TopLength        | int     | Value in mm                                               |
-| Type             | string  | Direct, Indirect, DirectIndirect                          |
-| HousingColor     | string  | 4 digit RAL color code                                    |
+| Parameter        | Type   | Explanation                                                         |
+| ---------------- | :----: | :-----------------------------------------------------------------: |
+| Width            | int    | Value in mm                                                         |
+| Length           | int    | Value in mm                                                         |
+| Height           | int    | Value in mm                                                         |
+| LuminousWidth    | int    | Value in mm                                                         |
+| LuminousLength   | int    | Value in mm                                                         |
+| LuminousHeight   | int    | Value in mm                                                         |
+| ReflectorDepth   | int    | Value in mm                                                         |
+| TopWidth         | int    | Value in mm *(optional)*                                            |
+| TopLength        | int    | Value in mm *(optional)*                                            |
+| Type             | string | `Direct`, `Indirect`, `DirectIndirect` *(optional)*                   |
+| HousingColor     | string | 4 digit RAL color code *(optional)*                                 |
+| FileName         | string | Optional file name (without an extension) *(optional)*              |
 
 ## XSD
 
@@ -59,16 +62,13 @@ This type is a cube-shaped luminaire that is attached to a wall.
         </xs:simpleType>
       </xs:element>
       <xs:element name="HousingColor" minOccurs="0">
-        <xs:complexType>
-          <xs:attribute name="ral">
-            <xs:simpleType>
-              <xs:restriction base="xs:string">
-                <xs:pattern value="[1-9][0-9]{3}"/>
-              </xs:restriction>
-            </xs:simpleType>
-          </xs:attribute>
-        </xs:complexType>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:pattern value="[1-9][0-9]{3}"/>
+          </xs:restriction>
+        </xs:simpleType>
       </xs:element>
+      <xs:element name="FileName" type="xs:string" minOccurs="0"/>
     </xs:sequence>
   </xs:complexType>
 </xs:element>
@@ -87,7 +87,8 @@ This type is a cube-shaped luminaire that is attached to a wall.
     <LuminousLength>90</LuminousLength>
     <LuminousHeight>40</LuminousHeight>
     <Type>DirectIndirect</Type>
-    <HousingColor ral="9005"/> 
+    <HousingColor>9005</HousingColor>
+    <FileName>example_filename</FileName>
   </WallCuboid>
 </P3D>
 ```

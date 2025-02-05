@@ -7,31 +7,39 @@ sidebar_label: Stand Cuboid Side
 
 ![Stand Cuboid Side](/img/docs/geometry/parametric/stand-cuboid-side.webp)
 
-A cube-shaped standing luminaire with the head attached on the side rather than the center. This parametric model allows you to define the `TotalHeight` and the `Height` of the luminaire, not including the stand.
+`Stand Cuboid Side` is a cube-shaped standing luminaire with the head attached on the side rather than the center. This parametric model allows you to define the `TotalHeight` and the `Height` of the luminaire (not including the stand).
 
-- The full default height will be 1.8 meters.
-- The stand height is the `TotalHeight` minus the luminaire `Height`.
+- The full default height is 1.8 meters.
+- The stand height is calculated as `TotalHeight` minus the luminaire `Height`.
 - The stand is always in the middle of the luminaire.
-- Default size of the foot will be the 80 % of the main size.
-- Default height of the foot is 2 cm.
-- Diameter of the stand is 5 cm.
+- The default size of the foot is 80% of the main size.
+- The default height of the foot is 2 cm and the diameter of the stand is 5 cm.
 - Luminous dimensions must be smaller than the main dimensions.
-- `Type` ➜ `Direct`: LEO and LES placed at the bottom center of the luminaire. Grows upwards with `LumimousHeight`.
-- `Type` ➜ `Indirect`: LEO and LES placed at the top center of the luminaire. Grows downwards with `LumimousHeight`.
-- `Type` ➜ `DirectIndirect`: LEO placed in the center of the luminaire. LES on top and bottom surfaces centered.
-- Luminaire head is aligned in direction C0.
-- If `Length` is greater than C90, die luminous surface grows backwards toward with a 2% distance from length.
+- `Type` defines the placement and growth direction of light emitters:
+  - `Direct`: LEO and LES are placed at the bottom center of the luminaire and grow upwards with `LuminousHeight`.
+  - `Indirect`: LEO and LES are placed at the top center of the luminaire and grow downwards with `LuminousHeight`.
+  - `DirectIndirect`: LEO is placed in the center of the luminaire and LES on the top and bottom surfaces are centered.
+- The luminaire head is aligned in the direction of C0.
 
-| Parameter      | Type |           Explanation            |
-| -------------- | :--: | :------------------------------: |
-| Width          | int  |           value in mm            |
-| Length         | int  |           value in mm            |
-| Height         | int  |           value in mm            |
-| LuminousWidth  | int  |           value in mm            |
-| LuminousLength | int  |           value in mm            |
-| TotalHeight    | int  |           value in mm            |
-| Type           | int  | Direct, Indirect, DirectIndirect |
-| HousingColor   | string | 4 digit RAL color code         |
+*Note*: Any reference to additional parameters such as `C90` is omitted as they are not defined in the schema.
+
+## Parameters
+
+| Parameter         | Type   | Explanation                                                                                          |
+| ----------------- | :----: | ----------------------------------------------------------------------------------------------------:|
+| **Width**         | int    | Value in mm.                                                                                         |
+| **Length**        | int    | Value in mm.                                                                                         |
+| **Height**        | int    | Value in mm.                                                                                         |
+| **LuminousWidth** | int    | Value in mm.                                                                                         |
+| **LuminousLength**| int    | Value in mm.                                                                                         |
+| **TopWidth**      | int    | Value in mm *(optional; default is 80% of `Width`)*                                                  |
+| **TopLength**     | int    | Value in mm *(optional; default is 80% of `Length`)*                                                 |
+| **TotalHeight**   | int    | Value in mm.                                                                                         |
+| **LuminousHeight**| int    | Value in mm *(optional)*; describes how far the luminous part protrudes from the body                 |
+| **ReflectorDepth**| int    | Value in mm *(optional)*; describes how far the luminous part is recessed into the body               |
+| **Type**          | string | One of: `Direct`, `Indirect`, `DirectIndirect` *(optional)*                                          |
+| **HousingColor**  | string | 4 digit RAL color code *(optional)*                                                                  |
+| **FileName**      | string | Optional file name (without an extension) *(optional)*                                             |
 
 ## XSD
 
@@ -44,7 +52,13 @@ A cube-shaped standing luminaire with the head attached on the side rather than 
       <xs:element name="Height" type="xs:int"/>
       <xs:element name="LuminousWidth" type="xs:int"/>
       <xs:element name="LuminousLength" type="xs:int"/>
+      <xs:element name="TopWidth" type="xs:int" minOccurs="0"/>
+      <xs:element name="TopLength" type="xs:int" minOccurs="0"/>
       <xs:element name="TotalHeight" type="xs:int"/>
+      <xs:choice minOccurs="0">
+        <xs:element name="LuminousHeight" type="xs:int" minOccurs="0"/>
+        <xs:element name="ReflectorDepth" type="xs:int" minOccurs="0"/>
+      </xs:choice>
       <xs:element name="Type" minOccurs="0">
         <xs:simpleType>
           <xs:restriction base="xs:string">
@@ -55,16 +69,13 @@ A cube-shaped standing luminaire with the head attached on the side rather than 
         </xs:simpleType>
       </xs:element>
       <xs:element name="HousingColor" minOccurs="0">
-        <xs:complexType>
-          <xs:attribute name="ral">
-            <xs:simpleType>
-              <xs:restriction base="xs:string">
-                <xs:pattern value="[1-9][0-9]{3}"/>
-              </xs:restriction>
-            </xs:simpleType>
-          </xs:attribute>
-        </xs:complexType>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:pattern value="[1-9][0-9]{3}"/>
+          </xs:restriction>
+        </xs:simpleType>
       </xs:element>
+      <xs:element name="FileName" type="xs:string" minOccurs="0"/>
     </xs:sequence>
   </xs:complexType>
 </xs:element>
@@ -76,14 +87,17 @@ A cube-shaped standing luminaire with the head attached on the side rather than 
 ```xml
 <P3D filename="StandCuboidSide">
   <StandCuboidSide>
-    <Width>250</Width>
+    <Width>350</Width>
     <Length>350</Length>
-    <Height>40</Height>
-    <LuminousWidth>240</LuminousWidth>
+    <Height>150</Height>
+    <LuminousWidth>340</LuminousWidth>
     <LuminousLength>340</LuminousLength>
+    <TopWidth>250</TopWidth>
+    <TopLength>250</TopLength>
     <TotalHeight>600</TotalHeight>
-    <Type>DirectIndirect</Type>
-    <HousingColor ral="9005"/> 
+    <LuminousHeight>50</LuminousHeight>
+    <HousingColor>9005</HousingColor>
+    <FileName>example_filename</FileName>
   </StandCuboidSide>
 </P3D>
 ```

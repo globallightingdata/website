@@ -7,33 +7,34 @@ sidebar_label: Wall Cylinder
 
 ![Wall Cylinder](/img/docs/geometry/parametric/wall-cylinder.webp)
 
-This type is a cylinder-shaped luminaire that is attached to a wall.
+`Wall Cylinder` is a cylinder-shaped luminaire that is attached to a wall.
 
 - `Diameter` and `Height` determine the housing dimensions.
 - `LuminousDiameter` sets the size of the luminous surfaces.
 - Either `LuminousHeight` or `ReflectorDepth` can be specified to describe how the luminaire interacts with the wall:
-  - The `LuminousHeight` describes how far the luminous part sticks out of the body.
-  - The `ReflectorDepth` describes how far the luminous part is recessed into the body.
-- You can skew the housing by setting `TopLength` and `TopWidth`.
+  - `LuminousHeight` describes how far the luminous part sticks out of the body.
+  - `ReflectorDepth` describes how far the luminous part is recessed into the body.
+- You can skew the housing by setting `TopLength` and `TopWidth`:
   - The default `TopWidth` is 80% of the main `Width`.
   - The default `TopLength` is 80% of the main `Length`.
 - You can define the light output areas through `Type` as `Direct`, `Indirect`, or `DirectIndirect`.
-- The base elements default width is 80% of the main diameter.
-- The base elements default depth is twice the distance of the outer point of the cylinder to the inner point of the intersection within the cylinder.
+- The base elements' default width is 80% of the main diameter.
+- The base elements' default depth is twice the distance from the outer point of the cylinder to the inner point of the intersection within the cylinder.
 
 ## Parameters
 
-| Parameter        | Type    | Explanation                                               |
-| ---------------- | :-----: | :-------------------------------------------------------: |
-| Diameter         | int     | Value in mm                                               |
-| Height           | int     | Value in mm                                               |
-| LuminousDiameter | int     | Value in mm                                               |
-| LuminousHeight   | int     | Value in mm                                               |
-| ReflectorDepth   | int     | Value in mm                                               |
-| TopWidth         | int     | Value in mm (default is 80% of `Width`)                   |
-| TopLength        | int     | Value in mm (default is 80% of `Length`)                  |
-| Type             | string  | Direct, Indirect, DirectIndirect                          |
-| HousingColor     | string  | 4 digit RAL color code                                    |
+| **Parameter**        | Type   | Explanation                                                                   |
+| -------------------- | :----: | :---------------------------------------------------------------------------: |
+| **Diameter**         | int    | Value in mm                                                                   |
+| **Height**           | int    | Value in mm                                                                   |
+| **LuminousDiameter** | int    | Value in mm                                                                   |
+| **LuminousHeight**   | int    | Value in mm                                                                   |
+| **ReflectorDepth**   | int    | Value in mm                                                                   |
+| **TopWidth**         | int    | Value in mm (default is 80% of `Width`)                                       |
+| **TopLength**        | int    | Value in mm (default is 80% of `Length`)                                      |
+| **Type**             | string | `Direct`, `Indirect`, `DirectIndirect`                                        |
+| **HousingColor**     | string | 4 digit RAL color code                                                        |
+| **FileName**         | string | Optional file name (without an extension)                                   |
 
 ## XSD
 
@@ -58,16 +59,13 @@ This type is a cylinder-shaped luminaire that is attached to a wall.
         </xs:simpleType>
       </xs:element>
       <xs:element name="HousingColor" minOccurs="0">
-        <xs:complexType>
-          <xs:attribute name="ral">
-            <xs:simpleType>
-              <xs:restriction base="xs:string">
-                <xs:pattern value="[1-9][0-9]{3}"/>
-              </xs:restriction>
-            </xs:simpleType>
-          </xs:attribute>
-        </xs:complexType>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:pattern value="[1-9][0-9]{3}"/>
+          </xs:restriction>
+        </xs:simpleType>
       </xs:element>
+      <xs:element name="FileName" type="xs:string" minOccurs="0"/>
     </xs:sequence>
   </xs:complexType>
 </xs:element>
@@ -84,7 +82,8 @@ This type is a cylinder-shaped luminaire that is attached to a wall.
     <LuminousDiameter>80</LuminousDiameter>
     <LuminousHeight>50</LuminousHeight>
     <Type>DirectIndirect</Type>
-    <HousingColor ral="9005"/>
+    <HousingColor>9005</HousingColor>
+    <FileName>example_filename</FileName>
   </WallCylinder>
 </P3D>
 ```

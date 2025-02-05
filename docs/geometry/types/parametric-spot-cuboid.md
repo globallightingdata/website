@@ -22,23 +22,22 @@ A spotlight with a cuboid-shaped luminous head mounted on a bracket attached to 
   - The distance from the connector of the bracket to the luminaire is equal to the `Height` of the luminaire head.
   - The length of the connection from the base surface to the bracket is 10% of the `Height`.
 
-**Note**: The pole itself is **not modeled** within this luminaire configuration.
-
 ## Parameters
 
-| Parameter           | Type  | Explanation                                                                            |
-| ------------------- | :---: | :--------------------------------------------------------------------------------------: |
-| Width               | int   | Base width of the luminaire in millimeters (mm).                                        |
-| Length              | int   | Base length of the luminaire in millimeters (mm).                                       |
-| Height              | int   | Height of the luminaire head in millimeters (mm).                                       |
-| LuminousWidth       | int   | Width of the luminous surface in millimeters (mm).                                      |
-| LuminousLength      | int   | Length of the luminous surface in millimeters (mm).                                     |
-| LuminousHeight      | int   | Extent to which the luminous part protrudes from the housing *(optional)* (mm).         |
-| ReflectorDepth      | int   | Extent to which the luminous part is recessed into the housing *(optional)* (mm).       |
-| BaseWidth           | int   | Width of the base plate in millimeters (mm) *(optional)*.                               |
-| BaseLength          | int   | Length of the base plate in millimeters (mm) *(optional)*.                              |
-| BaseHeight          | int   | Height of the base plate in millimeters (mm) *(optional)*.                              |
-| HousingColor        | string | 4 digit RAL color code                                                                 |
+| Parameter           | Type  | Explanation                                                                                   |
+| ------------------- | :---: | ---------------------------------------------------------------------------------------------:|
+| Width               | int   | Base width of the luminaire in millimeters (mm).                                               |
+| Length              | int   | Base length of the luminaire in millimeters (mm).                                              |
+| Height              | int   | Height of the luminaire head in millimeters (mm).                                              |
+| LuminousWidth       | int   | Width of the luminous surface in millimeters (mm).                                             |
+| LuminousLength      | int   | Length of the luminous surface in millimeters (mm).                                            |
+| LuminousHeight      | int   | Extent to which the luminous part protrudes from the housing *(optional)* (mm).                |
+| ReflectorDepth      | int   | Extent to which the luminous part is recessed into the housing *(optional)* (mm).              |
+| BaseWidth           | int   | Width of the base plate in millimeters (mm) *(optional)*.                                      |
+| BaseLength          | int   | Length of the base plate in millimeters (mm) *(optional)*.                                     |
+| BaseHeight          | int   | Height of the base plate in millimeters (mm) *(optional)*.                                     |
+| HousingColor        | string| 4 digit RAL color code *(optional)*.                                                           |
+| FileName            | string| Optional file name (without an extension) *(optional)*.                                      |
 
 ## XSD
 
@@ -59,16 +58,13 @@ A spotlight with a cuboid-shaped luminous head mounted on a bracket attached to 
       <xs:element name="BaseLength" type="xs:int" minOccurs="0"/>
       <xs:element name="BaseHeight" type="xs:int" minOccurs="0"/>
       <xs:element name="HousingColor" minOccurs="0">
-        <xs:complexType>
-          <xs:attribute name="ral">
-            <xs:simpleType>
-              <xs:restriction base="xs:string">
-                <xs:pattern value="[1-9][0-9]{3}"/>
-              </xs:restriction>
-            </xs:simpleType>
-          </xs:attribute>
-        </xs:complexType>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:pattern value="[1-9][0-9]{3}"/>
+          </xs:restriction>
+        </xs:simpleType>
       </xs:element>
+      <xs:element name="FileName" type="xs:string" minOccurs="0"/>
     </xs:sequence>
   </xs:complexType>
 </xs:element>
@@ -89,6 +85,7 @@ A spotlight with a cuboid-shaped luminous head mounted on a bracket attached to 
     <BaseWidth>100</BaseWidth>
     <BaseLength>20</BaseLength>
     <BaseHeight>10</BaseHeight>
+    <FileName>example_filename</FileName>
   </SpotCuboid>
 </P3D>
 ```

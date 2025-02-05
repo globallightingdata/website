@@ -7,33 +7,35 @@ sidebar_label: Wall Triangular
 
 ![Wall Triangular](/img/docs/geometry/parametric/wall-triangular.webp)
 
-Triangular-shaped wall-mounted luminaire.
+`Wall Triangular` is a triangular-shaped wall-mounted luminaire.
 
 - `Width`, `Length`, and `Height` determine the housing dimensions.
-- `LuminousWidth`, `LuminousLength`, and either `LuminousHeight` or `ReflectorDepth` determine the size of the luminous surfaces.
-  - The `LuminousHeight` describes how far the luminous part sticks out of the housing.
-  - The `ReflectorDepth` describes how far the luminous part is recessed into the housing.
-- You can skew the housing by setting `TopLength` and `TopWidth`.
+- `LuminousWidth`, `LuminousLength`, and either `LuminousHeight` or `ReflectorDepth` determine the size of the luminous surfaces:
+  - `LuminousHeight` describes how far the luminous part sticks out of the housing.
+  - `ReflectorDepth` describes how far the luminous part is recessed into the housing.
+- You can skew the housing by setting `TopLength` and `TopWidth`:
   - The default `TopWidth` is 80% of the main `Width`.
   - The default `TopLength` is 80% of the main `Length`.
-- You can define the light output areas through `Type` as `Direct`, `Indirect`, or `DirectIndirect`.
-- Both sides have the same length. Luminous surfaces have the same size.
+- You can define the light output areas through `Type` as `Direct`, `Indirect`, or `DirectIndirect` *(optional)*.
+- Optionally, `HousingColor` can be provided as a 4 digit RAL color code.
+- Optionally, `FileName` can be provided (without an extension).
 
 ## Parameters
 
-| Parameter        | Type    | Explanation                                               |
-| ---------------- | :-----: | :-------------------------------------------------------: |
-| Width            | int     | Value in mm                                               |
-| Length           | int     | Value in mm                                               |
-| Height           | int     | Value in mm                                               |
-| LuminousWidth    | int     | Value in mm                                               |
-| LuminousLength   | int     | Value in mm                                               |
-| LuminousHeight   | int     | Value in mm                                               |
-| ReflectorDepth   | int     | Value in mm                                               |
-| TopWidth         | int     | Value in mm (default is 80% of `Width`)                   |
-| TopLength        | int     | Value in mm (default is 80% of `Length`)                  |
-| Type             | string  | Direct, Indirect, DirectIndirect                          |
-| HousingColor     | string  | 4 digit RAL color code                                    |
+| **Parameter**        | Type   | Explanation                                               |
+| -------------------- | :----: | :-------------------------------------------------------: |
+| **Width**            | int    | Value in mm                                               |
+| **Length**           | int    | Value in mm                                               |
+| **Height**           | int    | Value in mm                                               |
+| **LuminousWidth**    | int    | Value in mm                                               |
+| **LuminousLength**   | int    | Value in mm                                               |
+| **LuminousHeight**   | int    | Value in mm                                               |
+| **ReflectorDepth**   | int    | Value in mm                                               |
+| **TopWidth**         | int    | Value in mm (default is 80% of `Width`)                   |
+| **TopLength**        | int    | Value in mm (default is 80% of `Length`)                  |
+| **Type**             | string | `Direct`, `Indirect`, `DirectIndirect` *(optional)*       |
+| **HousingColor**     | string | 4 digit RAL color code *(optional)*                       |
+| **FileName**         | string | Optional file name (without an extension) *(optional)*    |
 
 ## XSD
 
@@ -60,16 +62,13 @@ Triangular-shaped wall-mounted luminaire.
         </xs:simpleType>
       </xs:element>
       <xs:element name="HousingColor" minOccurs="0">
-        <xs:complexType>
-          <xs:attribute name="ral">
-            <xs:simpleType>
-              <xs:restriction base="xs:string">
-                <xs:pattern value="[1-9][0-9]{3}"/>
-              </xs:restriction>
-            </xs:simpleType>
-          </xs:attribute>
-        </xs:complexType>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:pattern value="[1-9][0-9]{3}"/>
+          </xs:restriction>
+        </xs:simpleType>
       </xs:element>
+      <xs:element name="FileName" type="xs:string" minOccurs="0"/>
     </xs:sequence>
   </xs:complexType>
 </xs:element>
@@ -87,7 +86,8 @@ Triangular-shaped wall-mounted luminaire.
     <LuminousWidth>100</LuminousWidth>
     <LuminousLength>220</LuminousLength>
     <LuminousHeight>20</LuminousHeight>
-    <HousingColor ral="9005"/>
+    <HousingColor>9005</HousingColor>
+    <FileName>example_filename</FileName>
   </WallTriangular>
 </P3D>
 ```

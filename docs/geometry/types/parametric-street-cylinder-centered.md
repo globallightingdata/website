@@ -7,32 +7,33 @@ sidebar_label: Street Cylinder Centered
 
 ![Street Cylinder Centered](/img/docs/geometry/parametric/street-cylinder-centered.webp)
 
-A classic street light featuring a cylinder-shaped luminous head centered on the pole.
+`Street Cylinder Centered` is a classic street light featuring a cylinder-shaped luminous head centered on the pole.
 
 - `Diameter` and `Height`: Define the overall dimensions of the luminaire's housing.
 - `TopDiameter`: Allows for skewing the cylinder by adjusting the diameter at the top.
 - `LuminousDiameter`: Sets the size of the main luminous surface.
 - `TopLuminousDiameter` (optional): Defines the size of the luminous surface at the top, allowing for additional design flexibility.
-- `LuminousHeight` or `ReflectorDepth` (optional):
+- Either `LuminousHeight` or `ReflectorDepth` (optional):
   - `LuminousHeight`: Describes how far the luminous part sticks out from the housing.
   - `ReflectorDepth`: Describes how far the luminous part is recessed into the housing.
 - `Height` (optional): Sets the height of the luminaire head separately from the overall model.
-
-**Note**: The pole itself is not modeled within this luminaire configuration.
+- `TotalHeight` (optional): Defines the overall height of the luminaire including the stand.
+- The pole itself is not modeled within this luminaire configuration.
 
 ## Parameters
 
-| Parameter           | Type   | Explanation                                                       |
-| ------------------- | :----: | :----------------------------------------------------------------: |
-| Diameter            | int    | Base diameter of the luminaire in millimeters (mm).               |
-| TopDiameter         | int    | Diameter at the top of the luminaire, allowing for skewing.       |
-| LuminousDiameter    | int    | Diameter of the main luminous surface in millimeters (mm).        |
-| TopLuminousDiameter | int    | Diameter of the luminous surface at the top (optional).           |
-| LuminousHeight      | int    | Extent to which the luminous part protrudes from the housing (mm).|
-| ReflectorDepth      | int    | Extent to which the luminous part is recessed into the housing (mm).|
-| Height              | int    | Height of the luminaire head in millimeters (mm) (optional).      |
-| TotalHeight         | int    | Overall height of the luminaire including the stand (mm) (optional).|
-| HousingColor        | string | 4 digit RAL color code                                            |
+| **Parameter**           | Type   | Explanation                                                                                       |
+| ----------------------- | :----: | -------------------------------------------------------------------------------------------------:|
+| **Diameter**            | int    | Base diameter of the luminaire in millimeters (mm).                                               |
+| **TopDiameter**         | int    | Diameter at the top of the luminaire, allowing for skewing.                                       |
+| **LuminousDiameter**    | int    | Diameter of the main luminous surface in millimeters (mm).                                        |
+| **TopLuminousDiameter** | int    | Diameter of the luminous surface at the top *(optional)*.                                         |
+| **LuminousHeight**      | int    | Extent to which the luminous part protrudes from the housing in mm *(optional)*.                 |
+| **ReflectorDepth**      | int    | Extent to which the luminous part is recessed into the housing in mm *(optional)*.               |
+| **Height**              | int    | Height of the luminaire head in millimeters (mm) *(optional)*.                                    |
+| **TotalHeight**         | int    | Overall height of the luminaire including the stand in millimeters (mm) *(optional)*.              |
+| **HousingColor**        | string | 4 digit RAL color code *(optional)*.                                                              |
+| **FileName**            | string | Optional file name (without an extension) *(optional)*.                                         |
 
 ## XSD
 
@@ -50,16 +51,13 @@ A classic street light featuring a cylinder-shaped luminous head centered on the
       </xs:choice>
       <xs:element name="Height" type="xs:int" minOccurs="0"/>
       <xs:element name="HousingColor" minOccurs="0">
-        <xs:complexType>
-          <xs:attribute name="ral">
-            <xs:simpleType>
-              <xs:restriction base="xs:string">
-                <xs:pattern value="[1-9][0-9]{3}"/>
-              </xs:restriction>
-            </xs:simpleType>
-          </xs:attribute>
-        </xs:complexType>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:pattern value="[1-9][0-9]{3}"/>
+          </xs:restriction>
+        </xs:simpleType>
       </xs:element>
+      <xs:element name="FileName" type="xs:string" minOccurs="0"/>
     </xs:sequence>
   </xs:complexType>
 </xs:element>
@@ -77,7 +75,8 @@ A classic street light featuring a cylinder-shaped luminous head centered on the
     <TopLuminousDiameter>600</TopLuminousDiameter>
     <LuminousHeight>400</LuminousHeight>
     <Height>500</Height>
-    <HousingColor ral="9005"/> 
+    <HousingColor>9005</HousingColor>
+    <FileName>example_filename</FileName>
   </StreetCylinderCentered>
 </P3D>
 ```

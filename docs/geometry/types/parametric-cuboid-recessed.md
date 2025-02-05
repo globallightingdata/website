@@ -11,24 +11,28 @@ The `RecessedCuboid` is a cube-shaped recessed luminaire.
 
 - `Width`, `Length`, and `Height` describe the total size of the entire luminaire.
 - `LuminousWidth`, `LuminousLength`, and either `LuminousHeight` or `ReflectorDepth` describe the dimensions of the luminous surfaces.
-- The `LuminousHeight` describes how far the luminous part sticks out of the housing.
-- The `ReflectorDepth` describes how far the luminous part is recessed into the housing.
-- Top dimensions are by default 80% of the lower dimensions.
-- The luminaire can be mounted on ceilings, walls, or floors (`Mounting`).
+  - `LuminousHeight` describes how far the luminous part sticks out of the housing.
+  - `ReflectorDepth` describes how far the luminous part is recessed into the housing.
+- `TopWidth` and `TopLength` define the dimensions of the upper part, which are by default 80% of the lower dimensions.
+- `Mounting` specifies how the luminaire is mounted. Possible values are `Ceiling`, `Wall`, or `Floor`.
+- Optionally, `HousingColor` can be provided as a 4-digit RAL color code.
+- Optionally, a `FileName` can be provided.
 
-| Parameter        | Type    | Explanation                  |
-| ---------------- | :-----: | :--------------------------: |
-| Width            | int     | Value in mm                  |
-| Length           | int     | Value in mm                  |
-| Height           | int     | Value in mm                  |
-| LuminousWidth    | int     | Value in mm                  |
-| LuminousLength   | int     | Value in mm                  |
-| LuminousHeight   | int     | Value in mm                  |
-| ReflectorDepth   | int     | Value in mm                  |
-| TopWidth         | int     | Value in mm                  |
-| TopLength        | int     | Value in mm                  |
-| Mounting         | string  | Ceiling, Wall or Floor       |
-| HousingColor     | string  | 4 digit RAL color code       |
+## Parameters
+
+| Parameter                              |  Type   | Explanation                                                                                           |
+| -------------------------------------- | :-----: | -----------------------------------------------------------------------------------------------------:|
+| **Width**                              | int     | Value in mm.                                                                                          |
+| **Length**                             | int     | Value in mm.                                                                                          |
+| **Height**                             | int     | Value in mm.                                                                                          |
+| **LuminousWidth**                      | int     | Value in mm.                                                                                          |
+| **LuminousLength**                     | int     | Value in mm.                                                                                          |
+| **LuminousHeight** / **ReflectorDepth**| int     | Value in mm. Choose one to define how the luminous part interacts with the housing.                   |
+| **TopWidth**                           | int     | Value in mm (optional).                                                                               |
+| **TopLength**                          | int     | Value in mm (optional).                                                                               |
+| **Mounting**                           | string  | `Ceiling`, `Wall` or `Floor`.                                                                         |
+| **HousingColor**                       | string  | A 4-digit RAL color code matching the pattern `[1-9][0-9]{3}` (optional).                             |
+| **FileName**                           | string  | Optional file name.                                                                                   |
 
 ## XSD
 
@@ -57,21 +61,17 @@ The `RecessedCuboid` is a cube-shaped recessed luminaire.
         </xs:simpleType>
       </xs:element>
       <xs:element name="HousingColor" minOccurs="0">
-        <xs:complexType>
-          <xs:attribute name="ral">
-            <xs:simpleType>
-              <xs:restriction base="xs:string">
-                <xs:pattern value="[1-9][0-9]{3}"/>
-              </xs:restriction>
-            </xs:simpleType>
-          </xs:attribute>
-        </xs:complexType>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:pattern value="[1-9][0-9]{3}"/>
+          </xs:restriction>
+        </xs:simpleType>
       </xs:element>
+      <xs:element name="FileName" type="xs:string" minOccurs="0"/>
     </xs:sequence>
   </xs:complexType>
 </xs:element>
 ```
-
 ## XML
 ### Example
 
@@ -87,7 +87,8 @@ The `RecessedCuboid` is a cube-shaped recessed luminaire.
     <TopWidth>100</TopWidth>
     <TopLength>100</TopLength>
     <Mounting>Ceiling</Mounting>
-    <HousingColor ral="9005"/> 
+    <HousingColor>9005</HousingColor>
+    <FileName>example_filename</FileName>
   </RecessedCuboid>
 </P3D>
 ```

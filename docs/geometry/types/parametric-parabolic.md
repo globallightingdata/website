@@ -7,31 +7,35 @@ sidebar_label: Parabolic
 
 ![Parabolic Luminaire](/img/docs/geometry/parametric/parabolic.webp)
 
-Parabolic shaped luminaire.
+`Parabolic` is a parabolic-shaped luminaire.
 
-- The `Diameter` indicates the widest part of the luminaire.
-- The `Height` describes the total height of the luminaire.
-- The `LuminousDiameter` describes the diameter of the illuminated surface.
-- The `BaseDiameter` has a default value of 50% of the main diameter.
-- The `BaseHeight` has a default value of 50% of the main height.
-- Either `LuminousHeight` or `ReflectorDepth` can be specified to describe how the luminous part extrudes or introdudes into the body:
-  - The `LuminousHeight` describes how far the luminous part sticks out of the body.
-  - The `ReflectorDepth` describes how far the luminaire is recessed into the body.
-- The luminaire can be mounted on ceilings, walls, floors, or suspended from a pendulum (`Mounting`).
-- If `Mounting` is set to `Pendulum`, the `PendulumLength` must be specified.
+- `Diameter`: Indicates the widest part of the luminaire.
+- `Height`: Describes the total height of the luminaire.
+- `LuminousDiameter`: Describes the diameter of the illuminated surface *(optional)*.
+- `BaseDiameter`: Has a default value of 50% of the main diameter *(optional)*.
+- `BaseHeight`: Has a default value of 50% of the main height *(optional)*.
+- `Luminous Features`: Specify either `LuminousHeight` or `ReflectorDepth`:
+  - `LuminousHeight`: Describes how far the luminous part sticks out of the body.
+  - `ReflectorDepth`: Describes how far the luminaire is recessed into the body.
+- `Mounting`: The luminaire can be mounted on ceilings, walls, floors, or suspended from a pendulum.
+  - If `Mounting` is set to `Pendulum`, the `PendulumLength` must be specified.
+- Optionally, `HousingColor` can be provided as a 4-digit RAL color code.
+- Optionally, `FileName` can be provided (without an extension).
 
-| Parameter        | Type    | Explanation                                           |
-| ---------------- | :-----: | :---------------------------------------------------: |
-| Diameter         | int     | Value in mm                                           |
-| Height           | int     | Value in mm                                           |
-| LuminousDiameter | int     | Value in mm                                           |
-| LuminousHeight   | int     | Value in mm                                           |
-| ReflectorDepth   | int     | Value in mm                                           |
-| BaseDiameter     | int     | Value in mm (default is 50% of `Diameter`)            |
-| BaseHeight       | int     | Value in mm (default is 50% of `Height`)              |
-| Mounting         | string  | Ceiling, Wall, Floor or Pendulum                      |
-| PendulumLength   | int     | Value in mm (required if `Mounting` is `Pendulum`)    |
-| HousingColor     | string  | 4 digit RAL color code                                |
+## Parameters
+
+| Parameter                              |  Type   | Explanation                                                                                   |
+| -------------------------------------- | :-----: | ---------------------------------------------------------------------------------------------:|
+| **Diameter**                           | int     | Value in mm. Indicates the widest part of the luminaire.                                       |
+| **Height**                             | int     | Value in mm. Total height of the luminaire.                                                    |
+| **LuminousDiameter**                   | int     | Value in mm. Diameter of the illuminated surface *(optional)*.                                 |
+| **LuminousHeight** / **ReflectorDepth**| int     | Value in mm. Choose one to define how the luminous part interacts with the body.                |
+| **BaseDiameter**                       | int     | Value in mm. Base diameter *(default is 50% of `Diameter`)* *(optional)*.                       |
+| **BaseHeight**                         | int     | Value in mm. Base height *(default is 50% of `Height`)* *(optional)*.                           |
+| **Mounting**                           | string  | One of: `Ceiling`, `Wall`, `Floor`, or `Pendulum`.                                             |
+| **PendulumLength**                     | int     | Value in mm. Required if `Mounting` is `Pendulum`.                                             |
+| **HousingColor**                       | string  | A 4-digit RAL color code matching `[1-9][0-9]{3}` (optional).                                  |
+| **FileName**                           | string  | Optional file name (without an extension).                                                    |
 
 ## XSD
 
@@ -60,16 +64,13 @@ Parabolic shaped luminaire.
       </xs:element>
       <xs:element name="PendulumLength" type="xs:int" minOccurs="0"/>
       <xs:element name="HousingColor" minOccurs="0">
-        <xs:complexType>
-          <xs:attribute name="ral">
-            <xs:simpleType>
-              <xs:restriction base="xs:string">
-                <xs:pattern value="[1-9][0-9]{3}"/>
-              </xs:restriction>
-            </xs:simpleType>
-          </xs:attribute>
-        </xs:complexType>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:pattern value="[1-9][0-9]{3}"/>
+          </xs:restriction>
+        </xs:simpleType>
       </xs:element>
+      <xs:element name="FileName" type="xs:string" minOccurs="0"/>
     </xs:sequence>
   </xs:complexType>
 </xs:element>
@@ -85,10 +86,11 @@ Parabolic shaped luminaire.
     <Height>150</Height>
     <LuminousDiameter>180</LuminousDiameter>
     <LuminousHeight>50</LuminousHeight>
-    <BaseDiameter>80</BaseDiameter>
-    <BaseHeight>80</BaseHeight>
+    <BaseDiameter>100</BaseDiameter>
+    <BaseHeight>75</BaseHeight>
     <Mounting>Ceiling</Mounting>
-    <HousingColor ral="9005"/> 
+    <HousingColor>9005</HousingColor>
+    <FileName>example_filename</FileName>
   </Parabolic>
 </P3D>
 ```
