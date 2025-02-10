@@ -68,8 +68,8 @@ The XSD urls without version should only be referenced with caution, as the cont
 
 ### P3D XSD history
 
-- L3D: <a href="/xsd/p3d/1.0/p3d.xsd" target="_blank">v1.0</a>
-- L3D: <a href="/xsd/p3d/0.9/p3d.xsd" target="_blank">v0.9</a>
+- P3D: <a href="/xsd/p3d/1.0/p3d.xsd" target="_blank">v1.0</a>
+- P3D: <a href="/xsd/p3d/0.9/p3d.xsd" target="_blank">v0.9</a>
 
 ---
 
