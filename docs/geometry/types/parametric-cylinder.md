@@ -7,21 +7,31 @@ sidebar_label: Cylinder
 
 ![Cylinder](/img/docs/geometry/parametric/cylinder.webp)
 
-`Diameter` and `Height` describe the bounding box size of the luminaire.
+`Cylinder` is a cylindrical luminaire.
 
-- `LuminousDiameter` and `LuminousHeight` describe the dimensions of the illuminated surface.
-- `LuminousHeight` will let the luminous surface extrude out of the object.
-- If the `Mounting` type is a `Pendulum`, the `PendulumLength` will set the default pendulum length.
+- `Diameter` and `Height` describe the bounding box size of the luminaire.
+- `LuminousDiameter` and either `LuminousHeight` or `ReflectorDepth` describe the dimensions of the illuminated surface.
+  - `LuminousHeight` describes how far the luminous part sticks out of the body.
+  - `ReflectorDepth` describes how far the luminous part is recessed into the body.
+- The `TopDiameter` is, by default, 80% of the main diameter and describes the diameter of the top part of the luminaire.
+- The luminaire can be mounted on ceilings, walls, floors, or suspended from a pendulum (`Mounting`).
+  - If `Mounting` is set to `Pendulum`, the `PendulumLength` must be specified.
+- Optionally, `HousingColor` can be provided as a 4-digit RAL color code.
+- Optionally, a `FileName` can be provided. The filename should not include an extension.
 
-| Parameter        | Type |          Explanation           |
-| ---------------- | :--: | :----------------------------: |
-| Diameter         | int  |          value in mm           |
-| Height           | int  |          value in mm           |
-| TopDiameter      | int  |          value in mm           |
-| LuminousDiameter | int  |          value in mm           |
-| LuminousHeight   | int  |          value in mm           |
-| Mounting         | int  | Ceiling, Wall, Floor, Pendulum |
-| PendulumLength   | int  |          value in mm           |
+## Parameters
+
+| Parameter                              |  Type   | Explanation                                                                                   |
+| -------------------------------------- | :-----: | ---------------------------------------------------------------------------------------------:|
+| **Diameter**                           | int     | Value in mm.                                                                                  |
+| **Height**                             | int     | Value in mm.                                                                                  |
+| **TopDiameter**                        | int     | Value in mm (optional; default is 80% of `Diameter`).                                         |
+| **LuminousDiameter**                   | int     | Value in mm.                                                                                  |
+| **LuminousHeight** / **ReflectorDepth**| int     | Value in mm. Choose one to define how the illuminated surface interacts with the body.         |
+| **Mounting**                           | string  | One of: `Ceiling`, `Wall`, `Floor`, or `Pendulum`.                                             |
+| **PendulumLength**                     | int     | Value in mm (required if `Mounting` is `Pendulum`).                                           |
+| **HousingColor**                       | string  | A 4-digit RAL color code matching `[1-9][0-9]{3}` (optional).                                  |
+| **FileName**                           | string  | Optional file name (without an extension).                                                   |
 
 ## XSD
 
@@ -33,7 +43,10 @@ sidebar_label: Cylinder
       <xs:element name="Height" type="xs:int"/>
       <xs:element name="TopDiameter" type="xs:int" minOccurs="0"/>
       <xs:element name="LuminousDiameter" type="xs:int"/>
-      <xs:element name="LuminousHeight" type="xs:int" minOccurs="0"/>
+      <xs:choice minOccurs="0">
+        <xs:element name="LuminousHeight" type="xs:int" minOccurs="0"/>
+        <xs:element name="ReflectorDepth" type="xs:int" minOccurs="0"/>
+      </xs:choice>
       <xs:element name="Mounting">
         <xs:simpleType>
           <xs:restriction base="xs:string">
@@ -45,23 +58,34 @@ sidebar_label: Cylinder
         </xs:simpleType>
       </xs:element>
       <xs:element name="PendulumLength" type="xs:int" minOccurs="0"/>
+      <xs:element name="HousingColor" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:pattern value="[1-9][0-9]{3}"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="FileName" type="xs:string" minOccurs="0"/>
     </xs:sequence>
   </xs:complexType>
 </xs:element>
 ```
 
 ## XML
+### Example
 
 ```xml
-<P3D>
+<P3D filename="Cylinder">
   <Cylinder>
-    <Diameter>340</Diameter>
-    <Height>200</Height>
-    <TopDiameter>250</TopDiameter>
-    <LuminousDiameter>320</LuminousDiameter>
-    <LuminousHeight>0</LuminousHeight>
+    <Diameter>100</Diameter>
+    <Height>150</Height>
+    <TopDiameter>100</TopDiameter>
+    <LuminousDiameter>90</LuminousDiameter>
+    <LuminousHeight>20</LuminousHeight>
     <Mounting>Pendulum</Mounting>
     <PendulumLength>400</PendulumLength>
+    <HousingColor>9005</HousingColor>
+    <FileName>example_filename</FileName>
   </Cylinder>
 </P3D>
 ```
