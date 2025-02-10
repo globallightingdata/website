@@ -79,6 +79,7 @@ sidebar_label: Cuboid
 ```
 
 ## XML
+
 ### Example
 
 ```xml

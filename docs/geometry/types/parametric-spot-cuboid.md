@@ -71,6 +71,7 @@ A spotlight with a cuboid-shaped luminous head mounted on a bracket attached to 
 ```
 
 ## XML
+
 ### Example
 
 ```xml

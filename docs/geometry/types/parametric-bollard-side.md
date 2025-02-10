@@ -63,6 +63,7 @@ sidebar_label: Bollard Side
 ```
 
 ## XML
+
 ### Example
 
 ```xml

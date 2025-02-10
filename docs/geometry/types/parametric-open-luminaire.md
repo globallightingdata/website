@@ -18,7 +18,6 @@ The `Open Luminaire` features a base with an openly accessible luminous object, 
   - Determines the number of luminous tubes or elements within the luminaire.
 - Optionally, you can specify a `HousingColor` as a 4-digit RAL color code and a `FileName` (without an extension).
 
-
 ## Parameters
 
 | Parameter        |  Type  | Explanation                                                                                |
@@ -67,8 +66,8 @@ The `Open Luminaire` features a base with an openly accessible luminous object, 
 ```
 
 ## XML
-### Example
 
+### Example
 
 ```xml
 <P3D filename="OpenLuminaire">

@@ -72,7 +72,9 @@ The `RecessedCuboid` is a cube-shaped recessed luminaire.
   </xs:complexType>
 </xs:element>
 ```
+
 ## XML
+
 ### Example
 
 ```xml

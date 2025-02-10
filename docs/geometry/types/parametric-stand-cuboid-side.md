@@ -82,6 +82,7 @@ sidebar_label: Stand Cuboid Side
 ```
 
 ## XML
+
 ### Example
 
 ```xml

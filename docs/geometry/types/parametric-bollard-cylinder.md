@@ -67,6 +67,7 @@ sidebar_label: Bollard Cylinder
 ```
 
 ## XML
+
 ### Example
 
 ```xml

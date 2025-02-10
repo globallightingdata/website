@@ -75,6 +75,7 @@ sidebar_label: Wall Triangular
 ```
 
 ## XML
+
 ### Example
 
 ```xml

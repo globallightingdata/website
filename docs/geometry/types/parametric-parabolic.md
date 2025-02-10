@@ -77,6 +77,7 @@ sidebar_label: Parabolic
 ```
 
 ## XML
+
 ### Example
 
 ```xml

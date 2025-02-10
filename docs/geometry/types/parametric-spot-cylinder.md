@@ -58,6 +58,7 @@ A spotlight in cylinder shape mounted on a bracket attached to a plate.
 ```
 
 ## XML
+
 ### Example
 
 ```xml

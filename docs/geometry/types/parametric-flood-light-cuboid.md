@@ -55,6 +55,7 @@ sidebar_label: Floodlight Cuboid
 ```
 
 ## XML
+
 ### Example
 
 ```xml
