@@ -7,21 +7,30 @@ sidebar_label: Street Cuboid Side
 
 ![Street Cuboid Side](/img/docs/geometry/parametric/street-cuboid-side.webp)
 
-Classic street light with the luminous head cube-shaped attached to the pole on its edge.
+`Street Cuboid Side` is a classic street light featuring a cuboid-shaped luminous head attached to the side of a pole. This parametric model allows you to define the `TotalHeight` and the `Height` of the luminaire's housing (not including the stand).
 
-- The pole will not be modeled.
-- You can adjust the dimensions of the head by setting the `LuminousLength`, `LuminousWidth`, and `LuminousHeight`.
-- The luminous center is located at 0,0,0.
-- There is an offset aligned to C0.
+- `Width`, `Length`, and `Height` define the overall dimensions of the luminaire's housing.
+- `LuminousWidth` and `LuminousLength` *(optional)* specify the size of the luminous surfaces.
+- Either `LuminousHeight` or `ReflectorDepth` *(optional)* can be specified:
+  - `LuminousHeight`: Describes how far the luminous part sticks out from the housing.
+  - `ReflectorDepth`: Describes how far the luminous part is recessed into the housing.
+- `TotalHeight` *(optional)* defines the overall height of the entire model, including the stand. If specified, the stand height is calculated as `TotalHeight` minus the luminaire `Height`.
+- The pole itself is not modeled within this luminaire configuration.
 
-| Parameter      | Type | Explanation |
-| -------------- | :--: | :---------: |
-| Width          | int  | value in mm |
-| Length         | int  | value in mm |
-| Height         | int  | value in mm |
-| LuminousWidth  | int  | value in mm |
-| LuminousLength | int  | value in mm |
-| LuminousHeight | int  | value in mm |
+## Parameters
+
+| Parameter         | Type   | Explanation                                                                                  |
+| ----------------- | :----: | --------------------------------------------------------------------------------------------:|
+| Width             | int    | Base width of the luminaire in millimeters (mm).                                             |
+| Length            | int    | Base length of the luminaire in millimeters (mm).                                            |
+| Height            | int    | Height of the luminaire head in millimeters (mm).                                            |
+| LuminousWidth     | int    | Width of the luminous surface in millimeters (mm) *(optional)*.                              |
+| LuminousLength    | int    | Length of the luminous surface in millimeters (mm) *(optional)*.                             |
+| LuminousHeight    | int    | Extent to which the luminous part protrudes from the housing in mm *(optional)*.             |
+| ReflectorDepth    | int    | Extent to which the luminous part is recessed into the housing in mm *(optional)*.           |
+| TotalHeight       | int    | Overall height of the luminaire including the stand in millimeters (mm) *(optional)*.          |
+| HousingColor      | string | 4 digit RAL color code *(optional)*.                                                         |
+| FileName          | string | Optional file name (without an extension) *(optional)*.                                      |
 
 ## XSD
 
@@ -34,7 +43,18 @@ Classic street light with the luminous head cube-shaped attached to the pole on 
       <xs:element name="Height" type="xs:int"/>
       <xs:element name="LuminousWidth" type="xs:int" minOccurs="0"/>
       <xs:element name="LuminousLength" type="xs:int" minOccurs="0"/>
-      <xs:element name="LuminousHeight" type="xs:int" minOccurs="0"/>
+      <xs:choice minOccurs="0">
+        <xs:element name="LuminousHeight" type="xs:int" minOccurs="0"/>
+        <xs:element name="ReflectorDepth" type="xs:int" minOccurs="0"/>
+      </xs:choice>
+      <xs:element name="HousingColor" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:pattern value="[1-9][0-9]{3}"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="FileName" type="xs:string" minOccurs="0"/>
     </xs:sequence>
   </xs:complexType>
 </xs:element>
@@ -42,15 +62,19 @@ Classic street light with the luminous head cube-shaped attached to the pole on 
 
 ## XML
 
+### Example
+
 ```xml
-<P3D>
+<P3D filename="StreetCuboidSide">
   <StreetCuboidSide>
     <Width>300</Width>
     <Length>190</Length>
     <Height>80</Height>
     <LuminousWidth>280</LuminousWidth>
-    <LuminousLength>120</LuminousLength>
-    <LuminousHeight>0</LuminousHeight>
+    <LuminousLength>170</LuminousLength>
+    <LuminousHeight>40</LuminousHeight>
+    <HousingColor>9005</HousingColor>
+    <FileName>example_filename</FileName>
   </StreetCuboidSide>
 </P3D>
 ```

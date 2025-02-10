@@ -1,5 +1,5 @@
 ---
-title: Sport Cuboid
+title: Spot Cuboid
 sidebar_label: Spot Cuboid
 ---
 
@@ -7,25 +7,37 @@ sidebar_label: Spot Cuboid
 
 ![Spot Cuboid](/img/docs/geometry/parametric/spot-cuboid.webp)
 
-A Spotlight in cube shape mounted on a bracket attached to a cubic plate.
+A spotlight with a cuboid-shaped luminous head mounted on a bracket attached to a cubic base plate.
 
-- You can adjust the dimensions of the light by setting the `Length`, `Width` and `Height`.
-- Setting the `TotalHeight` parameter will affect the size of the bracket.
-- The plate size can be changed using the base dimensions.
-- The distance of the connector of the bracket to the luminaire is the same as the `Height`.
-- The length of the connection from the base surface to the bracket is 10% of the `Height`.
+- `Dimensions`: Adjust the size of the luminaire by setting the `Width`, `Length`, and `Height`.
+- `Luminous Features`:
+  - `LuminousWidth` and `LuminousLength`: Define the size of the luminous surfaces.
+  - `LuminousHeight` or `ReflectorDepth` *(optional)*:
+    - `LuminousHeight`: Describes how far the luminous part protrudes from the housing.
+    - `ReflectorDepth`: Describes how far the luminous part is recessed into the housing.
+- `Base Dimensions` *(optional)*: Modify the size of the base plate using `BaseWidth`, `BaseLength`, and `BaseHeight`.
+  - `BaseWidth` and `BaseLength`: Determine the footprint of the base plate.
+  - `BaseHeight`: Sets the height of the base plate.
+- `Bracket Connection`:
+  - The distance from the connector of the bracket to the luminaire is equal to the `Height` of the luminaire head.
+  - The length of the connection from the base surface to the bracket is 10% of the `Height`.
 
-| Parameter      | Type | Explanation |
-| -------------- | :--: | :---------: |
-| Width          | int  | value in mm |
-| Length         | int  | value in mm |
-| Height         | int  | value in mm |
-| LuminousWidth  | int  | value in mm |
-| LuminousLength | int  | value in mm |
-| LuminousHeight | int  | value in mm |
-| BaseWidth      | int  | value in mm |
-| BaseLength     | int  | value in mm |
-| BaseHeight     | int  | value in mm |
+## Parameters
+
+| Parameter           | Type  | Explanation                                                                                   |
+| ------------------- | :---: | ---------------------------------------------------------------------------------------------:|
+| Width               | int   | Base width of the luminaire in millimeters (mm).                                               |
+| Length              | int   | Base length of the luminaire in millimeters (mm).                                              |
+| Height              | int   | Height of the luminaire head in millimeters (mm).                                              |
+| LuminousWidth       | int   | Width of the luminous surface in millimeters (mm).                                             |
+| LuminousLength      | int   | Length of the luminous surface in millimeters (mm).                                            |
+| LuminousHeight      | int   | Extent to which the luminous part protrudes from the housing *(optional)* (mm).                |
+| ReflectorDepth      | int   | Extent to which the luminous part is recessed into the housing *(optional)* (mm).              |
+| BaseWidth           | int   | Width of the base plate in millimeters (mm) *(optional)*.                                      |
+| BaseLength          | int   | Length of the base plate in millimeters (mm) *(optional)*.                                     |
+| BaseHeight          | int   | Height of the base plate in millimeters (mm) *(optional)*.                                     |
+| HousingColor        | string| 4 digit RAL color code *(optional)*.                                                           |
+| FileName            | string| Optional file name (without an extension) *(optional)*.                                      |
 
 ## XSD
 
@@ -38,10 +50,21 @@ A Spotlight in cube shape mounted on a bracket attached to a cubic plate.
       <xs:element name="Height" type="xs:int"/>
       <xs:element name="LuminousWidth" type="xs:int"/>
       <xs:element name="LuminousLength" type="xs:int"/>
-      <xs:element name="LuminousHeight" type="xs:int"/>
+      <xs:choice>
+        <xs:element name="LuminousHeight" type="xs:int"/>
+        <xs:element name="ReflectorDepth" type="xs:int"/>
+      </xs:choice>
       <xs:element name="BaseWidth" type="xs:int" minOccurs="0"/>
       <xs:element name="BaseLength" type="xs:int" minOccurs="0"/>
       <xs:element name="BaseHeight" type="xs:int" minOccurs="0"/>
+      <xs:element name="HousingColor" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:pattern value="[1-9][0-9]{3}"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="FileName" type="xs:string" minOccurs="0"/>
     </xs:sequence>
   </xs:complexType>
 </xs:element>
@@ -49,18 +72,21 @@ A Spotlight in cube shape mounted on a bracket attached to a cubic plate.
 
 ## XML
 
+### Example
+
 ```xml
-<P3D>
+<P3D filename="SpotCuboid">
   <SpotCuboid>
-    <Width>100</Width>
-    <Length>100</Length>
-    <Height>30</Height>
-    <LuminousWidth>90</LuminousWidth>
-    <LuminousLength>90</LuminousLength>
-    <LuminousHeight>10</LuminousHeight>
-    <BaseWidth>30</BaseWidth>
-    <BaseLength>30</BaseLength>
+    <Width>70</Width>
+    <Length>70</Length>
+    <Height>120</Height>
+    <LuminousWidth>60</LuminousWidth>
+    <LuminousLength>60</LuminousLength>
+    <LuminousHeight>30</LuminousHeight>
+    <BaseWidth>100</BaseWidth>
+    <BaseLength>20</BaseLength>
     <BaseHeight>10</BaseHeight>
+    <FileName>example_filename</FileName>
   </SpotCuboid>
 </P3D>
 ```
