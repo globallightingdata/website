@@ -1,5 +1,5 @@
 ### BUILD ###
-FROM node:22-bookworm-slim AS build
+FROM node:24-bookworm-slim AS build
 
 WORKDIR /build
 COPY . /
