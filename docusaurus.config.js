@@ -13,6 +13,7 @@ const config = {
   favicon: "img/favicon.ico",
   organizationName: "globallightingdata",
   projectName: "website",
+  future: { v4: true, },
 
   i18n: {
     defaultLocale: "en",
@@ -35,6 +36,9 @@ const config = {
             xslt: true,
           },
           editUrl: "https://github.com/globallightingdata/website/tree/master",
+          onInlineTags: 'warn',
+          onInlineAuthors: 'warn',
+          onUntruncatedBlogPosts: 'warn',
         },
         theme: {
           customCss: [
