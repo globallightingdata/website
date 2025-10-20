@@ -8,8 +8,6 @@ const config = {
   tagline: "Global Lighting Data Format",
   url: "https://gldf.io",
   baseUrl: "/",
-  onBrokenLinks: "warn",
-  onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
   organizationName: "globallightingdata",
   projectName: "website",
@@ -18,6 +16,13 @@ const config = {
   i18n: {
     defaultLocale: "en",
     locales: ["en"],
+  },
+
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: 'warn',
+      onBrokenMarkdownImages: 'warn',
+    },
   },
 
   presets: [
