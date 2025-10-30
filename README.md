@@ -27,3 +27,14 @@ npm start -- --host 0.0.0.0
 ```console
 npm run build
 ```
+
+## Docker & Testsystem (<https://test.gldf.io>)
+
+Image lokal erstellen und auf Dockerhub pushen.  
+Das Testsystem prüft regelmässig auf neue Images und aktualisiert die Container selbstständig.
+
+```console
+docker login -u dialgmbh
+docker build -t dialgmbh/gldf-website:latest .
+docker push dialgmbh/gldf-website:latest
+```
