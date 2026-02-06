@@ -31,44 +31,42 @@ Make sure that you substitute "EMAIL" and "PASSWORD" with your actual email addr
 Open the windows text editor of your choice, enter the following code and save the file as *example.bat*
 
 ```bash
-@Echo off
+@echo off
+setlocal EnableExtensions EnableDelayedExpansion
 
 REM File Dialog
-For /f "usebackqdelims=" %%A in (
-  `powershell -Executionpolicy ByPass -Command "[void][System.Reflection.Assembly]::LoadWithPartialName('System.Windows.Forms');$dlg = New-Object System.Windows.Forms.OpenFileDialog; if($dlg.ShowDialog() -eq 'OK'){return $dlg.FileNames}"`
-) Do Set file=%%A
-echo %file%
+For /f "usebackq delims=" %%A in (
+  `powershell -Executionpolicy ByPass -Command "[void][System.Reflection.Assembly]::LoadWithPartialName('System.Windows.Forms');$dlg = New-Object System.Windows.Forms.OpenFileDialog; if($dlg.ShowDialog() -eq 'OK'){ $dlg.FileName }"`
+) Do Set "file=%%A"
+echo !file!
 
 REM auth Call
-curl --location "https://relux.com/en/account/api/login/" --form "username="EMAIL"" --form "password="PASSWORD"" --output token.json
+curl --location "https://auth.relux.com/auth/login/" ^
+  --form "username=YOUREMAIL" ^
+  --form "password=YOURPASSWORD" ^
+  --output token.json
 
 REM get token out of json
-For /f "usebackqdelims=" %%A in (
-  `Powershell -Executionpolicy Bypass -command "return (Get-Content -Raw -Encoding UTF8 token.json) | ConvertFrom-Json | ForEach-Object id_token"`
-) Do Set idtoken=%%A
-echo %idtoken%
+For /f "usebackq delims=" %%A in (
+  `Powershell -Executionpolicy Bypass -command "(Get-Content -Raw -Encoding UTF8 token.json | ConvertFrom-Json).id_token"`
+) Do Set "idtoken=%%A"
+echo !idtoken!
 
 REM API Call
-curl --header "Authorization: Bearer %idtoken%" --request "PUT" --header "Content-Type:application/xml" "https://p3d.relux.com/l3d/" --data "@%file%" --output out.xml
+curl --header "Authorization: Bearer !idtoken!" --request "PUT" --header "Content-Type:application/xml" "https://p3d.relux.com/l3d/" --data "@!file!" --output out.xml
 
-REM get URL out of JSON
-For /f "usebackqdelims=" %%A in (
+REM get URL out of XML
+For /f "usebackq delims=" %%A in (
   `Powershell -Executionpolicy Bypass -command "([xml](gc 'out.xml')).SelectSingleNode('//root').innerText"`
-) Do Set url=%%A
-echo %url%
+) Do Set "url=%%A"
+echo !url!
 
 REM Filename of URL
-for /f "tokens=1,2,3,4 delims=/ " %%a in ("%url%") do set filename=%%d
-echo %filename%
+for %%F in ("!url!") do set "filename=%%~nxF"
+echo !filename!
 
-REM URL downlaod
-curl --header "Authorization: Bearer %idtoken%" -L -X GET %url% --output %filename%
-
-REM clean up
-del out.xml
-del token.json
-
-pause
+REM URL download
+curl --header "Authorization: Bearer !idtoken!" -L -X GET "!url!" --output "!filename!"
 ```
 
 ### Step 2
