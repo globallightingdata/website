@@ -127,6 +127,16 @@ function Imprints() {
           </>
         }
       />
+      <div className="ImprintEditorial">
+        <h2>Editorial Responsibility (Blog Section)</h2>
+        <p>
+          Responsible for the journalistic and editorial content of the blog section (gldf.io/blog/)
+          in accordance with Section 18 (2) of the German State Media Treaty (Medienstaatsvertrag, MStV):<br />
+          <strong>Dieter Polle</strong>, Managing Director of DIAL GmbH,<br />Bahnhofsallee 18, 58507 Lüdenscheid, Germany.
+        </p>
+        <br />
+        <br />
+      </div>
     </>
   );
 }
