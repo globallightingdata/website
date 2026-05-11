@@ -122,6 +122,11 @@ const config = {
             position: 'left',
           },
           {
+            to: 'gldf-editor/',
+            label: 'GLDF Editor',
+            position: 'left',
+          },
+          {
             to: 'download',
             label: 'Download',
             position: 'right',
