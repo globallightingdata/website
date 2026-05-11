@@ -26,103 +26,87 @@ function Imprints() {
       <TwoColumns
         columnOne={
           <>
-            <h2 class="ImprintCompanyName">DIAL GmbH</h2>
+            <h2 className="ImprintCompanyName">DIAL GmbH</h2>
             <p>
-              <div>
-                <strong>Chief Executive Officer</strong>
-              </div>
-              <div>Dipl.-Ing. Dieter Polle</div>
+              <strong>Chief Executive Officer</strong>
+              <br />
+              Dipl.-Ing. Dieter Polle
             </p>
             <p>
-              <div>
-                <strong>Court of jurisdiction – commercial register</strong>
-              </div>
-              <div>Iserlohn</div>
+              <strong>Court of jurisdiction – commercial register</strong>
+              <br />
+              Iserlohn
             </p>
             <p>
-              <div>
-                <strong>No. in commercial register</strong>
-              </div>
-              <div>HRB 4446</div>
+              <strong>No. in commercial register</strong>
+              <br />
+              HRB 4446
             </p>
             <p>
-              <div>
-                <strong>VAT ID</strong>
-              </div>
-              <div>DE 125807143</div>
+              <strong>VAT ID</strong>
+              <br />
+              DE 125807143
             </p>
             <p>
-              <div>
-                <strong>Responsible for the content</strong>
-              </div>
-              <div>Dipl.-Ing. Dieter Polle</div>
+              <strong>Responsible for the content</strong>
+              <br />
+              Dipl.-Ing. Dieter Polle
             </p>
             <p>
-              <div>
-                <strong>Contact</strong>
-              </div>
-              <div>
-                DIAL GmbH
-                <br />
-                Bahnhofsallee 18
-                <br />
-                D-58507 Lüdenscheid
-                <br />
-                Fon: +49 23 51 56 74 0
-                <br />
-                Mail: dialog@dial.de
-              </div>
+              <strong>Contact</strong>
+              <br />
+              DIAL GmbH
+              <br />
+              Bahnhofsallee 18
+              <br />
+              D-58507 Lüdenscheid
+              <br />
+              Fon: +49 23 51 56 74 0
+              <br />
+              Mail: dialog@dial.de
             </p>
           </>
         }
         columnTwo={
           <>
-            <h2 class="ImprintCompanyName">RELUX Informatik AG</h2>
+            <h2 className="ImprintCompanyName">RELUX Informatik AG</h2>
             <p>
-              <div>
-                <strong>Chief Executive Officer</strong>
-              </div>
-              <div>Dipl.-Ing. Markus Hegi</div>
+              <strong>Chief Executive Officer</strong>
+              <br />
+              Dipl.-Ing. Markus Hegi
             </p>
             <p>
-              <div>
-                <strong>Court of jurisdiction – commercial register</strong>
-              </div>
-              <div>Basel</div>
+              <strong>Court of jurisdiction – commercial register</strong>
+              <br />
+              Basel
             </p>
             <p>
-              <div>
-                <strong>No. in commercial register</strong>
-              </div>
-              <div>CHE-104.196.664</div>
+              <strong>No. in commercial register</strong>
+              <br />
+              CHE-104.196.664
             </p>
             <p>
-              <div>
-                <strong>VAT ID</strong>
-              </div>
-              <div>CHE-104.196.664 TVA</div>
+              <strong>VAT ID</strong>
+              <br />
+              CHE-104.196.664 TVA
             </p>
             <p>
-              <div>
-                <strong>Responsible for the content</strong>
-              </div>
-              <div>Dipl.-Ing. Robert Heinze</div>
+              <strong>Responsible for the content</strong>
+              <br />
+              Dipl.-Ing. Robert Heinze
             </p>
             <p>
-              <div>
-                <strong>Contact</strong>
-              </div>
-              <div>
-                RELUX Informatik AG
-                <br />
-                Kaspar Pfeiffer Strasse 4
-                <br />
-                CH-4142 Münchenstein
-                <br />
-                Fon: +41 61 333 07 70
-                <br />
-                Mail: info@relux.com
-              </div>
+              <strong>Contact</strong>
+              <br />
+              RELUX Informatik AG
+              <br />
+              Kaspar Pfeiffer Strasse 4
+              <br />
+              CH-4142 Münchenstein
+              <br />
+              Fon: +41 61 333 07 70
+              <br />
+              Mail: info@relux.com
             </p>
           </>
         }
@@ -132,7 +116,8 @@ function Imprints() {
         <p>
           Responsible for the journalistic and editorial content of the blog section (gldf.io/blog/)
           in accordance with Section 18 (2) of the German State Media Treaty (Medienstaatsvertrag, MStV):<br />
-          <strong>Dieter Polle</strong>, Managing Director of DIAL GmbH,<br />Bahnhofsallee 18, 58507 Lüdenscheid, Germany.
+          <strong>Dieter Polle</strong>, Managing Director of DIAL GmbH,<br />
+          Bahnhofsallee 18, 58507 Lüdenscheid, Germany.
         </p>
         <br />
         <br />
