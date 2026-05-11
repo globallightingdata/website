@@ -117,13 +117,13 @@ const config = {
             target: '_blank',
           },
           {
-            to: 'l3d-editor/',
-            label: 'L3D Editor',
+            to: 'gldf-editor/',
+            label: 'GLDF Editor',
             position: 'left',
           },
           {
-            to: 'gldf-editor/',
-            label: 'GLDF Editor',
+            to: 'l3d-editor/',
+            label: 'L3D Editor',
             position: 'left',
           },
           {
