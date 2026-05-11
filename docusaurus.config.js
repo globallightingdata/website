@@ -69,6 +69,7 @@ const config = {
     ({
       image: 'img/docusaurus-social-card.jpg',
       colorMode: {
+        defaultMode: 'light',
         respectPrefersColorScheme: true,
       },
       docs: {
@@ -114,6 +115,11 @@ const config = {
             label: 'XSD Reference',
             position: 'left',
             target: '_blank',
+          },
+          {
+            to: 'gldf-editor/',
+            label: 'GLDF Editor',
+            position: 'left',
           },
           {
             to: 'l3d-editor/',

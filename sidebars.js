@@ -105,6 +105,7 @@ module.exports = {
       {
         Tooling: [
           "tools-dev/l3d-editor",
+          "tools-dev/gldf-editor",
         ],
         Parsers: ["tools-dev/gldf-net-parser", "tools-dev/l3d-net-parser"],
       },

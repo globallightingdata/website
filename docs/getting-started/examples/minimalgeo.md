@@ -15,7 +15,7 @@ The setup of the file is very straightforward. It contains a simple 3D geometry,
 
 It also references a basic L3D file in the file definitions. The screenshot below shows that the 3D file contains only one light-emitting object named LEO, which we will reference later in the Geomtry part of the product.xml file.
 
-![Minimal Geo r3d model in editor](/img/docs/getting-started/examples_minimalgeo_3D.webp)
+![Minimal Geo r3d model in editor](/img/docs/getting-started/examples_minimalgeo_3d.webp)
 
 ## product.xml
 

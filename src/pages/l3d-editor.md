@@ -1,7 +1,7 @@
 ---
 ---
 
-# L3d Editor
+# L3D Editor
 
 L3D is the new **3D geometry file format for GLDF**. It is comparable to the old r3d and m3d formats, but modern and open for everyone. DIAL did the first step and provide the first **Editor for L3D**. With this tool it is much easier to **view, edit and create L3D** as just with standard text editors. It is a web application running in browsers and **free to use**. We hope that a larger community will start to investigate the possibilities of GLDF and L3D.
 
