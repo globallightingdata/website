@@ -8,7 +8,7 @@ tags: [gldf.net, tools, release]
 
 The *GLDF.NET* Parser - a GLDF XML serializer and deserializer for [DotNet](https://dotnet.microsoft.com) - is available now for GLDF [1.0.0-rc.1](https://github.com/globallightingdata/gldf/releases/tag/v1.0.0-rc.1). In this blog post you will find a quick introduction and overview of its usage.
 
-<!--truncate-->
+{/*truncate*/}
 
 ## What is it
 

@@ -10,7 +10,8 @@ tags: [gldf, release]
 On the way to the final version 1.0 of the GLDF, we have published the next release candidate based on feedback. As always, the changelog can be found on Github: [GLDF v1.0.rc2](https://github.com/globallightingdata/gldf/releases/tag/v1.0.0-rc.2).
 
 Since this is still a pre-release version, we have taken the opportunity to include necessary breaking changes that we would like to avoid in the final version. Below is a short guide on how to migrate existing GLDFs from rc1 to the new rc2 version.
-<!--truncate-->
+
+{/*truncate*/}
 
 ---
 
