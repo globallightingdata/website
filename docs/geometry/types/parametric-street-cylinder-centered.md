@@ -22,18 +22,18 @@ sidebar_label: Street Cylinder Centered
 
 ## Parameters
 
-| **Parameter**           | Type   | Explanation                                                                                       |
-| ----------------------- | :----: | -------------------------------------------------------------------------------------------------:|
-| **Diameter**            | int    | Base diameter of the luminaire in millimeters (mm).                                               |
-| **TopDiameter**         | int    | Diameter at the top of the luminaire, allowing for skewing.                                       |
-| **LuminousDiameter**    | int    | Diameter of the main luminous surface in millimeters (mm).                                        |
-| **TopLuminousDiameter** | int    | Diameter of the luminous surface at the top *(optional)*.                                         |
-| **LuminousHeight**      | int    | Extent to which the luminous part protrudes from the housing in mm *(optional)*.                 |
-| **ReflectorDepth**      | int    | Extent to which the luminous part is recessed into the housing in mm *(optional)*.               |
-| **Height**              | int    | Height of the luminaire head in millimeters (mm) *(optional)*.                                    |
-| **TotalHeight**         | int    | Overall height of the luminaire including the stand in millimeters (mm) *(optional)*.              |
-| **HousingColor**        | string | 4 digit RAL color code *(optional)*.                                                              |
-| **FileName**            | string | Optional file name (without an extension) *(optional)*.                                         |
+| **Parameter** | Type | Explanation |
+| :--- | :---: | :--- |
+| **Diameter** | int | Base diameter of the luminaire in millimeters (mm). |
+| **TopDiameter** | int | Diameter at the top of the luminaire, allowing for skewing. |
+| **LuminousDiameter** | int | Diameter of the main luminous surface in millimeters (mm). |
+| **TopLuminousDiameter** | int | Diameter of the luminous surface at the top *(optional)*. |
+| **LuminousHeight** | int | Extent to which the luminous part protrudes from the housing in mm *(optional)*. |
+| **ReflectorDepth** | int | Extent to which the luminous part is recessed into the housing in mm *(optional)*. |
+| **Height** | int | Height of the luminaire head in millimeters (mm) *(optional)*. |
+| **TotalHeight** | int | Overall height of the luminaire including the stand in millimeters (mm) *(optional)*. |
+| **HousingColor** | string | 4 digit RAL color code *(optional)*. |
+| **FileName** | string | Optional file name (without an extension) *(optional)*. |
 
 ## XSD
 

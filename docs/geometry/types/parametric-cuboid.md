@@ -22,20 +22,20 @@ sidebar_label: Cuboid
 
 ## Parameters
 
-| Parameter                              |  Type   | Explanation                                                                                           |
-| -------------------------------------- | :-----: | -----------------------------------------------------------------------------------------------------:|
-| **Width**                              | int     | Value in mm.                                                                                          |
-| **Length**                             | int     | Value in mm.                                                                                          |
-| **Height**                             | int     | Value in mm.                                                                                          |
-| **LuminousWidth**                      | int     | Value in mm.                                                                                          |
-| **LuminousLength**                     | int     | Value in mm.                                                                                          |
-| **LuminousHeight** / **ReflectorDepth**| int     | Value in mm. Choose one to define how the luminous part interacts with the body.                      |
-| **TopWidth**                           | int     | Value in mm (optional).                                                                               |
-| **TopLength**                          | int     | Value in mm (optional).                                                                               |
-| **Mounting**                           | string  | One of: `Ceiling`, `Wall`, `Floor`, `Pendulum`.                                                       |
-| **PendulumLength**                     | int     | Value in mm (required if `Mounting` is `Pendulum`).                                                   |
-| **HousingColor**                       | string  | A 4-digit RAL color code matching `[1-9][0-9]{3}` (optional).                                          |
-| **FileName**                           | string  | Optional file name (without an extension).                                                          |
+| Parameter | Type | Explanation |
+| :--- | :---: | :--- |
+| **Width** | int | Value (mm). |
+| **Length** | int | Value (mm). |
+| **Height** | int | Value (mm). |
+| **LuminousWidth** | int | Value (mm). |
+| **LuminousLength** | int | Value (mm). |
+| **LuminousHeight** / **ReflectorDepth** | int | Value (mm). Pick one for body interaction. |
+| **TopWidth** | int | Value (mm, optional). |
+| **TopLength** | int | Value (mm, optional). |
+| **Mounting** | string | `Ceiling`, `Wall`, `Floor`, `Pendulum`. |
+| **PendulumLength** | int | Value (mm). Required for `Pendulum`. |
+| **HousingColor** | string | 4-digit RAL code `[1-9][0-9]{3}` (optional). |
+| **FileName** | string | Optional file name (no extension). |
 
 ## XSD
 

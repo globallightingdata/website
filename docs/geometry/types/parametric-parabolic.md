@@ -24,18 +24,18 @@ sidebar_label: Parabolic
 
 ## Parameters
 
-| Parameter                              |  Type   | Explanation                                                                                   |
-| -------------------------------------- | :-----: | ---------------------------------------------------------------------------------------------:|
-| **Diameter**                           | int     | Value in mm. Indicates the widest part of the luminaire.                                       |
-| **Height**                             | int     | Value in mm. Total height of the luminaire.                                                    |
-| **LuminousDiameter**                   | int     | Value in mm. Diameter of the illuminated surface *(optional)*.                                 |
-| **LuminousHeight** / **ReflectorDepth**| int     | Value in mm. Choose one to define how the luminous part interacts with the body.                |
-| **BaseDiameter**                       | int     | Value in mm. Base diameter *(default is 50% of `Diameter`)* *(optional)*.                       |
-| **BaseHeight**                         | int     | Value in mm. Base height *(default is 50% of `Height`)* *(optional)*.                           |
-| **Mounting**                           | string  | One of: `Ceiling`, `Wall`, `Floor`, or `Pendulum`.                                             |
-| **PendulumLength**                     | int     | Value in mm. Required if `Mounting` is `Pendulum`.                                             |
-| **HousingColor**                       | string  | A 4-digit RAL color code matching `[1-9][0-9]{3}` (optional).                                  |
-| **FileName**                           | string  | Optional file name (without an extension).                                                    |
+| Parameter | Type | Explanation |
+| :--- | :---: | :--- |
+| **Diameter** | int | Value (mm). Widest part. |
+| **Height** | int | Value (mm). Total height. |
+| **LuminousDiameter** | int | Value (mm, optional). Illuminated surface. |
+| **LuminousHeight** / **ReflectorDepth** | int | Value (mm). Pick one for body interaction. |
+| **BaseDiameter** | int | Value (mm, optional). Default: 50% of `Diameter`. |
+| **BaseHeight** | int | Value (mm, optional). Default: 50% of `Height`. |
+| **Mounting** | string | `Ceiling`, `Wall`, `Floor`, `Pendulum`. |
+| **PendulumLength** | int | Value (mm). Required for `Pendulum`. |
+| **HousingColor** | string | 4-digit RAL code `[1-9][0-9]{3}` (optional). |
+| **FileName** | string | Optional file name (no extension). |
 
 ## XSD
 

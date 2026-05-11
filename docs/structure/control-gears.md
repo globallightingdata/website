@@ -2,7 +2,7 @@
 title: Control Gears
 sidebar_label: Control Gears
 ---
-<!-- markdownlint-disable MD033 (no html im markdown) -->
+
 
 ## ControlGear Description
 

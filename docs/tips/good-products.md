@@ -2,7 +2,7 @@
 title: Creating good GLDF files
 sidebar_label: Creating good GLDF files
 ---
-<!-- markdownlint-disable MD033 (no html im markdown) -->
+
 
 ## How to create GLDF?
 
@@ -52,6 +52,7 @@ The GLDF allows translations to be specified in many places, in the form of the 
 - **Rule**: Provide for **at least one language** at each translatable element a translation of this language
 - **Recommandation**: Provide English translations for each translatable element
 - **Recommandation**: If you define some language at one element, provide this language at all elements
+
 :::
 
 - In the example above, the **first rule** is satisfied because the luminaire data contains at least one consistent translation for both - the `ProductNumber` and the `Name` element. In this case even two languages: German (`de`) and English (`en`) are completly translated.
@@ -77,6 +78,7 @@ It specifies for applications the language that should preferably be displayed i
 :::tip
 
 - **Rule**: For the specified **`DefaultLanguage`**, provide at each translatable element a translation of this language
+
 :::
 
 ## Interchangeable `Emitter` without `Geometry`
@@ -90,6 +92,7 @@ The rule states:
 :::tip
 
 - **Rule**: In the so-called photometry-only case (when using [`EmitterReference`](/docs/structure/variant#2-emitterreference) and omitting any [`Geometry`](/docs/structure/geometries) definition), interchangeable emitter definitions like in the example above should be avoided. Because in this use case not only the photometric information is taken from the photometry, but also the geometric. Define multiple [`Emitter`](/docs/structure/emitters) and use them in multiple [`Variants`](/docs/structure/variant) instead.
+
 :::
 
 ## Duplicate file names
@@ -99,6 +102,7 @@ Another rule applies to the file structure within the GLDF container. As this is
 :::tip
 
 - **Rule**: Do not use equal file names for different files within one directory.
+
 :::
 
 ## Forbidden file name characters
@@ -108,6 +112,7 @@ A similar rule applies to certain characters within the file name. In particular
 :::tip
 
 - **Rule**: Do not use the Backslash `\` charackter in file names
+
 :::
 
 ## Too many `Variants`
@@ -118,6 +123,7 @@ It may be tempting to define not only a luminaire but a complete product family 
 
 - **Recommandation**: Specify only a single luminaire in the `Variants`, not a whole product family
 - **Recommandation**: Limit each GLDF to a maximum of 15 `Variants`
+
 :::
 
 ## Too large GLDF files
@@ -127,6 +133,7 @@ GLDFs are intended for the exchange of luminaire data. Be it as is or integrated
 :::tip
 
 - **Recommandation**: Keep your GLDFs small and do not exceed the size of 5MB
+
 :::
 
 You can achive this in several ways:

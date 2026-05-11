@@ -2,7 +2,7 @@
 title: Descriptive Attributes
 sidebar_label: Descriptive Attributes
 ---
-<!-- markdownlint-disable MD033 (no html im markdown) -->
+
 
 ## Introduction
 
@@ -10,18 +10,18 @@ GLDF covers a lot of native data fields to carry information that is not only re
 
 Even if you need to transport information that does not fit into a native field within GLDF, we've got you covered. For that purpose, we invented custom attributes. Custom attributes allow you to put virtually any information you can come up with into the GLDF and use it in your application or use case.
 
-You can use Descriptive Properties in the meta section of the product or on a variant basis. Properties set in the meta section will apply to all variants. 
+You can use Descriptive Properties in the meta section of the product or on a variant basis. Properties set in the meta section will apply to all variants.
 
 We split descriptive attributes into the following categories.
 
 | Category | Description |
-|----|----|
-| Mechanical  | Describes the physical appearance and weight of a product |
-| Electrical  |  Electrical properties of the product  |
-| Emergency   |  Emergency characteristics of a product.  |
-|  Marketing  |  Properties you would typically used for marketing purposes.  |
-|  Operations and Maintenance  |  Properties affecting the operation and maintenance of the product, such as useful lifetime, etc.  |
-|  Custom Properties  |  Any property you can describe that is not covered above.  |
+| --- | --- |
+| Mechanical | Describes the physical appearance and weight of a product |
+| Electrical | Electrical properties of the product |
+| Emergency | Emergency characteristics of a product. |
+| Marketing | Properties you would typically used for marketing purposes. |
+| Operations and Maintenance | Properties affecting the operation and maintenance of the product, such as useful lifetime, etc. |
+| Custom Properties | Any property you can describe that is not covered above. |
 
 <img src="/img/docs/structure/desciptiveattributes.webp" alt="Descriptive Attributes" width="561" />
 
@@ -29,7 +29,7 @@ We split descriptive attributes into the following categories.
 
 This XML schema describes the `Mechanical` element, which provides information about the mechanical attributes of a luminaire.
 
-### Structure
+### Mechanical Structure
 
 <img src="/img/docs/structure/mechanical.webp" alt="Mechanical Attributes" width="435" />
 
@@ -127,14 +127,13 @@ The `ProtectiveAreas` element contains a sequence of Area elements, representing
 
 The `Weight` element describes the weight of the luminaire in kilograms, including the ballast but excluding the packaging (type: `xs:double`).
 
-
-## Electrical 
+## Electrical
 
 The `Electrical` element, which provides information about the electrical attributes of a luminaire.
 
 <img src="/img/docs/structure/electrical.webp" alt="Electrical Attributes" width="433" />
 
-### Example
+### Electrical Example
 
 ```xml showLineNumbers
 <Electrical>
@@ -250,7 +249,7 @@ The `Marketing` element contains descriptive attributes for marketing purposes.
 
 <img src="/img/docs/structure/marketing.webp" alt="Marketing Attributes" width="407" />
 
-### Example
+### Marketing Example
 
 ```xml showLineNumbers
 <?xml version="1.0" encoding="UTF-8"?>
@@ -337,7 +336,7 @@ DesignAward (0 or more occurrences, `xs:string`): Luminaire design award, e.g., 
 
 The `Labels` element contains labels of the product.
 
-`Label` (0 to 14 occurrences, `xs:string`): Label of the product. Must be one of the predefined enumeration values: 
+`Label` (0 to 14 occurrences, `xs:string`): Label of the product. Must be one of the predefined enumeration values:
 
 - CE
 - GS
@@ -364,11 +363,11 @@ The `Applications` element contains fields of application for the luminaire.
 
 This XML schema describes the `OperationsAndMaintenance` element, which provides information about the Operations and Maintenance attributes of a luminaire.
 
-### Structure
+### OperationsAndMaintenance Structure
 
 <img src="/img/docs/structure/operationsandmaint.webp" alt="Operatoins and Maintenance Attributes" width="536" />
 
-### Example
+### OperationsAndMaintenance Example
 
 ```xml showLineNumbers
 <DescriptiveAttributes>
@@ -457,11 +456,6 @@ Recommend fixed time values are 35k, 50k, 75k or 100k hours (depending on applic
 ### OperatingTemperature
 
 `OperatingTemperature` Operating range defined by a minimum and maximum temperature, at which the luminaire operates normally
-
-#### TemperatureRange
-
-- `Lower` (`xs:int`): Lower inclusive limit of the temperature (Unit: celsius)
-- `Upper` (`xs:int`): Upper inclusive limit of the temperature (Unit: celsius)
 
 ### AmbientTemperature
 
@@ -559,18 +553,18 @@ It Contains `Directive` elements.
 
 - `Gas`: Gas, fog, steam zones contins
   - Group: Group IIC, IIB + H2, IIB, IIA
-   - Enumeration:
-   - IIC
-   - IIB + H2
-   - IIB
-   - IIA
+  - Enumeration:
+  - IIC
+  - IIB + H2
+  - IIB
+  - IIA
 
 - `Dust`: Dust zones
- - `Group`: Group IIIC, IIIB, IIIA
-   - Enumeration:
-   - IIIC
-   - IIIB
-   - IIIA
+- `Group`: Group IIIC, IIIB, IIIA
+  - Enumeration:
+  - IIIC
+  - IIIB
+  - IIIA
 
 #### MaximumSurfaceTemperature
 
@@ -579,6 +573,7 @@ It Contains `Directive` elements.
 #### TemperatureClasses
 
 `TemperatureClasses`: Temperature classifications. E.g. T3 lower/equal 300°C Contains
+
 - `TemperatureClass`:  Temperature classification
   - Enumeration:
   - T1
@@ -599,6 +594,7 @@ It Contains `Directive` elements.
 #### ExCodes
 
 `xCodes`: Protection against the occurrence of an ignition source Contains
+
 - `ExCode` (`xs:string`): Type of protection short code
   - Enumeration:
   - da
@@ -631,28 +627,31 @@ It Contains `Directive` elements.
 #### EquipmentProtectionLevels
 
 `EquipmentProtectionLevels`: Equipment Protection Level EPL. "M" Mining - "G" Gas - "D" Dust and respective protection level. Contains
- - `EquipmentProtectionLevel` (`xs:string`): Equipment protection level
-  - Enumeration:
-  - Ga
-  - Gb
-  - Gc
-  - Da
-  - Db
-  - Dc
-  - Ma
-  - Mb
+
+- `EquipmentProtectionLevel` (`xs:string`): Equipment protection level
+- Enumeration:
+- Ga
+- Gb
+- Gc
+- Da
+- Db
+- Dc
+- Ma
+- Mb
 
 #### EquipmentGroups
 
 `EquipmentGroups` Equipment Groups. Defines if the equipment can be used under ground (mining) or above ground explosive areas. Contains
- - `EquipmentGroup` (`xs:string`): Possible hazardous area
-  - Enumeration:
-  - I
-  - II
+
+- `EquipmentGroup` (`xs:string`): Possible hazardous area
+- Enumeration:
+- I
+- II
 
 #### EquipmentCategories
 
 `EquipmentCategories` Defines in which zones the equipment can be used. With protection level from normal to high. Contsains:
+
 - `EquipmentCategory` (`xs:string`): Possible equipment hazardous zone. Mining, Gas, Dust and corresponding protection level
   - Enumerations:
   - M1
@@ -668,23 +667,25 @@ It Contains `Directive` elements.
 
 `Atmospheres` Atmosphere classification. Contains:
 `Atmosphere` (`xs:string`): Gas, Dust
- - Enumeration:
- - G
- - D
+
+- Enumeration:
+- G
+- D
 
 #### Groups
 
 `Groups` (`xs:string`): Explosion groups (I Mining, II Gas, III Dust) and sub-group classification
 Enumeration Values:
- - I
- - II
- - IIA
- - IIB
- - IIC
- - III
- - IIIA
- - IIIB
- - IIIC
+
+- I
+- II
+- IIA
+- IIB
+- IIC
+- III
+- IIIA
+- IIIB
+- IIIC
 
 ### AcousticAbsorptionRates
 
@@ -698,9 +699,9 @@ Contains:
 
 ## Custom Properties
 
-<img src="/img/docs/structure/customproperties.webp" alt="Custom Properties Attributes" width="536" />   
+<img src="/img/docs/structure/customproperties.webp" alt="Custom Properties Attributes" width="536" />
 
-### Example
+### CustomProperties Example
 
 ```xml showLineNumbers
 <CustomProperties>
@@ -730,7 +731,7 @@ Contains:
 - Attribute `id` (`xs:string`). Id may refer to a customer based internal id system. If no Id is available, use a placeholder like a number
 - `Name` Element holding a Sequence of type `Locale`: Meaningful name of the property
 - `PropertySource` (`xs:string`, optional): Property source, e.g. standard name like ISO, CIE or DIN. Or Identity Server key
-- Either 
+- Either
   - `Value` (`xs:string`): Value of the property
   - FileReference
     - Attribute: fileId (`xs:NCName`): Id reference to a `File` element defined under GeneralDefinitions/Files

@@ -17,15 +17,15 @@ This model consists of a sphere on a base if the base height is greater than 0.
 
 ## Parameters
 
-| Parameter      | Type   | Explanation                                                   |
-| -------------- | :----: | ------------------------------------------------------------- |
-| Diameter       | int    | Value in mm                                                   |
-| BaseHeight     | int    | Value in mm *(optional)*                                      |
-| BaseDiameter   | int    | Value in mm *(optional)*                                      |
-| Mounting       | string | Ceiling, Wall, Floor, Pendulum                                |
-| PendulumLength | int    | Value in mm *(optional; required if `Mounting` is `Pendulum`)*  |
-| HousingColor   | string | 4 digit RAL color code *(optional)*                           |
-| FileName       | string | Optional file name (without an extension) *(optional)*        |
+| Parameter | Type | Explanation |
+| :--- | :---: | :--- |
+| Diameter | int | Value in mm |
+| BaseHeight | int | Value in mm *(optional)* |
+| BaseDiameter | int | Value in mm *(optional)* |
+| Mounting | string | Ceiling, Wall, Floor, Pendulum |
+| PendulumLength | int | Value in mm *(optional; required if `Mounting` is `Pendulum`)* |
+| HousingColor | string | 4 digit RAL color code *(optional)* |
+| FileName | string | Optional file name (without an extension) *(optional)* |
 
 ## XSD
 

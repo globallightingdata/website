@@ -21,17 +21,17 @@ sidebar_label: Cylinder
 
 ## Parameters
 
-| Parameter                              |  Type   | Explanation                                                                                   |
-| -------------------------------------- | :-----: | ---------------------------------------------------------------------------------------------:|
-| **Diameter**                           | int     | Value in mm.                                                                                  |
-| **Height**                             | int     | Value in mm.                                                                                  |
-| **TopDiameter**                        | int     | Value in mm (optional; default is 80% of `Diameter`).                                         |
-| **LuminousDiameter**                   | int     | Value in mm.                                                                                  |
-| **LuminousHeight** / **ReflectorDepth**| int     | Value in mm. Choose one to define how the illuminated surface interacts with the body.         |
-| **Mounting**                           | string  | One of: `Ceiling`, `Wall`, `Floor`, or `Pendulum`.                                             |
-| **PendulumLength**                     | int     | Value in mm (required if `Mounting` is `Pendulum`).                                           |
-| **HousingColor**                       | string  | A 4-digit RAL color code matching `[1-9][0-9]{3}` (optional).                                  |
-| **FileName**                           | string  | Optional file name (without an extension).                                                   |
+| Parameter | Type | Explanation |
+| :--- | :---: | :--- |
+| **Diameter** | int | Value (mm). |
+| **Height** | int | Value (mm). |
+| **TopDiameter** | int | Value (mm, optional; default 80% of `Diameter`). |
+| **LuminousDiameter** | int | Value (mm). |
+| **LuminousHeight** / **ReflectorDepth** | int | Value (mm). Pick one for surface interaction. |
+| **Mounting** | string | `Ceiling`, `Wall`, `Floor`, `Pendulum`. |
+| **PendulumLength** | int | Value (mm). Required for `Pendulum`. |
+| **HousingColor** | string | 4-digit RAL code `[1-9][0-9]{3}` (optional). |
+| **FileName** | string | Optional file name (no extension). |
 
 ## XSD
 

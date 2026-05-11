@@ -7,19 +7,18 @@ sidebar_label: Meta-Information
 
 A GLDF file can require information, that does **not refer to the specific** product it provides. This information are more of a **technical nature**. For this data, a separate file is intended in the GLDF: the **`meta-information.xml`**. Its content is specified like the `product.xml` through a [XSD Schema](/download) and will be described in this chapter.
 
-:::caution important
+:::caution[Important]
 The `meta-information.xml` is not intended to store manufacturers luminaire data.  
 These have to be written into the `product.xml`!
 :::
 
 ## XSD
 
-<!-- markdownlint-disable-next-line -->
 <img src="/img/docs/container/meta-info-xsd.webp" alt="Meta Information XSD" width="450" />
 
 ## `name` attribute convention
 
-:::info property naming
+:::info[property naming]
 The convention for the `name` attribute is the following:
 
 `Issuer`-`PropertyName`

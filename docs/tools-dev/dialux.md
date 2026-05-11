@@ -2,7 +2,7 @@
 title: GLDF in DIALux
 sidebar_label: DIALux
 ---
-<!-- markdownlint-disable MD033 (no html im markdown) -->
+
 
 ## Introduction
 

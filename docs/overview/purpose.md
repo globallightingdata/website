@@ -2,7 +2,7 @@
 title: GLDF Purpose
 sidebar_label: Purpose
 ---
-<!-- markdownlint-disable MD033 (no html im markdown) -->
+
 
 RELUX and DIAL present the new unified lighting data format for **luminaires and sensors**. Not only seamlessly compatible with **RELUX and DIALux**, GLDF is **open and freely available** for everyone to create or interpret.
 

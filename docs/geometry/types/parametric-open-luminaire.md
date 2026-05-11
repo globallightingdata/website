@@ -20,17 +20,17 @@ The `Open Luminaire` features a base with an openly accessible luminous object, 
 
 ## Parameters
 
-| Parameter        |  Type  | Explanation                                                                                |
-| ---------------- | :----: | ------------------------------------------------------------------------------------------:|
-| **Width**        | int    | Base width of the luminaire in millimeters (mm).                                            |
-| **Length**       | int    | Base length of the luminaire in millimeters (mm).                                           |
-| **Height**       | int    | Height of the luminaire's housing in millimeters (mm).                                      |
-| **LuminousDiameter** | int | Diameter of the main luminous object in millimeters (mm).                                   |
-| **LuminousLength**   | int | Length of the luminous elements in millimeters (mm).                                        |
-| **Mounting**     | enum   | Mounting type of the luminaire. Possible values: `Ceiling`, `Wall`.                         |
-| **NumberOfTubes**| int    | Number of luminous tubes or elements within the luminaire.                                  |
-| **HousingColor** | string | A 4-digit RAL color code matching `[1-9][0-9]{3}` (optional).                               |
-| **FileName**     | string | Optional file name (without an extension).                                                 |
+| Parameter | Type | Explanation |
+| :--- | :---: | :--- |
+| **Width** | int | Value (mm). |
+| **Length** | int | Value (mm). |
+| **Height** | int | Value (mm). Housing height. |
+| **LuminousDiameter** | int | Value (mm). Luminous diameter. |
+| **LuminousLength** | int | Value (mm). Luminous length. |
+| **Mounting** | enum | `Ceiling`, `Wall`. |
+| **NumberOfTubes** | int | Number of tubes/elements. |
+| **HousingColor** | string | 4-digit RAL code `[1-9][0-9]{3}` (optional). |
+| **FileName** | string | Optional file name (no extension). |
 
 ## XSD
 

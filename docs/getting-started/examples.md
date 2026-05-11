@@ -3,7 +3,7 @@ title: Examples
 sidebar_label: Examples
 ---
 
-### Introduction
+## Introduction
 
 In this section, we will be showcasing example GLDF files. They represent real GLDFs that you can use for orientation purposes. All samples are available for download from the [GitHub examples repository](https://github.com/globallightingdata/examples).
 

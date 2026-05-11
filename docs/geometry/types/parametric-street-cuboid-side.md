@@ -19,18 +19,18 @@ sidebar_label: Street Cuboid Side
 
 ## Parameters
 
-| Parameter         | Type   | Explanation                                                                                  |
-| ----------------- | :----: | --------------------------------------------------------------------------------------------:|
-| Width             | int    | Base width of the luminaire in millimeters (mm).                                             |
-| Length            | int    | Base length of the luminaire in millimeters (mm).                                            |
-| Height            | int    | Height of the luminaire head in millimeters (mm).                                            |
-| LuminousWidth     | int    | Width of the luminous surface in millimeters (mm) *(optional)*.                              |
-| LuminousLength    | int    | Length of the luminous surface in millimeters (mm) *(optional)*.                             |
-| LuminousHeight    | int    | Extent to which the luminous part protrudes from the housing in mm *(optional)*.             |
-| ReflectorDepth    | int    | Extent to which the luminous part is recessed into the housing in mm *(optional)*.           |
-| TotalHeight       | int    | Overall height of the luminaire including the stand in millimeters (mm) *(optional)*.          |
-| HousingColor      | string | 4 digit RAL color code *(optional)*.                                                         |
-| FileName          | string | Optional file name (without an extension) *(optional)*.                                      |
+| Parameter | Type | Explanation |
+| :--- | :---: | :--- |
+| Width | int | Base width of the luminaire in millimeters (mm). |
+| Length | int | Base length of the luminaire in millimeters (mm). |
+| Height | int | Height of the luminaire head in millimeters (mm). |
+| LuminousWidth | int | Width of the luminous surface in millimeters (mm) *(optional)*. |
+| LuminousLength | int | Length of the luminous surface in millimeters (mm) *(optional)*. |
+| LuminousHeight | int | Extent to which the luminous part protrudes from the housing in mm *(optional)*. |
+| ReflectorDepth | int | Extent to which the luminous part is recessed into the housing in mm *(optional)*. |
+| TotalHeight | int | Overall height of the luminaire including the stand in millimeters (mm) *(optional)*. |
+| HousingColor | string | 4 digit RAL color code *(optional)*. |
+| FileName | string | Optional file name (without an extension) *(optional)*. |
 
 ## XSD
 

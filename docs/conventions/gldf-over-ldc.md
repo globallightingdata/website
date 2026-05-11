@@ -2,13 +2,12 @@
 title: GLDF over Photometry
 sidebar_label: GLDF over Photometry
 ---
-<!-- markdownlint-disable MD033 (no html im markdown) -->
 
 ## Definition
 
 One convention in the GLDF is: which **priority** applies, if the **same property** is present in the **photometry** as well as in the **GLDF**:
 
-:::important Convention
+:::important[Convention]
 If a property is present
 
 - in a linked photometry file

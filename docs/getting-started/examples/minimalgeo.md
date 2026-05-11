@@ -2,23 +2,22 @@
 title: Minimal Geo
 sidebar_label: Minimal Geo
 ---
-<!-- markdownlint-disable MD033 (no html im markdown) -->
 
-### Introduction
+## Introduction
 
 This example demonstrates very simple minimal GLDF file implementation with no complexity.
 
-Download the example here: <a href="https://github.com/globallightingdata/examples/tree/master/Minimal%20Geo" target="_blank">Minimal Geo.gldf</a>
+Download the example here: [Minimal Geo.gldf](https://github.com/globallightingdata/examples/tree/master/Minimal%20Geo)
 
-### Explanation
+## Explanation
 
 The setup of the file is very straightforward. It contains a simple 3D geometry, light emitter, and light source in the general definitions section with a minimum amount of meta information.
 
 It also references a basic L3D file in the file definitions. The screenshot below shows that the 3D file contains only one light-emitting object named LEO, which we will reference later in the Geomtry part of the product.xml file.
 
-<img src="/img/docs/getting-started/examples_minimalgeo_3D.webp" alt="Minimal Geo r3d model in editor" width="800" />
+![Minimal Geo r3d model in editor](/img/docs/getting-started/examples_minimalgeo_3D.webp)
 
-### product.xml
+## product.xml
 
 The following XML code references the single light-emitting object of the 3D file. The 3D file is referenced in line 15-16 and the LEO inside this 3D file in the Emitter in line 68.
 
@@ -101,6 +100,6 @@ The following XML code references the single light-emitting object of the 3D fil
 </Root>
 ```
 
-### Download
+## Download
 
-<a href="https://github.com/globallightingdata/examples/tree/master/Minimal%20Geo" target="_blank">Minimal Geo.gldf</a>
+[Minimal Geo.gldf](https://github.com/globallightingdata/examples/tree/master/Minimal%20Geo)

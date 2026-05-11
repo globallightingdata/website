@@ -2,7 +2,6 @@
 title: GLDF Container Specification
 sidebar_label: Container Specification
 ---
-<!-- markdownlint-disable MD033 (no html im markdown) -->
 
 ## General
 
@@ -80,4 +79,4 @@ For a manufacturer with the name *ManufacturerXY* and a luminaire with the name 
 
 ## L3D Container
 
-The [Luminaire 3D](/docs/geometry/l3d-intro) container specification is described [here](/docs/geometry/l3d-container-spec)
+The [Luminaire 3D](/docs/geometry/l3d-intro) container specification [is described here](/docs/geometry/l3d-container-spec)

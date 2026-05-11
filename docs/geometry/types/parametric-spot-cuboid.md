@@ -24,20 +24,20 @@ A spotlight with a cuboid-shaped luminous head mounted on a bracket attached to 
 
 ## Parameters
 
-| Parameter           | Type  | Explanation                                                                                   |
-| ------------------- | :---: | ---------------------------------------------------------------------------------------------:|
-| Width               | int   | Base width of the luminaire in millimeters (mm).                                               |
-| Length              | int   | Base length of the luminaire in millimeters (mm).                                              |
-| Height              | int   | Height of the luminaire head in millimeters (mm).                                              |
-| LuminousWidth       | int   | Width of the luminous surface in millimeters (mm).                                             |
-| LuminousLength      | int   | Length of the luminous surface in millimeters (mm).                                            |
-| LuminousHeight      | int   | Extent to which the luminous part protrudes from the housing *(optional)* (mm).                |
-| ReflectorDepth      | int   | Extent to which the luminous part is recessed into the housing *(optional)* (mm).              |
-| BaseWidth           | int   | Width of the base plate in millimeters (mm) *(optional)*.                                      |
-| BaseLength          | int   | Length of the base plate in millimeters (mm) *(optional)*.                                     |
-| BaseHeight          | int   | Height of the base plate in millimeters (mm) *(optional)*.                                     |
-| HousingColor        | string| 4 digit RAL color code *(optional)*.                                                           |
-| FileName            | string| Optional file name (without an extension) *(optional)*.                                      |
+| Parameter | Type | Explanation |
+| :--- | :---: | :--- |
+| Width | int | Base width of the luminaire in millimeters (mm). |
+| Length | int | Base length of the luminaire in millimeters (mm). |
+| Height | int | Height of the luminaire head in millimeters (mm). |
+| LuminousWidth | int | Width of the luminous surface in millimeters (mm). |
+| LuminousLength | int | Length of the luminous surface in millimeters (mm). |
+| LuminousHeight | int | Extent to which the luminous part protrudes from the housing *(optional)* (mm). |
+| ReflectorDepth | int | Extent to which the luminous part is recessed into the housing *(optional)* (mm). |
+| BaseWidth | int | Width of the base plate in millimeters (mm) *(optional)*. |
+| BaseLength | int | Length of the base plate in millimeters (mm) *(optional)*. |
+| BaseHeight | int | Height of the base plate in millimeters (mm) *(optional)*. |
+| HousingColor | string | 4 digit RAL color code *(optional)*. |
+| FileName | string | Optional file name (without an extension) *(optional)*. |
 
 ## XSD
 

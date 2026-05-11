@@ -2,7 +2,7 @@
 title: Spectrums
 sidebar_label: Spectrums
 ---
-<!-- markdownlint-disable MD033 (no html im markdown) -->
+
 
 ## Spectrum Description
 
@@ -15,7 +15,7 @@ A spectrum in the GLDF can be defined in two ways
 
 ## Location in XSD
 
-<img src="/img/docs/structure/spectrums-hierarchy.webp" alt="Spectrum location in XSD" width="550" />
+![Spectrum location in XSD](/img/docs/structure/spectrums-hierarchy.webp)
 
 ## XSD description
 
@@ -81,26 +81,24 @@ The spectrum file...
 - contain the assignment of **wavelengths to intensities**
 - each assignment must be written in a **new line**
 - wavelengths and intensities must be **separated** by a **specific character**
+
 :::caution
 The character between wavelength and intensity **must** be a **single whitespace** or a **single tabulator**!
 :::
+
 - is usually within the range of 380-780(nm), which corresponds to a textfile with 81 lines
 
 An abbreviated example:
 
-<!-- markdownlint-disable MD010 -->
 ```txt
 380  0.003720622
 385  0.003494165
 390  0.002572627
 780  0.0001542017
 ```
-<!-- markdownlint-enable MD010 -->
 
 :::tip
-<!-- markdownlint-disable MD033 -->
-A **complete spectrum example file** can be downloaded here: <a href="/other/Spectrum-Mercury-Discharge-Lamp.txt" target="_blank">**Mercury-Vapor-Lamp.txt**</a>
-<!-- markdownlint-disable MD033 -->
+A **complete spectrum example file** can be downloaded here: [**Mercury-Vapor-Lamp.txt**](/other/Spectrum-Mercury-Discharge-Lamp.txt)
 :::
 
 ## Referencing a spectrum

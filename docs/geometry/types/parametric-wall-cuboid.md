@@ -20,20 +20,20 @@ sidebar_label: Wall Cuboid
 
 ## Parameters
 
-| Parameter        | Type   | Explanation                                                         |
-| ---------------- | :----: | :-----------------------------------------------------------------: |
-| Width            | int    | Value in mm                                                         |
-| Length           | int    | Value in mm                                                         |
-| Height           | int    | Value in mm                                                         |
-| LuminousWidth    | int    | Value in mm                                                         |
-| LuminousLength   | int    | Value in mm                                                         |
-| LuminousHeight   | int    | Value in mm                                                         |
-| ReflectorDepth   | int    | Value in mm                                                         |
-| TopWidth         | int    | Value in mm *(optional)*                                            |
-| TopLength        | int    | Value in mm *(optional)*                                            |
-| Type             | string | `Direct`, `Indirect`, `DirectIndirect` *(optional)*                   |
-| HousingColor     | string | 4 digit RAL color code *(optional)*                                 |
-| FileName         | string | Optional file name (without an extension) *(optional)*              |
+| Parameter | Type | Explanation |
+| :--- | :---: | :--- |
+| Width | int | Value in mm |
+| Length | int | Value in mm |
+| Height | int | Value in mm |
+| LuminousWidth | int | Value in mm |
+| LuminousLength | int | Value in mm |
+| LuminousHeight | int | Value in mm |
+| ReflectorDepth | int | Value in mm |
+| TopWidth | int | Value in mm *(optional)* |
+| TopLength | int | Value in mm *(optional)* |
+| Type | string | `Direct`, `Indirect`, `DirectIndirect` *(optional)* |
+| HousingColor | string | 4 digit RAL color code *(optional)* |
+| FileName | string | Optional file name (without an extension) *(optional)* |
 
 ## XSD
 

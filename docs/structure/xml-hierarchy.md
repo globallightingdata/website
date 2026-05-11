@@ -2,7 +2,7 @@
 title: XML Hierarchy
 sidebar_label: XML Hierarchy
 ---
-<!-- markdownlint-disable MD033 (no html im markdown) -->
+
 
 We designed `GLDF` to provide a standardized way of exchanging luminaire data between software tools and systems.
 
@@ -16,24 +16,24 @@ The third part is called `ProductDefinitions`. Here is where you put together yo
 
 For a detailed description of the individual parts of the GLDF file, please see the respective sections of the documentation.
 
-### Header
+## Header
 
-- <a href="/docs/structure/header">Header</a>
+- [Header](/docs/structure/header)
 
 ### General Definitions
 
-- <a href="/docs/structure/files">Files</a>
-- <a href="/docs/structure/sensors">Sensors</a>
-- <a href="/docs/structure/photometries">Photometries</a>
-- <a href="/docs/structure/spectrums">Spectrums</a>
-- <a href="/docs/structure/light-sources">Light Sources</a>
-- <a href="/docs/structure/control-gears">Control Gears</a>
-- <a href="/docs/structure/equipments">Equipments</a>
-- <a href="/docs/structure/emitters">Emitters</a>
-- <a href="/docs/structure/geometries">Geometries</a>
+- [Files](/docs/structure/files)
+- [Sensors](/docs/structure/sensors)
+- [Photometries](/docs/structure/photometries)
+- [Spectrums](/docs/structure/spectrums)
+- [Light Sources](/docs/structure/light-sources)
+- [Control Gears](/docs/structure/control-gears)
+- [Equipments](/docs/structure/equipments)
+- [Emitters](/docs/structure/emitters)
+- [Geometries](/docs/structure/geometries)
 
 ### Product Definitions
 
-- <a href="/docs/structure/product">Global Product Data</a>
-- <a href="/docs/structure/variant">Specific Variant Data</a>
-- <a href="/docs/structure/descriptive-attributes">Descriptive Attributes</a>
+- [Global Product Data](/docs/structure/product)
+- [Specific Variant Data](/docs/structure/variant)
+- [Descriptive Attributes](/docs/structure/descriptive-attributes)

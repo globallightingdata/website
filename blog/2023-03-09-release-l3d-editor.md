@@ -11,15 +11,14 @@ Today we've released the **first major version** of the **L3D Editor** 🥳. It 
 
 This post is a **brief summary** of what has changed since the beta version. As well as a small preview of the near-term **roadmap**.
 
-<!-- markdownlint-disable-next-line -->
 <img src="/img/homepage/l3d-editor-logo.webp" alt="GLDF Container" width="180" />
 
-<!--truncate-->
+{/*truncate*/}
 
 ## Where can I get it
 
 :::tip
-A short **description** and links to the **docs** and the **L3D Editor** itself can be found [**here**](/l3d-editor).
+A short **description** and links to the **docs** and the **L3D Editor** itself can [**be found here**](/l3d-editor).
 :::
 
 ---
@@ -64,7 +63,7 @@ A short **description** and links to the **docs** and the **L3D Editor** itself 
 
 ### Documentation
 
-A comprehensive documentation can now be accessed directly from the editor (and found [**here**](/docs/tools-dev/l3d-editor)).
+A comprehensive documentation can now be accessed directly from the editor ([**or here**](/docs/tools-dev/l3d-editor)).
 
 ---
 
@@ -74,7 +73,7 @@ Finally, a short outlook on further changes:
 
 - **L3D XSD 1.0 support**  
   Currently, the L3D Editor supports the L3D XSD in version 0.10. One upcoming major change will be the integration of the final L3D XSD specification 1.0.
-  :::warning Important
+  :::warning[Important]
   Even though the L3D Editor is already final, the L3D XSD is still close to finalisation. It is unlikely, but we cannot guarantee that the final version won't introduce **breaking changes**. Keep this in mind when creating L3Ds.
   :::
 

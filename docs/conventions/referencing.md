@@ -5,7 +5,7 @@ sidebar_label: Referencing
 
 As described in the [chapters on XML hierarchy](/docs/structure/xml-hierarchy.md), the GLDF is structured in a **modular** way, where parts of the luminaire are defined first and then **combined to form [Variants](/docs/structure/variant.md)**. This is done in the XML by referencing the blocks with each other.
 
-:::tip Convention
+:::tip[Convention]
 For this purpose, each block, that can be **referenced in subsequent blocks**, has an `id` attribute.
 :::
 
@@ -39,7 +39,7 @@ The `id` value of a `File` element in this example is *photometryFile*:
 
 This `File` can now be referenced in subsequent elements.
 
-:::tip Convention
+:::tip[Convention]
 For the purpose of referencing prepreviously defined blocks, subsequent XML node(s) contains XML elements, which **ends** with `...Reference` in their **name**.
 :::
 

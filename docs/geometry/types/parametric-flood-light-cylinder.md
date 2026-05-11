@@ -21,15 +21,15 @@ sidebar_label: Floodlight Cylinder
 
 ## Parameters
 
-| Parameter                              |  Type   | Explanation                                                                                     |
-| -------------------------------------- | :-----: | ---------------------------------------------------------------------------------------------:|
-| **Diameter**                           | int     | Base diameter of the luminaire in millimeters (mm).                                            |
-| **Height**                             | int     | Height of the luminaire head in millimeters (mm).                                              |
-| **LuminousDiameter**                   | int     | Diameter of the main luminous surface in millimeters (mm).                                      |
-| **LuminousHeight** / **ReflectorDepth**| int     | Value in mm. Choose one to define how the luminous part interacts with the housing.             |
-| **TotalHeight**                        | int     | Overall height of the luminaire including the bracket in millimeters (mm) *(optional)*.         |
-| **HousingColor**                       | string  | A 4-digit RAL color code matching `[1-9][0-9]{3}` (optional).                                  |
-| **FileName**                           | string  | Optional file name (without an extension).                                                    |
+| Parameter | Type | Explanation |
+| :--- | :---: | :--- |
+| **Diameter** | int | Value (mm). Base diameter. |
+| **Height** | int | Value (mm). Head height. |
+| **LuminousDiameter** | int | Value (mm). Luminous diameter. |
+| **LuminousHeight** / **ReflectorDepth** | int | Value (mm). Pick one for housing interaction. |
+| **TotalHeight** | int | Value (mm, optional). Incl. bracket. |
+| **HousingColor** | string | 4-digit RAL code `[1-9][0-9]{3}` (optional). |
+| **FileName** | string | Optional file name (no extension). |
 
 ## XSD
 

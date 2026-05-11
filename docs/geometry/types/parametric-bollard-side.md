@@ -21,17 +21,17 @@ sidebar_label: Bollard Side
 
 ## Parameters
 
-| Parameter                           |  Type   | Explanation                                                                                           |
-| ----------------------------------- | :-----: | -----------------------------------------------------------------------------------------------------: |
-| **Width**                           | int     | Value in mm.                                                                                          |
-| **Length**                          | int     | Value in mm.                                                                                          |
-| **Height**                          | int     | Value in mm. Sets the height of the luminaire head.                                                   |
-| **LuminousWidth**                   | int     | Value in mm. Defines the width of the luminous surfaces.                                              |
-| **LuminousLength**                  | int     | Value in mm. Defines the length of the luminous surfaces.                                             |
-| **LuminousHeight** / **ReflectorDepth** | int     | Value in mm. Choose one to define how the luminous part interacts with the housing.                     |
-| **TotalHeight**                     | int     | Value in mm. Overall height including the stand.                                                      |
-| **HousingColor**                    | string  | A 4-digit RAL color code matching the pattern `[1-9][0-9]{3}` (optional).                               |
-| **FileName**                        | string  | Optional file name.                                                                                     |
+| Parameter | Type | Explanation |
+| :--- | :---: | :--- |
+| **Width** | int | Value (mm). |
+| **Length** | int | Value (mm). |
+| **Height** | int | Value (mm). Sets height of luminaire head. |
+| **LuminousWidth** | int | Value (mm). Width of luminous surfaces. |
+| **LuminousLength** | int | Value (mm). Length of luminous surfaces. |
+| **LuminousHeight** / **ReflectorDepth** | int | Value (mm). Pick one for housing interaction. |
+| **TotalHeight** | int | Value (mm). Overall height incl. stand. |
+| **HousingColor** | string | 4-digit RAL code `[1-9][0-9]{3}` (optional). |
+| **FileName** | string | Optional file name. |
 
 ## XSD
 

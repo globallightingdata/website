@@ -3,7 +3,7 @@ title: GLDF Introduction
 sidebar_label: Introduction
 slug: /
 ---
-<!-- markdownlint-disable MD033 (no html im markdown) -->
+
 
 Welcome to the **G**lobal **L**uminaire **D**ata **F**ormat docs. On the upcoming pages, you will discover a wide range of resources:
 

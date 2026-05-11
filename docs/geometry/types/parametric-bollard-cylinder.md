@@ -23,18 +23,18 @@ sidebar_label: Bollard Cylinder
 
 ## Parameters
 
-| Parameter                           |  Type   | Explanation                                                                                             |
-| ----------------------------------- | :-----: | -------------------------------------------------------------------------------------------------------: |
-| **Diameter**                        | int     | Value in mm. Defines the overall diameter of the luminaire.                                             |
-| **Height**                          | int     | Value in mm. Sets the height of the luminaire head (optional).                                            |
-| **LuminousHeight** / **ReflectorDepth** | int     | Value in mm. Choose one to define how the luminaire interacts with the stand (optional).                |
-| **TotalHeight**                     | int     | Value in mm. Defines the overall height including the stand (optional).                                 |
-| **C0**                              | int     | Value in mm (optional; 0 means no luminous surface in the C0 direction).                                |
-| **C90**                             | int     | Value in mm (optional; 0 means no luminous surface in the C90 direction).                               |
-| **C180**                            | int     | Value in mm (optional; 0 means no luminous surface in the C180 direction).                              |
-| **C270**                            | int     | Value in mm (optional; 0 means no luminous surface in the C270 direction).                              |
-| **HousingColor**                    | string  | A 4-digit RAL color code matching the pattern `[1-9][0-9]{3}` (optional).                               |
-| **FileName**                        | string  | Optional file name.                                                                                     |
+| Parameter | Type | Explanation |
+| :--- | :---: | :--- |
+| **Diameter** | int | Value (mm). Defines overall diameter. |
+| **Height** | int | Value (mm, optional). Height of luminaire head. |
+| **LuminousHeight** / **ReflectorDepth** | int | Value (mm, optional). Pick one for stand interaction. |
+| **TotalHeight** | int | Value (mm, optional). Overall height incl. stand. |
+| **C0** | int | Value (mm, optional; 0 = no luminous surface in C0 direction). |
+| **C90** | int | Value (mm, optional; 0 = no luminous surface in C90 direction). |
+| **C180** | int | Value (mm, optional; 0 = no luminous surface in C180 direction). |
+| **C270** | int | Value (mm, optional; 0 = no luminous surface in C270 direction). |
+| **HousingColor** | string | 4-digit RAL code `[1-9][0-9]{3}` (optional). |
+| **FileName** | string | Optional file name. |
 
 ## XSD
 

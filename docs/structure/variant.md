@@ -3,7 +3,7 @@ title: Specific Variant Data
 sidebar_label: Specific Variant Data
 ---
 
-<!-- markdownlint-disable MD033 (no html im markdown) -->
+
 
 ## Variant Description
 

@@ -2,7 +2,7 @@
 title: Photometries
 sidebar_label: Photometries
 ---
-<!-- markdownlint-disable MD033 (no html im markdown) -->
+
 
 ## Photometry Description
 

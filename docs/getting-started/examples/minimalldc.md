@@ -2,15 +2,14 @@
 title: Minimal LDC
 sidebar_label: Minimal LDC
 ---
-<!-- markdownlint-disable MD033 (no html im markdown) -->
 
-### Introduction
+## Introduction
 
 This example demonstrates very simple minimal GLDF file implementation with no 3D geometry. The only file reference is the light distribution curve.
 
-Download the example here: <a href="https://github.com/globallightingdata/examples/tree/master/Minimal%20LDC" target="_blank">Minimal LDC.gldf</a>
+Download the example here: [Minimal LDC.gldf](https://github.com/globallightingdata/examples/tree/master/Minimal%20LDC)
 
-### Explanation
+## Explanation
 
 - The setup of the file is very straightforward. It contains no 3D geometry and only a simple light distribution curve.
 - There is only one file reference called ldtFile reference by one photometry called photometry01.
@@ -18,7 +17,7 @@ Download the example here: <a href="https://github.com/globallightingdata/exampl
 - The geometry has the simplest possible structure. It only contains the reference to the light emitter (line 55).
 - Because no geometry is defined, Relux and DIALux will use the LDT file to determine the geometry for their respective applications.
 
-### product.xml
+## product.xml
 
 ```xml {16-36,55} showLineNumbers
 <?xml version="1.0" encoding="UTF-8"?>
@@ -83,6 +82,6 @@ Download the example here: <a href="https://github.com/globallightingdata/exampl
 </Root>
 ```
 
-### Download
+## Download
 
-<a href="https://github.com/globallightingdata/examples/tree/master/Minimal%20LDC" target="_blank">Minimal LDC.gldf</a>
+[Minimal LDC.gldf](https://github.com/globallightingdata/examples/tree/master/Minimal%20LDC)

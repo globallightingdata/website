@@ -2,7 +2,6 @@
 title: Emitters
 sidebar_label: Emitters
 ---
-<!-- markdownlint-disable MD033 (no html im markdown) -->
 
 ## Emitter Description
 
@@ -10,7 +9,7 @@ sidebar_label: Emitters
 
 Emitters define the **radiation emitting parts** of the luminaire. Be it in form of **visible light** of lamps or **infrared** EMR in case of motion detection sensors. However, they **define not** the lamps or sensors themselves. Emitters is the XML block, where many of these parts before come together. They are the parts of the luminaire description, where the measured photometry is finally placed. And get combined later in [`Variants`](/docs/structure/variant.md) with the geometrical definition of the luminaire:
 
-<img src="/img/docs/structure/emitters-context.webp" alt="Emitter" width="450" /><br /><br />
+<img src="/img/docs/structure/emitters-context.webp" alt="Emitter" width="450" />
 
 ---
 
@@ -27,18 +26,15 @@ First of all you have to decide which **type of emitter** is required for your *
 
 :::important
 
-One <span class="blue-text">remarkable</span> part of the XSD definition above is the fact, that GLDF accepts **one or more** `ChangeableLightEmitter` for **each** single Emitter. Or one or more `FixedLightEmitter`, `MultiChannelLightEmitter` or `Sensor` vice versa.
+One remarkable part of the XSD definition above is the fact, that GLDF accepts **one or more** `ChangeableLightEmitter` for **each** single Emitter. Or one or more `FixedLightEmitter`, `MultiChannelLightEmitter` or `Sensor` vice versa.
 
 This does **not** mean that all these emitters **are active simultaneously**. Instead, they are **interchangeable**. The luminaire can operate in only one of these modes. Users in lighting calculation software, such as DIALux or RELUX, can switch between these modes as needed.
 
-<details>
-<summary>Examples</summary>
+## Examples
 
 *Example #1*: Imagine a luminaire with **emergency mode** on one light source. In GLDF you can describe this with **one emitter** which contains **two** `ChangeableLightEmitter` child elements. One for normal mode and e.g. 500 lumen and another `ChangeableLightEmitter` for the same light output, but with emergency mode and 50 lumen. **Both are not active at the same time** but can operate in one mode or another.
 
 *Example #2*: Imagine a luminaire measured/sold with two different lamps (and therefore probably different lighting, spectrum and electric characteristics). Again, you can describe this use case with **multiple [Equipments](/docs/structure/equipments.md)** referenced inside **one Emitter**. This way they are meant to be interchangeable, rather than both active at same time on multiple light outputs.
-</details>
-:::
 
 Let's assume we would like to define a luminaire with a changeable light output. So for the moment a first `Emitter` XML example could look as follows:
 
@@ -156,7 +152,7 @@ We've defined
 - Line 19: A [`ControlGear`](/docs/structure/control-gears.md). Let's further assume this metal halide lamp requires a ballast
 - Line 24: We combine the metal halide lamp with the ballast to an [`Equipment`](/docs/structure/equipments.md) and say, it requires 210W in total
 - Line 31: The final part inside the general definition block: We reference the [`Equipment`](/docs/structure/equipments.md) above together with the [`Photometry`](/docs/structure/photometries.md) into a `ChangeableLightEmitter`. The part of the luminaire description, where the measured photometry is finally placed
-- Line 32: An `emergencyBehaviour` attribute to define, how **this specific** light output of the luminaire behaves in emergency lighting scenarios. Possible values are 
+- Line 32: An `emergencyBehaviour` attribute to define, how **this specific** light output of the luminaire behaves in emergency lighting scenarios. Possible values are
   - `None` ➜ This Emitter is intended for normal lighting only (which is also the default, if the attribute is missing)
   - `EmergencyOnly` ➜ This Emitter is active during emergency lighting and inactive during normal lighting
   - `Combined` ➜ This Emitter is intended for both, normal and emergency lighting scenarios

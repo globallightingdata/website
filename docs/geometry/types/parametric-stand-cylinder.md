@@ -23,17 +23,17 @@ sidebar_label: Stand Cylinder
 
 ## Parameters
 
-| Parameter         | Type   | Explanation                                                           |
-| ----------------- | :----: | ---------------------------------------------------------------------:|
-| Diameter          | int    | Value in mm                                                           |
-| Height            | int    | Value in mm                                                           |
-| TopDiameter       | int    | Value in mm *(optional; default is 80% of `Diameter`)*                |
-| LuminousDiameter  | int    | Value in mm                                                           |
-| LuminousHeight    | int    | Value in mm *(optional)*; describes how far the luminous part protrudes|
-| ReflectorDepth    | int    | Value in mm *(optional)*; describes how far the luminous part is recessed|
-| TotalHeight       | int    | Value in mm                                                           |
-| HousingColor      | string | 4 digit RAL color code *(optional)*                                   |
-| FileName          | string | Optional file name (without an extension) *(optional)*                |
+| Parameter | Type | Explanation |
+| :--- | :---: | :--- |
+| Diameter | int | Value in mm |
+| Height | int | Value in mm |
+| TopDiameter | int | Value in mm *(optional; default is 80% of `Diameter`)* |
+| LuminousDiameter | int | Value in mm |
+| LuminousHeight | int | Value in mm *(optional)*; describes how far the luminous part protrudes |
+| ReflectorDepth | int | Value in mm *(optional)*; describes how far the luminous part is recessed |
+| TotalHeight | int | Value in mm |
+| HousingColor | string | 4 digit RAL color code *(optional)* |
+| FileName | string | Optional file name (without an extension) *(optional)* |
 
 ## XSD
 
@@ -63,8 +63,7 @@ sidebar_label: Stand Cylinder
 </xs:element>
 ```
 
-## XML
-### Example
+## XML Example
 
 ```xml
 <P3D filename="StandCylinder">

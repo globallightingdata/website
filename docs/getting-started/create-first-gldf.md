@@ -2,7 +2,6 @@
 title: Create your first GLDF
 sidebar_label: Create your first GLDF
 ---
-<!-- markdownlint-disable MD033 (no html im markdown) -->
 
 ## Overview
 
@@ -25,9 +24,9 @@ To create your first gldf file, follow these steps:
 - Create an empty XML file named *product.xml* and place it in this root directory.  
   We will edit this file further below.
 - Create three subdirectories named *geo*, *image*, and *ldc*.
-- Download the <a href="/other/photometry.ldt" target="_blank">Eulumdat photometry</a> and store it in the *ldc* directory.
-- Download the <a href="/other/geometry.l3d" target="_blank">L3D geometry</a> and store it in the *geo* directory.
-- Download the <a href="/other/luminaire.png" target="_blank">PNG image</a> and store it in the *image* directory.
+- Download the [Eulumdat photometry](/other/photometry.ldt) and store it in the *ldc* directory.
+- Download the [L3D geometry](/other/geometry.l3d) and store it in the *geo* directory.
+- Download the [PNG image](/other/luminaire.png) and store it in the *image* directory.
 
 Your directory should look like this now:
 
@@ -90,7 +89,7 @@ If you are using a code editor that supports XML Schema validation, you should n
 
 ### Step 2: Manufacturer Metadata
 
-The first step for each GLDF is to define some metadata in the `Header` element. It contains information about the GLDF file itself and the manufacturer of the product. In this example, we will keep things simple and concentrate on only mandatory elements of the `Header` element. In a real GLDF, however, it is always advisable to specify further data, such as contact information and more. A complete description about the possible `Header` content is provided [here](/docs/structure/header.md).
+The first step for each GLDF is to define some metadata in the `Header` element. It contains information about the GLDF file itself and the manufacturer of the product. In this example, we will keep things simple and concentrate on only mandatory elements of the `Header` element. In a real GLDF, however, it is always advisable to specify further data, such as contact information and more. A complete description about the possible `Header` content is [provided here](/docs/structure/header.md).
 
 For this example, let's assume we are working for the luminaire manufacturer **ACME lighting** and are writing this GLDF using the **Visual Studio Code** editor. The current GLDF version is [**1.0-rc.3**](/download) and today is the **23rd of October**. We generate a **worldwide unique** Id for this GLDF using the [UUID Online Generator](https://guidgenerator.com).
 
@@ -353,7 +352,7 @@ Now that we have defined all the necessary "general parts", the next goal is to 
 - [**Variants**](/docs/structure/variant.md)  
   Variants are considered variations of a given product but not entirely different products. If your product comes in different variations like color or mounting types, you can create several variants for each version.
 
-:::warning Warning
+:::warning[Warning]
 Do not misuse variants to combine completely unrelated products in a single GLDF file.
 :::
 
@@ -394,7 +393,7 @@ Replace your `ProductMetaData` with the following code:
 
 ### Step 10: Add a `Variant`
 
-Last but not least, we will combine all the previously prepared building blocks into a [`Variant`](/docs/structure/variant.md). Again, we add a simple `Name` and `Description` first. 
+Last but not least, we will combine all the previously prepared building blocks into a [`Variant`](/docs/structure/variant.md). Again, we add a simple `Name` and `Description` first.
 
 The core of each `Variant` is the `Geometry` element. It combines the radiation emitting parts (light sources and sensors) with the 3D geometry of the luminaire. There are three ways in which the geometry can be represented in the GLDF:
 
@@ -562,4 +561,4 @@ Finally, compress your just created folder containing
 
 into a ZIP archive and change the extension from *.zip* to *.gldf*. Congratulations, you have now successfully created your first GLDF file. We encourage you to browse the documentation and experiment for yourself to learn how to use the full potential GLDF has to offer.
 
-You can download the result <a href="/other/example.gldf" target="_blank">here</a>, should you want to compare your file.
+You can download the [result here](/other/example.gldf), should you want to compare your file.
