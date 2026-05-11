@@ -11,7 +11,7 @@ For this reason, we divided the GLDF product definitions into two parts. The fir
 
 The second part is the [`Variants`](/docs/structure/variant.md) part. You can define the variations of your product and apply properties to the different [`Variants`](/docs/structure/variant.md) individually instead of globally in the [`ProductMetaData`](/docs/structure/product) part above.
 
-:::important Convention
+:::important[Convention]
 If a property is present in `ProductMetaData`
 
 - it **applies to all variants** in the gldf file
@@ -20,11 +20,11 @@ If a property is present in `ProductMetaData`
 This convention **always prevails** without having to be explicitly defined.
 :::
 
-### Example 1
+## Example 1
 
 Let's assume you have a standing luminaire in your product portfolio with different electrical components for other markets. You can apply all the same pictures, names, descriptions, etc., to all variants but define separate electrical properties in the electrical section of the descriptive attributes.
 
-### Example 2
+## Example 2
 
 You have a track-mounted luminaire that comes with different reflectors. All Luminaires will have the same name, descriptive attributes, etc. However, the 3D Model and the Light distribution would change for the other variants.
 

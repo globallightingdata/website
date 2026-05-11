@@ -2,7 +2,7 @@
 title: Files
 sidebar_label: Files
 ---
-<!-- markdownlint-disable MD033 (no html im markdown) -->
+
 
 ## File Description
 
@@ -114,10 +114,10 @@ The **binary content** of a `File` element can be provided in two different ways
 
 Both types has their own advantages and disadvantages
 
-|                  | Local                                                                                                                                                       | Online                                                                                                                           |
-| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| **Advantage**    | - File is always/offline available <br />- File can't be deleted accidentally<br />- Faster file loading speed | - Smaller GLDF container size <br />- Reusable across multiple GLDF <br />- Can be updated anytime for already distributed GLDFs |
-| **Disadvantage** | - Larger container size <br />- Duplicated across multiple GLDF                                                                                           | - Application using GLDF must be online to retrieve the file <br />- Usually slower loading speed                                |
+| | Local | Online |
+| --- | --- | --- |
+| **Advantage** | - File is always/offline available <br />- File can't be deleted accidentally<br />- Faster file loading speed | - Smaller GLDF container size <br />- Reusable across multiple GLDF <br />- Can be updated anytime for already distributed GLDFs |
+| **Disadvantage** | - Larger container size <br />- Duplicated across multiple GLDF | - Application using GLDF must be online to retrieve the file <br />- Usually slower loading speed |
 
 ### type="localFileName"
 
@@ -153,16 +153,16 @@ So in this example *Luminaire.jpg* is expected to be in a subfolder *image* like
 
 Further examples of the 2. convention:
 
-| contentType    | Folder inside GLDF |
-|----------------|--------------------|
-| image/png      | image              |
-| ldc/eulum      | ldc                |
-| geo/l3d        | geo                |
-| document/pdf   | document           |
-| symbol/dxf     | symbol             |
-| sensor/sensxml | sensor             |
-| spectrum/text  | spectrum           |
-| other          | other              |
+| contentType | Folder inside GLDF |
+| --- | --- |
+| image/png | image |
+| ldc/eulum | ldc |
+| geo/l3d | geo |
+| document/pdf | document |
+| symbol/dxf | symbol |
+| sensor/sensxml | sensor |
+| spectrum/text | spectrum |
+| other | other |
 
 ### type="url"
 

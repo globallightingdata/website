@@ -2,7 +2,7 @@
 title: GLDF Requirements
 sidebar_label: Requirements
 ---
-<!-- markdownlint-disable MD033 (no html im markdown) -->
+
 
 To create the very first GLDF XML on your own, **a simple text editor is all you need**. Additionally an **application to create ZIP archives** is required to create the [GLDF container](/docs/container/about-container) afterwards.
 
@@ -13,7 +13,7 @@ However, if you want a little more comfort when writing GLDFs, we recommend an a
 
 If you do not already use a preferred text editor, we suggest one of the following with the above features:
 
-### Notepad++
+## Notepad++
 
 [Notepadd++ for Windows](https://notepad-plus-plus.org) is a free and lightweight editor, but already offers XML schema validation:
 
@@ -23,7 +23,7 @@ Provided the GLDF XSD is referenced (1), Notepad++ marks the faulty parts direct
 
 <img src="/img/docs/getting-started/requirements-notepad-validation.webp" alt="Notepad++ validation" width="750" /><br/><br/>
 
-### Visual Studio Code
+## Visual Studio Code
 
 One step further goes the [Visual Studio Code IDE](https://code.visualstudio.com), which is available for all common operating systems. In addition to XML schema validation (1) like in Notepad++, Visual Studio Code also offers full code completion and IntelliSense (2):
 

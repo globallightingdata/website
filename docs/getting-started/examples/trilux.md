@@ -2,19 +2,18 @@
 title: Example Trilux Belviso S CDP
 sidebar_label: Trilux Belviso S CDP
 ---
-<!-- markdownlint-disable MD033 (no html im markdown) -->
 
-### Introduction
+## Introduction
 
 Trilux Belviso is an example of a standing luminaire with two individual heads. The secondary light emitter can be adjusted by rotating it. Each light emitter has a different ldt file connected via the geometry node.
 
-<img src="/img/docs/getting-started/product_trilux.webp" alt="Trilux Belviso S CDP Product Picture"/>
+![Trilux Belviso S CDP Product Picture](/img/docs/getting-started/product_trilux.webp)
 
-<img src="/img/docs/getting-started/product_trilux_cad.webp" alt="Trilux Belviso S CDP Technical sketch"/>
+![Trilux Belviso S CDP Technical sketch](/img/docs/getting-started/product_trilux_cad.webp)
 
-<img src="/img/docs/getting-started/product_trilux_3d.webp" alt="Trilux Belviso S CDP Relux Screenshot"/>
+![Trilux Belviso S CDP Relux Screenshot](/img/docs/getting-started/product_trilux_3d.webp)
 
-### product.xml
+## product.xml
 
 ```xml showLineNumbers
 <?xml version="1.0" encoding="UTF-8"?>
@@ -173,6 +172,6 @@ Trilux Belviso is an example of a standing luminaire with two individual heads. 
 </Root>
 ```
 
-### Download
+## Download
 
-<a href="https://github.com/globallightingdata/examples/tree/master/Trilux%20Belviso%20S%20CDP" target="_blank">Trilux Belviso S CDP</a>
+[Trilux Belviso S CDP](https://github.com/globallightingdata/examples/tree/master/Trilux%20Belviso%20S%20CDP)

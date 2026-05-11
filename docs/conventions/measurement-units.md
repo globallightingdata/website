@@ -2,7 +2,6 @@
 title: Measurement Units
 sidebar_label: Measurement Units
 ---
-<!-- markdownlint-disable MD033 (no html im markdown) -->
 
 In GLDF and L3D, units are used according to the **International System of Units** (or derived from it). They are firmly assigned to the respective fields and documented accordingly in the XSD.
 
@@ -14,7 +13,7 @@ In both **GLDF** and **L3D**, dimensions are exclusively specified in millimeter
 
 The following units are currently in use:
 
-|**Quantity**|**Unit name**|**Symbol**|
+| **Quantity** | **Unit name** | **Symbol** |
 | :--- | :------: | :------: |
 | Dimensions | millimetres | \[mm\] |
 | Angle | degrees | \[°\] |

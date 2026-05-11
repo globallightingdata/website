@@ -2,7 +2,7 @@
 title: Global Product Data
 sidebar_label: Global Product Data
 ---
-<!-- markdownlint-disable MD033 (no html im markdown) -->
+
 
 ## ProductDefinitions Description
 
@@ -70,7 +70,7 @@ Most **marketing information** are **optional**. However, the more are specified
 </Root>
 ```
 
-:::tip Unique Product Id
+:::tip[Unique Product Id]
 The element `UniqueProductId` is particularly important, as it makes it possible to recognise the same (updated) product across multiple GLDF files. You could use the product's article number, GTIN or EAN for it, but we **recommend UUIDs (GUIDs)** related only for this use case, since all other values could change over time.
 
 **See also [Unique IDs](/getting-started#unique-ids)**
@@ -147,7 +147,7 @@ A complete example, on the other hand, could look as follows. In general, it is 
 </Root>
 ```
 
-An introduction to `DescriptiveAttributes` can be found [here](/docs/structure/descriptive-attributes.md).
+An introduction to `DescriptiveAttributes` can [be found here](/docs/structure/descriptive-attributes.md).
 
 ### Luminaire maintenance
 

@@ -2,7 +2,6 @@
 title: Download
 hide_table_of_contents: false
 ---
-<!-- markdownlint-disable MD033 (no html im markdown) -->
 
 ## Downloads / Links
 

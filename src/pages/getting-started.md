@@ -2,7 +2,6 @@
 title: Getting started
 hide_table_of_contents: false
 ---
-<!-- markdownlint-disable MD033 (no html im markdown) -->
 
 ## Getting started
 
@@ -141,6 +140,6 @@ See also [IDs and timecodes](/docs/conventions/ids-and-timecodes)
 If you would like to start with the documentation, you can get to the first chapter here: [**Introduction**](/docs)
 <br/>
 
-:::note Contribute
+:::note[Contribute]
 You would like to contribute to GLDF? Have a look on the [**Get involved chapter**](/docs/contribute). We would also appreciate to welcome you as a new [**DIALux & Relux member**](/docs/contribute/become-a-partner).
 :::

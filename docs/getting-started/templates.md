@@ -2,7 +2,7 @@
 title: GLDF Templates
 sidebar_label: Templates
 ---
-<!-- markdownlint-disable MD033 (no html im markdown) -->
+
 
 ## Overview
 

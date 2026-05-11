@@ -2,7 +2,7 @@
 title: Equipments
 sidebar_label: Equipments
 ---
-<!-- markdownlint-disable MD033 (no html im markdown) -->
+
 
 ## Equipment Description
 

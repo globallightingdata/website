@@ -2,7 +2,7 @@
 title: Sensors
 sidebar_label: Sensors
 ---
-<!-- markdownlint-disable MD033 (no html im markdown) -->
+
 
 ## Sensor Description
 

@@ -2,7 +2,6 @@
 title: Parametric Geometry Introduction
 sidebar_label: Introduction
 ---
-<!-- markdownlint-disable MD033 (no html im markdown) -->
 
 ## The Concept
 
@@ -14,13 +13,13 @@ Our Parametric 3D Model web service allows you to upload an input XML file and p
 
 This guide will walk you through the steps to create a sample parametric L3D model and help you understand how the web service works. The outline of the process is as follows:
 
-- Create an input XML file according to our <a href="/xsd/p3d/p3d.xsd" target="_blank">XSD</a> file specification.
+- Create an input XML file according to our [XSD](/xsd/p3d/p3d.xsd) file specification.
 - Send the input XML file to our web service.
 - The web service will respond with a URL where you can download the generated L3D file.
 
 The following is an example based on the Windows platform. We will create a Windows batchfile (.bat) and a sample source XML file to demonstrate and test the web service.
 
-:::warning Important
+:::warning[Important]
 Before you start, you will need to obtain authentication information from Relux or DIAL.
 
 Make sure that you substitute "EMAIL" and "PASSWORD" with your actual email address and password as registered with the Relux API service. If you have any doubts, please reach out to [support@relux.com](mailto:support@relux.com) for assistance.

@@ -2,17 +2,16 @@
 title: Example Zumtobel P-EVO R100L
 sidebar_label: Zumtobel P-EVO R100L
 ---
-<!-- markdownlint-disable MD033 (no html im markdown) -->
 
-### Introduction
+## Introduction
 
 Zumtobel P-EVO R100L ist a simple recessed luminaire using an L3D model.
 
-<img src="/img/docs/getting-started/product_zumtobel.webp" alt="SLV NEW TRIA 2"/>
+![SLV NEW TRIA 2](/img/docs/getting-started/product_zumtobel.webp)
 
-<img src="/img/docs/getting-started/product_zumtobel_3d.webp" alt="SLV NEW TRIA 2"/>
+![SLV NEW TRIA 2](/img/docs/getting-started/product_zumtobel_3d.webp)
 
-### product.xml
+## product.xml
 
 ```xml showLineNumbers
 <?xml version="1.0" encoding="UTF-8"?>
@@ -115,6 +114,6 @@ Hinweis Bluetooth®: Funk Definition:  basicDIM Wireless - Bluetooth® 4.x, Funk
 </Root>
 ```
 
-### Download
+## Download
 
-<a href="https://github.com/globallightingdata/examples/tree/master/Zumtobel%20P-EVO%20R100L" target="_blank">Zumtobel P-EVO R100L</a>
+[Zumtobel P-EVO R100L](https://github.com/globallightingdata/examples/tree/master/Zumtobel%20P-EVO%20R100L)

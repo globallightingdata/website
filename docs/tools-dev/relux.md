@@ -2,7 +2,7 @@
 title: GLDF in RELUX
 sidebar_label: RELUX
 ---
-<!-- markdownlint-disable MD033 (no html im markdown) -->
+
 
 RELUX offers all Luminaire Manufacturer Members a tool set to create, edit, and upload product data to [ReluxNet](https://relux.com/en/search/luminaires/DE/#).
 

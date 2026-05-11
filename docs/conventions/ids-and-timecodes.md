@@ -23,11 +23,12 @@ Worldwide unique UUIDs can be generated for example here: [guidgenerator.com](ht
 
 ## Timecodes
 
-:::note TLDR;
+:::note[TLDR;]
 GLDF contains two timestamps in the [`Header`](/docs/structure/header.md) element, that allows to precisely distinguish the last time:
 
 - When a **GLDF as a whole** has changed -> `GldfCreationTimeCode`
 - When **anything product related** inside the GLDF has changed. -> `ProductDataTimeCode`
+
 :::
 
 The difference in detail is the following:
@@ -37,7 +38,7 @@ The difference in detail is the following:
 - **`ProductDataTimeCode`**  
   This element must reflect **the last time**, when something **only related to the product data** has **changed**. **Excluding any metadata** like manufacturer contact information in the [`Header`](/docs/structure/header.md). So this applies to any changes in XML childs of [`GeneralDefinitions`](/docs/structure/xml-hierarchy.md) and [`ProductDefinitions`](/docs/structure/xml-hierarchy.md), as well as files related to the product like product images or photometries. But not to the elements in the [`Header`](/docs/structure/header.md) area or files like the manufacturer image.
 
-:::caution Important
+:::caution[Important]
 Both timestamps must completly ignore changes to the [**meta-information.xml**](/docs/container/meta-information) file. Whether it is created, deleted or modified. As this file is intended only for digital signatures and similar. And is otherwise completly unrelated to the GLDF content at all.
 :::
 

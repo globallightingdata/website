@@ -2,17 +2,16 @@
 title: SLV - Tria 2 with sensor
 sidebar_label: SLV - Tria 2 with sensor
 ---
-<!-- markdownlint-disable MD033 (no html im markdown) -->
 
-### Introduction
+## Introduction
 
 This example demonstrates a GLDF file with an L3D model, two light outputs, and an integrated sensor. Everything is put together via the geometry node.
 
-<img src="/img/docs/getting-started/product_slv.webp" alt="SLV NEW TRIA 2"/>
+![SLV NEW TRIA 2](/img/docs/getting-started/product_slv.webp)
 
-<img src="/img/docs/getting-started/product_slv_3d.webp" alt="SLV NEW TRIA 2"/>
+![SLV NEW TRIA 2](/img/docs/getting-started/product_slv_3d.webp)
 
-### product.xml
+## product.xml
 
 ```xml showLineNumbers
 <?xml version="1.0" encoding="UTF-8"?>
@@ -293,6 +292,6 @@ This example demonstrates a GLDF file with an L3D model, two light outputs, and 
 </Root>
 ```
 
-### Download
+## Download
 
-<a href="https://github.com/globallightingdata/examples/tree/master/SLV%20-%20Tria%202%20with%20sensor" target="_blank">SLV - Tria 2 with sensor</a>
+[SLV - Tria 2 with sensor](https://github.com/globallightingdata/examples/tree/master/SLV%20-%20Tria%202%20with%20sensor)

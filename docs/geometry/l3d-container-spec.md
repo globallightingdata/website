@@ -58,4 +58,4 @@ The .obj files must not contain more than one material per file.
 
 ## GLDF Container
 
-The **GLDF** container specification is described [here](/docs/container/container-specification)
+The **GLDF** container specification [is described here](/docs/container/container-specification)

@@ -2,15 +2,14 @@
 title: Philips SP542P
 sidebar_label: Philips SP542P
 ---
-<!-- markdownlint-disable MD033 (no html im markdown) -->
 
-### Introduction
+## Introduction
 
 This example demonstrates a simple minimal GLDF implementation of the Philips SP542P product. It uses L3D geometry.
 
-<img src="/img/docs/getting-started/product_philips.webp" alt="Philips SP542 Product Image"/>
+![Philips SP542 Product Image](/img/docs/getting-started/product_philips.webp)
 
-<img src="/img/docs/getting-started/product_philips_3d.webp" alt="Philips SP542 Relux Screenshot"/>
+![Philips SP542 Relux Screenshot](/img/docs/getting-started/product_philips_3d.webp)
 
 ### product.xml
 
@@ -146,6 +145,6 @@ This example demonstrates a simple minimal GLDF implementation of the Philips SP
 </Root>
 ```
 
-### Download
+## Download
 
-<a href="https://github.com/globallightingdata/examples/tree/master/Philips%20SP542P" target="_blank">Philips SP542P</a>
+[Philips SP542P](https://github.com/globallightingdata/examples/tree/master/Philips%20SP542P)

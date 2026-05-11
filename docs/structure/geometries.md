@@ -2,7 +2,7 @@
 title: Geometries
 sidebar_label: Geometries
 ---
-<!-- markdownlint-disable MD033 (no html im markdown) -->
+
 
 ## Geometry Description
 
@@ -129,6 +129,7 @@ How to create 3D models is described in own chapters:
 
 1. Would you like to read more about the new L3D file format? Have a look on the [**L3D Introduction**](/docs/geometry/l3d-intro.md).  
 2. Would you like to start creating L3D models, check out our [**L3D Editor**](/docs/tools-dev/l3d-editor.md)
+
 :::
 
 ### `ModelGeometry` example
@@ -223,4 +224,4 @@ As GLDF supports 3 model file types (l3d, m3d, r3d). And there are three level o
 
 ## Referencing a geometry
 
-Once declared, all geometries can be referenced in subsequent XML elements via their `id` attribute **one or several** times. This is done in the [`Variant`](/docs/structure/variant.md) element and described in detail [**here**](/docs/structure/variant#geometry-options).
+Once declared, all geometries can be referenced in subsequent XML elements via their `id` attribute **one or several** times. This is done in the [`Variant`](/docs/structure/variant.md) element and described in [detail here](/docs/structure/variant#geometry-options).

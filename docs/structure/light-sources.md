@@ -2,7 +2,7 @@
 title: Light Sources
 sidebar_label: Light Sources
 ---
-<!-- markdownlint-disable MD033 (no html im markdown) -->
+
 
 ## LightSource Description
 
@@ -171,7 +171,7 @@ Below is a longer example where all three types are defined with minimal data. I
 
 Once declared, all light sources can be referenced in subsequent XML elements via their `id` attribute **one or several** times.
 
-:::info Important
+:::info[Important]
 What is particularly remarkable about the XML example above is how **differently `ChangeableLightSource` and `FixedLightSource` are referenced**. While at first glance this adds complexity, it better represents the reality:
 
 For the usage of a `ChangeableLightSource` an element of the type `Equipment` must be defined first. Which combines a `ChangeableLightSource` with an optional `ControlGear`. Subsequently, this `Equipment` is finally referenced in the `Emitter`. The `FixedLightSource` however, is referenced directly in the `Emitter` itself. This also applies to the luminous flux, which is defined directly in the `Emitter`, and not the light source, as well.

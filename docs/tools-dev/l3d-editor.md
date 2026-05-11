@@ -2,13 +2,12 @@
 title: L3D Editor
 sidebar_label: L3D Editor
 ---
-<!-- markdownlint-disable MD033 (no html im markdown) -->
 
 ## Introduction
 
 The L3D Editor is a web-based CAD application developed by [DIAL/DIALux](https://www.dialux.com) to create [L3D models](/docs/geometry/l3d-intro.md) from [Wavefront OBJ files](https://de.wikipedia.org/wiki/Wavefront_OBJ). These L3Ds models can then be used for detailed visualisation of your own products in GLDF (see [`Geometry`](/docs/structure/geometries.md)).
 
-:::tip Link
+:::tip[Link]
 [https://l3d-editor.gldf.io](https://l3d-editor.gldf.io)
 :::
 
@@ -16,7 +15,7 @@ In this chapter, the graphical user interface will be explained first. You will 
 
 ## User interface
 
-<img src="/img/docs/tools/l3d-editor-ui.webp" alt="L3D Editor" width="900" /><br /><br />
+<img src="/img/docs/tools/l3d-editor-ui.webp" alt="L3D Editor" width="900" />
 
 1. **Drag & Drop elements**  
   In the upper left corner you can find various icons, which you can drag  drop into the working CAD area (3). These are
@@ -248,7 +247,7 @@ Rule of thumb: lighting design software expect the **geometry of the luminaire**
 
 Yo can **rotate the C0 plane** by selecting the LEO and clicking on *Rotate G0* Button (to rotate the C0 plane **around** the G0 axis)
 
-:::tip street luminaires
+:::tip[street luminaires]
 A C0 rotation by 90° around G0 is often required for street luminaires with IES photometry.
 :::
 
@@ -395,6 +394,7 @@ Light Emitting Surfaces (LES) - similar to Light Emitting Objects (LEO) - are mo
 - On **surfaces marked as LEO** the photometry is positioned in the center of them. They are intended for the **physically correct calculation**.
 - Areas marked as LES have **no relevance for the light calculation**. They are only intended for **visualisation** of the luminaire.
 - **At least one LEO must be present** in the model, otherwise it cannot be saved in the L3D editor. **LES are optional** on the other hand.
+
 :::
 
 By default there is no need to create LES them manually. Whenever a LEO is created, a LES with a luminous intensity of 100% is **also created for the corresponding areas**. However, you can create them also manually. Simply select the LEO you would like to create an additional LES for. And click on **Create Light Emitting Surface**:
