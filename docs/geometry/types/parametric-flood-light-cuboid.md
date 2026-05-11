@@ -13,17 +13,17 @@ sidebar_label: Floodlight Cuboid
 
 ## Parameters
 
-| Parameter                              |  Type   | Explanation                                                                                   |
-| -------------------------------------- | :-----: | ---------------------------------------------------------------------------------------------:|
-| **Width**                              | int     | Base width of the luminaire in millimeters (mm).                                              |
-| **Length**                             | int     | Base length of the luminaire in millimeters (mm).                                             |
-| **Height**                             | int     | Height of the luminaire head in millimeters (mm).                                             |
-| **LuminousWidth**                      | int     | Width of the luminous surfaces in millimeters (mm).                                           |
-| **LuminousLength**                     | int     | Length of the luminous surfaces in millimeters (mm).                                          |
-| **LuminousHeight** / **ReflectorDepth**| int     | Value in mm. Choose one to define how the luminous part interacts with the housing.           |
-| **TotalHeight**                        | int     | Overall height of the luminaire in millimeters (mm) *(optional)*.                             |
-| **HousingColor**                       | string  | A 4-digit RAL color code matching `[1-9][0-9]{3}` (optional).                                 |
-| **FileName**                           | string  | Optional file name (without an extension).                                                  |
+| Parameter | Type | Explanation |
+| :--- | :---: | :--- |
+| **Width** | int | Value (mm). |
+| **Length** | int | Value (mm). |
+| **Height** | int | Value (mm). Head height. |
+| **LuminousWidth** | int | Value (mm). Luminous surface width. |
+| **LuminousLength** | int | Value (mm). Luminous surface length. |
+| **LuminousHeight** / **ReflectorDepth** | int | Value (mm). Pick one for housing interaction. |
+| **TotalHeight** | int | Value (mm, optional). Overall height. |
+| **HousingColor** | string | 4-digit RAL code `[1-9][0-9]{3}` (optional). |
+| **FileName** | string | Optional file name (no extension). |
 
 ## XSD
 

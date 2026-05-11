@@ -18,17 +18,17 @@ sidebar_label: Recessed Round
 
 ## Parameters
 
-| Parameter         | Type | Explanation                                                   |
-| ----------------- | :--: | ------------------------------------------------------------- |
-| Diameter          | int  | Value in mm                                                   |
-| Height            | int  | Value in mm                                                   |
-| LuminousDiameter  | int  | Value in mm                                                   |
-| TopDiameter       | int  | Value in mm                                                   |
-| LuminousHeight    | int  | Value in mm                                                   |
-| ReflectorDepth    | int  | Value in mm                                                   |
-| Mounting          | string | Ceiling, Wall or Floor                                      |
-| HousingColor      | string | 4 digit RAL color code                                        |
-| FileName          | string | Optional file name (without an extension)                     |
+| Parameter | Type | Explanation |
+| :--- | :---: | :--- |
+| Diameter | int | Value in mm |
+| Height | int | Value in mm |
+| LuminousDiameter | int | Value in mm |
+| TopDiameter | int | Value in mm |
+| LuminousHeight | int | Value in mm |
+| ReflectorDepth | int | Value in mm |
+| Mounting | string | Ceiling, Wall or Floor |
+| HousingColor | string | 4 digit RAL color code |
+| FileName | string | Optional file name (without an extension) |
 
 ## XSD
 

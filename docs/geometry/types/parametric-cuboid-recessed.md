@@ -20,19 +20,19 @@ The `RecessedCuboid` is a cube-shaped recessed luminaire.
 
 ## Parameters
 
-| Parameter                              |  Type   | Explanation                                                                                           |
-| -------------------------------------- | :-----: | -----------------------------------------------------------------------------------------------------:|
-| **Width**                              | int     | Value in mm.                                                                                          |
-| **Length**                             | int     | Value in mm.                                                                                          |
-| **Height**                             | int     | Value in mm.                                                                                          |
-| **LuminousWidth**                      | int     | Value in mm.                                                                                          |
-| **LuminousLength**                     | int     | Value in mm.                                                                                          |
-| **LuminousHeight** / **ReflectorDepth**| int     | Value in mm. Choose one to define how the luminous part interacts with the housing.                   |
-| **TopWidth**                           | int     | Value in mm (optional).                                                                               |
-| **TopLength**                          | int     | Value in mm (optional).                                                                               |
-| **Mounting**                           | string  | `Ceiling`, `Wall` or `Floor`.                                                                         |
-| **HousingColor**                       | string  | A 4-digit RAL color code matching the pattern `[1-9][0-9]{3}` (optional).                             |
-| **FileName**                           | string  | Optional file name.                                                                                   |
+| Parameter | Type | Explanation |
+| :--- | :---: | :--- |
+| **Width** | int | Value (mm). |
+| **Length** | int | Value (mm). |
+| **Height** | int | Value (mm). |
+| **LuminousWidth** | int | Value (mm). |
+| **LuminousLength** | int | Value (mm). |
+| **LuminousHeight** / **ReflectorDepth** | int | Value (mm). Pick one for housing interaction. |
+| **TopWidth** | int | Value (mm, optional). |
+| **TopLength** | int | Value (mm, optional). |
+| **Mounting** | string | `Ceiling`, `Wall` or `Floor`. |
+| **HousingColor** | string | 4-digit RAL code `[1-9][0-9]{3}` (optional). |
+| **FileName** | string | Optional file name. |
 
 ## XSD
 

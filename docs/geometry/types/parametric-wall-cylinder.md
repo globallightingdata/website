@@ -23,18 +23,18 @@ sidebar_label: Wall Cylinder
 
 ## Parameters
 
-| **Parameter**        | Type   | Explanation                                                                   |
-| -------------------- | :----: | :---------------------------------------------------------------------------: |
-| **Diameter**         | int    | Value in mm                                                                   |
-| **Height**           | int    | Value in mm                                                                   |
-| **LuminousDiameter** | int    | Value in mm                                                                   |
-| **LuminousHeight**   | int    | Value in mm                                                                   |
-| **ReflectorDepth**   | int    | Value in mm                                                                   |
-| **TopWidth**         | int    | Value in mm (default is 80% of `Width`)                                       |
-| **TopLength**        | int    | Value in mm (default is 80% of `Length`)                                      |
-| **Type**             | string | `Direct`, `Indirect`, `DirectIndirect`                                        |
-| **HousingColor**     | string | 4 digit RAL color code                                                        |
-| **FileName**         | string | Optional file name (without an extension)                                   |
+| **Parameter** | Type | Explanation |
+| :--- | :---: | :--- |
+| **Diameter** | int | Value in mm |
+| **Height** | int | Value in mm |
+| **LuminousDiameter** | int | Value in mm |
+| **LuminousHeight** | int | Value in mm |
+| **ReflectorDepth** | int | Value in mm |
+| **TopWidth** | int | Value in mm (default is 80% of `Width`) |
+| **TopLength** | int | Value in mm (default is 80% of `Length`) |
+| **Type** | string | `Direct`, `Indirect`, `DirectIndirect` |
+| **HousingColor** | string | 4 digit RAL color code |
+| **FileName** | string | Optional file name (without an extension) |
 
 ## XSD
 

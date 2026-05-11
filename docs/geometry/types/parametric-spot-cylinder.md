@@ -21,16 +21,16 @@ A spotlight in cylinder shape mounted on a bracket attached to a plate.
 
 ## Parameters
 
-| Parameter         | Type   | Explanation                                                    |
-| ----------------- | :----: | -------------------------------------------------------------- |
-| Diameter          | int    | Value in mm                                                    |
-| Height            | int    | Value in mm                                                    |
-| LuminousDiameter  | int    | Value in mm                                                    |
-| TotalHeight       | int    | Value in mm                                                    |
-| BaseDiameter      | int    | Value in mm *(optional)*                                       |
-| BaseHeight        | int    | Value in mm *(optional)*                                       |
-| HousingColor      | string | 4 digit RAL color code *(optional)*                            |
-| FileName          | string | Optional file name (without an extension) *(optional)*         |
+| Parameter | Type | Explanation |
+| :--- | :---: | :--- |
+| Diameter | int | Value in mm |
+| Height | int | Value in mm |
+| LuminousDiameter | int | Value in mm |
+| TotalHeight | int | Value in mm |
+| BaseDiameter | int | Value in mm *(optional)* |
+| BaseHeight | int | Value in mm *(optional)* |
+| HousingColor | string | 4 digit RAL color code *(optional)* |
+| FileName | string | Optional file name (without an extension) *(optional)* |
 
 ## XSD
 
