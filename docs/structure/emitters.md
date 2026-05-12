@@ -309,12 +309,8 @@ An example of the `MultiChannelLightEmitter` illustrates well how the definition
   <Header/>  
   <GeneralDefinitions>
     <Files>
-      <File id="photometryRedFile" contentType="ldc/eulumdat" 
+      <File id="photometryFile" contentType="ldc/eulumdat" 
             type="url">http://example.org/photometryRed.ldt</File>
-      <File id="photometryGreenFile" contentType="ldc/eulumdat" 
-            type="url">http://example.org/photometryGreen.ldt</File>
-      <File id="photometryBlueFile" contentType="ldc/eulumdat" 
-            type="url">http://example.org/photometryBlue.ldt</File>
       <File id="spectrumRedFile" contentType="spectrum/text" 
             type="url">http://example.org/spectrumRed.txt</File>
       <File id="spectrumGreenFile" contentType="spectrum/text" 
@@ -325,14 +321,8 @@ An example of the `MultiChannelLightEmitter` illustrates well how the definition
             type="url">http://example.org/image.jpg</File>
     </Files>
     <Photometries>
-      <Photometry id="photometryRed">
-        <PhotometryFileReference fileId="photometryRedFile"/>
-      </Photometry>
-      <Photometry id="photometryGreen">
-        <PhotometryFileReference fileId="photometryGreenFile"/>
-      </Photometry>
-      <Photometry id="photometryBlue">
-        <PhotometryFileReference fileId="photometryBlueFile"/>
+      <Photometry id="photometry">
+        <PhotometryFileReference fileId="photometryFile"/>
       </Photometry>
     </Photometries>
     <Spectrums>
@@ -361,7 +351,7 @@ An example of the `MultiChannelLightEmitter` illustrates well how the definition
               <Locale language="en">Red</Locale>
             </DisplayName>
             <SpectrumReference spectrumId="spectrumRed"/>
-            <PhotometryReference photometryId="photometryRed"/>
+            <PhotometryReference photometryId="photometry"/>
             <RatedLuminousFlux>150</RatedLuminousFlux>
           </Channel>
           <Channel type="Green">
@@ -369,7 +359,7 @@ An example of the `MultiChannelLightEmitter` illustrates well how the definition
               <Locale language="en">Green</Locale>
             </DisplayName>
             <SpectrumReference spectrumId="spectrumGreen"/>
-            <PhotometryReference photometryId="photometryGreen"/>
+            <PhotometryReference photometryId="photometry"/>
             <RatedLuminousFlux>150</RatedLuminousFlux>
           </Channel>
           <Channel type="Blue">
@@ -377,7 +367,7 @@ An example of the `MultiChannelLightEmitter` illustrates well how the definition
               <Locale language="en">Blue</Locale>
             </DisplayName>
             <SpectrumReference spectrumId="spectrumBlue"/>
-            <PhotometryReference photometryId="photometryBlue"/>
+            <PhotometryReference photometryId="photometry"/>
             <RatedLuminousFlux>150</RatedLuminousFlux>
           </Channel>
         </Channels>
