@@ -10,7 +10,7 @@ The GLDF Editor is a web-based application developed by RELUX to create, edit, a
 ---
 
 :::tip[Open]
-[gldf-editor.relux.com](https://gldf-editor.relux.com)  
+[gldf-editor.gldf.io](https://gldf-editor.gldf.io)  
 :::
 
 ![Screenshot GLDF Editor](/img/homepage/gldf-editor.webp)  
