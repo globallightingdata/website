@@ -386,7 +386,7 @@ Replace your `ProductMetaData` with the following code:
     <Locale language="de">Runde Pendelleuchte für Innenräume</Locale>
   </Description>
   <Pictures>
-    <image imageType="Product Picture" fileId="pictureFile-1" />
+    <Image imageType="Product Picture" fileId="pictureFile-1" />
   </Pictures>
 </ProductMetaData>
 ```
