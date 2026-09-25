@@ -62,7 +62,7 @@ Below you can find an example definition of an equipment:
 
 Each `Equipment` element must contain the **mandatory** `id` attribute, a `LightSourceReference` and a `RatedInputPower` element. This `Equipment`
 
-- can be **referenced** in subsequent elements via *equipment1* (`id` attribute, line 18)
+- can be **referenced** in subsequent elements via *equipment1* (`id` attribute, line 19)
 - provide no optional **metadata** (see below)
 
 ## Referencing an equipment
@@ -109,7 +109,7 @@ Once declared, all equipments can be referenced in subsequent XML elements via t
 </Root>
 ```
 
-In the example above, the `Equipment` with `id` *equipment11* (line 18) is **referenced** once inside the element `Emitter` and defines the **luminaire's set of lamp and control gear inside a light emitter** (line 27).
+In the example above, the `Equipment` with `id` *equipment11* (line 19) is **referenced** once inside the element `Emitter` and defines the **luminaire's set of lamp and control gear inside a light emitter** (line 28).
 
 ## Equipment MetaData
 
