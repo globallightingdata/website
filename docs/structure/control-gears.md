@@ -53,7 +53,7 @@ Below you can find an example definition of two control gears:
 
 Each `ControlGear` element contains only the **mandatory** `id` attribute and `Name` element. The `Name` in this example is provided in two languages (*de* and *en* for German and English), but one translation is always sufficient in GLDF. These `ControlGear`
 
-- can be **referenced** in subsequent elements via *controlGear1* and *controlGear2* (`id` attribute, line 6 and 12)
+- can be **referenced** in subsequent elements via *controlGear1* and *controlGear2* (`id` attribute, line 7 and 13)
 - provide no optional **metadata** (see below)
 
 ## Referencing a control gear
@@ -95,7 +95,7 @@ Once declared, all control gears can be referenced in subsequent XML elements vi
 </Root>
 ```
 
-In the example above, the `ControlGear` with `id` *controlGear1* (line 11) is **referenced** once inside the element `Equipment` and defines the **luminaire's set of lamp and control gear** (line 20/21).
+In the example above, the `ControlGear` with `id` *controlGear1* (line 14) is **referenced** once inside the element `Equipment` and defines the **luminaire's set of lamp and control gear** (line 24).
 
 ## ControlGear MetaData
 

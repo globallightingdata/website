@@ -41,8 +41,8 @@ First of all, a single `Photometry` element references a [**File**](/docs/struct
 
 The `Photometry` Element above describes a single photometry with only **mandatory** content. It...
 
-- **references** itself the ldc `File` element with `id` *photometryFile* (line 6 + 10)
-- can be **referenced** in subsequent elements via *photometry1* (its `id` attribute, line 9)
+- **references** the ldc `File` element with `id` *photometryFile* (line 7 + 11)
+- can be **referenced** in subsequent elements via *photometry1* (its `id` attribute, line 10)
 - provides no optional **metadata** (see below)
 
 Its simply the **definition of a ldc file as a photometry** for further usage in the description of a luminare.
@@ -80,7 +80,7 @@ Once declared, all photometries can be referenced in subsequent XML elements via
 </Root>
 ```
 
-The `Photometry` with `id` *photometry1* (line 9) is referenced once inside the subsequent element `ChangeableLightSource` and defines the light source's **light distribution curve** (line 20).
+The `Photometry` with `id` *photometry1* (line 10) is referenced once inside the subsequent element `ChangeableLightSource` and defines the light source's **light distribution curve** (line 21).
 
 ## Photometry MetaData
 
