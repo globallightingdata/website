@@ -134,4 +134,4 @@ Once declared, all spectrums can be referenced in subsequent XML elements via th
 </Root>
 ```
 
-The `Spectrum` with `id` *spectrum1* (line 9) is referenced once inside the subsequent element `ChangeableLightSource` through the element `SpectrumReference`. And defines the light source's **spectrum** in this way (line 19)
+The `Spectrum` with `id` *spectrum1* (line 10) is referenced once inside the subsequent element `ChangeableLightSource` through the element `SpectrumReference`. And defines the light source's **spectrum** in this way (line 20)
