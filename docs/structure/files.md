@@ -73,7 +73,7 @@ Once declared, all files can be referenced in subsequent XML elements via their 
 </Root>
 ```
 
-This `File` with `id` *lightSourceImage* (line 6) is referenced multiple times inside subsequent `ChangeableLightSource` elements and defines their *Product Picture* (line 11 and 16)
+This `File` with `id` *lightSourceImage* (line 7) is referenced multiple times inside subsequent `ChangeableLightSource` elements and defines their *Product Picture* (line 12 and 17)
 
 ## Available content types
 

@@ -19,7 +19,7 @@ It also references a basic L3D file in the file definitions. The screenshot belo
 
 ## product.xml
 
-The following XML code references the single light-emitting object of the 3D file. The 3D file is referenced in line 15-16 and the LEO inside this 3D file in the Emitter in line 68.
+The following XML code references the single light-emitting object of the 3D file. The 3D file is referenced in line 15-16 and the LEO inside this 3D file in the Emitter in line 69.
 
 ```xml {15-16,69} showLineNumbers
 <?xml version="1.0" encoding="UTF-8"?>
