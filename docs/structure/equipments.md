@@ -109,7 +109,7 @@ Once declared, all equipments can be referenced in subsequent XML elements via t
 </Root>
 ```
 
-In the example above, the `Equipment` with `id` *equipment11* (line 19) is **referenced** once inside the element `Emitter` and defines the **luminaire's set of lamp and control gear inside a light emitter** (line 28).
+In the example above, the `Equipment` with `id` *equipment1* (line 19) is **referenced** once inside the element `Emitter` and defines the **luminaire's set of lamp and control gear inside a light emitter** (line 28).
 
 ## Equipment MetaData
 
