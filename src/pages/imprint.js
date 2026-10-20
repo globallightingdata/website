@@ -28,9 +28,9 @@ function Imprints() {
           <>
             <h2 className="ImprintCompanyName">DIAL GmbH</h2>
             <p>
-              <strong>Chief Executive Officer</strong>
+              <strong>Managing Directors</strong>
               <br />
-              Dipl.-Ing. Dieter Polle
+              Dieter Polle, Friedrich Wilhelm Bremecker
             </p>
             <p>
               <strong>Court of jurisdiction – commercial register</strong>
@@ -50,7 +50,7 @@ function Imprints() {
             <p>
               <strong>Responsible for the content</strong>
               <br />
-              Dipl.-Ing. Dieter Polle
+              Dieter Polle
             </p>
             <p>
               <strong>Contact</strong>
@@ -73,7 +73,7 @@ function Imprints() {
             <p>
               <strong>Chief Executive Officer</strong>
               <br />
-              Dipl.-Ing. Markus Hegi
+              Markus Hegi
             </p>
             <p>
               <strong>Court of jurisdiction – commercial register</strong>
@@ -93,7 +93,7 @@ function Imprints() {
             <p>
               <strong>Responsible for the content</strong>
               <br />
-              Dipl.-Ing. Robert Heinze
+              Robert Heinze
             </p>
             <p>
               <strong>Contact</strong>
